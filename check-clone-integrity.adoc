@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: check-clone-integrity.html 
+keywords: integrity check, data corruption 
+summary: Eseguire un controllo di integrità per determinare se i dati del clone sandbox sono intatti o corrotti. 
+---
+= Verificare l'integrità dei dati in un clone sandbox
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Eseguire un controllo di integrità per determinare se i dati del clone sandbox sono intatti o corrotti.
+
+.A proposito di questa attività
+Quando si crea un clone sandbox da un database di origine mentre è occupato, i dati del clone potrebbero non essere sincronizzati con lo snapshot più recente del database di origine. Questa operazione verifica l'integrità di tutti gli oggetti nel clone sandbox per determinare se i dati del clone sandbox sono aggiornati.
+
+.Fasi
+. Accedere a link:https://console.workloads.netapp.com["Console di workload Factory"^].
+. Nella sezione Database, selezionare *Vai a inventario database*.
+. In Database, selezionare la scheda *Sandbox*.
+. Nella scheda Sandboxes, fare clic sul menu dei tre punti del clone sandbox per verificare l'integrità.
+. Selezionare *Esegui controllo integrità*.
+. Nella finestra di dialogo controllo integrità, fare clic su *controllo integrità*.
+. Controllare lo stato del controllo di integrità nelle sandbox o in monitoraggio processo.
+
+
+Se il controllo di integrità non riesce, si consiglia di non utilizzare il clone sandbox e di creare un nuovo clone sandbox.

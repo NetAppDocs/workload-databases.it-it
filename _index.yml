@@ -1,0 +1,28 @@
+---
+indexpage:
+  title: Workload Factory per la documentazione dei carichi di lavoro del database
+  lead: Implementa le configurazioni di Microsoft SQL Server e gestisci gli ambienti
+    di database in storage del file system FSX per ONTAP in BlueXP workload Factory.
+  tiles:
+  - title: Inizia subito
+    links:
+    - title: Note di rilascio
+      url: "/whats-new.html"
+    - title: Informazioni sui database
+      url: "/learn-databases.html"
+    - title: Avvio rapido
+      url: "/quick-start-databases.html"
+  - title: Utilizzare i database
+    links:
+    - title: Creare un server di database
+      url: "/create-database-server.html"
+    - title: Creare un database
+      url: "/create-database.html"
+    - title: Monitorare un database
+      url: "/monitor-databases.html"
+  - title: Conoscenza e supporto
+    links:
+    - title: Registrati per ricevere assistenza
+      url: "/support-registration-databases.html"
+    - title: Richiedi assistenza
+      url: "/get-help-databases.html"

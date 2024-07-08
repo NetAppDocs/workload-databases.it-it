@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: detect-host.html 
+keywords: detect, detect server instance, instance, detect a database host, instance 
+summary: 'Rilevamento di un"istanza di Microsoft SQL Server in workload Factory per i database.' 
+---
+= Rilevamento di un'istanza di Microsoft SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Rilevamento di un'istanza di Microsoft SQL Server in workload Factory per i database.
+
+Questa attività serve a rilevare un'istanza _non rilevata_.
+
+.A proposito di questa attività
+Quando le credenziali AWS sono associate a workload Factory, i database consentono il rilevamento automatico di Microsoft SQL Server a partire da SQL Server 2016 con i seguenti tipi di storage AWS:
+
+* FSX per ONTAP
+* Memorizzazione di blocchi elastici (EBS)
+* FSX per Windows file Server
+
+
+Nei database, le istanze rilevate sono classificate come segue:
+
+* _Istanze non rilevate_: Istanze non rilevate rilevate rilevate automaticamente da workload Factory. Le istanze non vengono rilevate nei seguenti casi:
++
+** L'autenticazione di Microsoft SQL Server non riesce.
+** Il file system FSX per ONTAP per Microsoft SQL Server non è registrato con l'account in workload Factory.
+
+
+* _Unmanaged instances_: Sono state rilevate istanze non gestite da workload Factory
+* _Managed instances_: Istanze rilevate gestite da workload Factory
+
+
+Il primo passo per gestire un'istanza di Microsoft SQL Server, o istanza host, in workload Factory per i database è il rilevamento di un'istanza del server di database non rilevata.
+
+.Prima di iniziare
+I requisiti per il rilevamento di un'istanza del server di database non rilevata sono i seguenti:
+
+* È necessario link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS"^] rilevare un'istanza del server di database in workload Factory.
+* Il tipo di archiviazione per l'istanza deve essere uno dei seguenti:
++
+** FSX per ONTAP
+** Memorizzazione di blocchi elastici (EBS)
+** FSX per Windows file Server
+
+
+* Le istanze EC2 devono avere un profilo ruolo/istanza che consenta la connessione SSM per il rilevamento.
++
+Quando viene rilevata un'istanza di Microsoft SQL, l'ambiente esistente non viene modificato. Il rilevamento avviene attraverso AWS Systems Manager Session Manager (SSM). Senza il profilo di istanza IAM corretto, il rilevamento non riesce. link:https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-troubleshooting.html["Ulteriori informazioni sulla risoluzione dei problemi di SSM"^].
+
+
+
+.Fasi
+. Accedere a link:https://console.workloads.netapp.com["Console di workload Factory"^].
+. Nella sezione Database, selezionare *Vai a inventario database*.
+. In Database, selezionare la scheda *inventario*.
+. Fare clic sulla freccia dell'elenco a discesa per espandere la riga dell'host da rilevare.
++
+L'host si espande e vengono visualizzate le istanze dell'host.
+
+. Fare clic sul menu dei tre punti dell'istanza da rilevare.
+. Fare clic su *rileva*.
+. Nella finestra di dialogo *rileva istanza*, specificare il nome utente e la password di Microsoft SQL Server o FSX per il nome utente e la password di ONTAP.
++
+Workload Factory tenta di convalidare le credenziali Microsoft SQL o FSX per ONTAP.
+
++
+Se una di queste credenziali non è disponibile, workload Factory tenta di installare il `aws.tools.SimpleSystemsManagement` modulo in PowerShell.
+
+. Fare clic su *rileva*.
++
+Vengono visualizzate le informazioni sull'istanza rilevata.
+
+. Selezionare *Sì, Gestisci istanza tramite workload Factory* o *No*.
+. Fare clic su *fine*.
+
+
+.Cosa succederà
+Quando il tipo di archiviazione per l'istanza host è FSX per ONTAP, è possibile link:manage-server.html["Gestire l'istanza tramite workload Factory"].

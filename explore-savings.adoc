@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: explore-savings.html 
+keywords: cost, savings, compare costs, EBS, FSx for ONTAP 
+summary: 'Esplora i risparmi per i carichi di lavoro del database utilizzando lo storage Amazon Elastic Block Store (EBS).' 
+---
+= Esplora i risparmi offerti da workload Factory per i database
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Esplora i risparmi per i carichi di lavoro del database utilizzando lo storage Amazon Elastic Block Store (EBS).
+
+Workload Factory offre un calcolatore che ti permette di confrontare i vari componenti dei costi dell'esecuzione di workload Microsoft SQL Server come storage, calcolo, licenza SQL, snapshot e cloni per i workload del database in FSX per i file system ONTAP con lo storage di Elastic Block Store (EBS). In base ai tuoi requisiti di storage, potresti renderti conto che i file system FSX per ONTAP sono i più convenienti per i carichi di lavoro del tuo database.
+
+Il calcolatore indica se lo storage per i carichi di lavoro del database su questi Microsoft SQL Server risulterebbe inferiore se si utilizza un file system FSX per ONTAP.
+
+Se workload Factory determina un risparmio economico eseguendo questi workload in un file system FSX per ONTAP, puoi implementare Microsoft SQL su FSX per ONTAP direttamente dal calcolatore in workload Factory. In alcuni casi, workload Factory potrebbe consigliare di implementare più file system in base alla quantità di storage attualmente utilizzata e alle caratteristiche di performance dei carichi di lavoro del database. In alcuni casi, workload Factory potrebbe consigliare di implementare più file system in base alla quantità di storage attualmente utilizzata e alle caratteristiche di performance dei carichi di lavoro del database.
+
+
+
+== Specificare i requisiti di sistema
+
+Se è stata attivata la modalità _Automate_ (link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["ulteriori informazioni sulle modalità"]) aggiungendo credenziali AWS al proprio account workload Factory, workload Factory può identificare tutti i sistemi storage disponibili nell'account AWS e visualizzare le caratteristiche dei volumi in tali sistemi nella pagina di inventario dello storage. L'account AWS ricercato si basa sulle credenziali definite nell'account workload Factory.
+
+Questa figura mostra i volumi in FSX per i sistemi Windows file Server che sono stati rilevati in un account AWS.
+
+image:screenshot-storage-inventory.png["Pagina di inventario dello storage che mostra l'inventario corrente dei volumi in FSX per Windows file Server."]
+
+Se non hai aggiunto credenziali per collegare il tuo account workload Factory a un account AWS (chiamato _BASIC_ mode), puoi inserire manualmente le caratteristiche richieste per un sistema storage che intendi implementare e il calcolatore dello storage determinerà il file system migliore in base ai costi. È possibile utilizzare questo metodo per definire l'ambito di un nuovo file system FSX per ONTAP utilizzando anche la modalità _automatizza_.
+
+Questa figura mostra la pagina del calcolatore di storage con un confronto tra FSX per lo storage ONTAP ed EBS.
+
+image:screenshot-ebs-calculator.png["Pagina del calcolatore dello storage con un confronto tra FSX per ONTAP e lo storage elastico di archivi a blocchi."]
+
+.Prima di iniziare
+Prima di iniziare, completare i seguenti prerequisiti:
+
+* Assicurati di link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["concedi autorizzazioni _automatizza_"^] utilizzare il tuo account AWS per rilevare i sistemi Elastic Block Store (EBS) nell'inventario dei database.
+* Rilevare gli host nello storage EBS nell'inventario dei database. link:detect-host.html["Scopri come rilevare gli host"].
+
+
+.Fasi
+. Accedere a link:https://console.workloads.netapp.com["Console di workload Factory"^].
+. Nella sezione Database, selezionare *Vai all'inventario dei database*.
+. Selezionare la scheda *Esplora risparmi*.
+. Fare clic su *Esplora risparmi* per il server di database che utilizza lo storage EBS.
+. Facoltativamente, fornisci i seguenti dettagli su cloni e snapshot nel tuo storage EBS per una stima più accurata dei risparmi sui costi.
++
+.. *Frequenza istantanea*: Selezionare una frequenza istantanea dal menu a discesa.
+.. *Clona frequenza di aggiornamento*: Selezionare una frequenza di aggiornamento del clone dal menu a discesa.
+.. *Tasso di modifica mensile*: Immettere la percentuale di variazione dei dati clone e snapshot in media al mese.
+
+
+. Rivedere i calcoli e i consigli forniti nella pagina.
++
+Inoltre, scorri verso il basso fino in fondo alla pagina fino a visualizzare *Esporta PDF*.
+
+
+
+
+
+== Implementa FSX per i file system ONTAP
+
+Se desideri passare a FSX for ONTAP per risparmiare sui costi, fai clic su *Crea* per creare il file system direttamente dalla procedura guidata Crea un file system FSX per ONTAP oppure fai clic su *Salva* per salvare le configurazioni consigliate in un secondo momento.
+
+Metodi di distribuzione:: In modalità _automatizza_, puoi implementare il file system FSX per ONTAP direttamente da workload Factory. È inoltre possibile copiare il contenuto dalla finestra Codebox e distribuire il sistema utilizzando uno dei metodi Codebox.
++
+--
+In modalità _BASIC_, è possibile copiare il contenuto dalla finestra Codebox e distribuire il file system FSX per ONTAP utilizzando uno dei metodi Codebox.
+
+--
+

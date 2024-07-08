@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: split-clone.html 
+keywords: split, clone, source, new database 
+summary: Dividere un clone sandbox dal database di origine per creare un nuovo database. 
+---
+= Dividere un clone sandbox dal database di origine
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+La suddivisione di un clone sandbox dal relativo database di origine crea un nuovo database che consuma una certa quantità di capacità di storage. Il clone viene eliminato al termine della divisione e il nuovo database viene visualizzato nell'inventario.
+
+.Prima di iniziare
+Considerare la capacità di storage necessaria per il nuovo database. Se necessario, link:https://docs.netapp.com/us-en/workload-fsx-ontap/increase-file-system-capacity.html["aumentare la capacità del file system"^] per il file system FSX for ONTAP prima di iniziare.
+
+.Fasi
+. Accedere a link:https://console.workloads.netapp.com["Console di workload Factory"^].
+. Nella sezione Database, selezionare *Vai a inventario database*.
+. In Database, selezionare la scheda *Sandbox*.
+. Nella scheda Sandboxes, fare clic sul menu dei tre punti del clone sandbox che si desidera dividere.
+. Selezionare *Dividi*.
+. Nella finestra di dialogo Dividi, fare clic su *Dividi*.
+

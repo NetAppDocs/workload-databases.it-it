@@ -1,0 +1,75 @@
+---
+settings:
+  name: Database workloads
+  platform: cloud
+  internal:
+    pdf_enabled: true
+    termcheck_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  rss_page: whats-new.html
+  langs: it-it,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr
+sidebar:
+  entries:
+  - title: Documentazione relativa ai carichi di lavoro dei database
+    url: "/index.html"
+  - title: Note di rilascio
+    entries:
+    - title: Novità
+      url: "/whats-new.html"
+    - title: Limitazioni note
+      url: "/known-limitations.html"
+  - title: Inizia subito
+    entries:
+    - title: Scopri workload Factory per i database
+      url: "/learn-databases.html"
+    - title: Avvio rapido
+      url: "/quick-start-databases.html"
+  - title: Utilizzo di carichi di lavoro del database
+    entries:
+    - title: Scopri i risparmi
+      url: "/explore-savings.html"
+    - title: Creare un nuovo server di database
+      url: "/create-database-server.html"
+    - title: Rilevare un server di database
+      url: "/detect-host.html"
+    - title: Creare un database
+      url: "/create-database.html"
+    - title: Automatizza con Codebox
+      url: "/automate-codebox.html"
+  - title: Amministrare e monitorare
+    entries:
+    - title: Gestire un Microsoft SQL Server
+      url: "/manage-server.html"
+    - title: Gestire i cloni
+      entries:
+      - title: Creare un clone sandbox
+        url: "/create-sandbox-clone.html"
+      - title: Verificare l'integrità di un clone sandbox
+        url: "/check-clone-integrity.html"
+      - title: Ripristina un clone sandbox
+        url: "/revert-clone.html"
+      - title: Aggiornare un clone sandbox
+        url: "/refresh-clone.html"
+      - title: Connettersi alla pipeline ci/CD
+        url: "/connect-clone-cicd.html"
+      - title: Visualizzare le informazioni sulla connessione clone
+        url: "/view-clone-connection.html"
+      - title: Dividere un clone sandbox
+        url: "/split-clone.html"
+      - title: Eliminare un clone sandbox
+        url: "/delete-clone.html"
+    - title: Monitorare i database
+      url: "/monitor-databases.html"
+  - title: Conoscenza e supporto
+    entries:
+    - title: Registrati per ricevere assistenza
+      url: "/support-registration-databases.html"
+    - title: Richiedi assistenza
+      url: "/get-help-databases.html"
+  - title: Note legali
+    url: "/legal-notices.html"
+product-family:
+  name: BlueXP Workload Factory for AWS
+  repo: workload-family

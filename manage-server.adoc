@@ -1,0 +1,126 @@
+---
+sidebar: sidebar 
+permalink: manage-server.html 
+keywords: Microsoft SQL Server instance, server instance, manage host, view host, database host, database instance, manage, unmanage 
+summary: Gestisci le istanze di Microsoft SQL Server in workload Factory per i database. 
+---
+= Gestire le istanze di Microsoft SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Gestisci le istanze di Microsoft SQL Server per monitorare lo stato delle istanze e dei database, l'utilizzo delle risorse, la protezione e le performance dello storage in workload Factory per i database.
+
+I database possono gestire le istanze di Microsoft SQL Server solo con FSX per lo storage del file system ONTAP.
+
+
+
+== Gestione delle istanze di Microsoft SQL Server
+
+La gestione delle istanze di Microsoft SQL Server include le seguenti attività:
+
+* Gestire un'istanza host
+* Visualizzare un'istanza gestita
+* Visualizzare i database
+* Annullare la gestione di un'istanza host
+
+
+Per completare queste attività, è necessario link:detect-host.html["rilevamento di una o più istanze host"^].
+
+
+
+== Gestire un'istanza host
+
+Gestire un'istanza di Microsoft SQL Server rilevata o non gestita per un host.
+
+.Prima di iniziare
+Prima di iniziare, completare i seguenti prerequisiti:
+
+* È necessario disporre di un'istanza rilevata nell'host che sia disponibile per la gestione.
+* PowerShell7 è necessario per gestire l'istanza del database. Installare manualmente PowerShell7 facendo riferimento alla link:https://learn.microsoft.com/en-us/powershell/scripting/developer/module/installing-a-powershell-module?view=powershell-7.4["Documentazione di Microsoft PowerShell per Windows"^].
+* Tutte le operazioni di gestione vengono eseguite da AWS System Manager Agent utilizzando `NT Authority\SYSTEM` il privilegio utente. Fornire le seguenti autorizzazioni per `NT Authority\SYSTEM` l'utente nel server di database:
++
+** `“ALTER SETTINGS”`
+** `“CONTROL SERVER”`
+** `“ALTER ANY DATABASE”`
+** `“VIEW ANY DEFINITION”`
+** `“CONNECT ANY DATABASE”`
+** `“CREATE ANY DATABASE”`
+
+
+
+
+.Fasi
+. Accedere a link:https://console.workloads.netapp.com["Console di workload Factory"^].
+. Nella sezione Database, selezionare *Vai a inventario database*.
+. In Database, selezionare la scheda *inventario*.
+. Fare clic su *Gestisci* nella riga dell'host da gestire.
+. Selezionare una o più istanze host da gestire.
+. Fare clic su *Gestisci*.
+
+
+L'operazione non riesce quando Microsoft SQL Server non dispone di determinati moduli PowerShell e script di gestione. Workload Factory attiva un processo di preparazione delle risorse per installare moduli e script mancanti che è possibile visualizzare nella scheda monitoraggio dei lavori. Al termine del processo, riprovare a gestire l'istanza host.
+
+
+
+== Visualizzare un'istanza gestita
+
+È possibile visualizzare un'istanza gestita seguendo questa procedura.
+
+.Fasi
+. Accedere a link:https://console.workloads.netapp.com["Console di workload Factory"^].
+. Nella sezione Database, selezionare *Vai a inventario database*.
+. In Database, selezionare la scheda *inventario*.
+. Fare clic sulla freccia dell'elenco a discesa per espandere la riga dell'host per visualizzarne le istanze gestite.
++
+L'host si espande e vengono visualizzate le istanze dell'host.
+
+. Fare clic sul menu dei tre punti dell'istanza da visualizzare, quindi selezionare *Visualizza istanza*.
+
+
+.Risultato
+La panoramica dell'istanza viene visualizzata nella scheda inventario.
+
+
+
+== Visualizzare i database
+
+È possibile visualizzare i database gestiti dall'istanza gestita seguendo questi passaggi.
+
+.Fasi
+. Accedere a link:https://console.workloads.netapp.com["Console di workload Factory"^].
+. Nella sezione Database, selezionare *Vai a inventario database*.
+. In Database, selezionare la scheda *inventario*.
+. Fare clic sulla freccia dell'elenco a discesa per espandere la riga dell'host per visualizzarne i database.
++
+L'host si espande e vengono visualizzate le istanze dell'host.
+
+. Fare clic sul menu dei tre punti dell'istanza contenente i database da visualizzare.
+. Selezionare *Visualizza database*.
+
+
+.Risultato
+L'elenco dei database nell'istanza viene visualizzato nella scheda inventario.
+
+
+
+== Annullare la gestione di un'istanza host
+
+Annullare la gestione di un'istanza host seguendo questi passaggi.
+
+.Fasi
+. Accedere a link:https://console.workloads.netapp.com["Console di workload Factory"^].
+. Nella sezione Database, selezionare *Vai a inventario database*.
+. In Database, selezionare la scheda *inventario*.
+. Fare clic sulla freccia dell'elenco a discesa per espandere la riga dell'istanza host da annullare la gestione.
++
+L'host si espande e vengono visualizzate le istanze dell'host.
+
+. Fare clic sul menu dei tre punti dell'istanza da annullare la gestione.
+. Selezionare *Annulla gestione*.
+
+
+.Risultato
+L'istanza host è ora non gestita.

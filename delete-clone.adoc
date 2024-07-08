@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: delete-clone.html 
+keywords: delete, clone 
+summary: Elimina un clone sandbox quando non è più necessario. 
+---
+= Dividere un clone sandbox dal database di origine
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Elimina un clone sandbox quando non è più necessario e vuoi liberare capacità dello storage.
+
+.Fasi
+. Accedere a link:https://console.workloads.netapp.com["Console di workload Factory"^].
+. Nella sezione Database, fare clic su *Vai all'inventario dei database*.
+. In Database, selezionare la scheda *Sandbox*.
+. Fare clic sul menu dei tre punti del clone sandbox che si desidera eliminare.
+. Selezionare *Delete* (Elimina).
+. Nella finestra di dialogo Elimina, fare clic su *Elimina*.
+

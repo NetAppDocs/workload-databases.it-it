@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, enhancements, fixes, new features, workload factory, databases, workload factory' 
+summary: Scopri le novità di workload Factory per i database. 
+---
+= Novità
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Scopri le novità dei database.
+
+
+
+== 7 luglio
+
+
+
+=== Release iniziale di workload Factory per i database
+
+La release iniziale include la capacità di esplorare i risparmi con Amazon FSX per NetApp ONTAP come ambiente di storage per i carichi di lavoro del database, rilevare, gestire e implementare server Microsoft SQL, implementare e clonare database e monitorare questi job all'interno di workload Factory.
+
+link:learn-databases.html["Informazioni sui database"].

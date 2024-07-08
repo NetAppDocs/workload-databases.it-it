@@ -1,0 +1,119 @@
+---
+sidebar: sidebar 
+permalink: create-database.html 
+keywords: create, database, creation, Microsoft SQL 
+summary: Creare un database Microsoft SQL con i database workload Factory. 
+---
+= Creare un database Microsoft SQL in workload Factory per i database
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+La creazione di un nuovo database Microsoft SQL nella console workload Factory consente di gestire la risorsa in workload Factory.
+
+.A proposito di questa attività
+Al momento della creazione del database, vengono creati due nuovi volumi nel file system FSX per ONTAP, che consiste di LUN indipendenti per ospitare i dati e i file di log per il database. I file di database del nuovo database sono dotati di thin provisioning e utilizzano solo pochi MB delle dimensioni totali allocate per il nuovo database.
+
+Se si desidera separare lo storage per il database, è possibile farlo utilizzando un _punto di montaggio virtuale_. Il punto di montaggio virtuale consente di consolidare i database in poche unità comuni sull'host.
+
+La creazione di un database in workload Factory richiede l'automazione delle autorizzazioni per la modalità. In alternativa, in modalità base, è possibile copiare o scaricare un modello di codice parzialmente completato per completare l'operazione al di fuori di workload Factory. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Scopri le modalità operative in workload Factory"^] per decidere quale modalità utilizzare.
+
+
+NOTE: I server Microsoft SQL che utilizzano il protocollo SMB non supportano la creazione di database.
+
+.Prima di iniziare
+Prima di creare un nuovo database, assicurarsi di aver completato i seguenti prerequisiti.
+
+Credenziali e autorizzazioni:: È necessario link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e autorizzazioni in modalità _Read_ o _Automate_"^] creare un nuovo database in workload Factory.
++
+--
+In alternativa, puoi utilizzare Codebox per copiare un modello in modo da poter implementare un database al di fuori di workload Factory utilizzando l'API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Ulteriori informazioni sull'automazione Codebox"^].
+
+--
+Host Windows:: Se si utilizza la modalità _Quick create_, è necessario disporre di un numero di lettere di unità sufficiente in Microsoft SQL Server per creare nuove unità per il nuovo database.
+Microsoft SQL Server:: È necessario disporre di un Microsoft SQL Server gestito in workload Factory per consentire ai database di ospitare il nuovo database.
+AWS Systems Manager:: Assicurarsi che il `NT Authority\SYSTEM user` privilegio sia abilitato nell'host Microsoft SQL tramite AWS System Manager.
+
+
+
+
+== Creare un database
+
+È possibile utilizzare le modalità di distribuzione _Quick create_ o _Advanced create_ per completare questa attività in workload Factory con le autorizzazioni in modalità _Read_ o _Automate_.
+
+[role="tabbed-block"]
+====
+.Creazione rapida
+--
+.Fasi
+. Accedere a link:https://console.workloads.netapp.com["Console di workload Factory"^].
+. Nella sezione Database, selezionare *Vai a inventario database*.
+. In Database, selezionare la scheda *inventario*.
+. Nella scheda inventario, selezionare un server database con un'istanza SQL Server gestita in cui creare il database.
+. Fare clic sul menu a tre punti dell'istanza gestita, quindi selezionare *Crea database utenti*.
+. Nella pagina Crea database utenti, in informazioni database, specificare quanto segue:
++
+.. *Nome database*: Immettere il nome per il database.
+.. *Fascicolazione*: Selezionare una fascicolazione per il database. È selezionata la fascicolazione predefinita SQL_Latin1_General_CP1_ci_AS" in Microsoft SQL Server.
+
+
+. In Impostazioni file, specificare quanto segue:
++
+.. *Modalità impostazioni file*: Selezionare *creazione rapida*.
+.. *Nomi file e percorso*:
++
+*** *Nome file di dati*: Immettere il nome del file di dati.
+*** *Nome file di registro*: Immettere il nome del file di registro.
+
+
+.. *Dimensioni file*: Immettere le dimensioni dei dati e del registro per il database.
+
+
+. Fare clic su *Create* (Crea).
++
+In alternativa, se si desidera modificare subito una di queste impostazioni predefinite, modificare la modalità *Impostazioni file* in *creazione avanzata*.
+
+
+
+--
+.Creazione avanzata
+--
+.Fasi
+. Accedere a link:https://console.workloads.netapp.com["Console di workload Factory"^].
+. Nella sezione Database, selezionare *Vai a inventario database*.
+. In Database, selezionare la scheda *inventario*.
+. Nella scheda inventario, selezionare un server database con un'istanza SQL Server gestita in cui creare il database.
+. Fare clic sul menu a tre punti dell'istanza gestita, quindi selezionare *Crea database utenti*.
+. Selezionare *Crea database utenti*.
+. Nella pagina Crea database utenti, in informazioni database, specificare quanto segue:
++
+.. *Nome database*: Immettere il nome per il database.
+.. *Fascicolazione*: Selezionare la fascicolazione per il database. È selezionata la fascicolazione predefinita SQL_Latin1_General_CP1_ci_AS" in Microsoft SQL Server.
+
+
+. In Impostazioni file, specificare quanto segue:
++
+.. *Modalità impostazioni file*: Selezionare *creazione avanzata*.
+.. *Nomi file e percorso*:
++
+... *File di dati*: Selezionare una lettera di unità e immettere il nome del file di dati.
++
+In alternativa, fare clic sulla casella *punto di montaggio virtuale*.
+
+... *File di registro*: Selezionare una lettera di unità e immettere il nome del file di registro.
++
+In alternativa, fare clic sulla casella *punto di montaggio virtuale*.
+
+
+
+.. *Dimensioni file*: Immettere le dimensioni dei dati e del registro per il database.
+
+
+. Fare clic su *Create* (Crea).
+
+
+--
+====
+Se è stato creato l'host del database, è possibile controllare l'avanzamento del lavoro nella scheda *monitoraggio processi*.

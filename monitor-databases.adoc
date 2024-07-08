@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: monitor-databases.html 
+keywords: monitor databases, monitor jobs, track database jobs 
+summary: 'Tenere traccia dei lavori del database e monitorare i database all"interno di workload Factory per i database.' 
+---
+= Monitorare i database
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Tenere traccia dei lavori del database e monitorare i database con workload Factory per i database.
+
+.A proposito di questa attività
+I database consentono di monitorare i processi in modo da poter tenere traccia dell'avanzamento dei processi e diagnosticare e risolvere eventuali problemi. Inoltre, filtra per tipo e stato, la funzione di ricerca e l'opzione per scaricare la guida della tabella dei lavori con la navigazione e la creazione di rapporti sui lavori del database.
+
+Il monitoraggio dei lavori supporta fino a tre livelli di monitoraggio a seconda del lavoro. Ad esempio, per la creazione di nuovi cloni di database e sandbox, il monitoraggio dei job tiene traccia dei job principali e secondari.
+
+Livelli di monitoraggio dei lavori::
++
+--
+* Livello 1 (processo principale): Tiene traccia del processo di distribuzione dell'host.
+* Livello 2 (processo secondario): Tiene traccia dei processi secondari correlati al processo principale di distribuzione dell'host.
+* Livello 3 (attività): Elenca la sequenza delle azioni eseguite su ciascuna risorsa.
+
+
+--
+Stato del lavoro:: La funzione di monitoraggio dei processi tiene traccia dei processi _in corso_, _completati_ e _non riusciti_ giornalieri, settimanali, bisettimanali e mensili.
+Conservazione degli eventi del processo:: Gli eventi di monitoraggio dei processi vengono conservati nell'interfaccia utente per 30 giorni.
+
+
+
+
+== Monitorare i lavori
+
+.Fasi
+. Accedere a link:https://console.workloads.netapp.com["Console di workload Factory"^].
+. Nella sezione Database, selezionare *Vai a inventario database*.
+. In Database, selezionare la scheda *monitoraggio processi*.
+. Nella scheda monitoraggio lavoro, utilizzare i filtri o cercare di limitare i risultati dei lavori. È anche possibile scaricare un rapporto lavori.
+. Fare clic sul menu a tre punti del processo e fare clic su *Vai a CloudFormation* per visualizzare il registro del processo nella console di AWS CloudFormation.
+

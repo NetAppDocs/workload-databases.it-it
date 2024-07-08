@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: quick-start-databases.html 
+keywords: requirements, basic mode, read mode, automate mode 
+summary: I database hanno tre diverse modalità che hanno requisiti diversi. 
+---
+= Avvio rapido per i database
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Con i database, è possibile iniziare immediatamente in modalità _BASIC_. Se desideri utilizzare workload Factory per individuare gli host, gestire le risorse e molto altro ancora, puoi iniziare in pochi passaggi.
+
+Per iniziare, devi disporre di un account AWS.
+
+Segui questa procedura per iniziare con i database di workload Factory.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Accedere a workload Factory
+[role="quick-margin-para"]
+Sarà necessario link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["Configurare un account con workload Factory"^] e. link:https://console.workloads.netapp.com["accedi"^]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Aggiungere credenziali e autorizzazioni
+[role="quick-margin-para"]
+Scegliere tra link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["_basic_, _read_ e _automate_ modalità operative"^].
+
+[role="quick-margin-para"]
+Se operate in modalità _Basic_, non dovete andare oltre. È possibile iniziare a utilizzare i database di workload Factory per copiare gli esempi di codice parzialmente completati. Nella sezione Database, fare clic su *Deploy database host*. link:create-database-server.html["Informazioni su come distribuire un server di database"].
+
+[role="quick-margin-para"]
+Se operate in modalità _Read_ o _Automate_, avrete bisogno di link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["aggiungere manualmente le credenziali a un account"^] quale include la selezione delle capacità del carico di lavoro, come database e ai, e la creazione delle policy IAM per assicurarvi di disporre delle autorizzazioni corrette per operare in modalità _Read_ o _Automate_.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Distribuire un server di database
+[role="quick-margin-para"]
+Infine, se si sceglie di operare in modalità _automatizza_, è necessario link:create-database-server.html["implementa"] o link:detect-host.html["rilevare un server di database"] gestire le risorse host e prima di aggiungere i database degli utenti.
+
+.Cosa succederà
+Quando nell'inventario dei database sono presenti host gestiti di FSX per ONTAP, è possibile link:create-database.html["creare un database utenti"] o link:create-sandbox-clone.html["clona l'host per creare una sandbox"].
+
+Quando si dispone di host di Elastic Block Store nell'inventario dei database, è possibile link:explore-savings.html["Esplora i risparmi grazie al calcolatore dei risparmi dello storage"].
