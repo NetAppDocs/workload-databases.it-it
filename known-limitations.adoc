@@ -108,3 +108,9 @@ Un modello CloudFormation (file YAML) generato da Codebox scaricato o copiato ha
 * Nella scheda inventario, il costo stimato mostrato per ogni istanza di Microsoft SQL viene calcolato a livello di file system FSX per ONTAP e non per i volumi che ospitano l'istanza SQL.
 * I calcoli di risparmio di Esplora non sono supportati per FSX per Windows file Server.
 
+
+
+
+== File system FSX multipli per ONTAP
+
+Workload Factory non supporta la creazione o il salvataggio di configurazioni per Microsoft SQL Server con più file system FSX per ONTAP. È supportata solo una distribuzione della configurazione del file system FSX per ONTAP.

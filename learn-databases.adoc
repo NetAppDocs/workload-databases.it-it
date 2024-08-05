@@ -140,12 +140,12 @@ Le architetture di implementazione di zona di disponibilità singola e zone di d
 .Singola zona di disponibilità
 Il diagramma seguente mostra l'architettura standalone con una singola zona di disponibilità in un'unica area.
 
-image:diagram-SAZ-database-architecture.png["Diagramma di un'architettura standalone con un'implementazione a singola zona di disponibilità di Amazon FSX per NetApp ONTAP in una singola area"]
+image:diagram-SAZ-database-architecture.png["Un diagramma dell'architettura standalone con un'implementazione a singola zona di disponibilità di Amazon FSX per NetApp ONTAP in una singola area"]
 
 .Zone di disponibilità multiple
 Il diagramma seguente mostra un'architettura ad alta disponibilità (ha) a due nodi con cluster di istanza del cluster di failover (FCI) in una singola area.
 
-image:diagram-MAZ-database-architecture.png["diagramma dell'architettura ad alta disponibilità a due nodi con cluster di istanza di failover in una singola area"]
+image:diagram-MAZ-database-architecture.png["Diagramma dell'architettura ad alta disponibilità a due nodi con cluster di istanza di failover in una singola area"]
 
 
 
