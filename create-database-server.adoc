@@ -30,6 +30,11 @@ I file system FSX per ONTAP hanno due modelli di distribuzione di Microsoft SQL 
 
 
 --
+Configurazione i/o Microsoft Multi-path:: I modelli di distribuzione di Microsoft SQL Server richiedono entrambi la creazione di LUN mediante il protocollo storage iSCSI. Workload Factory configura Microsoft Multi-path i/o (MPIO) come parte della configurazione di LUN per SQL Server su FSX per ONTAP. MPIO viene configurato in base alle Best practice di AWS e NetApp.
+
+
+Per ulteriori informazioni, fare riferimento a link:https://aws.amazon.com/blogs/modernizing-with-aws/sql-server-high-availability-amazon-fsx-for-netapp-ontap/["Implementazioni ad alta disponibilità di SQL Server con Amazon FSX per NetApp ONTAP"^].
+
 Active Directory:: Durante la distribuzione di Active Directory (ad) si verifica quanto segue:
 +
 --
@@ -173,6 +178,14 @@ Per le Active Directory gestite da AWS, gli indirizzi IP DNS vengono visualizzat
 Un nuovo file system FSX per ONTAP può aggiungere 30 minuti o più di tempo di installazione.
 
 ... *Selezionare un file FSX esistente per ONTAP*: Selezionare FSX per nome ONTAP dal menu a discesa e immettere un nome utente e una password per il file system.
++
+Per i file system FSX for ONTAP esistenti, verificare quanto segue:
+
++
+**** Il gruppo di routing collegato a FSX per ONTAP consente di utilizzare i percorsi verso le sottoreti per la distribuzione.
+**** Il gruppo di protezione consente il traffico proveniente dalle subnet utilizzate per la distribuzione, in particolare dalle porte TCP HTTPS (443) e iSCSI (3260).
+
+
 
 
 .. *Dimensione unità dati*: Immettere la capacità dell'unità dati e selezionare l'unità di capacità.
@@ -264,7 +277,7 @@ Tre gruppi di protezione vengono collegati ai nodi SQL (istanze EC2) durante la 
 ... Nel caso di Active Directory gestito da AWS, il gruppo di protezione collegato al servizio directory viene aggiunto automaticamente ai nodi Microsoft SQL per consentire la comunicazione con Active Directory.
 ... Per un file system FSX for ONTAP esistente, il gruppo di sicurezza ad esso associato viene aggiunto automaticamente ai nodi SQL, consentendo così la comunicazione con il file system. Quando viene creato un nuovo sistema FSX per ONTAP, viene creato un nuovo gruppo di protezione per il file system FSX per ONTAP e lo stesso gruppo di protezione viene collegato anche ai nodi SQL.
 +
-Per un Active Directory gestito dall'utente, è possibile selezionare un gruppo di protezione che consenta il traffico dei sistemi esistenti che devono connettersi al database. Il gruppo di protezione deve consentire la comunicazione con i controller di dominio Active Directory dalle subnet in cui sono configurate le istanze EC2 per Microsoft SQL.
+Per un Active Directory gestito dall'utente, assicurarsi che il gruppo di protezione configurato sull'istanza ad consenta il traffico dalle subnet utilizzate per la distribuzione. Il gruppo di protezione deve consentire la comunicazione con i controller di dominio Active Directory dalle subnet in cui sono configurate le istanze EC2 per Microsoft SQL.
 
 
 
@@ -325,6 +338,14 @@ Per le Active Directory gestite da AWS, gli indirizzi IP DNS vengono visualizzat
 Un nuovo file system FSX per ONTAP può aggiungere 30 minuti o più di tempo di installazione.
 
 ... *Selezionare un file FSX esistente per ONTAP*: Selezionare FSX per nome ONTAP dal menu a discesa e immettere un nome utente e una password per il file system.
++
+Per i file system FSX for ONTAP esistenti, verificare quanto segue:
+
++
+**** Il gruppo di routing collegato a FSX per ONTAP consente di utilizzare i percorsi verso le sottoreti per la distribuzione.
+**** Il gruppo di protezione consente il traffico proveniente dalle subnet utilizzate per la distribuzione, in particolare dalle porte TCP HTTPS (443) e iSCSI (3260).
+
+
 
 
 .. *Snapshot policy*: Attivato per impostazione predefinita. Le snapshot vengono acquisite giornalmente e hanno un periodo di conservazione di 7 giorni.
