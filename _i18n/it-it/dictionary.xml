@@ -233,7 +233,6 @@
   <block id="b6b9aec3a98d2a803dfd7a3e7b836cb2" category="list-text">*Host database di destinazione*: Selezionare un host database di destinazione per il clone sandbox che si trova nello stesso VPC e che ha lo stesso file system FSX per ONTAP dell'host di origine.</block>
   <block id="04bd2b110b2a3aaa82dccc7fe837f151" category="list-text">*Istanza del database di destinazione*: Selezionare l'istanza del database di destinazione per il clone sandbox.</block>
   <block id="26e615a604b088a660581f026763c30b" category="list-text">*Database di destinazione*: Immettere un nome per il clone sandbox.</block>
-  <block id="7f63d4b83f27b850d1eb970cfa4666b3" category="list-text">*Mount*: Selezionare *Auto-assign mount point* o *define mount point path*. Se si seleziona *Definisci percorso del punto di montaggio*, immettere il percorso del punto di montaggio.</block>
   <block id="f3346b0efa80289c47d4e6113a73a3ab" category="list-text">*Definisci tag*: Selezionare un tag per definire il clone sandbox.</block>
   <block id="34775e5e4b0b832c45a2707ae9b18f95" category="paragraph">Per verificare l'avanzamento del processo, andare alla scheda *monitoraggio processo*.</block>
   <block id="18a852f2a54ab28755adc6bcf4897e75" category="summary">Elimina un clone sandbox quando non è più necessario.</block>
@@ -781,4 +780,11 @@
   <block id="e6ae9aa516c09658fbcbb0830276915c" category="paragraph">In modalità _BASIC_, è possibile copiare il contenuto dalla finestra Codebox e distribuire la configurazione consigliata utilizzando uno dei metodi Codebox.</block>
   <block id="0bbe82b56668e820bcb7722aa8566ea5" category="list-text">La creazione di sandbox non è supportata quando il database di origine contiene più file di dati distribuiti su più di 2 dischi.</block>
   <block id="b5cef683aab00353096b98823a237e69" category="section-title">1 settembre 2024</block>
+  <block id="969e7140d33129e87f01e95c59fed40f" category="list-text">*Mount*: Durante la clonazione di un database SQL con più file di dati e/o di registro, workload Factory clona tutti i file con la lettera di unità assegnata automaticamente o definita.</block>
+  <block id="ed09bad7864ec765b3bccff9b87f25fb" category="paragraph">Selezionare una delle seguenti opzioni:</block>
+  <block id="f5154bf526cc04b2839db0c72b2a7c22" category="list-text">*Assegnazione automatica del punto di montaggio*</block>
+  <block id="c9e660490143e459ec13d72934832f2c" category="list-text">*Definisci percorso punto di montaggio*</block>
+  <block id="8dc9fd2e016e27559302505db1795c2c" category="paragraph">Fornire quanto segue per definire il percorso del punto di montaggio:</block>
+  <block id="431673d13b715d86ce4d92ad7cf17f75" category="list-text">Immettere la lettera dell'unità per il percorso del file di dati.</block>
+  <block id="d8cf051243077cb10ccd52dd0de9d181" category="list-text">Immettere la lettera dell'unità per il percorso del file di registro.</block>
 </blocks>

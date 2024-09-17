@@ -49,7 +49,23 @@ Database di origine:: È necessario un database di origine disponibile per il cl
 .. *Database di destinazione*: Immettere un nome per il clone sandbox.
 
 
-. *Mount*: Selezionare *Auto-assign mount point* o *define mount point path*. Se si seleziona *Definisci percorso del punto di montaggio*, immettere il percorso del punto di montaggio.
+. *Mount*: Durante la clonazione di un database SQL con più file di dati e/o di registro, workload Factory clona tutti i file con la lettera di unità assegnata automaticamente o definita.
++
+Selezionare una delle seguenti opzioni:
+
++
+.. *Assegnazione automatica del punto di montaggio*
+.. *Definisci percorso punto di montaggio*
++
+Fornire quanto segue per definire il percorso del punto di montaggio:
+
++
+*** Immettere la lettera dell'unità per il percorso del file di dati.
+*** Immettere la lettera dell'unità per il percorso del file di registro.
+
+
+
+
 . *Definisci tag*: Selezionare un tag per definire il clone sandbox.
 . Fare clic su *Create* (Crea).
 
