@@ -23,11 +23,11 @@ Se workload Factory determina un risparmio economico eseguendo questi workload i
 
 == Opzioni della calcolatrice
 
-Sono disponibili due opzioni di calcolatore per effettuare il confronto dei costi tra i tuoi sistemi e FSX per ONTAP, personalizzazione e rilevamento automatico per i tuoi ambienti storage Amazon.
+Sono disponibili due opzioni di calcolo per effettuare il confronto dei costi tra i sistemi e FSX per ONTAP, ossia la personalizzazione e il rilevamento.
 
 Esplora i risparmi tramite la personalizzazione: Fornisci le impostazioni di configurazione di Microsoft SQL Server su Amazon EC2 con EBS o FSX per Windows file Server, inclusi la regione, il modello di distribuzione, l'edizione di SQL Server, la frequenza di modifica dei dati mensile, la frequenza delle snapshot e altro ancora.
 
-Scopri i risparmi per gli ambienti di storage rilevati: Workload Factory si collega agli ambienti di storage AWS esistenti e sfrutta i dettagli del calcolatore per il confronto automatico. Per utilizzare questa opzione della calcolatrice, è necessario concedere l'autorizzazione di automazione. È possibile modificare il caso di utilizzo, ma tutti gli altri dettagli vengono determinati automaticamente nel calcolo.
+Scopri i risparmi per gli host rilevati: Workload Factory si collega ai server Microsoft SQL esistenti e ne estrae i dettagli per il confronto automatico. Per utilizzare questa opzione della calcolatrice, è necessario concedere l'autorizzazione di automazione. È possibile modificare il caso di utilizzo, ma tutti gli altri dettagli vengono determinati automaticamente nel calcolo.
 
 
 
@@ -111,23 +111,31 @@ Inoltre, scorri verso il basso fino in fondo alla pagina fino a *Esporta PDF* o 
 ====
 
 
-== Scopri i risparmi per gli host EBS rilevati
+== Esplora i risparmi per gli host rilevati
 
-Workload Factory inserisce le caratteristiche dell'host dell'Elastic Block Store rilevato in modo da poter esplorare automaticamente i risparmi.
+Workload Factory entra nelle caratteristiche host di Elastic Block Store e FSX per Windows file Server, in modo da poter esplorare automaticamente i risparmi.
 
 .Prima di iniziare
 Prima di iniziare, completare i seguenti prerequisiti:
 
-* Assicurati di link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["concedi autorizzazioni _automatizza_"^] utilizzare il tuo account AWS per rilevare i sistemi Elastic Block Store (EBS) nell'inventario dei database.
-* Rilevare gli host nello storage EBS nell'inventario dei database. link:detect-host.html["Scopri come rilevare gli host"].
+* Assicurati di link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["concedi autorizzazioni _automatizza_"^]utilizzare il tuo account AWS per rilevare Elastic Block Store (EBS) e FSX per Windows nell'inventario dei database.
+* Rilevare gli host nello storage EBS ed FSX per Windows nell'inventario dei database. link:detect-host.html["Scopri come rilevare gli host"].
 
 
+Seguire i passaggi nella scheda relativa al tipo di storage in uso.
+
+[role="tabbed-block"]
+====
+.Amazon Elastic Block Store (EBS)
+--
 .Fasi
 . Accedere a link:https://console.workloads.netapp.com["Console di workload Factory"^].
-. Dai database, selezionare *Vai all'inventario dei database*.
-. Selezionare la scheda *Esplora risparmi*.
-. Fare clic su *Esplora risparmi* per il server di database che utilizza lo storage EBS.
-. Facoltativamente, fornisci i seguenti dettagli su cloni e snapshot nel tuo storage EBS per una stima più accurata dei risparmi sui costi.
+. Nel riquadro Database, seleziona *Esplora risparmio*, quindi *Microsoft SQL Server su FSX per Windows* dal menu a discesa.
++
+Se workload Factory rileva gli host EBS, verrai reindirizzato alla scheda Esplora risparmi. Se workload Factory non rileva gli host EBS, verrai reindirizzato al calcolatore a <<Esplora i risparmi tramite la personalizzazione,esplora i risparmi tramite la personalizzazione>>.
+
+. Nella scheda Esplora risparmi, fare clic su *Esplora risparmi* del server database che utilizza lo storage EBS.
+. Nel calcolatore dei risparmi, facoltativamente, fornisci i seguenti dettagli sui cloni e sulle snapshot nello storage EBS, per una stima più accurata dei risparmi sui costi.
 +
 .. *Frequenza istantanea*: Selezionare una frequenza istantanea dal menu a discesa.
 .. *Clona frequenza di aggiornamento*: Selezionare la frequenza di aggiornamento dei cloni dal menu a discesa.
@@ -141,6 +149,35 @@ Inoltre, scorri verso il basso fino in fondo alla pagina fino a *Esporta PDF* o 
 
 
 
+--
+.Amazon FSX per Windows file Server
+--
+.Fasi
+. Accedere a link:https://console.workloads.netapp.com["Console di workload Factory"^].
+. Nel riquadro Database, seleziona *Esplora risparmio*, quindi *Microsoft SQL Server su FSX per Windows* dal menu a discesa.
++
+Se workload Factory rileva FSX per gli host Windows, verrai reindirizzato alla scheda Esplora risparmi. Se workload Factory non rileva FSX per gli host Windows, verrai reindirizzato alla calcolatrice su <<Esplora i risparmi tramite la personalizzazione,esplora i risparmi tramite la personalizzazione>>.
+
+. Nella scheda Esplora risparmi, fare clic su *Esplora risparmi* del server di database utilizzando l'archiviazione di FSX per Windows file Server.
+. Nel calcolatore del risparmio, facoltativamente, fornisci i seguenti dettagli sui cloni (copie shadow) e sulle snapshot nel tuo storage FSX per Windows per una stima più accurata dei risparmi sui costi.
++
+.. *Frequenza istantanea*: Selezionare una frequenza istantanea dal menu a discesa.
++
+Se vengono rilevate copie shadow di FSX per Windows, il valore predefinito è *giornaliero*. Se le copie replicate non vengono rilevate, il valore predefinito è *Nessuna frequenza istantanea*.
+
+.. *Clona frequenza di aggiornamento*: Selezionare la frequenza di aggiornamento dei cloni dal menu a discesa.
+.. *Numero di copie clonate*: Immettere il numero di copie clonate nella configurazione di FSX per Windows.
+.. *Tasso di modifica mensile*: Immettere la percentuale di variazione dei dati clone e snapshot in media al mese.
+
+
+. Rivedere i calcoli e i consigli forniti nella pagina.
++
+Inoltre, scorri verso il basso fino in fondo alla pagina fino a *Esporta PDF* o *Visualizza calcoli*.
+
+
+
+--
+====
 
 
 == Implementa Microsoft SQL Server su AWS EC2 usando FSX per ONTAP

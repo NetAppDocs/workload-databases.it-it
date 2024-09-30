@@ -35,6 +35,14 @@ Per completare queste attività, è necessario link:detect-host.html["rilevament
 
 Gestire un'istanza di Microsoft SQL Server rilevata o non gestita per un host.
 
+Per gestire un'istanza host in una rete privata senza connettività esterna, i seguenti endpoint devono essere disponibili nel VPC con associazione alle sottoreti in cui sono presenti i server SQL. Assicurarsi che gli endpoint dell'interfaccia consentano la porta 443 nel gruppo di protezione collegato.
+
+* `S3 Gateway/endpoint`
+* `ssm`
+* `ssmmessages`
+* `fsx`
+
+
 .Prima di iniziare
 Prima di iniziare, completare i seguenti prerequisiti:
 

@@ -78,25 +78,19 @@ Un modello CloudFormation (file YAML) generato da Codebox scaricato o copiato ha
 
 == Supporto sandbox
 
-* Il numero massimo di cloni sandbox che è possibile creare da un server di database è 50.
-* La creazione di sandbox non è supportata quando il database di origine contiene più file di dati distribuiti su più di 2 dischi.
-
+Il numero massimo di cloni sandbox che è possibile creare da un server di database è 50.
 
 
 
 == Rilevamento e gestione di Microsoft SQL Server
 
-* Il rilevamento e la gestione delle istanze di Microsoft SQL non sono supportati quando si utilizza una rete privata senza connettività esterna.
-* Il rilevamento di Microsoft SQL Server non è stato salvato. Ogni volta che accedi ai database in workload Factory, il rilevamento di Microsoft SQL Server viene eseguito nuovamente per identificare le installazioni SQL nell'area.
-
+Il rilevamento di Microsoft SQL Server non è stato salvato. Ogni volta che accedi ai database in workload Factory, il rilevamento di Microsoft SQL Server viene eseguito nuovamente per identificare le installazioni SQL nell'area.
 
 
 
 == Scopri i risparmi
 
-* Nella scheda inventario, il costo stimato mostrato per ogni istanza di Microsoft SQL viene calcolato a livello di file system FSX per ONTAP e non per i volumi che ospitano l'istanza SQL.
-* I calcoli di risparmio di Esplora non sono supportati per FSX per Windows file Server.
-
+Nella scheda inventario, il costo stimato mostrato per ogni istanza di Microsoft SQL viene calcolato a livello di file system FSX per ONTAP e non per i volumi che ospitano l'istanza SQL.
 
 
 
