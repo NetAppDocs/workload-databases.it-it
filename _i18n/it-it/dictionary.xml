@@ -769,9 +769,6 @@
   <block id="8dc9fd2e016e27559302505db1795c2c" category="paragraph">Fornire quanto segue per definire il percorso del punto di montaggio:</block>
   <block id="431673d13b715d86ce4d92ad7cf17f75" category="list-text">Immettere la lettera dell'unità per il percorso del file di dati.</block>
   <block id="d8cf051243077cb10ccd52dd0de9d181" category="list-text">Immettere la lettera dell'unità per il percorso del file di registro.</block>
-  <block id="2153d6ab291e00be0a49d2a42e481b36" category="paragraph"><block ref="9a178ca3815f6aeb284a65e10447f086" category="inline-link-macro-rx"></block>.</block>
-  <block id="4ac33bc47ec0338e6c23f5e315a2b5ec" category="inline-link-macro">Scopri i risparmi con FSX per ONTAP per i carichi di lavoro dei database^.</block>
-  <block id="f9ca6ec7df5da581020634d84b3e477c" category="paragraph"><block ref="f9ca6ec7df5da581020634d84b3e477c" category="inline-link-macro-rx"></block></block>
   <block id="b6e7a46e866a97d8ad38a3ce2e41e926" category="inline-image-macro">Schermata della home page della console workload Factory. L'immagine mostra il riquadro dei database con un nuovo pulsante di risparmio Esplora. Fare clic sul pulsante per aprire un menu a discesa. Il menu a discesa presenta due opzioni: Microsoft SQL Server su EBS e Microsoft SQL Server su FSX per Windows file Server.</block>
   <block id="a7396d19dde0193e37cada3b5524bb0b" category="paragraph"><block ref="a7396d19dde0193e37cada3b5524bb0b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="cf88fa43b4b0e1b1bfb66e894b188442" category="doc">Esplora i risparmi per i server Microsoft SQL rilevati in FSX per Windows file Server</block>
@@ -798,4 +795,7 @@
   <block id="cfa54b7dd19dd91bb87ede68126951eb" category="list-text"><block ref="25f6388206f436c2d1de63216302b13d" prefix="" category="inline-code"></block></block>
   <block id="8d461d34b0f2c02565383f3301044282" category="list-text"><block ref="fea0543b0b4b9d4c240c6219de0db41c" prefix="" category="inline-code"></block></block>
   <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">29 settembre 2024</block>
+  <block id="9a178ca3815f6aeb284a65e10447f086" category="paragraph"><block ref="9a178ca3815f6aeb284a65e10447f086" category="inline-link-macro-rx"></block></block>
+  <block id="7d6d6d8a97f883d860bff04c0be1019c" category="inline-link-macro">Scopri i risparmi con FSX per ONTAP per i carichi di lavoro del database</block>
+  <block id="293758d509326f8da42abf75db2d37e6" category="paragraph"><block ref="293758d509326f8da42abf75db2d37e6" category="inline-link-macro-rx"></block></block>
 </blocks>

@@ -8,4 +8,4 @@
 
 La release iniziale include la capacità di esplorare i risparmi con Amazon FSX per NetApp ONTAP come ambiente di storage per i carichi di lavoro del database, rilevare, gestire e implementare server Microsoft SQL, implementare e clonare database e monitorare questi job all'interno di workload Factory.
 
-link:https://docs.netapp.com/us-en/workload-databases/learn-databases.html["Informazioni sui database"^].
+link:https://docs.netapp.com/us-en/workload-databases/learn-databases.html["Informazioni sui database"^]
