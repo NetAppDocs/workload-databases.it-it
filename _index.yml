@@ -23,6 +23,6 @@ indexpage:
   - title: Conoscenza e supporto
     links:
     - title: Registrati per ricevere assistenza
-      url: "/support-registration-databases.html"
+      url: "/support-registration.html"
     - title: Richiedi assistenza
-      url: "/get-help-databases.html"
+      url: "/get-help.html"
