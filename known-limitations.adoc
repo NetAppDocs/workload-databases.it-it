@@ -78,7 +78,7 @@ Un modello CloudFormation (file YAML) generato da Codebox scaricato o copiato ha
 
 == Supporto sandbox
 
-Il numero massimo di cloni sandbox che è possibile creare da un server di database è 50.
+Il numero massimo di cloni sandbox che è possibile creare da un server di database è 90.
 
 
 
