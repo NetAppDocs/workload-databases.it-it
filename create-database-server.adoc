@@ -91,7 +91,10 @@ Active Directory:: Quando ci si connette ad Active Directory, è necessario disp
 
 == Passaggio 1: Creare un server di database
 
-È possibile utilizzare le modalità di distribuzione _Quick create_ o _Advanced create_ per completare questa attività in workload Factory con autorizzazioni _Automate_ mode.
+È possibile utilizzare le modalità di distribuzione _Quick create_ o _Advanced create_ per completare questa attività in workload Factory con autorizzazioni _Automate_ mode. È inoltre possibile utilizzare i seguenti strumenti disponibili in Codebox: API REST, CloudFormation e Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Scopri come utilizzare Codebox per l'automazione"^].
+
+
+NOTE: Quando si utilizza Terraform da Codebox, il codice che si copia o si scarica nasconde `fsxadmin` e `vsadmin` password. Sarà necessario immettere nuovamente le password quando si esegue il codice. È necessario includere le seguenti autorizzazioni per l'account utente oltre alle autorizzazioni in modalità _automatizza_: `iam:TagRole` E `iam:TagInstanceProfile`.
 
 [role="tabbed-block"]
 ====

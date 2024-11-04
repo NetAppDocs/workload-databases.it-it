@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: optimize-configurations.html 
+keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
+summary: 'I database analizzano le configurazioni storage di Microsoft SQL Server fornendo informazioni e consigli per aiutarti a raggiungere l"eccellenza operativa.' 
+---
+= Ottimizza le configurazioni per le implementazioni di Microsoft SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+La farm di workload BlueXP  per i database scansiona e valuta continuamente le configurazioni di implementazione di Microsoft SQL Server in esecuzione su Amazon FSX per NetApp ONTAP. Le valutazioni forniscono approfondimenti, consigli e ottimizzazioni in modo da poter raggiungere l'eccellenza operativa.
+
+.A proposito di questa attività
+La valutazione viene eseguita automaticamente e continuamente una volta al giorno per le istanze di Microsoft SQL Server con FSX per lo storage ONTAP gestito in farm di workload. I report di valutazione sono disponibili nel dashboard di ottimizzazione solo se un processo giornaliero pianificato è stato eseguito dopo la distribuzione o dopo la gestione di un'istanza.
+
+Workload Factory offre consigli dettagliati per ottimizzare le configurazioni sulla base delle Best practice di FSX per lo storage ONTAP.
+
+Elementi sottoposti a scansione:: Workload Factory valuta lo stato di ottimizzazione delle seguenti configurazioni per le istanze di Microsoft SQL Server:
++
+--
+* Dimensionamento dello storage: Include Tier di storage, capacità aggiuntiva del file system, dimensioni dei dischi di log e dimensioni dei dischi TempDB
+* Layout dello storage: Comprende posizionamento dei file di dati degli utenti, posizionamento dei file di log e posizionamento di TempDB
+* Configurazione dello storage: Comprende gestione della capacità, thin provisioning, policy di tiering, snapshot, stato i/o multi-path, policy, sessioni e altro ancora
+* Calcolo: Include il right sizing
+
+
+--
+
+
+.Prima di iniziare
+* È necessario disporre di credenziali con autorizzazioni di lettura o di automazione.
+* Per valutare lo storage di un'istanza di Microsoft SQL Server, l'istanza deve essere gestita dalla fabbrica del carico di lavoro e il tipo di storage deve essere FSX per ONTAP.
+* Verificare attentamente ogni raccomandazione prima di selezionare per ottimizzare un'impostazione o una configurazione.
+
+
+.Fasi
+. Accedere a link:https://console.workloads.netapp.com["Console di workload Factory"^].
+. Nella sezione Database, selezionare *Vai a inventario database*.
+. In Database, selezionare la scheda *inventario*.
+. Fare clic sulla freccia dell'elenco a discesa per espandere la riga dell'host per visualizzarne le istanze gestite.
++
+L'host si espande e vengono visualizzate le istanze dell'host.
+
+. Selezionare il menu dei tre punti dell'istanza da acquisire, quindi selezionare *Ottimizza*.
+. Nella pagina Ottimizza istanza per l'host, esaminare i risultati della valutazione dello storage.
++
+È possibile ordinare i filtri in base a categorie, sottocategorie, stato, gravità e tag.
+
++
+Se necessario, è possibile scaricare un report dei risultati selezionando *Esporta PDF*.
+
+. Selezionare la freccia dell'elenco a discesa per visualizzare il suggerimento per qualsiasi configurazione. Verificare attentamente il suggerimento.
++
+Il suggerimento spiega le Best practice e i potenziali errori di configurazioni non ottimizzate.
+
+. Selezionare per *ottimizzare* le configurazioni non ottimizzate.
+. Rivedere il riepilogo dell'ottimizzazione e le azioni visualizzate nella finestra di dialogo di ottimizzazione per scoprire cosa accadrà se si sceglie di ottimizzare. Alcune operazioni di ottimizzazione possono causare tempi di inattività delle istanze o interruzioni del servizio.
+. Selezionare *continua* per ottimizzare la configurazione.
+
+
+.Risultato
+Viene avviato il processo di ottimizzazione. Selezionare la scheda *monitoraggio processo* per visualizzare lo stato dell'operazione.
