@@ -4,7 +4,7 @@ permalink: known-limitations.html
 keywords: limitations, databases 
 summary: Le limitazioni note identificano piattaforme, dispositivi o funzioni non supportate da questa versione del prodotto o che non interagiscono correttamente con esso. Esaminare attentamente queste limitazioni. 
 ---
-= Limitazioni note
+= Limitazioni note per la farm di workload BlueXP  per i database
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -29,13 +29,13 @@ La distribuzione con un AMI personalizzato presuppone che nell'immagine siano pr
 * Quando si seleziona una fascicolazione diversa da quella impostata nell'immagine per la distribuzione autonoma
 
 
-Durante l'implementazione, workload Factory non installa un AMI personalizzato con più istanze di Microsoft SQL Server. Solo l'istanza predefinita di Microsoft SQL Server è selezionata e configurata come parte della distribuzione.
+Come parte della distribuzione, workload Factory non installa un AMI personalizzato con più istanze di Microsoft SQL Server. Solo l'istanza predefinita di Microsoft SQL Server è selezionata e configurata come parte della distribuzione.
 
 
 
 == Eseguire il rollback e riprovare per le distribuzioni non riuscite
 
-Il rollback e il nuovo tentativo per le distribuzioni non riuscite non sono supportati in workload Factory. È possibile eseguire il rollback o riprovare uno stack non riuscito dalla console CloudFormation in AWS.
+Il rollback e il nuovo tentativo per le distribuzioni non riuscite non sono supportati in fabbrica del carico di lavoro. È possibile eseguire il rollback o riprovare uno stack non riuscito dalla console CloudFormation in AWS.
 
 
 
@@ -54,13 +54,13 @@ Sarà necessario ripulire manualmente questi elementi o attendere che il dominio
 
 == Supporto di configurazione per gruppi di disponibilità sempre attivo
 
-La gestione delle configurazioni dei gruppi di disponibilità sempre attive non è supportata in workload Factory.
+La gestione delle configurazioni dei gruppi di disponibilità sempre attive non è supportata in fabbrica dei workload.
 
 
 
 == Gruppi di protezione Active Directory gestiti dagli utenti
 
-Se si seleziona "Active Directory gestito dall'utente" durante la distribuzione di Microsoft SQL Server in workload Factory, è necessario fornire un gruppo di protezione che consenta la distribuzione del traffico tra le EC2 istanze al servizio directory. Workload Factory non collega automaticamente il gruppo di sicurezza per Active Directory gestito dall'utente come per AWS Managed Microsoft ad.
+Se si seleziona "Active Directory gestito dall'utente" durante la distribuzione di Microsoft SQL Server in fabbrica dei carichi di lavoro, è necessario fornire un gruppo di protezione che consenta il traffico tra le istanze EC2 al servizio directory per la distribuzione. Workload Factory non collega automaticamente il gruppo di sicurezza per Active Directory gestito dall'utente come per AWS Managed Microsoft ad.
 
 
 
@@ -84,7 +84,7 @@ Il numero massimo di cloni sandbox che è possibile creare da un server di datab
 
 == Rilevamento e gestione di Microsoft SQL Server
 
-Il rilevamento di Microsoft SQL Server non è stato salvato. Ogni volta che accedi ai database in workload Factory, il rilevamento di Microsoft SQL Server viene eseguito nuovamente per identificare le installazioni SQL nell'area.
+Il rilevamento di Microsoft SQL Server non è stato salvato. Ogni volta che si accede ai database nella fabbrica del carico di lavoro, il rilevamento di Microsoft SQL Server viene eseguito nuovamente per identificare le installazioni SQL nell'area.
 
 
 

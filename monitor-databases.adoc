@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: monitor-databases.html 
 keywords: monitor databases, monitor jobs, track database jobs 
-summary: 'Tenere traccia dei lavori del database e monitorare i database all"interno di workload Factory per i database.' 
+summary: 'Tenere traccia dei processi del database e monitorare i database all"interno della factory del carico di lavoro BlueXP  per i database.' 
 ---
-= Monitorare i database
+= Monitorare i database nella workload factory BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Tenere traccia dei lavori del database e monitorare i database con workload Factory per i database.
+Tenere traccia dei processi del database e monitorare i database all'interno della factory del carico di lavoro BlueXP  per i database.
 
 .A proposito di questa attività
 I database consentono di monitorare i processi in modo da poter tenere traccia dell'avanzamento dei processi e diagnosticare e risolvere eventuali problemi. Inoltre, filtra per tipo e stato, la funzione di ricerca e l'opzione per scaricare la guida della tabella dei lavori con la navigazione e la creazione di rapporti sui lavori del database.
@@ -36,7 +36,7 @@ Conservazione degli eventi del processo:: Gli eventi di monitoraggio dei process
 == Monitorare i lavori
 
 .Fasi
-. Accedere a link:https://console.workloads.netapp.com["Console di workload Factory"^].
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Vai a inventario database*.
 . In Database, selezionare la scheda *monitoraggio processi*.
 . Nella scheda monitoraggio lavoro, utilizzare i filtri o cercare di limitare i risultati dei lavori. È anche possibile scaricare un rapporto lavori.

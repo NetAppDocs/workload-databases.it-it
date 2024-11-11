@@ -1,8 +1,9 @@
 ---
 indexpage:
-  title: Workload Factory per la documentazione dei carichi di lavoro del database
+  title: Factory del carico di lavoro BlueXP  per la documentazione dei database
   lead: Implementa le configurazioni di Microsoft SQL Server e gestisci gli ambienti
-    di database in storage del file system FSX per ONTAP in BlueXP workload Factory.
+    di database sullo storage del file system FSX per ONTAP in una workload factory
+    di BlueXP .
   tiles:
   - title: Inizia subito
     links:

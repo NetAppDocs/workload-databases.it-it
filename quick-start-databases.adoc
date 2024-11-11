@@ -4,32 +4,32 @@ permalink: quick-start-databases.html
 keywords: requirements, basic mode, read mode, automate mode 
 summary: I database hanno tre diverse modalità che hanno requisiti diversi. 
 ---
-= Avvio rapido per i database
+= Avvio rapido della farm dei database con workload BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Con i database, è possibile iniziare immediatamente in modalità _BASIC_. Se desideri utilizzare workload Factory per individuare gli host, gestire le risorse e molto altro ancora, puoi iniziare in pochi passaggi.
+Con la workload factory di BlueXP  per i database, puoi iniziare immediatamente in modalità _Basic_. Se desideri utilizzare workload Factory per rilevare gli host, gestire le risorse e altro ancora, puoi iniziare in pochi passaggi.
 
-Per iniziare, devi disporre di un account AWS.
+Per utilizzare i database è necessario disporre di un account AWS.
 
-Segui questa procedura per iniziare con i database di workload Factory.
+Per iniziare, procedere come segue.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Accedere a workload Factory
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Effettua l'accesso alla fabbrica di workload BlueXP 
 [role="quick-margin-para"]
-Sarà necessario link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["Configurare un account con workload Factory"^] e. link:https://console.workloads.netapp.com["accedi"^]
+Sarà necessario link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["configurare un account con workload factory"^]ed effettuare l'accesso utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Aggiungere credenziali e autorizzazioni
 [role="quick-margin-para"]
 Scegliere tra link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["_basic_, _read_ e _automate_ modalità operative"^].
 
 [role="quick-margin-para"]
-Se operate in modalità _Basic_, non dovete andare oltre. È possibile iniziare a utilizzare i database di workload Factory per copiare gli esempi di codice parzialmente completati. Nella sezione Database, fare clic su *Deploy database host*. link:create-database-server.html["Informazioni su come distribuire un server di database"].
+Se operate in modalità _Basic_, non dovete andare oltre. È possibile iniziare a utilizzare i database per copiare gli esempi di codice parzialmente completati. Nella sezione Database, fare clic su *Deploy database host*. link:create-database-server.html["Informazioni su come distribuire un server di database"].
 
 [role="quick-margin-para"]
-Se operate in modalità _Read_ o _Automate_, avrete bisogno di link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["aggiungere manualmente le credenziali a un account"^] quale include la selezione delle capacità del carico di lavoro, come database e ai, e la creazione delle policy IAM per assicurarvi di disporre delle autorizzazioni corrette per operare in modalità _Read_ o _Automate_.
+Se operate in modalità _Read_ o _Automate_, avrete bisogno di link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["aggiungere manualmente le credenziali a un account"^]ciò che include la selezione delle capacità del carico di lavoro, come database e Genai, e la creazione delle policy IAM per assicurarsi di disporre delle autorizzazioni corrette per operare in modalità _Read_ o _Automate_.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Distribuire un server di database
 [role="quick-margin-para"]

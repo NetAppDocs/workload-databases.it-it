@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: manage-server.html 
 keywords: Microsoft SQL Server instance, server instance, manage host, view host, database host, database instance, manage, unmanage 
-summary: Gestisci le istanze di Microsoft SQL Server in workload Factory per i database. 
+summary: Gestisci le istanze di Microsoft SQL Server in una farm di workload BlueXP  per i database. 
 ---
-= Gestire le istanze di Microsoft SQL Server
+= Gestisci le istanze di Microsoft SQL Server in una fabbrica di workload BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Gestisci le istanze di Microsoft SQL Server per monitorare lo stato delle istanze e dei database, l'utilizzo delle risorse, la protezione e le performance dello storage in workload Factory per i database.
+Gestisci le istanze di Microsoft SQL Server per monitorare lo stato delle istanze e dei database, l'utilizzo delle risorse, la protezione e le performance dello storage in una farm di workload BlueXP  per i database.
 
 I database possono gestire le istanze di Microsoft SQL Server solo con FSX per lo storage del file system ONTAP.
 
@@ -61,7 +61,7 @@ Prima di iniziare, completare i seguenti prerequisiti:
 
 
 .Fasi
-. Accedere a link:https://console.workloads.netapp.com["Console di workload Factory"^].
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Vai a inventario database*.
 . In Database, selezionare la scheda *inventario*.
 . Fare clic su *Gestisci* nella riga dell'host da gestire.
@@ -69,7 +69,7 @@ Prima di iniziare, completare i seguenti prerequisiti:
 . Fare clic su *Gestisci*.
 
 
-L'operazione non riesce quando Microsoft SQL Server non dispone di determinati moduli PowerShell e script di gestione. Workload Factory attiva un processo di preparazione delle risorse per installare moduli e script mancanti che è possibile visualizzare nella scheda monitoraggio dei lavori. Al termine del processo, riprovare a gestire l'istanza host.
+L'operazione non riesce quando Microsoft SQL Server non dispone di determinati moduli PowerShell e script di gestione. Workload Factory attiva un processo di preparazione delle risorse per l'installazione di moduli e script mancanti che è possibile visualizzare nella scheda monitoraggio processi. Al termine del processo, riprovare a gestire l'istanza host.
 
 
 
@@ -78,7 +78,7 @@ L'operazione non riesce quando Microsoft SQL Server non dispone di determinati m
 È possibile visualizzare un'istanza gestita seguendo questa procedura.
 
 .Fasi
-. Accedere a link:https://console.workloads.netapp.com["Console di workload Factory"^].
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Vai a inventario database*.
 . In Database, selezionare la scheda *inventario*.
 . Fare clic sulla freccia dell'elenco a discesa per espandere la riga dell'host per visualizzarne le istanze gestite.
@@ -98,7 +98,7 @@ La panoramica dell'istanza viene visualizzata nella scheda inventario.
 È possibile visualizzare i database gestiti dall'istanza gestita seguendo questi passaggi.
 
 .Fasi
-. Accedere a link:https://console.workloads.netapp.com["Console di workload Factory"^].
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Vai a inventario database*.
 . In Database, selezionare la scheda *inventario*.
 . Fare clic sulla freccia dell'elenco a discesa per espandere la riga dell'host per visualizzarne i database.
@@ -119,7 +119,7 @@ L'elenco dei database nell'istanza viene visualizzato nella scheda inventario.
 Annullare la gestione di un'istanza host seguendo questi passaggi.
 
 .Fasi
-. Accedere a link:https://console.workloads.netapp.com["Console di workload Factory"^].
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Vai a inventario database*.
 . In Database, selezionare la scheda *inventario*.
 . Fare clic sulla freccia dell'elenco a discesa per espandere la riga dell'istanza host da annullare la gestione.

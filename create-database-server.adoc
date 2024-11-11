@@ -2,21 +2,21 @@
 sidebar: sidebar 
 permalink: create-database-server.html 
 keywords: create, server, Microsoft SQL, deploy, host, deploy a database host, database host 
-summary: Creare un nuovo Microsoft SQL Server in workload Factory per i database. 
+summary: Creare una nuova Microsoft SQL Server nella factory del carico di lavoro BlueXP  per i database. 
 ---
-= Creare un server di database in workload Factory per i database
+= Creare un database server in fabbrica con carichi di lavoro BlueXP  per i database
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-La creazione di un nuovo Microsoft SQL Server, o host di database, nei database richiede la distribuzione del file system FSX per ONTAP e le risorse per Active Directory.
+La creazione di un nuovo Microsoft SQL Server, o host di database, nella fabbrica di carichi di lavoro BlueXP  per i database richiede l'implementazione di un file system FSX per ONTAP e le risorse per Active Directory.
 
 .A proposito di questa attività
 Avrai bisogno delle credenziali dell'account AWS e delle autorizzazioni _automatizza_.
 
-Prima di iniziare, occorre conoscere i tipi di distribuzione dello storage disponibili per la configurazione dell'host del database, la distribuzione di Active Directory, le modalità operative di workload Factory e i requisiti per completare questa operazione.
+Prima di iniziare, è necessario conoscere i tipi di distribuzione dello storage disponibili per la configurazione dell'host del database, la distribuzione di Active Directory, le modalità operative della fabbrica del carico di lavoro e i requisiti per completare questa operazione.
 
 Dopo la distribuzione, sarà necessario <<Passaggio 2: Abilitare la connessione remota su Microsoft SQL Server,Attivare la connessione remota su Microsoft SQL Server>>.
 
@@ -30,7 +30,7 @@ I file system FSX per ONTAP hanno due modelli di distribuzione di Microsoft SQL 
 
 
 --
-Configurazione i/o Microsoft Multi-path:: I modelli di distribuzione di Microsoft SQL Server richiedono entrambi la creazione di LUN mediante il protocollo storage iSCSI. Workload Factory configura Microsoft Multi-path i/o (MPIO) come parte della configurazione di LUN per SQL Server su FSX per ONTAP. MPIO viene configurato in base alle Best practice di AWS e NetApp.
+Configurazione i/o Microsoft Multi-path:: I modelli di distribuzione di Microsoft SQL Server richiedono entrambi la creazione di LUN mediante il protocollo storage iSCSI. Questa funzione consente di configurare in fabbrica Microsoft i/o multi-path (MPIO) come parte della configurazione delle LUN per SQL Server su FSX per ONTAP. MPIO viene configurato in base alle Best practice di AWS e NetApp.
 
 
 Per ulteriori informazioni, fare riferimento a link:https://aws.amazon.com/blogs/modernizing-with-aws/sql-server-high-availability-amazon-fsx-for-netapp-ontap/["Implementazioni ad alta disponibilità di SQL Server con Amazon FSX per NetApp ONTAP"^].
@@ -52,25 +52,22 @@ Rollback delle risorse:: Se si decide di ripristinare le risorse DNS (Domain Nam
 
 
 --
-Modalità operative di fabbrica del carico di lavoro:: Workload Factory offre tre modalità operative che dipendono dalla comodità di lasciare che workload Factory gestisca le risorse AWS.
-+
---
-Modalità *_Basic_*: In questa modalità operativa, non è necessario associare le credenziali dell'account AWS in workload Factory. È possibile copiare o scaricare un modello YAML parzialmente compilato da Codebox per completarlo al di fuori di workload Factory.
+Modalità operative di fabbrica del carico di lavoro:: Workload Factory offre tre modalità operative che dipendono dalla comodità di lasciare che le risorse AWS vengano gestite in fabbrica dai carichi di lavoro.
 
-Modalità *_Read_*: In questa modalità operativa, fornisci le credenziali dell'account AWS con autorizzazioni di lettura che ti consentono di completare il modulo _Quick create_ o _Advanced create_ e di copiarlo o scaricarlo. Puoi anche reindirizzare a CloudFormation da workload Factory con i dettagli del modulo completati. Inoltre, sarà possibile gestire il server database distribuito in workload Factory.
 
-*_Automate_ mode*: In questa modalità operativa, fornisci credenziali di account AWS con autorizzazioni automatiche che ti consentono di creare e gestire le risorse AWS in workload Factory.
+Modalità *_Basic_*: In questa modalità operativa, non è necessario associare le credenziali dell'account AWS in fabbrica dei workload. È possibile copiare o scaricare un modello YAML parzialmente compilato dalla Codebox per completarlo al di fuori della fabbrica del carico di lavoro.
 
---
+Modalità *_Read_*: In questa modalità operativa, fornisci le credenziali dell'account AWS con autorizzazioni di lettura che ti consentono di completare il modulo _Quick create_ o _Advanced create_ e di copiarlo o scaricarlo. È anche possibile reindirizzare a CloudFormation da workload Factory con i dettagli del modulo completati. Inoltre, sarà possibile gestire il server di database installato in fabbrica dei workload.
 
+*_Automate_ mode*: In questa modalità operativa, fornisci credenziali di account AWS con autorizzazioni automatiche che ti consentono di creare e gestire risorse AWS all'interno di workload factory.
 
 .Prima di iniziare
 Prima di creare un nuovo host di database, accertarsi di disporre dei seguenti prerequisiti.
 
-Credenziali e autorizzazioni:: È necessario link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e automatizzare i permessi della modalità"^] creare un nuovo host di database in workload Factory.
+Credenziali e autorizzazioni:: È necessario link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e automatizzare i permessi della modalità"^]creare un nuovo host di database in workload factory.
 +
 --
-In alternativa, puoi utilizzare Codebox per copiare un modello vuoto o creare un modello completo in modo da implementare un database al di fuori di workload Factory utilizzando l'API REST, l'interfaccia a riga di comando di AWS o AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Ulteriori informazioni sull'automazione Codebox"^].
+In alternativa, puoi utilizzare Codebox per copiare un modello vuoto o creare un modello completo in modo da implementare un database al di fuori della fabbrica di workload utilizzando API REST, AWS CLI o AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Ulteriori informazioni sull'automazione Codebox"^].
 
 --
 Active Directory:: Quando ci si connette ad Active Directory, è necessario disporre dell'accesso amministrativo con autorizzazioni per effettuare le seguenti operazioni:
@@ -91,7 +88,7 @@ Active Directory:: Quando ci si connette ad Active Directory, è necessario disp
 
 == Passaggio 1: Creare un server di database
 
-È possibile utilizzare le modalità di distribuzione _Quick create_ o _Advanced create_ per completare questa attività in workload Factory con autorizzazioni _Automate_ mode. È inoltre possibile utilizzare i seguenti strumenti disponibili in Codebox: API REST, CloudFormation e Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Scopri come utilizzare Codebox per l'automazione"^].
+È possibile utilizzare le modalità di distribuzione _creazione rapida_ o _creazione avanzata_ per completare questa attività in fabbrica dei carichi di lavoro con autorizzazioni _automatizza_. È inoltre possibile utilizzare i seguenti strumenti disponibili in Codebox: API REST, CloudFormation e Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Scopri come utilizzare Codebox per l'automazione"^].
 
 
 NOTE: Quando si utilizza Terraform da Codebox, il codice che si copia o si scarica nasconde `fsxadmin` e `vsadmin` password. Sarà necessario immettere nuovamente le password quando si esegue il codice. È necessario includere le seguenti autorizzazioni per l'account utente oltre alle autorizzazioni in modalità _automatizza_: `iam:TagRole` E `iam:TagInstanceProfile`.
@@ -104,26 +101,26 @@ NOTE: Quando si utilizza Terraform da Codebox, il codice che si copia o si scari
 NOTE: In _Quick create_, FCI è il modello di distribuzione predefinito, Windows 2016 è la versione predefinita di Windows e SQL 2019 Standard Edition è la versione predefinita di SQL.
 
 .Fasi
-. Accedere a link:https://console.workloads.netapp.com["Console di workload Factory"^].
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Deploy database host*.
 . Selezionare *creazione rapida*.
 . In *Impostazioni AWS*, fornire quanto segue:
 +
 .. *Credenziali AWS*: Selezionare le credenziali AWS con autorizzazioni automatiche per implementare il nuovo host del database.
 +
-Le credenziali AWS con autorizzazioni _automatizza_ consentono a workload Factory di implementare e gestire il nuovo host del database dal tuo account AWS in workload Factory.
+Le credenziali AWS con autorizzazioni _automatizza_ consentono al workload di implementare e gestire in fabbrica il nuovo host del database dal tuo account AWS all'interno di una fabbrica di carichi di lavoro.
 
 +
-Le credenziali AWS con autorizzazioni _Read_ consentono a workload Factory di generare un modello CloudFormation da utilizzare nella console di AWS CloudFormation.
+Le credenziali AWS con autorizzazioni _Read_ consentono ai workload di generare un modello CloudFormation da utilizzare nella console AWS CloudFormation.
 
 +
-Se non disponi delle credenziali AWS associate a workload Factory e desideri creare il nuovo server in workload Factory, segui *opzione 1* per andare alla pagina credenziali. Aggiungere manualmente le credenziali e le autorizzazioni necessarie per la modalità _automatizza_ per i carichi di lavoro del database.
+Se non disponi delle credenziali AWS associate alla fabbrica dei carichi di lavoro e desideri creare il nuovo server nella fabbrica dei carichi di lavoro, segui *opzione 1* per andare alla pagina credenziali. Aggiungere manualmente le credenziali e le autorizzazioni necessarie per la modalità _automatizza_ per i carichi di lavoro del database.
 
 +
-Se si desidera completare il modulo di creazione di un nuovo server in workload Factory in modo da poter scaricare un modello di file YAML completo per la distribuzione in AWS CloudFormation, seguire *opzione 2* per assicurarsi di disporre delle autorizzazioni necessarie per creare il nuovo server in AWS CloudFormation. Aggiungere manualmente le credenziali e le autorizzazioni richieste per la modalità _Read_ per i carichi di lavoro del database.
+Se si desidera completare il modulo di creazione di un nuovo server in fabbrica del carico di lavoro in modo da poter scaricare un modello di file YAML completo per la distribuzione in AWS CloudFormation, seguire *opzione 2* per assicurarsi di disporre delle autorizzazioni necessarie per creare il nuovo server in AWS CloudFormation. Aggiungere manualmente le credenziali e le autorizzazioni richieste per la modalità _Read_ per i carichi di lavoro del database.
 
 +
-In alternativa, è possibile scaricare un modello di file YAML parzialmente completato da Codebox per creare lo stack al di fuori di workload Factory senza credenziali o autorizzazioni. Selezionare *CloudFormation* dal menu a discesa nel Codebox per scaricare il file YAML.
+In alternativa, è possibile scaricare un modello di file YAML parzialmente completato dalla Codebox per creare lo stack al di fuori della fabbrica del carico di lavoro senza credenziali o autorizzazioni. Selezionare *CloudFormation* dal menu a discesa nel Codebox per scaricare il file YAML.
 
 .. *Regione e VPC*: Selezionare una regione e una rete VPC.
 +
@@ -213,7 +210,7 @@ In alternativa, se si desidera modificare subito una di queste impostazioni pred
 .Creazione avanzata
 --
 .Fasi
-. Accedere a link:https://console.workloads.netapp.com["Console di workload Factory"^].
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Deploy database host*.
 . Selezionare *creazione avanzata*.
 . Per *modello di distribuzione*, selezionare *istanza cluster di failover* o *istanza singola*.
@@ -221,19 +218,19 @@ In alternativa, se si desidera modificare subito una di queste impostazioni pred
 +
 .. *Credenziali AWS*: Selezionare le credenziali AWS con autorizzazioni automatiche per implementare il nuovo host del database.
 +
-Le credenziali AWS con autorizzazioni _automatizza_ consentono a workload Factory di implementare e gestire il nuovo host del database dal tuo account AWS in workload Factory.
+Le credenziali AWS con autorizzazioni _automatizza_ consentono al workload di implementare e gestire in fabbrica il nuovo host del database dal tuo account AWS all'interno di una fabbrica di carichi di lavoro.
 
 +
-Le credenziali AWS con autorizzazioni _Read_ consentono a workload Factory di generare un modello CloudFormation da utilizzare nella console di AWS CloudFormation.
+Le credenziali AWS con autorizzazioni _Read_ consentono ai workload di generare un modello CloudFormation da utilizzare nella console AWS CloudFormation.
 
 +
-Se non disponi delle credenziali AWS associate a workload Factory e desideri creare il nuovo server in workload Factory, segui *opzione 1* per andare alla pagina credenziali. Aggiungere manualmente le credenziali e le autorizzazioni necessarie per la modalità _automatizza_ per i carichi di lavoro del database.
+Se non disponi delle credenziali AWS associate alla fabbrica dei carichi di lavoro e desideri creare il nuovo server nella fabbrica dei carichi di lavoro, segui *opzione 1* per andare alla pagina credenziali. Aggiungere manualmente le credenziali e le autorizzazioni necessarie per la modalità _automatizza_ per i carichi di lavoro del database.
 
 +
-Se si desidera completare il modulo di creazione di un nuovo server in workload Factory in modo da poter scaricare un modello di file YAML completo per la distribuzione in AWS CloudFormation, seguire *opzione 2* per assicurarsi di disporre delle autorizzazioni necessarie per creare il nuovo server in AWS CloudFormation. Aggiungere manualmente le credenziali e le autorizzazioni richieste per la modalità _Read_ per i carichi di lavoro del database.
+Se si desidera completare il modulo di creazione di un nuovo server in fabbrica del carico di lavoro in modo da poter scaricare un modello di file YAML completo per la distribuzione in AWS CloudFormation, seguire *opzione 2* per assicurarsi di disporre delle autorizzazioni necessarie per creare il nuovo server in AWS CloudFormation. Aggiungere manualmente le credenziali e le autorizzazioni richieste per la modalità _Read_ per i carichi di lavoro del database.
 
 +
-In alternativa, è possibile scaricare un modello di file YAML parzialmente completato da Codebox per creare lo stack al di fuori di workload Factory senza credenziali o autorizzazioni. Selezionare *CloudFormation* dal menu a discesa nel Codebox per scaricare il file YAML.
+In alternativa, è possibile scaricare un modello di file YAML parzialmente completato dalla Codebox per creare lo stack al di fuori della fabbrica del carico di lavoro senza credenziali o autorizzazioni. Selezionare *CloudFormation* dal menu a discesa nel Codebox per scaricare il file YAML.
 
 .. *Regione e VPC*: Selezionare una regione e una rete VPC.
 +
@@ -411,4 +408,4 @@ Dopo l'implementazione del server, workload Factory non abilita la connessione r
 
 
 .Cosa succederà
-Ora è possibile link:create-database.html["Creare un database in workload Factory"].
+Ora è possibile link:create-database.html["Creare un database in una fabbrica di carichi di lavoro BlueXP  per i database"].
