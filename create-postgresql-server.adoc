@@ -19,37 +19,34 @@ Avrai bisogno delle credenziali dell'account AWS e delle autorizzazioni _automat
 Prima di iniziare, è necessario conoscere i tipi di distribuzione dello storage disponibili per la configurazione dell'host del database, la distribuzione di Active Directory, le modalità operative della fabbrica del carico di lavoro e i requisiti per completare questa operazione.
 
 FSX per implementazioni di file system ONTAP:: La creazione di un nuovo server PostgreSQL richiede un file system FSX per ONTAP come backend dello storage. Puoi usare un file system FSX for ONTAP esistente o creare un nuovo file system. Se selezioni un file system FSX per ONTAP esistente come back-end dello storage del database server, creiamo una nuova macchina virtuale di storage per i workload PostgreSQL.
-
-
++
+--
 I file system FSX per ONTAP supportano le distribuzioni _standalone_ per PostgreSQL. Workload Factory crea un file system FSX per ONTAP in una singola zona di disponibilità, oltre a volumi e LUN separati per i file di dati, log e tempdb.
 
+--
 Modalità operative di fabbrica del carico di lavoro:: Workload Factory offre tre modalità operative che dipendono dalla comodità di lasciare che le risorse AWS vengano gestite in fabbrica dai carichi di lavoro.
-
-
++
+--
 Modalità *_Basic_*: In questa modalità operativa, non è necessario associare le credenziali dell'account AWS in fabbrica dei workload. È possibile copiare o scaricare un modello YAML parzialmente compilato dalla Codebox per completarlo al di fuori della fabbrica del carico di lavoro.
 
 Modalità *_Read_*: In questa modalità operativa, fornisci le credenziali dell'account AWS con autorizzazioni di lettura che ti consentono di completare il modulo _Quick create_ o _Advanced create_ e di copiarlo o scaricarlo. È anche possibile reindirizzare a CloudFormation da workload Factory con i dettagli del modulo completati. Inoltre, sarà possibile gestire il server di database installato in fabbrica dei workload.
 
 *_Automate_ mode*: In questa modalità operativa, fornisci credenziali di account AWS con autorizzazioni automatiche che ti consentono di creare e gestire risorse AWS all'interno di workload factory.
 
+--
+
+
 .Prima di iniziare
 Prima di creare un nuovo host di database, accertarsi di disporre dei seguenti prerequisiti.
 
 Credenziali e autorizzazioni:: È necessario link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e automatizzare i permessi della modalità"^]creare un nuovo host di database in workload factory.
-+
---
-In alternativa, puoi utilizzare Codebox per copiare un modello vuoto o creare un modello completo in modo da implementare un database al di fuori della fabbrica di workload utilizzando API REST, AWS CLI o AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Ulteriori informazioni sull'automazione Codebox"^].
-
---
 
 
 
 
 == Creare un server di database
 
-È possibile utilizzare le modalità di distribuzione _creazione rapida_ o _creazione avanzata_ per completare questa attività in fabbrica dei carichi di lavoro con autorizzazioni _automatizza_. È inoltre possibile utilizzare i seguenti strumenti disponibili in Codebox: API REST e CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Scopri come utilizzare Codebox per l'automazione"^].
-
-+
+È possibile utilizzare la modalità di distribuzione _Advanced create_ per completare questa attività in fabbrica del carico di lavoro con autorizzazioni in modalità _automatizza_. Puoi anche utilizzare i seguenti tool disponibili in Codebox: API REST, CLI AWS e AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Scopri come utilizzare Codebox per l'automazione"^].
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
@@ -179,6 +176,3 @@ In CloudWatch, viene creato un gruppo di log con il nome dello stack. Un flusso 
 In alternativa, è possibile salvare la configurazione.
 
 
-
-.Cosa succederà
-Ora è possibile link:create-database.html["Creare un database in una fabbrica di carichi di lavoro BlueXP  per i database"].

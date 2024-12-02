@@ -65,11 +65,6 @@ Modalità *_Read_*: In questa modalità operativa, fornisci le credenziali dell'
 Prima di creare un nuovo host di database, accertarsi di disporre dei seguenti prerequisiti.
 
 Credenziali e autorizzazioni:: È necessario link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e automatizzare i permessi della modalità"^]creare un nuovo host di database in workload factory.
-+
---
-In alternativa, puoi utilizzare Codebox per copiare un modello vuoto o creare un modello completo in modo da implementare un database al di fuori della fabbrica di workload utilizzando API REST, l'interfaccia a riga di comando di AWS e AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Ulteriori informazioni sull'automazione Codebox"^].
-
---
 Active Directory:: Quando ci si connette ad Active Directory, è necessario disporre dell'accesso amministrativo con autorizzazioni per effettuare le seguenti operazioni:
 +
 --
@@ -88,7 +83,7 @@ Active Directory:: Quando ci si connette ad Active Directory, è necessario disp
 
 == Passaggio 1: Creare un server di database
 
-È possibile utilizzare le modalità di distribuzione _creazione rapida_ o _creazione avanzata_ per completare questa attività in fabbrica dei carichi di lavoro con autorizzazioni _automatizza_. È inoltre possibile utilizzare i seguenti strumenti disponibili in Codebox: API REST, CloudFormation e Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Scopri come utilizzare Codebox per l'automazione"^].
+È possibile utilizzare le modalità di distribuzione _creazione rapida_ o _creazione avanzata_ per completare questa attività in fabbrica dei carichi di lavoro con autorizzazioni _automatizza_. Puoi anche utilizzare i seguenti tool disponibili in Codebox: API REST, interfaccia a riga di comando di AWS, AWS CloudFormation e Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Scopri come utilizzare Codebox per l'automazione"^].
 
 
 NOTE: Quando si utilizza Terraform da Codebox, il codice che si copia o si scarica nasconde `fsxadmin` e `vsadmin` password. Sarà necessario immettere nuovamente le password quando si esegue il codice. È necessario includere le seguenti autorizzazioni per l'account utente oltre alle autorizzazioni in modalità _automatizza_: `iam:TagRole` E `iam:TagInstanceProfile`.
