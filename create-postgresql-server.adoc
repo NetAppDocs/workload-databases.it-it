@@ -176,3 +176,6 @@ In CloudWatch, viene creato un gruppo di log con il nome dello stack. Un flusso 
 In alternativa, è possibile salvare la configurazione.
 
 
+
+.Cosa succederà
+È possibile configurare manualmente gli utenti, l'accesso remoto e i database sul server PostgreSQL distribuito.
