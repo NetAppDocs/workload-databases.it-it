@@ -32,7 +32,7 @@ Database di origine:: È necessario un database di origine disponibile per il cl
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai a inventario database*.
+. Nella sezione Database, selezionare *Vai all'inventario dei database*.
 . In Database, selezionare la scheda *Sandbox*.
 . Nella scheda Sandbox, selezionare *Crea nuova sandbox*.
 . Nella pagina Crea nuova sandbox, in origine database, fornire quanto segue:

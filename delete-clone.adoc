@@ -17,7 +17,7 @@ Elimina un clone sandbox nella fabbrica di workload BlueXP  per i database quan
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, fare clic su *Vai all'inventario dei database*.
 . In Database, selezionare la scheda *Sandbox*.
-. Fare clic sul menu dei tre punti del clone sandbox che si desidera eliminare.
+. Fare clic sul menu a tre punti del clone sandbox che si desidera eliminare.
 . Selezionare *Delete* (Elimina).
 . Nella finestra di dialogo Elimina, fare clic su *Elimina*.
 

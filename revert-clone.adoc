@@ -18,9 +18,9 @@ Quando si clona un database, il clone al momento della creazione è un clone _ba
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai a inventario database*.
+. Nella sezione Database, selezionare *Vai all'inventario dei database*.
 . In Database, selezionare la scheda *Sandbox*.
-. Nella scheda Sandbox, fare clic sul menu dei tre punti del clone sandbox che si desidera ripristinare.
+. Nella scheda Sandbox, fare clic sul menu a tre punti del clone sandbox che si desidera ripristinare.
 . Selezionare *Rebaseline*.
 . Nella finestra di dialogo Re-baseline, fare clic su *Re-baseline*.
 

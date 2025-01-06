@@ -13,11 +13,48 @@ summary: 'Esplora i risparmi per i carichi di lavoro del database confrontando i
 [role="lead"]
 Esplora i risparmi offerti dalla fabbrica di carichi di lavoro BlueXP  per i database per i carichi di lavoro del database confrontando i costi dell'utilizzo dello storage di Amazon Elastic Block Store (EBS) e di FSX per Windows file Server con lo storage FSX per ONTAP.
 
-Workload Factory offre un calcolatore di risparmi che ti permette di confrontare i vari componenti dei costi dell'esecuzione di workload Microsoft SQL Server come storage, calcolo, licenza SQL, snapshot e cloni per i workload del database in FSX per i file system ONTAP con Elastic Block Store (EBS) e FSX per lo storage Windows file Server. In base ai tuoi requisiti di storage, potresti renderti conto che i file system FSX per ONTAP sono i più convenienti per i carichi di lavoro del tuo database. Il calcolatore indica se lo storage per i carichi di lavoro del database su questi Microsoft SQL Server risulterebbe inferiore se si utilizza un file system FSX per ONTAP.
+
+
+== A proposito di questa attività
+
+Workload Factory offre un calcolatore di risparmi che ti permette di confrontare i vari componenti dei costi dell'esecuzione di workload Microsoft SQL Server come storage, calcolo, licenza SQL, snapshot e cloni per i workload del database in FSX per i file system ONTAP con Elastic Block Store (EBS) e FSX per lo storage Windows file Server. In base ai tuoi requisiti di storage, potresti renderti conto che i file system FSX per ONTAP sono i più convenienti per i carichi di lavoro del tuo database.
+
+Il calcolatore indica se lo storage per i carichi di lavoro del database su questi Microsoft SQL Server risulterebbe inferiore se si utilizza un file system FSX per ONTAP.
 
 image:screenshot-ebs-savings-calculator.png["Uno screenshot della pagina del calcolatore di risparmio mostra la configurazione selezionata di Microsoft SQL Server su Amazon Elastic Block Store a sinistra con l'opzione di personalizzare i valori di snapshot e cloni. Risparmi sui costi in dollari e percentuali, nonché sui costi totali mensili per l'utilizzo di Microsoft SQL Server in FSX per ONTAP e sullo storage di archiviazione a blocchi elastico sulla sinistra."]
 
 Se la workload Factory determina un risparmio economico eseguendo questi workload in un file system FSX per ONTAP, puoi implementare Microsoft SQL su FSX per ONTAP direttamente dal calcolatore in workload Factory. Se disponi di più istanze di Microsoft SQL Server su un archivio elastico di blocchi o su FSX per lo storage file server Windows, consigliamo una configurazione di FSX per ONTAP con una singola istanza SQL.
+
+
+
+== Analisi della distribuzione di SQL Server
+
+Il calcolatore esegue un'analisi completa della distribuzione di SQL Server per garantire che le risorse e le funzionalità utilizzate siano adeguate all'edizione di SQL Server. Di seguito sono riportati i fattori e le condizioni principali che la calcolatrice controlla prima di consigliare un downgrade a Standard Edition:
+
+Modello di implementazione:: La calcolatrice valuta il modello di distribuzione e se è richiesta l'edizione Enterprise.
+Risorse allocate:: Il calcolatore valuta le condizioni delle seguenti risorse assegnate in base alla licenza:
++
+--
+* Istanza di destinazione vCPU: L'istanza dispone di un numero massimo di 48 CPU virtuali.
+* Allocazione memoria: L'istanza dispone di 128GB GB o meno di memoria.
+
+
+--
+Utilizzo delle funzioni aziendali:: La calcolatrice verifica se è in uso una delle seguenti funzioni di Enterprise:
++
+--
+* Funzionalità Enterprise a livello di database
+* Operazioni di indice in linea
+* Regolatore delle risorse
+* Replica peer-to-peer o Oracle
+* Estensioni R/Python
+* TempDB ottimizzato per la memoria
+
+
+--
+
+
+Se l'istanza di SQL Server valutata non utilizza alcuna delle funzionalità Enterprise precedenti e soddisfa i limiti delle risorse, la calcolatrice consiglia di eseguire il downgrade della licenza alla Standard Edition. Questo suggerimento consente di ottimizzare i costi di licenza di SQL Server senza compromettere le prestazioni o la funzionalità.
 
 
 
@@ -31,7 +68,7 @@ Scopri i risparmi per gli host rilevati: Workload Factory si collega ai server M
 
 
 
-== Esplora i risparmi tramite la personalizzazione
+=== Esplora i risparmi tramite la personalizzazione
 
 Seguire i passaggi nella scheda relativa al tipo di storage in uso.
 
@@ -111,7 +148,7 @@ Inoltre, scorri verso il basso fino in fondo alla pagina fino a *Esporta PDF* o 
 ====
 
 
-== Esplora i risparmi per gli host rilevati
+=== Esplora i risparmi per gli host rilevati
 
 La fabbrica del carico di lavoro entra nelle caratteristiche host di Elastic Block Store e FSX per Windows file Server, in modo da poter esplorare automaticamente i risparmi.
 

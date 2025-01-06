@@ -38,4 +38,4 @@ Infine, se si sceglie di operare in modalità _automatizza_, è necessario link:
 .Cosa succederà
 Quando nell'inventario dei database sono presenti host gestiti di FSX per ONTAP, è possibile link:create-database.html["creare un database utenti"] o link:create-sandbox-clone.html["clona l'host per creare una sandbox"].
 
-Quando si dispone di host di Elastic Block Store nell'inventario dei database, è possibile link:explore-savings.html["Esplora i risparmi grazie al calcolatore dei risparmi dello storage"].
+Quando si dispone di Elastic Block Store o FSX per host Windows file Server nell'inventario dei database, è possibile link:explore-savings.html["scopri i risparmi grazie al calcolatore dei risparmi"].

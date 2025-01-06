@@ -49,10 +49,10 @@ AWS Systems Manager:: Assicurarsi che il `NT Authority\SYSTEM user` privilegio s
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai a inventario database*.
+. Nella sezione Database, selezionare *Vai all'inventario dei database*.
 . In Database, selezionare la scheda *inventario*.
 . Nella scheda inventario, selezionare un server database con un'istanza SQL Server gestita in cui creare il database.
-. Fare clic sul menu a tre punti dell'istanza gestita, quindi selezionare *Crea database utenti*.
+. Fare clic sul menu a tre puntidell'istanza gestita e selezionare *Crea database utente*.
 . Nella pagina Crea database utenti, in informazioni database, specificare quanto segue:
 +
 .. *Nome database*: Immettere il nome per il database.
@@ -82,10 +82,10 @@ In alternativa, se si desidera modificare subito una di queste impostazioni pred
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai a inventario database*.
+. Nella sezione Database, selezionare *Vai all'inventario dei database*.
 . In Database, selezionare la scheda *inventario*.
 . Nella scheda inventario, selezionare un server database con un'istanza SQL Server gestita in cui creare il database.
-. Fare clic sul menu a tre punti dell'istanza gestita, quindi selezionare *Crea database utenti*.
+. Fare clic sul menu a tre puntidell'istanza gestita e selezionare *Crea database utente*.
 . Selezionare *Crea database utenti*.
 . Nella pagina Crea database utenti, in informazioni database, specificare quanto segue:
 +

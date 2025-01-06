@@ -62,7 +62,7 @@ Prima di iniziare, completare i seguenti prerequisiti:
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai a inventario database*.
+. Nella sezione Database, selezionare *Vai all'inventario dei database*.
 . In Database, selezionare la scheda *inventario*.
 . Fare clic su *Gestisci* nella riga dell'host da gestire.
 . Selezionare una o più istanze host da gestire.
@@ -79,13 +79,13 @@ L'operazione non riesce quando Microsoft SQL Server non dispone di determinati m
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai a inventario database*.
+. Nella sezione Database, selezionare *Vai all'inventario dei database*.
 . In Database, selezionare la scheda *inventario*.
 . Fare clic sulla freccia dell'elenco a discesa per espandere la riga dell'host per visualizzarne le istanze gestite.
 +
 L'host si espande e vengono visualizzate le istanze dell'host.
 
-. Fare clic sul menu dei tre punti dell'istanza da visualizzare, quindi selezionare *Visualizza istanza*.
+. Fare clic sul menu a tre punti dell'istanza da visualizzare, quindi selezionare *Visualizza istanza*.
 
 
 .Risultato
@@ -99,13 +99,13 @@ La panoramica dell'istanza viene visualizzata nella scheda inventario.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai a inventario database*.
+. Nella sezione Database, selezionare *Vai all'inventario dei database*.
 . In Database, selezionare la scheda *inventario*.
 . Fare clic sulla freccia dell'elenco a discesa per espandere la riga dell'host per visualizzarne i database.
 +
 L'host si espande e vengono visualizzate le istanze dell'host.
 
-. Fare clic sul menu dei tre punti dell'istanza contenente i database da visualizzare.
+. Fare clic sul menu a tre punti dell'istanza contenente i database da visualizzare.
 . Selezionare *Visualizza database*.
 
 
@@ -120,13 +120,13 @@ Annullare la gestione di un'istanza host seguendo questi passaggi.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai a inventario database*.
+. Nella sezione Database, selezionare *Vai all'inventario dei database*.
 . In Database, selezionare la scheda *inventario*.
 . Fare clic sulla freccia dell'elenco a discesa per espandere la riga dell'istanza host da annullare la gestione.
 +
 L'host si espande e vengono visualizzate le istanze dell'host.
 
-. Fare clic sul menu dei tre punti dell'istanza da annullare la gestione.
+. Fare clic sul menu a tre punti dell'istanza da annullare la gestione.
 . Selezionare *Annulla gestione*.
 
 

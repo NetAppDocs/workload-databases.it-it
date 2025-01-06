@@ -102,10 +102,4 @@ Workload Factory non supporta la creazione o il salvataggio di configurazioni pe
 
 == Disponibilità regionale per la distribuzione di Microsoft SQL Server in una rete privata con Terraform
 
-La distribuzione di Microsoft SQL Server in una rete privata senza connettività in uscita mediante Terraform è supportata solo nell'area geografica US-East-1 (N. Virginia).
-
-
-
-== Supporto PostgreSQL
-
-PostgreSQL non supporta Amazon CloudWatch o la distribuzione in una rete privata.
+La distribuzione di Microsoft SQL Server in una rete privata senza connettività in uscita mediante Terraform è supportata solo nell'area geografica US-East-1 (N. Virginia). PostgreSQL non supporta Amazon CloudWatch o la distribuzione in una rete privata.

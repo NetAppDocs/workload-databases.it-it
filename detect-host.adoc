@@ -56,13 +56,13 @@ Quando viene rilevata un'istanza di Microsoft SQL, l'ambiente esistente non vien
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai a inventario database*.
+. Nella sezione Database, selezionare *Vai all'inventario dei database*.
 . In Database, selezionare la scheda *inventario*.
 . Fare clic sulla freccia dell'elenco a discesa per espandere la riga dell'host da rilevare.
 +
 L'host si espande e vengono visualizzate le istanze dell'host.
 
-. Fare clic sul menu dei tre punti dell'istanza da rilevare.
+. Fare clic sul menu a tre punti dell'istanza da rilevare.
 . Fare clic su *rileva*.
 . Nella finestra di dialogo *rileva istanza*, specificare il nome utente e la password di Microsoft SQL Server o FSX per il nome utente e la password di ONTAP.
 +

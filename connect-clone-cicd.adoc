@@ -18,9 +18,9 @@ Per fornire automaticamente una nuova versione del software al clone del databas
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai a inventario database*.
+. Nella sezione Database, selezionare *Vai all'inventario dei database*.
 . In Database, selezionare la scheda *Sandbox*.
-. Nella scheda Sandbox, fare clic sul menu dei tre punti del clone sandbox per connettersi agli strumenti ci/CD.
+. Nella scheda Sandbox, fare clic sul menu a tre punti del clone sandbox per connettersi agli strumenti ci/CD.
 . Selezionare *Connetti a strumenti ci/CD*.
 . Nella finestra di dialogo ci/CD, copiare o scaricare il codice API REST necessario per connettersi agli strumenti ci/CD.
 . Fare clic su *Chiudi*.

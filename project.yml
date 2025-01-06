@@ -71,9 +71,9 @@ sidebar:
     - title: Ottimizzazione di SQL Server
       entries:
       - title: Panoramica dell'ottimizzazione continua
-        url: optimize-overview.html
+        url: "/optimize-overview.html"
       - title: Ottimizza le configurazioni
-        url: optimize-configurations.html
+        url: "/optimize-configurations.html"
   - title: Conoscenza e supporto
     entries:
     - title: Registrati per ricevere assistenza
@@ -83,5 +83,5 @@ sidebar:
   - title: Note legali
     url: "/legal-notices.html"
 product-family:
-  name: BlueXP workload factory for AWS
+  name: BlueXP workload factory
   repo: workload-family

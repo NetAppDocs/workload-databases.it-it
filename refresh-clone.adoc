@@ -23,9 +23,9 @@ Per aggiornare un clone del database da uno snapshot, il database di origine dev
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai a inventario database*.
+. Nella sezione Database, selezionare *Vai all'inventario dei database*.
 . In Database, selezionare la scheda *Sandbox*.
-. Nella scheda Sandboxes, fare clic sul menu dei tre punti del clone sandbox che si desidera aggiornare.
+. Nella scheda Sandbox, fare clic sul menu a tre punti del clone sandbox che si desidera aggiornare.
 . Selezionare *Aggiorna*.
 . Nella finestra di dialogo Aggiorna, selezionare una delle seguenti opzioni:
 +
