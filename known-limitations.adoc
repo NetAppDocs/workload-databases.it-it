@@ -100,6 +100,12 @@ Workload Factory non supporta la creazione o il salvataggio di configurazioni pe
 
 
 
-== Disponibilità regionale per la distribuzione di Microsoft SQL Server in una rete privata con Terraform
+== Valutazione delle patch del sistema operativo per l'ottimizzazione
 
-La distribuzione di Microsoft SQL Server in una rete privata senza connettività in uscita mediante Terraform è supportata solo nell'area geografica US-East-1 (N. Virginia). PostgreSQL non supporta Amazon CloudWatch o la distribuzione in una rete privata.
+La valutazione delle patch del sistema operativo effettuata a scopo di ottimizzazione potrebbe non funzionare in una rete privata. La valutazione si basa su AWS Patch Manager. Per informazioni su come applicare patch alle istanze di Windows EC2 in una rete privata, fare riferimento a link:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["AWS Cloud Operations Blog "come applicare patch alle istanze di Windows EC2 nelle subnet private usando AWS Systems Manager""^].
+
+
+
+== Ottimizzazione del corretto dimensionamento delle risorse di calcolo
+
+Quando si passa a determinati tipi di istanza, è possibile reimpostare la configurazione di rete, che potrebbe causare un errore di connessione del nodo durante l'ottimizzazione e causare un errore del processo. Potrebbe essere necessario un intervento manuale per controllare e aggiornare le impostazioni DNS e le sessioni iSCSI. Per ulteriori informazioni sulle limitazioni di ridimensionamento di EC2, fare riferimento a link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resize-limitations.html["Documentazione di Amazon Elastic Compute Cloud"^].
