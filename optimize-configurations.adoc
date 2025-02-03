@@ -16,7 +16,7 @@ La farm di workload BlueXP  per i database scansiona e valuta continuamente le 
 .A proposito di questa attività
 La valutazione viene eseguita automaticamente e continuamente una volta al giorno per le istanze di Microsoft SQL Server con FSX per lo storage ONTAP gestito in farm di workload. I report di valutazione sono disponibili nel dashboard di ottimizzazione solo se un processo giornaliero pianificato è stato eseguito dopo la distribuzione o dopo la gestione di un'istanza.
 
-Workload Factory offre consigli dettagliati per ottimizzare le configurazioni sulla base delle Best practice di FSX per lo storage ONTAP.
+Workload Factory offre consigli dettagliati per ottimizzare le configurazioni sulla base delle Best practice di FSX per lo storage ONTAP. È possibile rivedere i consigli e scegliere di ottimizzare le configurazioni non ottimizzate.
 
 Elementi sottoposti a scansione:: Workload Factory valuta lo stato di ottimizzazione delle seguenti configurazioni per le istanze di Microsoft SQL Server:
 +
@@ -24,8 +24,8 @@ Elementi sottoposti a scansione:: Workload Factory valuta lo stato di ottimizzaz
 * Dimensionamento dello storage: Include Tier di storage, capacità aggiuntiva del file system, dimensioni dei dischi di log e dimensioni dei dischi TempDB
 * Layout dello storage: Comprende posizionamento dei file di dati degli utenti, posizionamento dei file di log e posizionamento di TempDB
 * Configurazione dello storage: Comprende gestione della capacità, thin provisioning, policy di tiering, snapshot, stato i/o multi-path, policy, sessioni e altro ancora
-* Calcolo: Include patch del sistema operativo e del corretto dimensionamento
-* Applicazioni: Include le licenze Microsoft SQL Server
+* Calcolo: Include il dimensionamento corretto, le patch del sistema operativo e le impostazioni della scheda di rete come Receive Side Scaling (RSS) e TCP offload
+* Applicazioni: Include le licenze di Microsoft SQL Server, la patch di Microsoft SQL Server e le impostazioni MAXDOP
 
 
 --
@@ -34,8 +34,11 @@ Elementi sottoposti a scansione:: Workload Factory valuta lo stato di ottimizzaz
 .Prima di iniziare
 * È necessario disporre di credenziali con autorizzazioni di lettura o di automazione.
 * Per valutare lo storage di un'istanza di Microsoft SQL Server, l'istanza deve essere gestita dalla fabbrica del carico di lavoro e il tipo di storage deve essere FSX per ONTAP.
-* Verificare attentamente ogni raccomandazione prima di selezionare per ottimizzare un'impostazione o una configurazione.
+* Verificare attentamente ogni raccomandazione prima di selezionare per ottimizzare un'impostazione o una configurazione. Per le impostazioni RSS e MAXDOP, si consiglia di testare le impostazioni consigliate per determinare i miglioramenti delle prestazioni prima di apportare modifiche all'ambiente di produzione.
 
+
+
+NOTE: Il processo di ottimizzazione può causare tempi di inattività delle istanze o interruzioni del servizio. Prima di ottimizzare una configurazione, verificare il riepilogo dell'ottimizzazione e le azioni da eseguire.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: explore-savings.html 
-keywords: cost, savings, compare costs, EBS, FSx for ONTAP 
-summary: 'Esplora i risparmi per i carichi di lavoro del database confrontando i costi dell"utilizzo dello storage di Amazon Elastic Block Store (EBS) ed FSX per Windows file Server con FSX per lo storage ONTAP.' 
+keywords: cost, savings, compare costs, EBS, FSx for Windows File Server, SQL Server on-premises, on-premises, FSx for ONTAP 
+summary: 'Confronta i costi dell"utilizzo dello storage di database on-premise Amazon Elastic Block Store (EBS), FSX per Windows file Server e SQL Server con FSX per lo storage ONTAP.' 
 ---
 = Esplora i risparmi offerti dalla fabbrica di workload BlueXP  per i database
 :allow-uri-read: 
@@ -11,19 +11,19 @@ summary: 'Esplora i risparmi per i carichi di lavoro del database confrontando i
 
 
 [role="lead"]
-Esplora i risparmi offerti dalla fabbrica di carichi di lavoro BlueXP  per i database per i carichi di lavoro del database confrontando i costi dell'utilizzo dello storage di Amazon Elastic Block Store (EBS) e di FSX per Windows file Server con lo storage FSX per ONTAP.
+Esplora i risparmi offerti dalla fabbrica di carichi di lavoro BlueXP  per i database per i carichi di lavoro del database confrontando i costi dell'utilizzo di Microsoft SQL Server su Amazon Elastic Block Store (EBS), FSX per Windows file Server e lo storage on-premise con FSX per lo storage ONTAP.
 
 
 
 == A proposito di questa attività
 
-Workload Factory offre un calcolatore di risparmi che ti permette di confrontare i vari componenti dei costi dell'esecuzione di workload Microsoft SQL Server come storage, calcolo, licenza SQL, snapshot e cloni per i workload del database in FSX per i file system ONTAP con Elastic Block Store (EBS) e FSX per lo storage Windows file Server. In base ai tuoi requisiti di storage, potresti renderti conto che i file system FSX per ONTAP sono i più convenienti per i carichi di lavoro del tuo database.
+Workload Factory offre un calcolatore di risparmi che ti permette di confrontare i vari componenti dei costi dell'esecuzione di workload Microsoft SQL Server come storage, calcolo, licenza SQL, snapshot e cloni per i workload del database in FSX per i file system ONTAP con Elastic Block Store (EBS), FSX per Windows file Server e lo storage on-premise. In base ai tuoi requisiti di storage, potresti renderti conto che i file system FSX per ONTAP sono i più convenienti per i carichi di lavoro del tuo database.
 
 Il calcolatore indica se lo storage per i carichi di lavoro del database su questi Microsoft SQL Server risulterebbe inferiore se si utilizza un file system FSX per ONTAP.
 
 image:screenshot-ebs-savings-calculator.png["Uno screenshot della pagina del calcolatore di risparmio mostra la configurazione selezionata di Microsoft SQL Server su Amazon Elastic Block Store a sinistra con l'opzione di personalizzare i valori di snapshot e cloni. Risparmi sui costi in dollari e percentuali, nonché sui costi totali mensili per l'utilizzo di Microsoft SQL Server in FSX per ONTAP e sullo storage di archiviazione a blocchi elastico sulla sinistra."]
 
-Se la workload Factory determina un risparmio economico eseguendo questi workload in un file system FSX per ONTAP, puoi implementare Microsoft SQL su FSX per ONTAP direttamente dal calcolatore in workload Factory. Se disponi di più istanze di Microsoft SQL Server su un archivio elastico di blocchi o su FSX per lo storage file server Windows, consigliamo una configurazione di FSX per ONTAP con una singola istanza SQL.
+Se la workload Factory determina un risparmio economico eseguendo questi workload in un file system FSX per ONTAP, puoi implementare Microsoft SQL su FSX per ONTAP direttamente dal calcolatore in workload Factory. Se disponi di più istanze di Microsoft SQL Server su Elastic Block Store, FSX per Windows file Server o sullo storage on-premise, ti consigliamo una configurazione di FSX per ONTAP con una singola istanza SQL.
 
 
 
@@ -204,6 +204,45 @@ Se vengono rilevate copie shadow di FSX per Windows, il valore predefinito è *g
 
 .. *Clona frequenza di aggiornamento*: Selezionare la frequenza di aggiornamento dei cloni dal menu a discesa.
 .. *Numero di copie clonate*: Immettere il numero di copie clonate nella configurazione di FSX per Windows.
+.. *Tasso di modifica mensile*: Immettere la percentuale di variazione dei dati clone e snapshot in media al mese.
+
+
+. Rivedere i calcoli e i consigli forniti nella pagina.
++
+Inoltre, scorri verso il basso fino in fondo alla pagina fino a *Esporta PDF* o *Visualizza calcoli*.
+
+
+
+--
+.Microsoft SQL Server on-premise
+--
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nella sezione Database, selezionare *Esplora risparmi*, quindi *Microsoft SQL Server on-Premises* dal menu a discesa.
+. Dalla scheda on-premise di SQL Server, scaricare lo script per valutare gli ambienti SQL Server on-premise.
++
+.. Scaricare lo script di valutazione. Lo script è un tool di raccolta dati basato su PowerShell. Raccoglie e carica quindi i dati di configurazione e delle prestazioni di SQL Server in BlueXP  workload Factory. Il Migration ADVISOR valuta i dati e pianifica la distribuzione di FSX per ONTAP per il tuo ambiente SQL Server.
++
+image:screenshot-download-script-on-premises.png["Una schermata della scheda on-premise di SQL Server mostra l'opzione di scaricare lo script di valutazione."]
+
+.. Eseguire lo script sull'host SQL Server.
+.. Caricare l'output dello script nella scheda on-premise di SQL Server in workload factory.
++
+image:screenshot-upload-script-on-premises.png["Una schermata della scheda on-premise di SQL Server mostra l'opzione di caricare lo script di valutazione."]
+
+
+
+. Dalla scheda on-premise di SQL Server, selezionare *Esplora risparmio* per eseguire un'analisi dei costi dell'host on-premise di SQL Server rispetto a FSX per ONTAP.
+. Nel calcolatore di risparmio, selezionare la regione per l'host on-premise.
+. Per risultati più precisi, aggiorna le informazioni di calcolo, i dettagli sullo storage e sulle performance.
+. Facoltativamente, fornisci i seguenti dettagli sui cloni (copie shadow) e sulle Snapshot nell'ambiente di database on-premise per una stima più accurata dei risparmi sui costi.
++
+.. *Frequenza istantanea*: Selezionare una frequenza istantanea dal menu a discesa.
++
+Se vengono rilevate copie shadow di FSX per Windows, il valore predefinito è *giornaliero*. Se le copie replicate non vengono rilevate, il valore predefinito è *Nessuna frequenza istantanea*.
+
+.. *Clona frequenza di aggiornamento*: Selezionare la frequenza di aggiornamento dei cloni dal menu a discesa.
+.. *Numero di copie clonate*: Immettere il numero di copie clonate nella configurazione on-premise.
 .. *Tasso di modifica mensile*: Immettere la percentuale di variazione dei dati clone e snapshot in media al mese.
 
 
