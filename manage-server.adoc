@@ -43,6 +43,14 @@ Per gestire un'istanza host in una rete privata senza connettività esterna, i s
 * `fsx`
 
 
+Se si utilizza un server proxy per tutte le connessioni in uscita da istanze EC2, è necessario consentire l'accesso ai seguenti domini in modo che le operazioni di gestione funzionino:
+
+* ``.microsoft.com``
+* ``.powershellgallery.com``
+* ``.aws.amazon.com``
+* ``.amazonaws.com``
+
+
 .Prima di iniziare
 Prima di iniziare, completare i seguenti prerequisiti:
 
