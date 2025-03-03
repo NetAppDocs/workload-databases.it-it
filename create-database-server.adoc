@@ -14,9 +14,7 @@ summary: Creare una nuova Microsoft SQL Server nella factory del carico di lavor
 La creazione di un nuovo Microsoft SQL Server, o host di database, nella fabbrica di carichi di lavoro BlueXP  per i database richiede l'implementazione di un file system FSX per ONTAP e le risorse per Active Directory.
 
 .A proposito di questa attività
-Avrai bisogno delle credenziali dell'account AWS e delle autorizzazioni _automatizza_.
-
-Prima di iniziare, è necessario conoscere i tipi di distribuzione dello storage disponibili per la configurazione dell'host del database, la distribuzione di Active Directory, le modalità operative della fabbrica del carico di lavoro e i requisiti per completare questa operazione.
+Prima di creare un Microsoft SQL Server dalla fabbrica del carico di lavoro, conoscere i tipi di distribuzione dello storage disponibili per la configurazione dell'host del database, la distribuzione di Active Directory, le modalità operative della fabbrica del carico di lavoro e i requisiti per completare questa operazione.
 
 Dopo la distribuzione, sarà necessario <<Passaggio 2: Abilitare la connessione remota su Microsoft SQL Server,Attivare la connessione remota su Microsoft SQL Server>>.
 

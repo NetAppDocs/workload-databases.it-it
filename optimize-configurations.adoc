@@ -26,6 +26,7 @@ Elementi sottoposti a scansione:: Workload Factory valuta lo stato di ottimizzaz
 * Configurazione dello storage: Comprende gestione della capacità, thin provisioning, policy di tiering, snapshot, stato i/o multi-path, policy, sessioni e altro ancora
 * Calcolo: Include il dimensionamento corretto, le patch del sistema operativo e le impostazioni della scheda di rete come Receive Side Scaling (RSS) e TCP offload
 * Applicazioni: Include le licenze di Microsoft SQL Server, la patch di Microsoft SQL Server e le impostazioni MAXDOP
+* Resilienza: Include snapshot locali
 
 
 --
