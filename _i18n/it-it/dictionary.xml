@@ -98,7 +98,6 @@
   <block id="8738f299dd52a2650f23bf1ae30694fa" category="list-text">Nel campo *Configurazione cluster - nodo 1*, selezionare una zona di disponibilità dal menu a discesa *zona di disponibilità* e una sottorete dal menu a discesa *sottorete*.</block>
   <block id="9c622025b2f6aaf628ede7de56df481b" category="list-text">Per le implementazioni FCI</block>
   <block id="5ac7c1b392927ce429f17a8855e854b5" category="list-text">*Gruppo di protezione*: Selezionare un gruppo di protezione esistente o creare un nuovo gruppo di protezione.</block>
-  <block id="a2c08d4b7f2bbde30396036629003448" category="paragraph">Tre gruppi di protezione vengono collegati ai nodi SQL (istanze EC2) durante la distribuzione del nuovo server.</block>
   <block id="ba4f09fe932ad91d759a5dd3636acec6" category="list-text">Viene creato un gruppo di protezione del carico di lavoro per consentire le porte e i protocolli necessari per la comunicazione dei cluster Microsoft SQL e Windows sui nodi.</block>
   <block id="1f653bdd2a02e3ebdc4f28328a96b00f" category="list-text">Nel caso di Active Directory gestito da AWS, il gruppo di protezione collegato al servizio directory viene aggiunto automaticamente ai nodi Microsoft SQL per consentire la comunicazione con Active Directory.</block>
   <block id="84c62c2707904a024819612ef450ef1d" category="list-text">Per un file system FSX for ONTAP esistente, il gruppo di sicurezza ad esso associato viene aggiunto automaticamente ai nodi SQL, consentendo così la comunicazione con il file system. Quando viene creato un nuovo sistema FSX per ONTAP, viene creato un nuovo gruppo di protezione per il file system FSX per ONTAP e lo stesso gruppo di protezione viene collegato anche ai nodi SQL.</block>
@@ -1004,4 +1003,5 @@
   <block id="05e1e00bdb39e9c766a6a0f69a222a3b" category="list-text"><block ref="05e1e00bdb39e9c766a6a0f69a222a3b" category="inline-link-macro-rx"></block></block>
   <block id="7115d78353263dbb2dbe063624f9f601" category="list-text"><block ref="7115d78353263dbb2dbe063624f9f601" category="inline-link-macro-rx"></block></block>
   <block id="4666cc74583e6d5c1f202a52bee57a9b" category="list-text"><block ref="4666cc74583e6d5c1f202a52bee57a9b" category="inline-link-macro-rx"></block></block>
+  <block id="b344730cd36668c36266c1d50c447eea" category="list-text">*Gruppo di protezione*: Selezionare un gruppo di protezione esistente o creare un nuovo gruppo di protezione. Tre gruppi di protezione vengono collegati ai nodi SQL (istanze EC2) durante la distribuzione del nuovo server.</block>
 </blocks>

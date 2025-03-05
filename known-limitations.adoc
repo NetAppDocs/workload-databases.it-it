@@ -58,12 +58,6 @@ La gestione delle configurazioni dei gruppi di disponibilità sempre attive non 
 
 
 
-== Gruppi di protezione Active Directory gestiti dagli utenti
-
-Se si seleziona "Active Directory gestito dall'utente" durante la distribuzione di Microsoft SQL Server in fabbrica dei carichi di lavoro, è necessario fornire un gruppo di protezione che consenta il traffico tra le istanze EC2 al servizio directory per la distribuzione. Workload Factory non collega automaticamente il gruppo di sicurezza per Active Directory gestito dall'utente come per AWS Managed Microsoft ad.
-
-
-
 == Chiavi di crittografia personalizzate
 
 Le chiavi di crittografia personalizzate per FSX for ONTAP non sono elencate in base all'applicabilità del servizio. È necessario scegliere la chiave appropriata. Le chiavi gestite da AWS vengono filtrate in base all'applicabilità al servizio.
