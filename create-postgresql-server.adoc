@@ -48,107 +48,11 @@ Credenziali e autorizzazioni:: È necessario link:https://docs.netapp.com/us-en/
 
 == Creare un server di database
 
-È possibile utilizzare le modalità di distribuzione _creazione rapida_ o _creazione avanzata_ per completare questa attività in fabbrica dei carichi di lavoro con autorizzazioni _automatizza_. Puoi anche utilizzare i seguenti tool disponibili in Codebox: API REST, interfaccia a riga di comando di AWS, AWS CloudFormation e Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Scopri come utilizzare Codebox per l'automazione"^].
+È possibile utilizzare la modalità di distribuzione _Advanced create_ per completare questa attività in fabbrica del carico di lavoro con autorizzazioni in modalità _automatizza_. Puoi anche utilizzare i seguenti tool disponibili in Codebox: API REST, interfaccia a riga di comando di AWS, AWS CloudFormation e Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Scopri come utilizzare Codebox per l'automazione"^].
 
 
 NOTE: Quando si utilizza Terraform da Codebox, il codice che si copia o si scarica nasconde `fsxadmin` e `vsadmin` password. Sarà necessario immettere nuovamente le password quando si esegue il codice. È necessario includere le seguenti autorizzazioni per l'account utente oltre alle autorizzazioni in modalità _automatizza_: `iam:TagRole` E `iam:TagInstanceProfile`. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#use-terraform-from-codebox["Scopri come utilizzare Terraform da Codebox"^].
 
-[role="tabbed-block"]
-====
-.Creazione rapida
---
-
-NOTE: In _Quick create_, HA è il modello di distribuzione predefinito, Windows 2016 è la versione predefinita di Windows e SQL 2019 Standard Edition è la versione predefinita di SQL.
-
-.Fasi
-. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Deploy database host*, quindi selezionare *PostgreSQL Server* dal menu a discesa.
-. Selezionare *creazione rapida*.
-. In *zona di atterraggio*, specificare quanto segue:
-+
-.. *Credenziali AWS*: Selezionare le credenziali AWS con autorizzazioni automatiche per implementare il nuovo host del database.
-+
-Le credenziali AWS con autorizzazioni _automatizza_ consentono al workload di implementare e gestire in fabbrica il nuovo host del database dal tuo account AWS all'interno di una fabbrica di carichi di lavoro.
-
-+
-Le credenziali AWS con autorizzazioni _Read_ consentono ai workload di generare un modello CloudFormation da utilizzare nella console AWS CloudFormation.
-
-+
-Se non disponi delle credenziali AWS associate alla fabbrica dei carichi di lavoro e desideri creare il nuovo server nella fabbrica dei carichi di lavoro, segui *opzione 1* per andare alla pagina credenziali. Aggiungere manualmente le credenziali e le autorizzazioni necessarie per la modalità _automatizza_ per i carichi di lavoro del database.
-
-+
-Se si desidera completare il modulo di creazione di un nuovo server in fabbrica del carico di lavoro in modo da poter scaricare un modello di file YAML completo per la distribuzione in AWS CloudFormation, seguire *opzione 2* per assicurarsi di disporre delle autorizzazioni necessarie per creare il nuovo server in AWS CloudFormation. Aggiungere manualmente le credenziali e le autorizzazioni richieste per la modalità _Read_ per i carichi di lavoro del database.
-
-+
-In alternativa, è possibile scaricare un modello di file YAML parzialmente completato dalla Codebox per creare lo stack al di fuori della fabbrica del carico di lavoro senza credenziali o autorizzazioni. Selezionare *CloudFormation* dal menu a discesa nel Codebox per scaricare il file YAML.
-
-.. *Regione e VPC*: Selezionare una regione e una rete VPC.
-+
-Garantire che i gruppi di protezione per un endpoint dell'interfaccia esistente consentano l'accesso al protocollo HTTPS (443) alle subnet selezionate.
-
-+
-Endpoint dell'interfaccia del servizio AWS (SQS, FSX, EC2, CloudWatch, CloudFormation, SSM) e l'endpoint del gateway S3 vengono creati durante la distribuzione se non vengono trovati.
-
-+
-Gli attributi DNS VPC `EnableDnsSupport` e `EnableDnsHostnames` sono stati modificati per abilitare la risoluzione degli indirizzi degli endpoint se non sono già impostati su `true`.
-
-.. *Zone di disponibilità*: Selezionare zone di disponibilità e subnet.
-+
-
-NOTE: Le implementazioni HA sono supportate solo nelle configurazioni FSX for ONTAP con più zone di disponibilità (MAZ).
-
-+
-Le sottoreti non devono condividere la stessa tabella di routing per la disponibilità elevata.
-
-+
-... Nel campo *Configurazione cluster - nodo 1*, selezionare l'area di disponibilità primaria per la configurazione MAZ FSX per ONTAP dal menu a discesa *zona di disponibilità* e una subnet dall'area di disponibilità primaria dal menu a discesa *sottorete*.
-... Nel campo *Configurazione cluster - nodo 2*, selezionare l'area di disponibilità secondaria per la configurazione MAZ FSX per ONTAP dal menu a discesa *zona di disponibilità* e una subnet dall'area di disponibilità secondaria dal menu a discesa *sottorete*.
-
-
-
-
-. In *Impostazioni applicazione*, immettere un nome utente e una password per *credenziali database*.
-. In *connettività*, selezionare una coppia di chiavi per connettersi in modo sicuro all'istanza.
-. In *Impostazioni infrastruttura*, fornire quanto segue:
-+
-.. *FSX per ONTAP system*: Creare un nuovo file system FSX per ONTAP o utilizzare un file system FSX per ONTAP esistente.
-+
-... *Crea nuovo file FSX per ONTAP*: Inserisci nome utente e password.
-+
-Un nuovo file system FSX per ONTAP può aggiungere 30 minuti o più di tempo di installazione.
-
-... *Selezionare un file FSX esistente per ONTAP*: Selezionare FSX per nome ONTAP dal menu a discesa e immettere un nome utente e una password per il file system.
-+
-Per i file system FSX for ONTAP esistenti, verificare quanto segue:
-
-+
-**** Il gruppo di routing collegato a FSX per ONTAP consente di utilizzare i percorsi verso le sottoreti per la distribuzione.
-**** Il gruppo di protezione consente il traffico proveniente dalle subnet utilizzate per la distribuzione, in particolare dalle porte TCP HTTPS (443) e iSCSI (3260).
-
-
-
-
-.. *Dimensione unità dati*: Immettere la capacità dell'unità dati e selezionare l'unità di capacità.
-
-
-. Riepilogo:
-+
-.. *Anteprima predefinita*: Esaminare le configurazioni predefinite impostate da creazione rapida.
-.. *Costo stimato*: Fornisce una stima degli addebiti che potrebbero essere sostenuti se sono state distribuite le risorse visualizzate.
-
-
-. Fare clic su *Create* (Crea).
-+
-In alternativa, se si desidera modificare subito una di queste impostazioni predefinite, creare il server database con creazione avanzata.
-
-+
-È inoltre possibile selezionare *Salva configurazione* per distribuire l'host in un secondo momento.
-
-
-
---
-.Creazione avanzata
---
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Deploy database host*, quindi selezionare *PostgreSQL Server* dal menu a discesa.
@@ -285,7 +189,5 @@ In alternativa, è possibile salvare la configurazione.
 
 
 
---
-====
 .Cosa succederà
 È possibile configurare manualmente gli utenti, l'accesso remoto e i database sul server PostgreSQL distribuito.
