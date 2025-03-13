@@ -948,10 +948,6 @@
   <block id="9aa0a44ed97cfd5357fb393a8de57dc7" category="list-text"><block ref="1f378775539050b7c7b5e1cdfe121e2f" prefix="" category="inline-code"></block></block>
   <block id="4bd2e14395b83906b0838bbcc78df388" category="list-text"><block ref="3e51061ec4171070ff2ffdabfbd63cc3" prefix="" category="inline-code"></block></block>
   <block id="9b6e1103f46b83b38494e5b294e2c410" category="list-text"><block ref="c1eaf26c3b755ad5252456a5d3f34a2f" prefix="" category="inline-code"></block></block>
-  <block id="e1e5f5c3c58578921409fc2e6d5eedd8" category="doc">PostgreSQL configurazione ad alta disponibilità e creazione rapida</block>
-  <block id="ed9e60a4e06d1c99d8eb3562ecbf8b63" category="paragraph">Sono supportate due nuove aree di funzionalità nella farm dei carichi di lavoro BlueXP  per i database:</block>
-  <block id="c657a4dd8aa01cb30f32e751a8482131" category="list-text">Configurazione ad alta disponibilità (ha) PostgreSQL: È ora possibile distribuire una configurazione ha per PostgreSQL Server.</block>
-  <block id="d86f1a99d557ac15f85400fdfbdb8b14" category="list-text">Creazione rapida: È possibile utilizzare questa opzione di distribuzione rapida per creare un server PostgreSQL con configurazione ha e procedure consigliate incorporate.</block>
   <block id="f57c49a06b4a8a20d9a723cd677b9655" category="inline-link-macro">Creare un server PostgreSQL</block>
   <block id="d3420539383bb38c88221d86000226d1" category="paragraph"><block ref="d3420539383bb38c88221d86000226d1" category="inline-link-macro-rx"></block></block>
   <block id="1414de2121340ce91492c56f7800fcc7" category="section-title">Supporto terraform per la creazione di server PostgreSQL</block>
@@ -1003,4 +999,6 @@
   <block id="4666cc74583e6d5c1f202a52bee57a9b" category="list-text"><block ref="4666cc74583e6d5c1f202a52bee57a9b" category="inline-link-macro-rx"></block></block>
   <block id="b344730cd36668c36266c1d50c447eea" category="list-text">*Gruppo di protezione*: Selezionare un gruppo di protezione esistente o creare un nuovo gruppo di protezione. Tre gruppi di protezione vengono collegati ai nodi SQL (istanze EC2) durante la distribuzione del nuovo server.</block>
   <block id="372b286436aa00cac0e53fa1f2a9c659" category="paragraph">È possibile utilizzare la modalità di distribuzione _Advanced create_ per completare questa attività in fabbrica del carico di lavoro con autorizzazioni in modalità _automatizza_. Puoi anche utilizzare i seguenti tool disponibili in Codebox: API REST, interfaccia a riga di comando di AWS, AWS CloudFormation e Terraform. <block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>.</block>
+  <block id="292e876f4d1d5af73b815913bd3d9b26" category="doc">PostgreSQL configurazione ad alta disponibilità</block>
+  <block id="047e8f86b83bb2e8d4c34b1dc560257b" category="paragraph">È ora possibile distribuire una configurazione ad alta disponibilità (ha) per PostgreSQL Server.</block>
 </blocks>
