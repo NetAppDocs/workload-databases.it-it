@@ -26,7 +26,7 @@ Elementi sottoposti a scansione:: Workload Factory valuta lo stato di ottimizzaz
 * Configurazione dello storage: Comprende gestione della capacità, thin provisioning, policy di tiering, snapshot, stato i/o multi-path, policy, sessioni e altro ancora
 * Calcolo: Include il dimensionamento corretto, le patch del sistema operativo e le impostazioni della scheda di rete come Receive Side Scaling (RSS) e TCP offload
 * Applicazioni: Include le licenze di Microsoft SQL Server, la patch di Microsoft SQL Server e le impostazioni MAXDOP
-* Resilienza: Include snapshot locali
+* Resilienza: Include snapshot locali, FSX per i backup ONTAP e replica tra aree (CRR)
 
 
 --
@@ -61,6 +61,9 @@ Puoi filtrare per categorie, sottocategorie, stato, gravità e tag.
 Il suggerimento spiega le Best practice e i potenziali errori di configurazioni non ottimizzate.
 
 . Selezionare per *ottimizzare* le configurazioni non ottimizzate.
++
+*Seleziona tutto* è l'impostazione predefinita, ma è possibile selezionare risorse specifiche da ottimizzare.
+
 . Rivedere il riepilogo dell'ottimizzazione e le azioni visualizzate nella finestra di dialogo di ottimizzazione per scoprire cosa accadrà se si sceglie di ottimizzare. Alcune operazioni di ottimizzazione possono causare tempi di inattività delle istanze o interruzioni del servizio.
 . Selezionare *continua* per ottimizzare la configurazione.
 
