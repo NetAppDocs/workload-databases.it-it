@@ -266,6 +266,9 @@ Inoltre, scorrere verso il basso fino in fondo alla pagina per visualizzare il r
 
 Per passare a FSX per ONTAP, seguire le istruzioni riportate in <<Implementa Microsoft SQL Server su AWS EC2 usando FSX per ONTAP,Distribuire Microsoft SQL Server su AQS EC2 utilizzando i file system FSX per ONTAP>>.
 
+Rimozione dell'host on-premise:: Dopo aver esaminato i risparmi per un host on-premise di Microsoft SQL Server, è possibile rimuovere il record dell'host on-premise dalla fabbrica dei workload BlueXP . Selezionare il menu a tre punti dell'host locale di Microsoft SQL Server, quindi selezionare *Elimina*.
+
+
 
 
 == Implementa Microsoft SQL Server su AWS EC2 usando FSX per ONTAP

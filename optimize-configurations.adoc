@@ -27,6 +27,7 @@ Elementi sottoposti a scansione:: Workload Factory valuta lo stato di ottimizzaz
 * Calcolo: Include il dimensionamento corretto, le patch del sistema operativo e le impostazioni della scheda di rete come Receive Side Scaling (RSS) e TCP offload
 * Applicazioni: Include le licenze di Microsoft SQL Server, la patch di Microsoft SQL Server e le impostazioni MAXDOP
 * Resilienza: Include snapshot locali, FSX per i backup ONTAP e replica tra aree (CRR)
+* Cloni: Include opzioni per l'aggiornamento e l'eliminazione dei cloni (sandbox) precedenti a 60 giorni
 
 
 --
@@ -44,11 +45,8 @@ NOTE: Il processo di ottimizzazione può causare tempi di inattività delle ista
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Vai all'inventario dei database*.
-. Nella scheda *inventario*, selezionare la freccia a discesa per espandere la riga dell'host per visualizzare le istanze gestite.
-+
-L'host si espande e vengono visualizzate le istanze dell'host.
-
-. Selezionare il menu a tre punti dell'istanza, quindi selezionare *Ottimizza*.
+. Nella scheda *inventario*, selezionare la scheda *istanze*.
+. Selezionare il menu a tre punti dell'istanza da ottimizzare, quindi selezionare *Ottimizza*.
 . Nella pagina Ottimizza istanza per l'istanza di SQL Server, esaminare i risultati della valutazione.
 +
 Puoi filtrare per categorie, sottocategorie, stato, gravità e tag.
@@ -64,7 +62,16 @@ Il suggerimento spiega le Best practice e i potenziali errori di configurazioni 
 +
 *Seleziona tutto* è l'impostazione predefinita, ma è possibile selezionare risorse specifiche da ottimizzare.
 
-. Rivedere il riepilogo dell'ottimizzazione e le azioni visualizzate nella finestra di dialogo di ottimizzazione per scoprire cosa accadrà se si sceglie di ottimizzare. Alcune operazioni di ottimizzazione possono causare tempi di inattività delle istanze o interruzioni del servizio.
++
+.. Per tutte le configurazioni, ad eccezione della pulitura dei cloni, esaminare i dettagli di ottimizzazione nella finestra di dialogo di ottimizzazione per scoprire cosa accadrà se si sceglie di ottimizzare. Alcune operazioni di ottimizzazione possono causare tempi di inattività delle istanze o interruzioni del servizio.
+.. Per la pulitura dei cloni, selezionare i database clonati (sandbox) da aggiornare o eliminare.
++
+*** L'aggiornamento di un clone lo sincronizza con il relativo database di origine. L'aggiornamento è disponibile solo per i cloni creati in workload factory.
+*** L'eliminazione di un clone lo rimuove in maniera permanente, libera spazio di storage e riduce i costi. Puoi eliminare i cloni creati in e all'esterno della workload Factory.
+
+
+
+
 . Selezionare *continua* per ottimizzare la configurazione.
 
 
