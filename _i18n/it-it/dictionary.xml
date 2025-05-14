@@ -742,12 +742,6 @@
   <block id="ac48048cc385514c8193aeb51f798df3" category="list-text">*Stima dei costi*: Valutate i potenziali risparmi sui costi con il calcolatore di risparmio, che stima e fornisce dettagli sui costi dettagliati di storage, calcolo, licenze SQL, snapshot e clonazione per le implementazioni esistenti di Microsoft SQL Server con Elastic Block Store ed FSX per Windows file Server rispetto ad FSX per ONTAP.</block>
   <block id="fb2076e79d297f45b57510dfff465ed5" category="list-text">*Modelli di automazione riutilizzabili*: Creare, riutilizzare e personalizzare i modelli di CloudFormation dalla fabbrica di workload Codebox per le future distribuzioni di Microsoft SQL Server in più ambienti.</block>
   <block id="200e3179449390bdf5f3f8d9a199630c" category="section-title">Strumenti per l'utilizzo di workload Factory</block>
-  <block id="7c7b8d9283341ca01be6ef2ac825ef5d" category="paragraph">È possibile utilizzare la fabbrica di workload con i seguenti strumenti:</block>
-  <block id="d5688c5bf16d0126d5b27759385bd41e" category="list-text">*Workload Factory Console*: La console workload Factory offre un'interfaccia visiva che offre una visione olistica delle applicazioni e dei progetti</block>
-  <block id="38f4e563ea70a0c42a140783a152e82f" category="list-text">*Console BlueXP *: La console BlueXP  offre un'interfaccia ibrida in modo da poter utilizzare la fabbrica dei workload BlueXP  insieme ad altri servizi BlueXP</block>
-  <block id="23ae25c2ba38ca6ce35bbc556ab80a83" category="list-text">*API REST*: Le API REST DI workload Factory ti consentono di implementare e gestire i file system FSX per ONTAP e altre risorse AWS</block>
-  <block id="870c2713113a9cc14410aec5475c932f" category="list-text">*CloudFormation*: Il codice AWS CloudFormation consente di eseguire le azioni definite nella console del workload factory per modellare, eseguire il provisioning e gestire risorse AWS e di terze parti dallo stack CloudFormation nell'account AWS.</block>
-  <block id="6ce3412b0e5ae57102bcf2ac59757270" category="list-text">*Terraform BlueXP  workload Factory provider*: Terraform consente di creare e gestire i flussi di lavoro dell'infrastruttura generati nella console della workload Factory.</block>
   <block id="11366d0688d978b3372702f5c4d33b84" category="inline-link-macro">Scopri FSX per ONTAP per workload factory</block>
   <block id="27dfabff613e2389e886e5b797252438" category="paragraph"><block ref="2e826ed2a2f94b608ac7d80f7c1db3b6" category="inline-link-macro-rx"></block>.</block>
   <block id="5e403a4c3b152d7f395a9974ccfd4e4c" category="section-title">Modalità operative in fabbrica dei carichi di lavoro</block>
@@ -755,8 +749,6 @@
   <block id="eb6e457556694fbc8d187534ac1188e1" category="inline-link-macro">modalità operative in fabbrica dei carichi di lavoro</block>
   <block id="7bb004aef4b112c40189995d006d040c" category="paragraph">Ulteriori informazioni su <block ref="eda3e48a35318d9f8306be63aaa1ab6b" category="inline-link-macro-rx"></block>.</block>
   <block id="b5a374f3f5b31b5057808689d26fe2c4" category="paragraph">È possibile utilizzare la farm di workload BlueXP  con i seguenti tool:</block>
-  <block id="219de842101d0d257b96e027417af55f" category="list-text">*API REST*: Le API REST DI workload Factory ti consentono di implementare e gestire Microsoft SQL Server e altre risorse AWS</block>
-  <block id="54a601d5c40cd463e158e2d8c24bc1e7" category="list-text">*Terraform BlueXP  workload Factory Provider*: Terraform consente di creare e gestire i flussi di lavoro dell'infrastruttura generati nella console di workload Factory.</block>
   <block id="37c0391f707d07b4c1d64a02e6944c56" category="paragraph">La fabbrica di workload per Microsoft SQL Server supporta sia l'high Availability (istanze di failover cluster sempre attive) che le implementazioni a singola istanza secondo le Best practice di AWS, NetApp ONTAP e SQL Server.</block>
   <block id="b9aff8d3c5ff2dd2a4ce0963f381f957" category="paragraph">Per domande generali sulle applicazioni e i servizi di fabbrica dei carichi di lavoro o di fabbrica dei carichi di lavoro, fare riferimento a <block ref="b9da93c3ce08d7fb81177157f233c056" category="inline-link-macro-rx"></block>.</block>
   <block id="71e2f5eacc9fc09317bbe70e053aeb1e" category="summary">Gestisci le istanze di Microsoft SQL Server in una farm di workload BlueXP  per i database.</block>
@@ -1082,4 +1074,11 @@
   <block id="f01282bfdabc9c97224d922f36d898b8" category="paragraph">L'analisi della configurazione viene riattivata e viene eseguita quotidianamente.</block>
   <block id="822748e99c70e9162ce5432b2e1eff5c" category="section-title">04 maggio 2025</block>
   <block id="f865802ec5f0fe104a096589d51b39a4" category="sidebar">Posticipare l'analisi della configurazione</block>
+  <block id="4b50901597179fa075617d96ccf51901" category="list-text">*Workload Factory Console*: La console workload Factory offre una visione visiva e olistica delle applicazioni e dei progetti.</block>
+  <block id="590410b3a112ba2f531f9aae44e29ed1" category="list-text">*Console BlueXP *: La console BlueXP  offre un'interfaccia ibrida in modo da poter utilizzare la fabbrica dei workload BlueXP  insieme ad altri servizi BlueXP .</block>
+  <block id="62c5120220d244bd5e611d7c4459b5c5" category="list-text">*Chiedimi*: Utilizza l'assistente Ask me ai per porre domande e saperne di più sulla fabbrica di workload senza abbandonare l'interfaccia utente web della fabbrica di workload. Accedere a Chiedimi dal menu della guida di fabbrica del carico di lavoro.</block>
+  <block id="e234d079cc2fccaeed8041a81e1e8122" category="list-text">*CLI CloudShell*: Workload Factory include una CLI CloudShell per gestire e utilizzare ambienti AWS e NetApp tra diversi account da un'unica CLI basata su browser. Accedi a CloudShell dalla barra superiore della console workload Factory.</block>
+  <block id="dfbf98e5a4263fb93c5b851bfc384ae3" category="list-text">*API REST*: Utilizza le API REST DI workload factory per implementare e gestire i file system FSX per ONTAP e altre risorse AWS.</block>
+  <block id="57f4ce64453b6cd8aa398c4f88d38c2e" category="list-text">*CloudFormation*: Utilizzare il codice AWS CloudFormation per eseguire le azioni definite nella console workload factory in modo da modellare, eseguire il provisioning e gestire risorse AWS e di terze parti dallo stack CloudFormation nell'account AWS.</block>
+  <block id="06c2e2277da374dd2cc7b735a1d1e848" category="list-text">*Terraform BlueXP  workload Factory Provider*: USA Terraform per costruire e gestire i flussi di lavoro infrastrutturali generati nella console di workload Factory.</block>
 </blocks>
