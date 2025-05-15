@@ -38,9 +38,9 @@ Le seguenti istruzioni descrivono come rinviare, ignorare o riattivare un'analis
 [role="tabbed-block"]
 ====
 .Posticipa
+--
 Rinviare per 30 giorni l'interruzione di un'analisi di configurazione. Dopo 30 giorni, l'analisi verrà riavviata automaticamente.
 
---
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Vai all'inventario dei database*.
@@ -53,9 +53,9 @@ L'analisi della configurazione si interrompe per 30 giorni.
 
 --
 .Ignora
+--
 Ignorare per interrompere un'analisi di configurazione a tempo indeterminato. È possibile riavviare l'analisi quando necessario.
 
---
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Vai all'inventario dei database*.
@@ -68,9 +68,9 @@ L'analisi della configurazione si interrompe.
 
 --
 .Riattiva
+--
 Riattivare in qualsiasi momento un'analisi di configurazione posticipata o ignorata.
 
---
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Vai all'inventario dei database*.
