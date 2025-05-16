@@ -1002,7 +1002,6 @@
   <block id="425a11288e6c089ecf9966b89b9be4eb" category="list-text">La valutazione di ottimizzazione non può determinare se viene utilizzata la replica tra aree (CRR) quando il file system FSX for ONTAP di destinazione si trova in un account AWS diverso.</block>
   <block id="a73971e47314d5a9302d6e0e452948e6" category="list-text">Workload Factory valuta solo la configurazione CRR del file system di origine FSX per ONTAP.</block>
   <block id="af64c2575cf7c41d9a388382dfd2aef2" category="section-title">Numero di database all'interno delle istanze di SQL Server</block>
-  <block id="b4f10df58cb8c1f0e0b30bd6fc637ddd" category="paragraph">Nella scheda inventario e nella dashboard, workload Factory supporta fino a 850 database nelle istanze di SQL Server.</block>
   <block id="fb090b715eaceea73761a137a2eb45c0" category="list-text">Resilienza: Include snapshot locali, FSX per i backup ONTAP e replica tra aree (CRR)</block>
   <block id="765282496f8377d23a4dec7887b9cea8" category="paragraph">*Seleziona tutto* è l'impostazione predefinita, ma è possibile selezionare risorse specifiche da ottimizzare.</block>
   <block id="c69c68bea63a58faad0233887cb8a9aa" category="section-title">04 aprile 2025</block>
@@ -1081,4 +1080,5 @@
   <block id="dfbf98e5a4263fb93c5b851bfc384ae3" category="list-text">*API REST*: Utilizza le API REST DI workload factory per implementare e gestire i file system FSX per ONTAP e altre risorse AWS.</block>
   <block id="57f4ce64453b6cd8aa398c4f88d38c2e" category="list-text">*CloudFormation*: Utilizzare il codice AWS CloudFormation per eseguire le azioni definite nella console workload factory in modo da modellare, eseguire il provisioning e gestire risorse AWS e di terze parti dallo stack CloudFormation nell'account AWS.</block>
   <block id="06c2e2277da374dd2cc7b735a1d1e848" category="list-text">*Terraform BlueXP  workload Factory Provider*: USA Terraform per costruire e gestire i flussi di lavoro infrastrutturali generati nella console di workload Factory.</block>
+  <block id="5614519834733a69bfb8911eae5d33b8" category="paragraph">Nella scheda inventario e nella dashboard, workload Factory supporta fino a 1.500 database nelle istanze di SQL Server.</block>
 </blocks>

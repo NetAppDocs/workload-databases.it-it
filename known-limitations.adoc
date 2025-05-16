@@ -132,4 +132,4 @@ Non viene preso in considerazione il calcolo delle dimensioni del volume per lo 
 
 == Numero di database all'interno delle istanze di SQL Server
 
-Nella scheda inventario e nella dashboard, workload Factory supporta fino a 850 database nelle istanze di SQL Server.
+Nella scheda inventario e nella dashboard, workload Factory supporta fino a 1.500 database nelle istanze di SQL Server.
