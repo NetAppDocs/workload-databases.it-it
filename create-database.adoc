@@ -26,7 +26,7 @@ NOTE: I server Microsoft SQL che utilizzano il protocollo SMB non supportano la 
 .Prima di iniziare
 Prima di creare un nuovo database, assicurarsi di aver completato i seguenti prerequisiti.
 
-Credenziali e autorizzazioni:: È necessario link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e autorizzazioni in modalità _Read_ o _Automate_"^]creare un nuovo database in workload factory.
+Credenziali e autorizzazioni:: È necessario link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e autorizzazioni in modalità _sola lettura_ o _lettura/scrittura_"^]creare un nuovo database in workload factory.
 +
 --
 In alternativa, è possibile utilizzare Codebox per copiare un modello in modo da poter distribuire un database al di fuori della fabbrica del carico di lavoro utilizzando l'API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Ulteriori informazioni sull'automazione Codebox"^].
@@ -41,7 +41,7 @@ AWS Systems Manager:: Assicurarsi che il `NT Authority\SYSTEM user` privilegio s
 
 == Creare un database
 
-È possibile utilizzare le modalità di distribuzione _Quick create_ o _Advanced create_ per completare questa attività in fabbrica dei carichi di lavoro con autorizzazioni in modalità _Read_ o _Automate_.
+È possibile utilizzare le modalità di distribuzione _Creazione rapida_ o _Creazione avanzata_ per completare questa attività nella fabbrica dei carichi di lavoro con autorizzazioni in modalità _sola lettura_ o _lettura/scrittura_.
 
 [role="tabbed-block"]
 ====

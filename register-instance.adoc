@@ -50,7 +50,7 @@ Se si utilizza un server proxy per tutte le connessioni in uscita da istanze EC2
 
 == Prima di iniziare
 
-L'host dell'istanza deve apparire nella scheda Inventario. Affinché gli host vengano visualizzati nell'inventario, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["devi aggiungere le credenziali dell'account AWS e le autorizzazioni in modalità _lettura_ o _automazione_"^] .
+L'host dell'istanza deve apparire nella scheda Inventario. Affinché gli host vengano visualizzati nell'inventario, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["è necessario aggiungere le credenziali dell'account AWS e le autorizzazioni in modalità _sola lettura_ o _lettura/scrittura_"^] .
 
 
 

@@ -58,16 +58,16 @@ NOTE: In _Quick create_, HA è il modello di distribuzione predefinito, Windows 
 +
 .. *Credenziali AWS*: Selezionare le credenziali AWS con autorizzazioni automatiche per implementare il nuovo host del database.
 +
-Le credenziali AWS con autorizzazioni _automatizza_ consentono al workload di implementare e gestire in fabbrica il nuovo host del database dal tuo account AWS all'interno di una fabbrica di carichi di lavoro.
+Le credenziali AWS con autorizzazioni di lettura/scrittura consentono a Workload Factory di distribuire e gestire il nuovo host del database dal tuo account AWS all'interno di Workload Factory.
 
 +
-Le credenziali AWS con autorizzazioni _Read_ consentono ai workload di generare un modello CloudFormation da utilizzare nella console AWS CloudFormation.
+Le credenziali AWS con autorizzazioni di _sola lettura_ consentono a Workload Factory di generare un modello CloudFormation da utilizzare nella console AWS CloudFormation.
 
 +
-Se non disponi delle credenziali AWS associate alla fabbrica dei carichi di lavoro e desideri creare il nuovo server nella fabbrica dei carichi di lavoro, segui *opzione 1* per andare alla pagina credenziali. Aggiungere manualmente le credenziali e le autorizzazioni necessarie per la modalità _automatizza_ per i carichi di lavoro del database.
+Se non disponi delle credenziali AWS associate alla fabbrica dei carichi di lavoro e desideri creare il nuovo server nella fabbrica dei carichi di lavoro, segui *opzione 1* per andare alla pagina credenziali. Aggiungere manualmente le credenziali e le autorizzazioni richieste per la modalità _lettura/scrittura_ per i carichi di lavoro del database.
 
 +
-Se si desidera completare il modulo di creazione di un nuovo server in fabbrica del carico di lavoro in modo da poter scaricare un modello di file YAML completo per la distribuzione in AWS CloudFormation, seguire *opzione 2* per assicurarsi di disporre delle autorizzazioni necessarie per creare il nuovo server in AWS CloudFormation. Aggiungere manualmente le credenziali e le autorizzazioni richieste per la modalità _Read_ per i carichi di lavoro del database.
+Se si desidera completare il modulo di creazione di un nuovo server in fabbrica del carico di lavoro in modo da poter scaricare un modello di file YAML completo per la distribuzione in AWS CloudFormation, seguire *opzione 2* per assicurarsi di disporre delle autorizzazioni necessarie per creare il nuovo server in AWS CloudFormation. Aggiungere manualmente le credenziali e le autorizzazioni richieste per la modalità di _sola lettura_ per i carichi di lavoro del database.
 
 +
 In alternativa, è possibile scaricare un modello di file YAML parzialmente completato dalla Codebox per creare lo stack al di fuori della fabbrica del carico di lavoro senza credenziali o autorizzazioni. Selezionare *CloudFormation* dal menu a discesa nel Codebox per scaricare il file YAML.
@@ -151,13 +151,13 @@ In alternativa, se si desidera modificare subito una di queste impostazioni pred
 Le credenziali AWS con autorizzazioni _automatizza_ consentono al workload di implementare e gestire in fabbrica il nuovo host del database dal tuo account AWS all'interno di una fabbrica di carichi di lavoro.
 
 +
-Le credenziali AWS con autorizzazioni _Read_ consentono ai workload di generare un modello CloudFormation da utilizzare nella console AWS CloudFormation.
+Le credenziali AWS con autorizzazioni di _sola lettura_ consentono a Workload Factory di generare un modello CloudFormation da utilizzare nella console AWS CloudFormation.
 
 +
-Se non disponi delle credenziali AWS associate alla fabbrica dei carichi di lavoro e desideri creare il nuovo server nella fabbrica dei carichi di lavoro, segui *opzione 1* per andare alla pagina credenziali. Aggiungere manualmente le credenziali e le autorizzazioni necessarie per la modalità _automatizza_ per i carichi di lavoro del database.
+Se non disponi delle credenziali AWS associate alla fabbrica dei carichi di lavoro e desideri creare il nuovo server nella fabbrica dei carichi di lavoro, segui *opzione 1* per andare alla pagina credenziali. Aggiungere manualmente le credenziali e le autorizzazioni richieste per la modalità _lettura/scrittura_ per i carichi di lavoro del database.
 
 +
-Se si desidera completare il modulo di creazione di un nuovo server in fabbrica del carico di lavoro in modo da poter scaricare un modello di file YAML completo per la distribuzione in AWS CloudFormation, seguire *opzione 2* per assicurarsi di disporre delle autorizzazioni necessarie per creare il nuovo server in AWS CloudFormation. Aggiungere manualmente le credenziali e le autorizzazioni richieste per la modalità _Read_ per i carichi di lavoro del database.
+Se si desidera completare il modulo di creazione di un nuovo server in fabbrica del carico di lavoro in modo da poter scaricare un modello di file YAML completo per la distribuzione in AWS CloudFormation, seguire *opzione 2* per assicurarsi di disporre delle autorizzazioni necessarie per creare il nuovo server in AWS CloudFormation. Aggiungere manualmente le credenziali e le autorizzazioni richieste per la modalità di _sola lettura_ per i carichi di lavoro del database.
 
 +
 In alternativa, è possibile scaricare un modello di file YAML parzialmente completato dalla Codebox per creare lo stack al di fuori della fabbrica del carico di lavoro senza credenziali o autorizzazioni. Selezionare *CloudFormation* dal menu a discesa nel Codebox per scaricare il file YAML.
