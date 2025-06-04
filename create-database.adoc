@@ -52,7 +52,7 @@ AWS Systems Manager:: Assicurarsi che il `NT Authority\SYSTEM user` privilegio s
 . Nella sezione Database, selezionare *Vai all'inventario dei database*.
 . In Database, selezionare la scheda *inventario*.
 . Nella scheda inventario, selezionare un server database con un'istanza SQL Server gestita in cui creare il database.
-. Fare clic sul menu a tre puntidell'istanza gestita e selezionare *Crea database utente*.
+. Fare clic sul menu a tre punti dell'istanza gestita e quindi selezionare *Crea database utente*.
 . Nella pagina Crea database utenti, in informazioni database, specificare quanto segue:
 +
 .. *Nome database*: Immettere il nome per il database.

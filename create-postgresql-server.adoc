@@ -26,22 +26,12 @@ I file system FSX per ONTAP hanno due modelli di distribuzione di PostgreSQL Ser
 
 
 --
-Modalità operative di fabbrica del carico di lavoro:: Workload Factory offre tre modalità operative che dipendono dalla comodità di lasciare che le risorse AWS vengano gestite in fabbrica dai carichi di lavoro.
-+
---
-Modalità *_Basic_*: In questa modalità operativa, non è necessario associare le credenziali dell'account AWS in fabbrica dei workload. È possibile copiare o scaricare un modello YAML parzialmente compilato dalla Codebox per completarlo al di fuori della fabbrica del carico di lavoro.
-
-Modalità *_Read_*: In questa modalità operativa, fornisci le credenziali dell'account AWS con autorizzazioni di lettura che ti consentono di completare il modulo _Quick create_ o _Advanced create_ e di copiarlo o scaricarlo. È anche possibile reindirizzare a CloudFormation da workload Factory con i dettagli del modulo completati. Inoltre, sarà possibile gestire il server di database installato in fabbrica dei workload.
-
-*_Automate_ mode*: In questa modalità operativa, fornisci credenziali di account AWS con autorizzazioni automatiche che ti consentono di creare e gestire risorse AWS all'interno di workload factory.
-
---
 
 
 .Prima di iniziare
 Prima di creare un nuovo host di database, accertarsi di disporre dei seguenti prerequisiti.
 
-Credenziali e autorizzazioni:: È necessario link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e automatizzare i permessi della modalità"^]creare un nuovo host di database in workload factory.
+Credenziali e autorizzazioni:: È necessario link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e autorizzazioni in modalità _lettura/scrittura_"^]creare un nuovo host di database in workload factory.
 
 
 

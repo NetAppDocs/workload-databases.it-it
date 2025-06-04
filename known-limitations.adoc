@@ -15,6 +15,12 @@ Le limitazioni note identificano piattaforme, dispositivi o funzioni non support
 
 
 
+== Supporto per il rilevamento delle istanze host
+
+Workload Factory supporta il rilevamento delle istanze PostgreSQL in esecuzione solo sui sistemi operativi Amazon Linux e delle istanze Oracle in esecuzione solo su Red Hat Enterprise Linux.
+
+
+
 == Supporto della versione dell'immagine AMI
 
 Vengono visualizzate solo quattro versioni recenti o revisioni di immagini AMI per ciascuna versione SQL. Non è consentita l'installazione da un'immagine AMI precedente alle ultime quattro versioni.
@@ -127,9 +133,3 @@ Non viene preso in considerazione il calcolo delle dimensioni del volume per lo 
 * La valutazione di ottimizzazione non può determinare se viene utilizzata la replica tra aree (CRR) quando il file system FSX for ONTAP di destinazione si trova in un account AWS diverso.
 * Workload Factory valuta solo la configurazione CRR del file system di origine FSX per ONTAP.
 
-
-
-
-== Numero di database all'interno delle istanze di SQL Server
-
-Nella scheda inventario e nella dashboard, workload Factory supporta fino a 1.500 database nelle istanze di SQL Server.

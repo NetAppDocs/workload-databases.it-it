@@ -2,22 +2,22 @@
 sidebar: sidebar 
 permalink: learn-databases.html 
 keywords: Databases 
-summary: 'BlueXP  workload Factory per database è un servizio di implementazione e manutenzione del database end-to-end con Best practice integrate per l"ottimizzazione, il thin cloning automatico e le funzionalità di monitoraggio e risoluzione.' 
+summary: 'Workload Factory for Databases è un servizio di distribuzione e manutenzione di database end-to-end con best practice integrate per l"ottimizzazione, la clonazione automatica sottile e funzionalità di monitoraggio e risoluzione.' 
 ---
-= Scopri la fabbrica di workload BlueXP  per i database
+= Scopri la fabbrica di workload per i database
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-BlueXP  workload Factory per database è un servizio di implementazione e manutenzione del database end-to-end con Best practice integrate per l'ottimizzazione, il thin cloning automatico e le funzionalità di monitoraggio e risoluzione.
+Workload Factory for Databases è un servizio di distribuzione e manutenzione di database end-to-end con best practice integrate per l'ottimizzazione, la clonazione automatica sottile e funzionalità di monitoraggio e risoluzione.
 
 
 
-== Che cos'è la farm di workload BlueXP  per i database?
+== Che cos'è la Workload Factory per i database?
 
-La workload factory di BlueXP  per database rileva, valuta, pianifica, effettua il provisioning e sposta i dati di Microsoft SQL Server nelle implementazioni di Amazon FSX per NetApp ONTAP (FSX per ONTAP), ottimizzate per soddisfare le tue aspettative in termini di performance e costi, rispettando al contempo le Best practice del settore. Durante l'intero ciclo di vita, la farm dei carichi di lavoro offre ottimizzazione e gestione continue per i database in FSX per ONTAP.
+Workload Factory per database rileva, valuta, pianifica, predispone e sposta i dati di Microsoft SQL Server nelle distribuzioni Amazon FSx for NetApp ONTAP (FSx for ONTAP), ottimizzate per soddisfare le aspettative in termini di prestazioni e costi, nel rispetto delle best practice del settore. Durante l'intero ciclo di vita, la farm dei carichi di lavoro offre ottimizzazione e gestione continue per i database in FSX per ONTAP.
 
 Per ulteriori informazioni sulla fabbrica dei carichi di lavoro, fare riferimento alla link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html["panoramica della fabbrica del carico di lavoro"^].
 
@@ -81,7 +81,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["Scop
 
 === Modalità operative in fabbrica dei carichi di lavoro
 
-Tre diverse modalità operative, _Basic_, _Read_ e _Automate_, offrono opzioni flessibili per l'implementazione all'interno e all'esterno della workload Factory. Ottieni un valore immediato con zero-trust in modalità _Basic_ con frammenti di codice da utilizzare al di fuori di workload factory. Ottenete valore incrementale con la fiducia incrementale nelle modalità _Read_ e _Automate_.
+Tre diverse modalità operative - _base_, _sola lettura_ e _lettura/scrittura_ - offrono opzioni flessibili per l'implementazione all'interno e all'esterno della workload factory. Ottieni un valore immediato con zero-trust in modalità _Basic_ con frammenti di codice da utilizzare al di fuori di workload factory. Ottieni valore incrementale con trust incrementale nelle modalità _sola lettura_ e _lettura/scrittura_.
 
 Ulteriori informazioni su link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["modalità operative in fabbrica dei carichi di lavoro"^].
 

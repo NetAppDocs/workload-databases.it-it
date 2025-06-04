@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: manage-instance.html 
+keywords: host instance, instance management, FSx for ONTAP, instance, manage host, view host, database host, database instance, manage 
+summary: Scopri di più sulla gestione delle istanze nella Workload Factory per i database. 
+---
+= Gestione delle istanze nella fabbrica dei carichi di lavoro per i database
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+La gestione delle istanze host registrate nella Workload Factory include la distribuzione di risorse per le istanze, come la creazione di database e cloni di database, e il monitoraggio dello stato delle istanze e dei database, dell'utilizzo delle risorse, della protezione e delle prestazioni di storage. Inoltre, è possibile analizzare lo stato di corretta architettura delle configurazioni del database e implementare le best practice di configurazione per migliorare le prestazioni e ridurre i costi operativi. La gestione delle istanze è disponibile solo per istanze con storage del file system FSx for ONTAP.
+
+Devi link:register-instance.html["registrare un'istanza host"] per svolgere una qualsiasi delle seguenti attività di gestione.
+
+I compiti di gestione includono:
+
+* link:create-database.html["Creazione di un database"]
+* link:create-sandbox-clone.html["Creazione di un clone del database (sandbox)"]
+* link:view-databases.html["Visualizzazione dei database"]
+* link:monitor-databases.html["Monitoraggio delle operazioni del database"]
+* link:optimize-configurations.html["Implementazione di configurazioni di database ben progettate"]
+

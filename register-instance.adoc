@@ -1,0 +1,91 @@
+---
+sidebar: sidebar 
+permalink: register-instance.html 
+keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle host instance, manage host, view host, database host, database instance, manage, unregister 
+summary: Gestisci le istanze di Microsoft SQL Server in una farm di workload BlueXP  per i database. 
+---
+= Registra le istanze nella fabbrica dei carichi di lavoro per i database
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Registrare le istanze host in modo da poter monitorare lo stato delle istanze e dei database, l'utilizzo delle risorse, la protezione e le prestazioni di archiviazione nella fabbrica dei carichi di lavoro per i database.
+
+I database possono registrare solo istanze con FSx per l'archiviazione del file system ONTAP.
+
+
+
+== Informazioni sul compito
+
+La registrazione di un'istanza host prevede due passaggi: l'autenticazione dell'istanza e la sua preparazione, assicurandosi che tutti i moduli AWS, NetApp e PowerShell siano installati sull'istanza.
+
+È possibile autenticare i collegamenti utilizzando le credenziali di SQL Server o le credenziali di Windows.
+
+
+NOTE: Workload Factory supporta solo la registrazione e la gestione di istanze host Microsoft SQL Server. A seconda delle credenziali dell'account AWS selezionate in Workload Factory, gli host PostgreSQL e Oracle potrebbero essere visualizzati nell'inventario. Attualmente, Workload Factory supporta istanze PostgreSQL non registrate in esecuzione solo su sistemi operativi Amazon Linux e istanze Oracle in esecuzione solo su Red Hat Enterprise Linux.
+
+
+
+== Registrazione dell'istanza host in una rete privata
+
+Per registrare un'istanza host in una rete privata senza connettività esterna, i seguenti endpoint devono essere disponibili nella VPC con associazione alle subnet in cui sono presenti i server SQL. Assicurarsi che gli endpoint dell'interfaccia consentano la porta 443 nel gruppo di protezione collegato.
+
+* `S3 Gateway/endpoint`
+* `ssm`
+* `ssmmessages`
+* `fsx`
+
+
+Se si utilizza un server proxy per tutte le connessioni in uscita da istanze EC2, è necessario consentire l'accesso ai seguenti domini in modo che le operazioni di gestione funzionino:
+
+* ``.microsoft.com``
+* ``.powershellgallery.com``
+* ``.aws.amazon.com``
+* ``.amazonaws.com``
+
+
+
+
+== Prima di iniziare
+
+L'host dell'istanza deve apparire nella scheda Inventario. Affinché gli host vengano visualizzati nell'inventario, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["devi aggiungere le credenziali dell'account AWS e le autorizzazioni in modalità _lettura_ o _automazione_"^] .
+
+
+
+== Registra un'istanza host
+
+La registrazione di un'istanza host include l'autenticazione e la preparazione dell'istanza.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nella sezione Database, selezionare *Vai all'inventario dei database*.
+. In Database, selezionare la scheda *inventario*.
+. Nella scheda Inventario, seleziona la scheda *Istanze*.
+. Passare all'istanza da gestire e selezionare *Registra istanza*.
+. Nella pagina Registra istanza, immettere il nome utente e la password di SQL Server e il nome utente e la password del file system FSx for ONTAP.
+. Selezionare *Avanti*.
+. Preparare l'istanza assicurandosi che soddisfi i prerequisiti richiesti. Se tutti i moduli richiesti sono installati e i prerequisiti sono soddisfatti, selezionare *Avanti* per registrare l'istanza. Se è necessario intervenire, seguire questi passaggi.
++
+.. Se mancante, selezionare la fabbrica del carico di lavoro per *Installare i moduli mancanti di AWS e NetApp PowerShell*.
+.. Se mancante, selezionare la fabbrica del carico di lavoro per *Installare PowerShell 7 mancante*. L'installazione del modulo PowerShell 7 mancante richiede il riavvio del sistema.
+.. Esaminare l'elenco dei prerequisiti per le seguenti funzionalità. Per registrare l'istanza, è necessario soddisfare almeno un prerequisito.
++
+*** *Esaminare problemi e raccomandazioni ben strutturati*
+*** *Risolvere problemi ben progettati*
+*** *Crea database*
+*** *Creare copie del database (sandbox)*
++
+Il completamento dei prerequisiti include l'aggiornamento delle autorizzazioni della policy AWS IAM, delle autorizzazioni del profilo dell'istanza EC2 IAM, delle autorizzazioni di SQL Server e dei moduli PowerShell.
+
+
+
+.. Per continuare, è necessario soddisfare almeno un prerequisito mancante.
+.. Quando uno o più prerequisiti sono stati completati e i controlli sono *Pronti*, è possibile scegliere di *Registrare* l'istanza.
+
+
+
+
+.Risultato
+Viene avviata la richiesta di registrazione dell'istanza. Selezionare la scheda *Monitoraggio job* per monitorare l'avanzamento.

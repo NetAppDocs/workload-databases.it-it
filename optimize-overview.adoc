@@ -1,25 +1,21 @@
 ---
 sidebar: sidebar 
 permalink: optimize-overview.html 
-keywords: continuous optimization, optimize, assess, assessment, scan, optimization, Microsoft SQL Server, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations 
-summary: La farm di workload BlueXP  per i database offre ottimizzazione continua per le implementazioni di Microsoft SQL Server su Amazon FSX per lo storage NetApp ONTAP. 
+keywords: database configuration issues, issues, analyze, scan, optimize, improve, database configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations, storage, compute, application, resiliency, scan, optimization, SQL Server, host, instance 
+summary: Workload Factory per Database analizza regolarmente le configurazioni di Microsoft SQL Server per determinare se ci sono problemi. 
 ---
-= Ottimizzazione continua per la farm di workload BlueXP  per i database
+= Analisi della configurazione per ambienti di database nella fabbrica dei carichi di lavoro
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-La farm di workload BlueXP  per i database offre ottimizzazione continua per le implementazioni di Microsoft SQL Server su Amazon FSX per lo storage NetApp ONTAP.
-
-L'ottimizzazione continua analizza e valuta automaticamente l'infrastruttura di database su larga scala per garantire che ambienti di grandi dimensioni raggiungano il massimo delle performance, l'efficienza dei costi e la conformità con le Best practice. La funzionalità ti offre un report completo di informazioni utili e consigli per l'ottimizzazione.
-
-L'ottimizzazione continua consente di rilevare i problemi dell'infrastruttura del database, individuare gli elementi da modificare e intraprendere azioni concrete.
+Workload Factory per Database analizza regolarmente le configurazioni dei database per determinare eventuali problemi nelle distribuzioni di Microsoft SQL Server su Amazon FSx per lo storage NetApp ONTAP. Quando vengono rilevati problemi, Workload Factory ne indica la natura e spiega cosa è necessario modificare per garantire che le configurazioni dei database raggiungano le massime prestazioni, la massima efficienza dei costi e la conformità alle best practice.
 
 Le funzionalità principali includono:
 
-* Valutazione continua
+* Analisi quotidiana della configurazione
 * Convalida automatica delle Best practice
 * Consigli per un corretto dimensionamento
 * Osservabilità proattiva
@@ -27,6 +23,34 @@ Le funzionalità principali includono:
 * Framework Advisor di AWS con architettura ottimale
 
 
-L'ambito dell'ottimizzazione è diverso a seconda del componente da valutare. Ad esempio, l'ottimizzazione dello storage avviene a livello di istanza SQL, mentre l'ottimizzazione del calcolo avviene a livello di host.
 
-link:optimize-configurations.html["Ottimizza le configurazioni per le implementazioni di Microsoft SQL Server"]
+
+== Stato ben progettato
+
+Nella console workload Factory a livello di file system, viene elencato lo stato con un'architettura appropriata per tutti i file system FSX per ONTAP. Gli stati ben architettati sono classificati come "problemi", "non analizzati" o "ben architettati". Selezionando lo stato con un'architettura ottimale si passa alla scheda di stato con un'architettura ottimale all'interno del file system, dove è possibile trovare il punteggio con un'architettura adeguata, le categorie di configurazione e tutte le configurazioni del file system.
+
+Punteggio ben strutturato:: Il punteggio include tutte le configurazioni attualmente analizzate e viene visualizzato come percentuale. Un punteggio del 25% indica che il 25% delle configurazioni del file system è caratterizzato da un'architettura ottimale.
+Categorie di configurazione:: Le configurazioni del file system sono organizzate in categorie allineate con i seguenti cinque pilastri del framework ben strutturato AWS.
++
+--
+* _Reliability_: Garantisce che i carichi di lavoro svolgano le funzioni previste in modo corretto e coerente, anche in presenza di interruzioni. Un esempio di configurazione è FSX per i backup ONTAP.
+* _Sicurezza_: Sottolinea la protezione di dati, sistemi e risorse attraverso valutazioni dei rischi e strategie di mitigazione.
+* _Eccellenza operativa_: Si concentra sulla fornitura dell'architettura e del valore di business ottimali.
+* _Ottimizzazione dei costi_: Mira a fornire valore aziendale riducendo al minimo i costi.
+* _Performance Efficiency_: Si concentra sull'utilizzo efficiente delle risorse per soddisfare i requisiti di sistema e mantenere prestazioni ottimali con il variare delle esigenze.
+
+
+--
+Ambito di analisi:: L'ambito dell'ottimizzazione è diverso a seconda del componente da valutare. Ad esempio, l'ottimizzazione dello storage avviene a livello di istanza SQL, mentre l'ottimizzazione del calcolo avviene a livello di host.
+
+
+
+
+== Requisiti di analisi
+
+Per un'analisi completa dell'ambiente del database, le istanze host devono essere registrate e online.
+
+link:register-instance.html["Scopri come registrare un'istanza host."]
+
+.Cosa succederà
+link:optimize-configurations.html["Implementare configurazioni di database ben progettate"]

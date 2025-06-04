@@ -4,17 +4,17 @@ permalink: create-database-server.html
 keywords: create, server, Microsoft SQL, deploy, host, deploy a database host, database host 
 summary: Creare una nuova Microsoft SQL Server nella factory del carico di lavoro BlueXP  per i database. 
 ---
-= Creare un database server in fabbrica con carichi di lavoro BlueXP  per i database
+= Creare un Microsoft SQL Server nella fabbrica del carico di lavoro per i database
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-La creazione di un nuovo Microsoft SQL Server, o host di database, nella fabbrica di carichi di lavoro BlueXP  per i database richiede l'implementazione di un file system FSX per ONTAP e le risorse per Active Directory.
+Per creare un nuovo Microsoft SQL Server o un host di database nella fabbrica di carichi di lavoro per i database, è necessario un'implementazione del file system FSx per ONTAP e risorse per Active Directory.
 
 .A proposito di questa attività
-Prima di creare un Microsoft SQL Server dalla fabbrica del carico di lavoro, conoscere i tipi di distribuzione dello storage disponibili per la configurazione dell'host del database, la distribuzione di Active Directory, le modalità operative della fabbrica del carico di lavoro e i requisiti per completare questa operazione.
+Prima di creare un Microsoft SQL Server dalla fabbrica del carico di lavoro, informati sui tipi di distribuzione dell'archiviazione disponibili per la configurazione host del database, la configurazione Microsoft Multi-path I/O, la distribuzione di Active Directory, i dettagli di rete e i requisiti per completare questa operazione.
 
 Dopo la distribuzione, sarà necessario <<Passaggio 2: Abilitare la connessione remota su Microsoft SQL Server,Attivare la connessione remota su Microsoft SQL Server>>.
 
@@ -58,19 +58,12 @@ Rollback delle risorse:: Se si decide di ripristinare le risorse DNS (Domain Nam
 
 
 --
-Modalità operative di fabbrica del carico di lavoro:: Workload Factory offre tre modalità operative che dipendono dalla comodità di lasciare che le risorse AWS vengano gestite in fabbrica dai carichi di lavoro.
 
-
-Modalità *_Basic_*: In questa modalità operativa, non è necessario associare le credenziali dell'account AWS in fabbrica dei workload. È possibile copiare o scaricare un modello YAML parzialmente compilato dalla Codebox per completarlo al di fuori della fabbrica del carico di lavoro.
-
-Modalità *_Read_*: In questa modalità operativa, fornisci le credenziali dell'account AWS con autorizzazioni di lettura che ti consentono di completare il modulo _Quick create_ o _Advanced create_ e di copiarlo o scaricarlo. È anche possibile reindirizzare a CloudFormation da workload Factory con i dettagli del modulo completati. Inoltre, sarà possibile gestire il server di database installato in fabbrica dei workload.
-
-*_Automate_ mode*: In questa modalità operativa, fornisci credenziali di account AWS con autorizzazioni automatiche che ti consentono di creare e gestire risorse AWS all'interno di workload factory.
 
 .Prima di iniziare
 Prima di creare un nuovo host di database, accertarsi di disporre dei seguenti prerequisiti.
 
-Credenziali e autorizzazioni:: È necessario link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e automatizzare i permessi della modalità"^]creare un nuovo host di database in workload factory.
+Credenziali e autorizzazioni:: È necessario link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e autorizzazioni in modalità _lettura/scrittura_"^]creare un nuovo host di database in workload factory.
 Active Directory:: Quando ci si connette ad Active Directory, è necessario disporre dell'accesso amministrativo con autorizzazioni per effettuare le seguenti operazioni:
 +
 --
@@ -125,13 +118,16 @@ In alternativa, è possibile scaricare un modello di file YAML parzialmente comp
 
 .. *Regione e VPC*: Selezionare una regione e una rete VPC.
 +
-Garantire che i gruppi di protezione per un endpoint dell'interfaccia esistente consentano l'accesso al protocollo HTTPS (443) alle subnet selezionate.
+Assicurarsi che le subnet di distribuzione siano associate agli endpoint dell'interfaccia esistenti e che i gruppi di sicurezza consentano l'accesso al protocollo HTTPS (443) alle subnet selezionate.
 
 +
 Endpoint dell'interfaccia del servizio AWS (SQS, FSX, EC2, CloudWatch, CloudFormation, SSM) e l'endpoint del gateway S3 vengono creati durante la distribuzione se non vengono trovati.
 
 +
 Gli attributi DNS VPC `EnableDnsSupport` e `EnableDnsHostnames` sono stati modificati per abilitare la risoluzione degli indirizzi degli endpoint se non sono già impostati su `true`.
+
++
+Quando si utilizza un DNS cross-VPC, il gruppo di sicurezza per gli endpoint sull'altra VPC in cui risiede il DNS dovrebbe consentire la porta 443 per le subnet di distribuzione. In caso contrario, è necessario fornire un resolver DNS dalla VPC locale quando ci si unisce a un Active Directory cross-VPC. In un ambiente con più controller di dominio replicati, se alcuni controller di dominio non sono raggiungibili dalla subnet, è possibile *reindirizzare a CloudFormation* e immettere  `Preferred domain controller` per connettersi ad Active Directory.
 
 .. *Zone di disponibilità*: Selezionare zone di disponibilità e subnet in base al modello di distribuzione istanza cluster failover (FCI).
 +
