@@ -20,6 +20,5 @@ I compiti di gestione includono:
 * link:create-database.html["Creazione di un database"]
 * link:create-sandbox-clone.html["Creazione di un clone del database (sandbox)"]
 * link:view-databases.html["Visualizzazione dei database"]
-* link:monitor-databases.html["Monitoraggio delle operazioni del database"]
 * link:optimize-configurations.html["Implementazione di configurazioni di database ben progettate"]
 

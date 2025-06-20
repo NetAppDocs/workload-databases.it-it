@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: monitor-databases.html 
 keywords: monitor databases, monitor jobs, track database jobs 
-summary: 'Tenere traccia dei processi del database e monitorare i database all"interno della factory del carico di lavoro BlueXP  per i database.' 
+summary: 'Tieni traccia dei lavori del database e monitora i database all"interno della fabbrica dei carichi di lavoro per i database.' 
 ---
-= Monitorare i database nella workload factory BlueXP 
+= Monitorare i lavori del database nella fabbrica dei carichi di lavoro
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Tenere traccia dei processi del database e monitorare i database all'interno della factory del carico di lavoro BlueXP  per i database.
+Tieni traccia dei lavori del database e monitora i database all'interno della fabbrica dei carichi di lavoro per i database.
 
 .A proposito di questa attività
 I database consentono di monitorare i processi in modo da poter tenere traccia dell'avanzamento dei processi e diagnosticare e risolvere eventuali problemi. È possibile filtrare i lavori per tipo e stato, trovare i lavori utilizzando la funzione di ricerca e scaricare la tabella dei lavori.
