@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: deregister-instance.html 
 keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle host instance, deregister instance, unregister instance, remove instance 
-summary: 'Annullare la registrazione di un"istanza host se non si desidera più distribuire o monitorare le risorse dell"istanza.' 
+summary: 'Annulla la registrazione di un"istanza se non vuoi più distribuire o monitorare le risorse dell"istanza.' 
 ---
-= Annullare la registrazione di un'istanza host nella fabbrica del carico di lavoro
+= Annullare la registrazione di un'istanza nella fabbrica dei carichi di lavoro
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Annulla la registrazione di un'istanza host se non desideri più distribuire o monitorare le risorse dell'istanza. L'annullamento della registrazione delle istanze rimuove anche la quantità di capacità di archiviazione utilizzata dall'istanza host.
+Annulla la registrazione di un'istanza se non desideri più distribuire o monitorare le risorse dell'istanza. L'annullamento della registrazione delle istanze comporta anche la rimozione della capacità di archiviazione utilizzata dall'istanza.
 
 Potrai registrare nuovamente l'istanza in un secondo momento.
 
@@ -19,13 +19,13 @@ Potrai registrare nuovamente l'istanza in un secondo momento.
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Vai all'inventario dei database*.
 . In Database, selezionare la scheda *inventario*.
-. Fare clic sulla freccia a discesa per espandere la riga dell'istanza host da annullare la registrazione.
+. Fare clic sulla freccia a discesa per espandere la riga dell'istanza da annullare la registrazione.
 +
-L'host si espande e vengono visualizzate le istanze dell'host.
+L'host si espande e appaiono le istanze.
 
 . Fare clic sul menu a tre punti dell'istanza per annullarne la registrazione.
 . Selezionare *Annulla registrazione*.
 
 
 .Risultato
-L'istanza host è ora deregistrata. Puoi registrarla nuovamente in seguito.
+L'istanza è ora annullata. Puoi registrarla nuovamente in seguito.

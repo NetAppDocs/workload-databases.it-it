@@ -11,7 +11,7 @@ summary: Gestisci le istanze di Microsoft SQL Server in una farm di workload Blu
 
 
 [role="lead"]
-Registrare le istanze host in modo da poter monitorare lo stato delle istanze e dei database, l'utilizzo delle risorse, la protezione e le prestazioni di archiviazione nella fabbrica dei carichi di lavoro per i database.
+Registrare le istanze in modo da poter monitorare lo stato delle istanze e del database, l'utilizzo delle risorse, la protezione e le prestazioni di archiviazione nella fabbrica dei carichi di lavoro per i database.
 
 I database possono registrare solo istanze con FSx per l'archiviazione del file system ONTAP.
 
@@ -19,18 +19,18 @@ I database possono registrare solo istanze con FSx per l'archiviazione del file 
 
 == Informazioni sul compito
 
-La registrazione di un'istanza host prevede due passaggi: l'autenticazione dell'istanza e la sua preparazione, assicurandosi che tutti i moduli AWS, NetApp e PowerShell siano installati sull'istanza.
+La registrazione di un'istanza prevede due passaggi: l'autenticazione dell'istanza e la sua preparazione, assicurandosi che tutti i moduli AWS, NetApp e PowerShell siano installati sull'istanza.
 
 È possibile autenticare i collegamenti utilizzando le credenziali di SQL Server o le credenziali di Windows.
 
 
-NOTE: Workload Factory supporta solo la registrazione e la gestione di istanze host Microsoft SQL Server. A seconda delle credenziali dell'account AWS selezionate in Workload Factory, gli host PostgreSQL e Oracle potrebbero essere visualizzati nell'inventario. Attualmente, Workload Factory supporta istanze PostgreSQL non registrate in esecuzione solo su sistemi operativi Amazon Linux e istanze Oracle in esecuzione solo su Red Hat Enterprise Linux.
+NOTE: Workload Factory supporta solo la registrazione e la gestione delle istanze di Microsoft SQL Server. A seconda delle credenziali dell'account AWS selezionate in Workload Factory, gli host PostgreSQL e Oracle potrebbero essere visualizzati nell'inventario. Attualmente, Workload Factory supporta istanze PostgreSQL non registrate in esecuzione solo su sistemi operativi Amazon Linux e istanze Oracle in esecuzione solo su Red Hat Enterprise Linux.
 
 
 
-== Registrazione dell'istanza host in una rete privata
+== Registrazione di un'istanza in una rete privata
 
-Per registrare un'istanza host in una rete privata senza connettività esterna, i seguenti endpoint devono essere disponibili nella VPC con associazione alle subnet in cui sono presenti i server SQL. Assicurarsi che gli endpoint dell'interfaccia consentano la porta 443 nel gruppo di protezione collegato.
+Per registrare un'istanza in una rete privata senza connettività esterna, i seguenti endpoint devono essere disponibili nella VPC con associazione alle subnet in cui sono presenti i server SQL. Assicurarsi che gli endpoint dell'interfaccia consentano la porta 443 nel gruppo di protezione collegato.
 
 * `S3 Gateway/endpoint`
 * `ssm`
@@ -50,23 +50,44 @@ Se si utilizza un server proxy per tutte le connessioni in uscita da istanze EC2
 
 == Prima di iniziare
 
-L'host dell'istanza deve apparire nella scheda Inventario. Affinché gli host vengano visualizzati nell'inventario, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["è necessario aggiungere le credenziali dell'account AWS e le autorizzazioni in modalità _sola lettura_ o _lettura/scrittura_"^] .
+Prima di registrare un'istanza, tenere presente quanto segue:
+
+* L'host dell'istanza deve apparire nella scheda Inventario. Affinché gli host vengano visualizzati nell'inventario, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["è necessario aggiungere le credenziali dell'account AWS e le autorizzazioni in modalità _sola lettura_ o _lettura/scrittura_"^] .
+* Quando si utilizzano le credenziali utente di dominio Windows per l'autenticazione per le operazioni di gestione di SQL Server, Workload Factory abilita la delega CredSSP sui nodi SQL. Se la delega CredSSP è bloccata per tutti i computer del dominio con i criteri di gruppo, l'autenticazione con le credenziali utente di Windows non funziona.
 
 
 
-== Registra un'istanza host
 
-La registrazione di un'istanza host include l'autenticazione e la preparazione dell'istanza.
+== Registra un'istanza
+
+La registrazione di un'istanza include l'autenticazione e la preparazione dell'istanza.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Vai all'inventario dei database*.
 . In Database, selezionare la scheda *inventario*.
 . Nella scheda Inventario, seleziona la scheda *Istanze*.
-. Passare all'istanza da gestire e selezionare *Registra istanza*.
-. Nella pagina Registra istanza, immettere il nome utente e la password di SQL Server e il nome utente e la password del file system FSx for ONTAP.
-. Selezionare *Avanti*.
-. Preparare l'istanza assicurandosi che soddisfi i prerequisiti richiesti. Se tutti i moduli richiesti sono installati e i prerequisiti sono soddisfatti, selezionare *Avanti* per registrare l'istanza. Se è necessario intervenire, seguire questi passaggi.
+. Selezionare per registrare una singola istanza o più istanze.
++
+.. Registrazione di una singola istanza: vai all'istanza da gestire e seleziona *Registra istanza*.
+.. Registrazione di più istanze: selezionare il pulsante *Registra più istanze*.
++
+Sono disponibili due opzioni per la registrazione di più istanze. In entrambi i casi, le istanze devono condividere lo stesso stato di autenticazione (non autenticato o autenticato).
+
++
+*** Istanze non autenticate: selezionare più istanze non autenticate da registrare. Queste istanze devono condividere le stesse credenziali di autenticazione e le stesse credenziali FSx for ONTAP. Selezionare *Applica* e quindi *Avanti*.
+*** Istanze autenticate: seleziona più istanze autenticate da registrare, quindi seleziona *Avanti*.
+
+
+
+
+. Al passaggio 2 della pagina "Registra istanze", seleziona la modalità di autenticazione dell'istanza, inserisci i seguenti dettagli e seleziona "Avanti". Se le istanze sono già autenticate, seleziona "Avanti".
++
+** *Autenticazione di SQL Server*: immettere il nome utente e la password di SQL Server, nonché il nome utente e la password del file system FSx for ONTAP.
+** *Autenticazione Windows*: immettere il nome utente e la password di Windows, nonché il nome utente e la password del file system FSx for ONTAP.
+
+
+. Nel passaggio 3, preparare l'istanza assicurandosi che soddisfi i prerequisiti richiesti. Se tutti i moduli richiesti sono installati e i prerequisiti sono soddisfatti, selezionare *Avanti* per registrare l'istanza. Se è necessario intervenire, seguire questi passaggi.
 +
 .. Se mancante, selezionare la fabbrica del carico di lavoro per *Installare i moduli mancanti di AWS e NetApp PowerShell*.
 .. Se mancante, selezionare la fabbrica del carico di lavoro per *Installare PowerShell 7 mancante*. L'installazione del modulo PowerShell 7 mancante richiede il riavvio del sistema.

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: manage-instance.html 
-keywords: host instance, instance management, FSx for ONTAP, instance, manage host, view host, database host, database instance, manage 
+keywords: instance, instance management, FSx for ONTAP, instance, manage host, view host, database host, database instance, manage 
 summary: Scopri di più sulla gestione delle istanze nella Workload Factory per i database. 
 ---
 = Gestione delle istanze nella fabbrica dei carichi di lavoro per i database
@@ -11,9 +11,9 @@ summary: Scopri di più sulla gestione delle istanze nella Workload Factory per 
 
 
 [role="lead"]
-La gestione delle istanze host registrate nella Workload Factory include la distribuzione di risorse per le istanze, come la creazione di database e cloni di database, e il monitoraggio dello stato delle istanze e dei database, dell'utilizzo delle risorse, della protezione e delle prestazioni di storage. Inoltre, è possibile analizzare lo stato di corretta architettura delle configurazioni del database e implementare le best practice di configurazione per migliorare le prestazioni e ridurre i costi operativi. La gestione delle istanze è disponibile solo per istanze con storage del file system FSx for ONTAP.
+La gestione delle istanze registrate nella Workload Factory include la distribuzione di risorse per le istanze, come la creazione di database e cloni di database, nonché il monitoraggio dello stato delle istanze e dei database, dell'utilizzo delle risorse, della protezione e delle prestazioni di archiviazione. Inoltre, è possibile analizzare lo stato di corretta architettura delle configurazioni del database e implementare le best practice di configurazione per migliorare le prestazioni e ridurre i costi operativi. La gestione delle istanze è disponibile solo per istanze con storage del file system FSx for ONTAP.
 
-Devi link:register-instance.html["registrare un'istanza host"] per svolgere una qualsiasi delle seguenti attività di gestione.
+Devi link:register-instance.html["registrare un'istanza"] per svolgere una qualsiasi delle seguenti attività di gestione.
 
 I compiti di gestione includono:
 

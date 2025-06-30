@@ -87,6 +87,8 @@ Active Directory:: Quando ci si connette ad Active Directory, è necessario disp
 
 NOTE: Quando si utilizza Terraform da Codebox, il codice che si copia o si scarica nasconde `fsxadmin` e `vsadmin` password. Sarà necessario immettere nuovamente le password quando si esegue il codice. È necessario includere le seguenti autorizzazioni per l'account utente oltre alle autorizzazioni in modalità _automatizza_: `iam:TagRole` E `iam:TagInstanceProfile`. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#use-terraform-from-codebox["Scopri come utilizzare Terraform da Codebox"^].
 
+Durante la distribuzione, la Workload Factory abilita CredSSP per la delega delle credenziali agli script per il provisioning di SQL. Quando la delega di CredSSP è bloccata per tutti i computer del dominio con i criteri di gruppo, la distribuzione fallisce. Dopo la distribuzione, la Workload Factory disabilita CredSSP.
+
 [role="tabbed-block"]
 ====
 .Creazione rapida

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: optimize-configurations.html 
 keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
-summary: 'La farm di workload BlueXP  per i database analizza le configurazioni di Microsoft SQL Server offrendo approfondimenti e consigli per aiutarti a raggiungere l"eccellenza operativa.' 
+summary: 'Workload Factory per database analizza le configurazioni di Microsoft SQL Server, fornendo informazioni e consigli per aiutarti a raggiungere l"eccellenza operativa.' 
 ---
 = Implementare configurazioni di database ben progettate nella fabbrica dei carichi di lavoro
 :allow-uri-read: 
@@ -23,7 +23,7 @@ Cosa viene analizzato:: Workload Factory analizza lo stato di corretta architett
 --
 * Dimensionamento dello storage: Include Tier di storage, capacità aggiuntiva del file system, dimensioni dei dischi di log e dimensioni dei dischi TempDB
 * Layout dello storage: Comprende posizionamento dei file di dati degli utenti, posizionamento dei file di log e posizionamento di TempDB
-* Configurazione dello storage: Comprende gestione della capacità, thin provisioning, policy di tiering, snapshot, stato i/o multi-path, policy, sessioni e altro ancora
+* Configurazione di archiviazione: include gestione della capacità, provisioning sottile, criteri di tiering, snapshot, stato Microsoft Multipath I/O (MPIO) e impostazione del timeout MPIO
 * Calcolo: Include il dimensionamento corretto, le patch del sistema operativo e le impostazioni della scheda di rete come Receive Side Scaling (RSS) e TCP offload
 * Applicazioni: Include le licenze di Microsoft SQL Server, la patch di Microsoft SQL Server e le impostazioni MAXDOP
 * Resilienza: Include snapshot locali, FSX per i backup ONTAP e replica tra aree (CRR)
@@ -57,10 +57,10 @@ NOTE: Il processo di correzione potrebbe causare tempi di inattività delle ista
 . Selezionare la freccia dell'elenco a discesa per visualizzare il suggerimento per qualsiasi configurazione. Le raccomandazioni includono le migliori pratiche, le potenziali insidie delle configurazioni non ottimizzate e considerazioni importanti. Verificare attentamente il suggerimento.
 . Selezionare per *Visualizzare e correggere* i problemi di configurazione quando l'opzione è disponibile.
 +
-*Seleziona tutto* è l'impostazione predefinita, ma è possibile selezionare risorse specifiche da ottimizzare.
+*Seleziona tutto* è l'impostazione predefinita, ma puoi selezionare risorse specifiche da correggere.
 
 +
-.. Per tutte le configurazioni, ad eccezione della pulizia dei cloni, consulta i dettagli delle raccomandazioni per scoprire cosa accadrà se scegli di ottimizzare. Alcune operazioni di ripristino potrebbero causare tempi di inattività delle istanze o interruzioni del servizio.
+.. Per tutte le configurazioni, ad eccezione della pulizia del clone, rivedi i dettagli della raccomandazione per sapere cosa accadrà se scegli di risolvere il problema. Alcune operazioni di ripristino potrebbero causare tempi di inattività delle istanze o interruzioni del servizio.
 .. Per la pulitura dei cloni, selezionare i database clonati (sandbox) da aggiornare o eliminare.
 +
 *** L'aggiornamento di un clone lo sincronizza con il relativo database di origine. L'aggiornamento è disponibile solo per i cloni creati in workload factory.
@@ -73,4 +73,4 @@ NOTE: Il processo di correzione potrebbe causare tempi di inattività delle ista
 
 
 .Risultato
-Viene avviato il processo di bonifica. Selezionare la scheda *monitoraggio processo* per visualizzare lo stato dell'operazione.
+Workload Factory inizia a risolvere i problemi. Selezionare la scheda *monitoraggio processo* per visualizzare lo stato dell'operazione.
