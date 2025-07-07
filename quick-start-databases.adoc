@@ -36,6 +36,6 @@ Se si opera in modalità _sola lettura_ o _lettura/scrittura_, sarà necessario 
 Infine, se hai scelto di operare in modalità _lettura/scrittura_, devi link:create-database-server.html["distribuire un server host"] O link:register-instance.html["registrare un'istanza"] per gestire le risorse dell'host e prima di aggiungere database utente.
 
 .Cosa succederà
-Dopo aver registrato istanze host con FSx per l'archiviazione del file system ONTAP nell'inventario dei database, è possibile link:create-database.html["creare un database utenti"] O link:create-sandbox-clone.html["clona l'host per creare una sandbox"] .
+Dopo aver registrato istanze con FSx per l'archiviazione del file system ONTAP nell'inventario dei database, è possibile link:create-database.html["creare un database utenti"] O link:create-sandbox-clone.html["clona l'host per creare una sandbox"] .
 
 Quando si dispone di Elastic Block Store o FSX per host Windows file Server nell'inventario dei database, è possibile link:explore-savings.html["scopri i risparmi grazie al calcolatore dei risparmi"].

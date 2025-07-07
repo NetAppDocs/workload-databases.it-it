@@ -48,9 +48,9 @@ Ambito di analisi:: L'ambito dell'ottimizzazione è diverso a seconda del compon
 
 == Requisiti di analisi
 
-Per un'analisi completa dell'ambiente del database, le istanze host devono essere registrate e online.
+Per un'analisi completa dell'ambiente del database, le istanze devono essere registrate e online.
 
-link:register-instance.html["Scopri come registrare un'istanza host."]
+link:register-instance.html["Scopri come registrare un'istanza."]
 
 .Cosa succederà
 link:optimize-configurations.html["Implementare configurazioni di database ben progettate"]

@@ -15,7 +15,7 @@ Le limitazioni note identificano piattaforme, dispositivi o funzioni non support
 
 
 
-== Supporto per il rilevamento delle istanze host
+== Supporto per il rilevamento delle istanze
 
 Workload Factory supporta il rilevamento delle istanze PostgreSQL in esecuzione solo sui sistemi operativi Amazon Linux e delle istanze Oracle in esecuzione solo su Red Hat Enterprise Linux.
 

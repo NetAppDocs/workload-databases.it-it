@@ -14,8 +14,8 @@ summary: 'Per ottenere un riepilogo delle risorse del database nella Workload Fa
 Per ottenere un riepilogo delle risorse del database nella Workload Factory, visualizza tutti i database nell'inventario. Puoi anche visualizzare i database per singola istanza registrata.
 
 .Prima di iniziare
-* Le istanze host che contengono risorse di database devono disporre di FSx per l'archiviazione del file system ONTAP.
-* Le istanze host devono essere registrate nella Workload Factory. Informazioni su link:register-instance.html["registrare le istanze host"].
+* Le istanze che contengono risorse di database devono disporre di FSx per l'archiviazione del file system ONTAP.
+* Le istanze devono essere registrate nella Workload Factory. Informazioni su link:register-instance.html["registrare un'istanza"].
 
 
 .Fasi
@@ -28,7 +28,7 @@ Per ottenere un riepilogo delle risorse del database nella Workload Factory, vis
 . In Database, selezionare la scheda *inventario*.
 . Fare clic sulla freccia dell'elenco a discesa per espandere la riga dell'host per visualizzarne i database.
 +
-L'host si espande e vengono visualizzate le istanze dell'host.
+L'host si espande e appaiono le istanze.
 
 . Fare clic sul menu a tre punti dell'istanza contenente i database da visualizzare.
 . Selezionare *Visualizza database*.
@@ -42,7 +42,7 @@ L'host si espande e vengono visualizzate le istanze dell'host.
 . In Database, selezionare la scheda *inventario*.
 . Fare clic sulla freccia dell'elenco a discesa per espandere la riga dell'host per visualizzarne i database.
 +
-L'host si espande e vengono visualizzate le istanze dell'host.
+L'host si espande e appaiono le istanze.
 
 . Fare clic sul menu a tre punti dell'istanza contenente i database da visualizzare.
 . Selezionare *Visualizza database*.

@@ -35,7 +35,7 @@ Cosa viene analizzato:: Workload Factory analizza lo stato di corretta architett
 
 .Prima di iniziare
 * Devi avere link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e autorizzazioni di lettura/scrittura"^] per analizzare le configurazioni del database.
-* Per valutare l'archiviazione di un'istanza di Microsoft SQL Server, l'istanza deve essere registrata nella Workload Factory e il tipo di archiviazione deve essere FSx per ONTAP. link:register-instance.html["Scopri come registrare un'istanza host."]
+* Per valutare l'archiviazione di un'istanza di Microsoft SQL Server, l'istanza deve essere registrata nella Workload Factory e il tipo di archiviazione deve essere FSx per ONTAP. link:register-instance.html["Scopri come registrare un'istanza."]
 * Assicurarsi di rivedere attentamente ogni suggerimento prima di selezionare per correggere un'impostazione o una configurazione. Per le impostazioni RSS e MAXDOP, si consiglia di testare le impostazioni consigliate per determinare i miglioramenti delle prestazioni prima di apportare modifiche all'ambiente di produzione.
 
 
@@ -47,7 +47,7 @@ NOTE: Il processo di correzione potrebbe causare tempi di inattività delle ista
 . Nella sezione Database, selezionare *Vai all'inventario dei database*.
 . Nella scheda *inventario*, selezionare la scheda *istanze*.
 . Selezionare *Risolvi problemi* per visualizzare i problemi di configurazione dell'istanza.
-. Nella pagina Stato ben progettato per l'istanza host, esaminare i risultati dell'analisi.
+. Nella pagina Stato ben progettato dell'istanza, esaminare i risultati dell'analisi.
 +
 È possibile filtrare i problemi di configurazione in base a categorie, sottocategorie, stato, gravità e tag.
 

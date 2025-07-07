@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: deregister-instance.html 
-keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle host instance, deregister instance, unregister instance, remove instance 
+keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle instance, deregister instance, unregister instance, remove instance 
 summary: 'Annulla la registrazione di un"istanza se non vuoi più distribuire o monitorare le risorse dell"istanza.' 
 ---
 = Annullare la registrazione di un'istanza nella fabbrica dei carichi di lavoro
