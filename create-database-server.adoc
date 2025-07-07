@@ -13,7 +13,10 @@ summary: Creare una nuova Microsoft SQL Server nella factory del carico di lavor
 [role="lead"]
 Per creare un nuovo Microsoft SQL Server o un host di database nella fabbrica di carichi di lavoro per i database, è necessario un'implementazione del file system FSx per ONTAP e risorse per Active Directory.
 
-.A proposito di questa attività
+
+
+== A proposito di questa attività
+
 Prima di creare un Microsoft SQL Server dalla fabbrica del carico di lavoro, informati sui tipi di distribuzione dell'archiviazione disponibili per la configurazione host del database, la configurazione Microsoft Multi-path I/O, la distribuzione di Active Directory, i dettagli di rete e i requisiti per completare questa operazione.
 
 Dopo la distribuzione, sarà necessario <<Passaggio 2: Abilitare la connessione remota su Microsoft SQL Server,Attivare la connessione remota su Microsoft SQL Server>>.
@@ -42,14 +45,7 @@ Active Directory:: Durante la distribuzione di Active Directory (ad) si verifica
 
 
 --
-
-
-
-
-== Gruppi di protezione Active Directory gestiti dagli utenti
-
-Se si seleziona "Active Directory gestito dall'utente" durante la distribuzione di Microsoft SQL Server in fabbrica dei carichi di lavoro, è necessario fornire un gruppo di protezione che consenta il traffico tra le istanze EC2 al servizio directory per la distribuzione. Workload Factory non collega automaticamente il gruppo di sicurezza per Active Directory gestito dall'utente come per AWS Managed Microsoft ad.
-
+Gruppi di protezione Active Directory gestiti dagli utenti:: Se si seleziona "Active Directory gestito dall'utente" durante la distribuzione di Microsoft SQL Server in fabbrica dei carichi di lavoro, è necessario fornire un gruppo di protezione che consenta il traffico tra le istanze EC2 al servizio directory per la distribuzione. Workload Factory non collega automaticamente il gruppo di sicurezza per Active Directory gestito dall'utente come per AWS Managed Microsoft ad.
 Rollback delle risorse:: Se si decide di ripristinare le risorse DNS (Domain Name System), i record di risorse in ad e DNS non vengono rimossi automaticamente. È possibile rimuovere i record dal server DNS e da ad nel modo seguente.
 +
 --
@@ -60,7 +56,10 @@ Rollback delle risorse:: Se si decide di ripristinare le risorse DNS (Domain Nam
 --
 
 
-.Prima di iniziare
+
+
+== Prima di iniziare
+
 Prima di creare un nuovo host di database, accertarsi di disporre dei seguenti prerequisiti.
 
 Credenziali e autorizzazioni:: È necessario link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e autorizzazioni in modalità _lettura/scrittura_"^]creare un nuovo host di database in workload factory.

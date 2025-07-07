@@ -26,24 +26,23 @@ La registrazione di un'istanza prevede due passaggi: l'autenticazione dell'istan
 
 NOTE: Workload Factory supporta solo la registrazione e la gestione delle istanze di Microsoft SQL Server. A seconda delle credenziali dell'account AWS selezionate in Workload Factory, gli host PostgreSQL e Oracle potrebbero essere visualizzati nell'inventario. Attualmente, Workload Factory supporta istanze PostgreSQL non registrate in esecuzione solo su sistemi operativi Amazon Linux e istanze Oracle in esecuzione solo su Red Hat Enterprise Linux.
 
-
-
-== Registrazione di un'istanza in una rete privata
-
-Per registrare un'istanza in una rete privata senza connettività esterna, i seguenti endpoint devono essere disponibili nella VPC con associazione alle subnet in cui sono presenti i server SQL. Assicurarsi che gli endpoint dell'interfaccia consentano la porta 443 nel gruppo di protezione collegato.
-
+Registrazione di un'istanza in una rete privata:: Per registrare un'istanza in una rete privata senza connettività esterna, i seguenti endpoint devono essere disponibili nella VPC con associazione alle subnet in cui sono presenti i server SQL. Assicurarsi che gli endpoint dell'interfaccia consentano la porta 443 nel gruppo di protezione collegato.
++
+--
 * `S3 Gateway/endpoint`
 * `ssm`
 * `ssmmessages`
 * `fsx`
-
-
++
 Se si utilizza un server proxy per tutte le connessioni in uscita da istanze EC2, è necessario consentire l'accesso ai seguenti domini in modo che le operazioni di gestione funzionino:
 
 * ``.microsoft.com``
 * ``.powershellgallery.com``
 * ``.aws.amazon.com``
 * ``.amazonaws.com``
+
+
+--
 
 
 
