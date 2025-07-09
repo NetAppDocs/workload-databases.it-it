@@ -11,10 +11,12 @@ summary: 'Workload Factory per database analizza le configurazioni di Microsoft 
 
 
 [role="lead"]
-Utilizzando le informazioni e i suggerimenti dell'analisi della configurazione, sfrutta Workload Factory per implementare le best practice per le configurazioni del tuo database. Puoi facilmente individuare i problemi e intervenire per migliorare l'architettura di qualsiasi configurazione non ottimizzata in termini di affidabilità, sicurezza, efficienza, prestazioni e costi.
+Utilizzando le informazioni e i suggerimenti dell'analisi della configurazione, sfrutta Workload Factory per implementare le best practice per le configurazioni del tuo database. È possibile esaminare facilmente lo stato di buona architettura, scoprire eventuali problemi con le configurazioni del database e intervenire per migliorare quelle non ottimizzate in termini di affidabilità, sicurezza, efficienza, prestazioni e costi.
+
+link:optimize-overview.html["Scopri di più sull'analisi della configurazione e sullo stato ben progettato nella fabbrica dei carichi di lavoro."]
 
 .A proposito di questa attività
-Workload Factory analizza quotidianamente le configurazioni del database. L'analisi giornaliera fornisce approfondimenti e suggerimenti, con opzioni per risolvere automaticamente i problemi di configurazione, in modo che le configurazioni siano conformi alle best practice.
+Workload Factory analizza quotidianamente le configurazioni del database. L'analisi giornaliera fornisce informazioni sullo stato di progettazione, nonché approfondimenti e raccomandazioni con opzioni per risolvere automaticamente i problemi di configurazione in modo che le configurazioni soddisfino le best practice.
 
 È possibile esaminare i suggerimenti per i problemi di configurazione e risolverli dall'inventario dei database nella console della Workload Factory.
 
