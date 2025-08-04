@@ -28,7 +28,7 @@ Cosa viene analizzato:: Workload Factory analizza lo stato di corretta architett
 * Configurazione di archiviazione: include gestione della capacità, provisioning sottile, criteri di tiering, snapshot, stato Microsoft Multipath I/O (MPIO) e impostazione del timeout MPIO
 * Calcolo: Include il dimensionamento corretto, le patch del sistema operativo e le impostazioni della scheda di rete come Receive Side Scaling (RSS) e TCP offload
 * Applicazioni: Include le licenze di Microsoft SQL Server, la patch di Microsoft SQL Server e le impostazioni MAXDOP
-* Resilienza: Include snapshot locali, FSX per i backup ONTAP e replica tra aree (CRR)
+* Resilienza: include snapshot locali, backup FSx per ONTAP , replica tra regioni (CRR) e Microsoft SQL High Availability.
 * Cloni: include opzioni per aggiornare ed eliminare i cloni (sandbox) creati all'interno o all'esterno della fabbrica dei carichi di lavoro e che hanno più di 60 giorni
 
 

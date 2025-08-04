@@ -15,7 +15,7 @@ Per ottenere un riepilogo delle risorse del database nella Workload Factory, vis
 
 .Prima di iniziare
 * Le istanze che contengono risorse di database devono disporre di FSx per l'archiviazione del file system ONTAP.
-* Le istanze devono essere registrate nella Workload Factory. Informazioni su link:register-instance.html["registrare un'istanza"].
+* Per visualizzare i database è necessario registrare le istanze nella fabbrica dei carichi di lavoro. Scopri come link:register-instance.html["registrare un'istanza"] .
 
 
 .Fasi
@@ -26,13 +26,10 @@ Per ottenere un riepilogo delle risorse del database nella Workload Factory, vis
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Vai all'inventario dei database*.
 . In Database, selezionare la scheda *inventario*.
-. Fare clic sulla freccia dell'elenco a discesa per espandere la riga dell'host per visualizzarne i database.
-+
-L'host si espande e appaiono le istanze.
+. Fare clic sul menu a tre punti dell'istanza e quindi selezionare *Visualizza database*.
 
-. Fare clic sul menu a tre punti dell'istanza contenente i database da visualizzare.
-. Selezionare *Visualizza database*.
 
+I database vengono visualizzati per la singola istanza nella scheda Database.
 
 --
 .Visualizza i database per tutte le istanze
@@ -40,15 +37,11 @@ L'host si espande e appaiono le istanze.
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Vai all'inventario dei database*.
 . In Database, selezionare la scheda *inventario*.
-. Fare clic sulla freccia dell'elenco a discesa per espandere la riga dell'host per visualizzarne i database.
+. Selezionare la scheda *Database*.
 +
-L'host si espande e appaiono le istanze.
+I database vengono visualizzati per tutte le istanze registrate.
 
-. Fare clic sul menu a tre punti dell'istanza contenente i database da visualizzare.
-. Selezionare *Visualizza database*.
 
 
 --
 ====
-.Risultato
-Hai visualizzato le risorse del database all'interno di Workload Factory.

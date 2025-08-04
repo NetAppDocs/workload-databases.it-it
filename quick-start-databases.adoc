@@ -26,16 +26,22 @@ Sarà necessario link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up
 Scegliere tra link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["modalità operative _base_, _sola lettura_ e _lettura/scrittura_"^].
 
 [role="quick-margin-para"]
-Se operate in modalità _Basic_, non dovete andare oltre. È possibile iniziare a utilizzare i database per copiare gli esempi di codice parzialmente completati. Nella sezione Database, fare clic su *Deploy database host*. link:create-database-server.html["Informazioni su come distribuire un server di database"].
+Se si opera in modalità _sola lettura_ o _lettura/scrittura_, sarà necessariolink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["aggiungere manualmente le credenziali a un account"^] selezionare le funzionalità del carico di lavoro, come Database e GenAI, e creare policy IAM per le autorizzazioni richieste.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"]Scopri o distribuisci risorse
+[role="quick-margin-para"]
+Con le credenziali e le policy IAM, puoi scoprire le risorse del database esistenti nell'inventario olink:create-database-server.html["distribuire un server host"] .  L'inventario fornisce un'interfaccia unificata per gestire le risorse.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"]Esplora le opportunità di risparmio sui costi
+[role="quick-margin-para"]
+Quando si hanno database in esecuzione in locale o su AWS con storage su Amazon Elastic Block Store (EBS) o FSx per Windows File Server, è possibilelink:explore-savings.html["usa il calcolatore di risparmio Explore"] per analizzare i costi e pianificare le migrazioni in modo efficace.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinque"]Implementare configurazioni di database ben progettate
+[role="quick-margin-para"]
+Workload Factory for Databases analizza regolarmente le distribuzioni di Microsoft SQL Server su Amazon FSx for NetApp ONTAP dalla dashboard Well-architected.  Per risolvere i problemi dalla dashboard ben progettata per le risorse del database, è necessario innanzituttolink:register-instance.html["registrare le istanze"] .
 
 [role="quick-margin-para"]
-Se si opera in modalità _sola lettura_ o _lettura/scrittura_, sarà necessario link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["aggiungere manualmente le credenziali a un account"^] che include la selezione delle capacità del carico di lavoro, come database e GenAI, e la creazione di policy IAM per garantire di disporre delle autorizzazioni corrette per operare in modalità _sola lettura_ o _lettura/scrittura_.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Distribuire un server di database
-[role="quick-margin-para"]
-Infine, se hai scelto di operare in modalità _lettura/scrittura_, devi link:create-database-server.html["distribuire un server host"] O link:register-instance.html["registrare un'istanza"] per gestire le risorse dell'host e prima di aggiungere database utente.
+Dopo aver registrato le istanze, è possibile visualizzare lo stato ben progettato e intraprendere azioni perlink:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html["implementare configurazioni di database ben progettate"] nella fabbrica del carico di lavoro.
 
 .Cosa succederà
 Dopo aver registrato istanze con FSx per l'archiviazione del file system ONTAP nell'inventario dei database, è possibile link:create-database.html["creare un database utenti"] O link:create-sandbox-clone.html["clona l'host per creare una sandbox"] .
-
-Quando si dispone di Elastic Block Store o FSX per host Windows file Server nell'inventario dei database, è possibile link:explore-savings.html["scopri i risparmi grazie al calcolatore dei risparmi"].

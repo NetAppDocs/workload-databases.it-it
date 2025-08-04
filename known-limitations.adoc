@@ -133,3 +133,9 @@ Non viene preso in considerazione il calcolo delle dimensioni del volume per lo 
 * La valutazione di ottimizzazione non può determinare se viene utilizzata la replica tra aree (CRR) quando il file system FSX for ONTAP di destinazione si trova in un account AWS diverso.
 * Workload Factory valuta solo la configurazione CRR del file system di origine FSX per ONTAP.
 
+
+
+
+== Autenticazione dell'host del database in Esplora i risparmi
+
+In alcuni casi con autorizzazioni limitate, la pagina Esplora risparmi non carica i dati dopo l'autenticazione riuscita.

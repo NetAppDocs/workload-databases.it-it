@@ -234,10 +234,14 @@ Seguire i passaggi nella scheda relativa al tipo di storage in uso.
 Se la fabbrica del carico di lavoro rileva gli host EBS, verrai reindirizzato alla scheda Esplora risparmi. Se la fabbrica del carico di lavoro non rileva gli host EBS, verrai reindirizzato alla calcolatrice a <<Esplora i risparmi tramite la personalizzazione,esplora i risparmi tramite la personalizzazione>>.
 
 . Nella scheda Esplora risparmi, fare clic su *Esplora risparmi* del server database che utilizza lo storage EBS.
+. Se necessario, autenticare l'host del database con le credenziali di SQL Server, le credenziali di Windows o aggiungendo le autorizzazioni mancanti di SQL Server.
++
+Se la pagina Esplora risparmi non carica i dati dopo l'autenticazione riuscita, seleziona la scheda *Inventario* per ricaricare i dati, quindi seleziona nuovamente la scheda *Esplora risparmi*.
+
 . Nel calcolatore dei risparmi, facoltativamente, fornisci i seguenti dettagli sui cloni e sulle snapshot nello storage EBS, per una stima più accurata dei risparmi sui costi.
 +
-.. *Frequenza istantanea*: Selezionare una frequenza istantanea dal menu a discesa.
-.. *Clona frequenza di aggiornamento*: Selezionare la frequenza di aggiornamento dei cloni dal menu a discesa.
+.. *Frequenza snapshot*: seleziona una frequenza snapshot dal menu.
+.. *Frequenza di aggiornamento clonazione*: seleziona dal menu la frequenza con cui clonare l'aggiornamento.
 .. *Numero di copie clonate*: Immettere il numero di copie clonate nella configurazione EBS.
 .. *Tasso di modifica mensile*: Immettere la percentuale di variazione dei dati clone e snapshot in media al mese.
 
@@ -249,18 +253,22 @@ Se la fabbrica del carico di lavoro rileva gli host EBS, verrai reindirizzato al
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Database, seleziona *Esplora risparmio*, quindi *Microsoft SQL Server su FSX per Windows* dal menu a discesa.
+. Nel riquadro Database, seleziona *Esplora risparmi*, quindi *Microsoft SQL Server su FSx per Windows* dal menu.
 +
 Se la fabbrica del carico di lavoro rileva FSX per gli host Windows, verrai reindirizzato alla scheda Esplora risparmi. Se la fabbrica del carico di lavoro non rileva gli host di FSX per Windows, verrai reindirizzato alla calcolatrice a <<Esplora i risparmi tramite la personalizzazione,esplora i risparmi tramite la personalizzazione>>.
 
-. Nella scheda Esplora risparmi, fare clic su *Esplora risparmi* del server di database utilizzando l'archiviazione di FSX per Windows file Server.
+. Nella scheda Esplora risparmi, seleziona *Esplora risparmi* dell'host del database utilizzando FSx per l'archiviazione di file server Windows.
+. Se necessario, autenticare l'host del database con le credenziali di SQL Server, le credenziali di Windows o aggiungendo le autorizzazioni mancanti di SQL Server.
++
+Se la pagina Esplora risparmi non carica i dati dopo l'autenticazione riuscita, seleziona la scheda *Inventario* per ricaricare i dati, quindi seleziona nuovamente la scheda *Esplora risparmi*.
+
 . Nel calcolatore del risparmio, facoltativamente, fornisci i seguenti dettagli sui cloni (copie shadow) e sulle snapshot nel tuo storage FSX per Windows per una stima più accurata dei risparmi sui costi.
 +
-.. *Frequenza istantanea*: Selezionare una frequenza istantanea dal menu a discesa.
+.. *Frequenza snapshot*: seleziona una frequenza snapshot dal menu.
 +
 Se vengono rilevate copie shadow di FSX per Windows, il valore predefinito è *giornaliero*. Se le copie replicate non vengono rilevate, il valore predefinito è *Nessuna frequenza istantanea*.
 
-.. *Clona frequenza di aggiornamento*: Selezionare la frequenza di aggiornamento dei cloni dal menu a discesa.
+.. *Frequenza di aggiornamento clonazione*: seleziona dal menu la frequenza con cui clonare l'aggiornamento.
 .. *Numero di copie clonate*: Immettere il numero di copie clonate nella configurazione di FSX per Windows.
 .. *Tasso di modifica mensile*: Immettere la percentuale di variazione dei dati clone e snapshot in media al mese.
 
@@ -272,7 +280,7 @@ Se vengono rilevate copie shadow di FSX per Windows, il valore predefinito è *g
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Esplora risparmi*, quindi *Microsoft SQL Server on-Premises* dal menu a discesa.
+. Nel riquadro Database, seleziona *Esplora risparmi*, quindi *Microsoft SQL Server locale* dal menu.
 . Dalla scheda on-premise di SQL Server, scaricare lo script per valutare gli ambienti SQL Server on-premise.
 +
 .. Scaricare lo script di valutazione. Lo script è un tool di raccolta dati basato su PowerShell. Raccoglie e carica quindi i dati di configurazione e delle prestazioni di SQL Server in BlueXP  workload Factory. Il Migration ADVISOR valuta i dati e pianifica la distribuzione di FSX per ONTAP per il tuo ambiente SQL Server.
@@ -291,11 +299,11 @@ image:screenshot-upload-script-on-premises.png["Una schermata della scheda on-pr
 . Per risultati più precisi, aggiorna le informazioni di calcolo, i dettagli sullo storage e sulle performance.
 . Facoltativamente, fornisci i seguenti dettagli sui cloni (copie shadow) e sulle Snapshot nell'ambiente di database on-premise per una stima più accurata dei risparmi sui costi.
 +
-.. *Frequenza istantanea*: Selezionare una frequenza istantanea dal menu a discesa.
+.. *Frequenza snapshot*: seleziona una frequenza snapshot dal menu.
 +
 Se vengono rilevate copie shadow di FSX per Windows, il valore predefinito è *giornaliero*. Se le copie replicate non vengono rilevate, il valore predefinito è *Nessuna frequenza istantanea*.
 
-.. *Clona frequenza di aggiornamento*: Selezionare la frequenza di aggiornamento dei cloni dal menu a discesa.
+.. *Frequenza di aggiornamento clonazione*: seleziona dal menu la frequenza con cui clonare l'aggiornamento.
 .. *Numero di copie clonate*: Immettere il numero di copie clonate nella configurazione on-premise.
 .. *Tasso di modifica mensile*: Immettere la percentuale di variazione dei dati clone e snapshot in media al mese.
 

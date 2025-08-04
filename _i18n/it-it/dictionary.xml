@@ -358,8 +358,6 @@
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">I file di avviso forniscono informazioni sul copyright e sulle licenze di terze parti utilizzate nel software NetApp.</block>
   <block id="948d113c0ab3cb85650dda6912a734c5" category="list-text">Visualizzare i database</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Risultato</block>
-  <block id="ca6b20c311193d70fa95150e9aadfeff" category="list-text">Fare clic sulla freccia dell'elenco a discesa per espandere la riga dell'host per visualizzarne i database.</block>
-  <block id="bab47e98a40b74089a0df1373390d048" category="list-text">Selezionare *Visualizza database*.</block>
   <block id="67b0a66954400448325457f930e0f82b" category="paragraph">Il monitoraggio dei lavori supporta fino a tre livelli di monitoraggio a seconda del lavoro. Ad esempio, per la creazione di nuovi cloni di database e sandbox, il monitoraggio dei job tiene traccia dei job principali e secondari.</block>
   <block id="b830a8f027299af6d1d8ffbb130bcc58" category="list-text">Livelli di monitoraggio dei lavori</block>
   <block id="f52bf93027629736a089ef7f590091e0" category="list-text">Livello 1 (processo principale): Tiene traccia del processo di distribuzione dell'host.</block>
@@ -374,10 +372,8 @@
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">Uno</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Due</block>
   <block id="27c19be9febabd1e2fb82d7a39784f2d" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> Aggiungere credenziali e autorizzazioni</block>
-  <block id="f13bb46705b371ce5ebc0ccc10f09bb0" category="inline-link-macro">Informazioni su come distribuire un server di database</block>
   <block id="ce8e7e98b5597e78e8fd7d6bc94729cb" category="inline-link-macro">aggiungere manualmente le credenziali a un account</block>
   <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">Tre</block>
-  <block id="6f6390592b833a81a0bda8c296a3c5b6" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Distribuire un server di database</block>
   <block id="76e0353f7732c65129a16b1dee5f98f2" category="inline-link-macro">creare un database utenti</block>
   <block id="9099614931eafcd02d62211a634872c7" category="inline-link-macro">clona l'host per creare una sandbox</block>
   <block id="24ba9febbdf4f0bdec223ad9cf7f746f" category="paragraph">L'aggiornamento di un clone aggiorna il clone nel database di origine al momento corrente o in uno snapshot del database di origine acquisito in un point-in-time precedente. Tutte le modifiche apportate al clone sandbox verranno eliminate.</block>
@@ -462,7 +458,6 @@
   <block id="651b8da486ba685aa80d9dd4866d0171" category="sidebar">Eliminare un clone sandbox</block>
   <block id="e7310dc180b25aba87aadafb96fb45f4" category="inline-image-macro">Uno screenshot della pagina del calcolatore di risparmio mostra la configurazione selezionata di Microsoft SQL Server su Amazon Elastic Block Store a sinistra con l'opzione di personalizzare i valori di snapshot e cloni. Risparmi sui costi in dollari e percentuali, nonché sui costi totali mensili per l'utilizzo di Microsoft SQL Server in FSX per ONTAP e sullo storage di archiviazione a blocchi elastico sulla sinistra.</block>
   <block id="dfa401fd4fd8841a340bd9f87c0910f8" category="list-text">*Frequenza istantanea*: Selezionare una frequenza istantanea dal menu a discesa.</block>
-  <block id="b92d49f94f8fe0dff03b4a997452d375" category="list-text">*Clona frequenza di aggiornamento*: Selezionare la frequenza di aggiornamento dei cloni dal menu a discesa.</block>
   <block id="3a886ba0c11f46f4a69567f2c732a39e" category="list-text">*Numero di copie clonate*: Immettere il numero di copie clonate nella configurazione EBS.</block>
   <block id="6c8bc6142fe7d27949e96c7c1eb44a70" category="list-text">*Regione*: Selezionare una regione dal menu a discesa.</block>
   <block id="4b671e090adbd727a425c2dc7c229735" category="list-text">*Modello di distribuzione*: Selezionare un modello di distribuzione dal menu a discesa.</block>
@@ -540,7 +535,6 @@
   <block id="bd0005565e08b9807da651535d09e628" category="inline-xref">esplora i risparmi tramite la personalizzazione</block>
   <block id="b2b254b73e406acc574452e9f29f5d9a" category="list-text">Nella scheda Esplora risparmi, fare clic su *Esplora risparmi* del server database che utilizza lo storage EBS.</block>
   <block id="3f1c1b5d06b7f8c588cd928fa1ac5e90" category="list-text">Nel calcolatore dei risparmi, facoltativamente, fornisci i seguenti dettagli sui cloni e sulle snapshot nello storage EBS, per una stima più accurata dei risparmi sui costi.</block>
-  <block id="8918771901c5636214df46e39006b50c" category="list-text">Nella scheda Esplora risparmi, fare clic su *Esplora risparmi* del server di database utilizzando l'archiviazione di FSX per Windows file Server.</block>
   <block id="60d184cc6fb4054879723de86764a020" category="list-text">Nel calcolatore del risparmio, facoltativamente, fornisci i seguenti dettagli sui cloni (copie shadow) e sulle snapshot nel tuo storage FSX per Windows per una stima più accurata dei risparmi sui costi.</block>
   <block id="c552646e3717f4144059bd229d9b3c96" category="paragraph">Se vengono rilevate copie shadow di FSX per Windows, il valore predefinito è *giornaliero*. Se le copie replicate non vengono rilevate, il valore predefinito è *Nessuna frequenza istantanea*.</block>
   <block id="724d4c3a0255dd97a61657dd67fdf48f" category="list-text">*Numero di copie clonate*: Immettere il numero di copie clonate nella configurazione di FSX per Windows.</block>
@@ -647,7 +641,6 @@
   <block id="3e7340039619cc08d8c1c5a3cd4bfb43" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Effettua l'accesso alla fabbrica di workload BlueXP </block>
   <block id="d9eebdefd5feceb309eadc305ce81e6f" category="inline-link-macro">configurare un account con workload factory</block>
   <block id="f6c71053fa21be1c35ee95758a3d1050" category="paragraph">Sarà necessario <block ref="782deaad814daa4f2ae09237c9394f09" category="inline-link-macro-rx"></block>ed effettuare l'accesso utilizzando uno dei <block ref="68ceec76279c6913cdee16884c2d813a" category="inline-link-macro-rx"></block>.</block>
-  <block id="a4470118de925b41004832644492fcab" category="paragraph">Se operate in modalità _Basic_, non dovete andare oltre. È possibile iniziare a utilizzare i database per copiare gli esempi di codice parzialmente completati. Nella sezione Database, fare clic su *Deploy database host*. <block ref="cf724fcba48c8dc4cbe06a87f2c5df99" category="inline-link-macro-rx"></block>.</block>
   <block id="c1b68fc67f0e2b970d81dd29c91edb3c" category="summary">Fare un refresh di un clone sandbox nella factory dei carichi di lavoro BlueXP  per i database.</block>
   <block id="6aa117cc6340cd2479e82444cbbadea9" category="doc">Fare un refresh di un clone sandbox nella factory dei carichi di lavoro BlueXP  per i database</block>
   <block id="99ce2cd9a13526e0582af2c9fa2a4382" category="paragraph">Aggiornare un clone del database in una fabbrica di carichi di lavoro BlueXP  per i database in modo che sia equivalente al database di origine al momento attuale o a un point-in-time precedente.</block>
@@ -739,12 +732,9 @@
   <block id="fc3e8f3c2017c33d444d483913a485ba" category="paragraph">Unisciti alla community dedicata alla fabbrica dei carichi di lavoro per seguire le discussioni in corso o crearne di nuovi.</block>
   <block id="ffa18fada5deeeb1e533786297855e7d" category="paragraph">Per utilizzare la funzionalità *Crea un caso*, è necessario prima registrarsi per ricevere assistenza. Associare le credenziali del sito di supporto NetApp all'accesso alla fabbrica del carico di lavoro. <block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>.</block>
   <block id="e13a5649dfef3a1c76c4be8e463226d7" category="list-text">Nella parte superiore destra della console di fabbrica del carico di lavoro, selezionare *Guida &gt; supporto*.</block>
-  <block id="6b30d701929b5a35aad77b847528d165" category="list-text">Fare clic sul menu a tre punti dell'istanza contenente i database da visualizzare.</block>
   <block id="5f08a8bbfa89b18958e70a8c6cbc44c3" category="paragraph">I database consentono di monitorare i processi in modo da poter tenere traccia dell'avanzamento dei processi e diagnosticare e risolvere eventuali problemi. È possibile filtrare i lavori per tipo e stato, trovare i lavori utilizzando la funzione di ricerca e scaricare la tabella dei lavori.</block>
   <block id="5ade2a57e46cf328c900013574754aa9" category="list-text">La funzione di monitoraggio dei processi tiene traccia dei processi _in corso_, _completati_, _completati con problemi_ e _non riusciti_ giornalieri, settimanali, bisettimanali e mensili.</block>
   <block id="10f9689e79d67ec4a1651805229939e6" category="list-text">Fare clic sul menu a tre punti del processo e fare clic su *Vai a CloudFormation* per visualizzare il registro del processo nella console di AWS CloudFormation.</block>
-  <block id="7bbfa484f6d4f2fd489e0f9cbab2b174" category="inline-link-macro">scopri i risparmi grazie al calcolatore dei risparmi</block>
-  <block id="7634b96d2de45d4657e04dff8ecded5f" category="paragraph">Quando si dispone di Elastic Block Store o FSX per host Windows file Server nell'inventario dei database, è possibile <block ref="481992ff67d8db3be48d151b768f7ce5" category="inline-link-macro-rx"></block>.</block>
   <block id="1f14f9d15a2087e9bbf3c4dd4b699191" category="list-text">Nella scheda Sandbox, fare clic sul menu a tre punti del clone sandbox che si desidera aggiornare.</block>
   <block id="e464b3f9b68caf988cec7cd7b5263281" category="list-text">Nella scheda Sandbox, fare clic sul menu a tre punti del clone sandbox che si desidera ripristinare.</block>
   <block id="07755964277c2a6aa1a5c2e771d7dbe0" category="list-text">Nella scheda Sandbox, fare clic sul menu a tre punti del clone sandbox che si desidera dividere.</block>
@@ -772,7 +762,6 @@
   <block id="5e73d91731c9445e9a0cc34e1969976a" category="summary">Confronta i costi dell'utilizzo dello storage di database on-premise Amazon Elastic Block Store (EBS), FSX per Windows file Server e SQL Server con FSX per lo storage ONTAP.</block>
   <block id="6bcb23607586342322d4d9d515a81317" category="paragraph">Esplora i risparmi offerti dalla fabbrica di carichi di lavoro BlueXP  per i database per i carichi di lavoro del database confrontando i costi dell'utilizzo di Microsoft SQL Server su Amazon Elastic Block Store (EBS), FSX per Windows file Server e lo storage on-premise con FSX per lo storage ONTAP.</block>
   <block id="7cf65e2ff3a983e2d864a8b1c64765f1" category="open-title">Microsoft SQL Server on-premise</block>
-  <block id="a2985bc0847d7596067c038e830be18b" category="list-text">Nella sezione Database, selezionare *Esplora risparmi*, quindi *Microsoft SQL Server on-Premises* dal menu a discesa.</block>
   <block id="979b029ad875506edc5721a6a441e313" category="list-text">Dalla scheda on-premise di SQL Server, scaricare lo script per valutare gli ambienti SQL Server on-premise.</block>
   <block id="db99a3f687ce317a37116a375a2f8e0a" category="list-text">Scaricare lo script di valutazione. Lo script è un tool di raccolta dati basato su PowerShell. Raccoglie e carica quindi i dati di configurazione e delle prestazioni di SQL Server in BlueXP  workload Factory. Il Migration ADVISOR valuta i dati e pianifica la distribuzione di FSX per ONTAP per il tuo ambiente SQL Server.</block>
   <block id="2840f80705232625a2e7a961c5ae7c57" category="inline-image-macro">Una schermata della scheda on-premise di SQL Server mostra l'opzione di scaricare lo script di valutazione.</block>
@@ -1008,10 +997,7 @@
   <block id="0bf39c9f8183add14af5a19ad4c80ff7" category="paragraph">Con Workload Factory per Database puoi iniziare subito in modalità _base_. Se desideri utilizzare workload Factory per rilevare gli host, gestire le risorse e altro ancora, puoi iniziare in pochi passaggi.</block>
   <block id="742b9524a4ab93b49eb1614d2aa4287b" category="inline-link-macro">modalità operative _base_, _sola lettura_ e _lettura/scrittura_</block>
   <block id="e19be16b30ba3a27ed29174edef4c120" category="paragraph">Scegliere tra <block ref="5653101a5bec855c555e8762c96ccdfc" category="inline-link-macro-rx"></block>.</block>
-  <block id="b60b67e70947e6a46c89e0d1c15f532f" category="paragraph">Se si opera in modalità _sola lettura_ o _lettura/scrittura_, sarà necessario <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block> che include la selezione delle capacità del carico di lavoro, come database e GenAI, e la creazione di policy IAM per garantire di disporre delle autorizzazioni corrette per operare in modalità _sola lettura_ o _lettura/scrittura_.</block>
   <block id="32077805607c935c0ac59dd7b4a3fdc6" category="inline-link-macro">distribuire un server host</block>
-  <block id="d53bce2cf4a36ab74378d06b70255899" category="inline-link-macro">registrare un'istanza</block>
-  <block id="d4e3cc6f64d77dfb90b8f3a54369d97f" category="paragraph">Infine, se hai scelto di operare in modalità _lettura/scrittura_, devi <block ref="086045f9b9433534ba0bc16ba8744718" category="inline-link-macro-rx"></block> O <block ref="70dc6f6bba18b4f574a867d694f53a80" category="inline-link-macro-rx"></block> per gestire le risorse dell'host e prima di aggiungere database utente.</block>
   <block id="8373481dd509f9b495f59748db1aa76d" category="doc">Registra le istanze nella fabbrica dei carichi di lavoro per i database</block>
   <block id="42c8e35152475231ef5a183766c9bebc" category="paragraph">I database possono registrare solo istanze con FSx per l'archiviazione del file system ONTAP.</block>
   <block id="91a3069301b0dd7ee29890c4b610ba27" category="section-title">Informazioni sul compito</block>
@@ -1032,7 +1018,6 @@
   <block id="34f8798aab35970d27e00ecdf2a9f526" category="doc">Visualizza i database nella fabbrica dei carichi di lavoro per i database</block>
   <block id="87301bee2c9587d1e63d873a81c4e6fa" category="open-title">Visualizza i database per una singola istanza</block>
   <block id="25734f9761801ac27c5c548d5c1829ca" category="open-title">Visualizza i database per tutte le istanze</block>
-  <block id="91063ca7fb76f05148ae179b2f84b160" category="paragraph">Hai visualizzato le risorse del database all'interno di Workload Factory.</block>
   <block id="4aa37f4d9a391345e9a54c68333e2503" category="section-title">03 giugno 2025</block>
   <block id="ebb5d0c39395173ae9cea85bcf7d498e" category="sidebar">Registra un'istanza</block>
   <block id="c38254582571637e4bded341a22ff035" category="sidebar">Gestisci le istanze</block>
@@ -1114,10 +1099,48 @@
   <block id="4dede94da0834ecd430bec6189bab6cc" category="paragraph"><block ref="4dede94da0834ecd430bec6189bab6cc" category="inline-link-macro-rx"></block></block>
   <block id="897c69f19b2f39fbf3080a555a679d8e" category="paragraph">Dopo aver registrato istanze con FSx per l'archiviazione del file system ONTAP nell'inventario dei database, è possibile <block ref="3d11347aa47327ab2988d0d3d3d6bd99" category="inline-link-macro-rx"></block> O <block ref="e4dc5f068f234adb2616993ddf9e76bc" category="inline-link-macro-rx"></block> .</block>
   <block id="621bb50103e94b947974d2656fb451ec" category="list-text">Le istanze che contengono risorse di database devono disporre di FSx per l'archiviazione del file system ONTAP.</block>
-  <block id="dd36ed4d606eb4686fae0a7232af1eac" category="list-text">Le istanze devono essere registrate nella Workload Factory. Informazioni su <block ref="e24144bf29586c3fb748c1e1cf493cb5" category="inline-link-macro-rx"></block>.</block>
   <block id="2eb8fe4398b92e5c2222314cd13b7749" category="paragraph">Utilizzando le informazioni e i suggerimenti dell'analisi della configurazione, sfrutta Workload Factory per implementare le best practice per le configurazioni del tuo database. È possibile esaminare facilmente lo stato di buona architettura, scoprire eventuali problemi con le configurazioni del database e intervenire per migliorare quelle non ottimizzate in termini di affidabilità, sicurezza, efficienza, prestazioni e costi.</block>
   <block id="2bab4675fc931e32d65c62820186d2e3" category="inline-link-macro">Scopri di più sull'analisi della configurazione e sullo stato ben progettato nella fabbrica dei carichi di lavoro.</block>
   <block id="00d1bba61e4e880f08c0a9d89d53205b" category="paragraph"><block ref="00d1bba61e4e880f08c0a9d89d53205b" category="inline-link-macro-rx"></block></block>
   <block id="8b2297ce6c1f7ab63874a40b0ca4a48f" category="paragraph">Workload Factory analizza quotidianamente le configurazioni del database. L'analisi giornaliera fornisce informazioni sullo stato di progettazione, nonché approfondimenti e raccomandazioni con opzioni per risolvere automaticamente i problemi di configurazione in modo che le configurazioni soddisfino le best practice.</block>
   <block id="08957eb86dbd3276e4875a3910d67420" category="sidebar">Visualizza lo stato di buona progettazione delle tue istanze</block>
+  <block id="65bff5c812b0782e85c3554a907e01d2" category="doc">Un'analisi ben progettata include la convalida del cluster ad alta disponibilità</block>
+  <block id="bdd55244a112c438dfe30c6c85a4fcb1" category="paragraph">L'analisi ben progettata ora include la convalida per cluster ad alta disponibilità.  Questa convalida controlla tutte le configurazioni relative al cluster dal lato server, tra cui la disponibilità e la configurazione del disco su entrambi i nodi, la configurazione del cluster Windows e la predisposizione al failover.  Ciò garantisce che il cluster Windows sia configurato correttamente e possa eseguire correttamente il failover quando necessario.</block>
+  <block id="ad229ca0142680e057d4328835a9c1ef" category="section-title">Menu multilivello disponibile per le istanze</block>
+  <block id="de0915fdab5af6d02111d53dcfd6ccb3" category="paragraph">La console Workload Factory ora include un menu multilivello per le istanze.  Questa modifica fornisce una struttura di navigazione più organizzata e intuitiva per la gestione delle istanze.  Le opzioni di menu per la gestione delle istanze includono la visualizzazione della dashboard delle istanze, la visualizzazione dei database, la creazione di un database e la creazione di un clone sandbox.</block>
+  <block id="8d79c3f1283ecc54b044e383580c41e0" category="inline-image-macro">Uno screenshot del menu della tabella delle istanze con una struttura di menu multilivello.  Selezionare il menu della tabella delle istanze e quindi gestire le istanze per visualizzare i database, creare un database e creare un clone sandbox.</block>
+  <block id="6f3cad43f8bb61ac11ebd8e87e6d6240" category="paragraph"><block ref="6f3cad43f8bb61ac11ebd8e87e6d6240" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5892d833ba074396906362cfc3ad6370" category="section-title">Nuova opzione di autenticazione per esplorare i risparmi</block>
+  <block id="3035f336d9539562dbf5355f26c10a4f" category="paragraph">Quando il<block ref="7254170b56a28e207df989a3f40b911f" prefix=" " category="inline-code"></block> l'utente non dispone di autorizzazioni sufficienti su Microsoft SQL Server, è possibile autenticarsi con le credenziali di SQL Server o aggiungere le autorizzazioni mancanti di SQL Server a<block ref="7254170b56a28e207df989a3f40b911f" prefix=" " category="inline-code"></block> .</block>
+  <block id="79717347a64fe25d0ea054d1670b04c6" category="inline-link-macro">Esplora i potenziali risparmi per i tuoi ambienti di database con Amazon FSx for NetApp ONTAP</block>
+  <block id="0c99e0e3525f8446afe1107c5294bead" category="paragraph"><block ref="0c99e0e3525f8446afe1107c5294bead" category="inline-link-macro-rx"></block></block>
+  <block id="0d1fd436d021926cae2510df23023f8f" category="list-text">Se necessario, autenticare l'host del database con le credenziali di SQL Server, le credenziali di Windows o aggiungendo le autorizzazioni mancanti di SQL Server.</block>
+  <block id="057a8460985f241177200f51e8c70447" category="paragraph">Se la pagina Esplora risparmi non carica i dati dopo l'autenticazione riuscita, seleziona la scheda *Inventario* per ricaricare i dati, quindi seleziona nuovamente la scheda *Esplora risparmi*.</block>
+  <block id="23a7f7680ea3dd0d8e35715312180e42" category="list-text">*Frequenza snapshot*: seleziona una frequenza snapshot dal menu.</block>
+  <block id="0f2833865dd9bd39be8189333dae1c4f" category="list-text">*Frequenza di aggiornamento clonazione*: seleziona dal menu la frequenza con cui clonare l'aggiornamento.</block>
+  <block id="d0e7e25b5d4913c7506b7abe691c9fa9" category="list-text">Nel riquadro Database, seleziona *Esplora risparmi*, quindi *Microsoft SQL Server su FSx per Windows* dal menu.</block>
+  <block id="ca1bcaaac2fa2065767d6cb9b43a5bf7" category="list-text">Nella scheda Esplora risparmi, seleziona *Esplora risparmi* dell'host del database utilizzando FSx per l'archiviazione di file server Windows.</block>
+  <block id="e4b085b007f80e7f8236f3693c0d0198" category="list-text">Nel riquadro Database, seleziona *Esplora risparmi*, quindi *Microsoft SQL Server locale* dal menu.</block>
+  <block id="808d573e3971d8d03b14bfaef043f475" category="section-title">Autenticazione dell'host del database in Esplora i risparmi</block>
+  <block id="546dcae8b2a33c531e585b76d51af0dd" category="paragraph">In alcuni casi con autorizzazioni limitate, la pagina Esplora risparmi non carica i dati dopo l'autenticazione riuscita.</block>
+  <block id="012a999834d8188ec17b6ec67f4db97d" category="list-text">Resilienza: include snapshot locali, backup FSx per ONTAP , replica tra regioni (CRR) e Microsoft SQL High Availability.</block>
+  <block id="884d3679394cea72f73ae724c1666492" category="paragraph">Se si opera in modalità _sola lettura_ o _lettura/scrittura_, sarà necessario<block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block> selezionare le funzionalità del carico di lavoro, come Database e GenAI, e creare policy IAM per le autorizzazioni richieste.</block>
+  <block id="1caf2514b723d82877e2b000e3ba5e3f" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>Scopri o distribuisci risorse</block>
+  <block id="714bf7245115e9e60e5f4ba3dc04e4f5" category="paragraph">Con le credenziali e le policy IAM, puoi scoprire le risorse del database esistenti nell'inventario o<block ref="086045f9b9433534ba0bc16ba8744718" category="inline-link-macro-rx"></block> .  L'inventario fornisce un'interfaccia unificata per gestire le risorse.</block>
+  <block id="981b8fcee42e1e726a67a2b9a98ea6e9" category="inline-image-macro">Quattro</block>
+  <block id="51632000dec3a4768004497c0cb1dc7a" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block>Esplora le opportunità di risparmio sui costi</block>
+  <block id="27a00979342c6038e57c451a97056eba" category="inline-link-macro">usa il calcolatore di risparmio Explore</block>
+  <block id="dfc5bbea65d061d8ef65858dceb395dd" category="paragraph">Quando si hanno database in esecuzione in locale o su AWS con storage su Amazon Elastic Block Store (EBS) o FSx per Windows File Server, è possibile<block ref="34af0e835becefaa17178e7fc48e3086" category="inline-link-macro-rx"></block> per analizzare i costi e pianificare le migrazioni in modo efficace.</block>
+  <block id="e5d9de39f7ca1ba2637e5640af3ae8aa" category="inline-image-macro">Cinque</block>
+  <block id="b898d5d576224cd9ff29f84561766760" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block>Implementare configurazioni di database ben progettate</block>
+  <block id="b06c1406344aa854d261bcc0a6e0f592" category="inline-link-macro">registrare le istanze</block>
+  <block id="e57096f2d1ce720a79c02a8e8f46d8de" category="paragraph">Workload Factory for Databases analizza regolarmente le distribuzioni di Microsoft SQL Server su Amazon FSx for NetApp ONTAP dalla dashboard Well-architected.  Per risolvere i problemi dalla dashboard ben progettata per le risorse del database, è necessario innanzitutto<block ref="001cc0ec03a1e5527fa917b277b2c766" category="inline-link-macro-rx"></block> .</block>
+  <block id="e8663036e4d283a237c51601bdcfc5cd" category="inline-link-macro">implementare configurazioni di database ben progettate</block>
+  <block id="fc5052ca3918c28b8e418893a6b982f9" category="paragraph">Dopo aver registrato le istanze, è possibile visualizzare lo stato ben progettato e intraprendere azioni per<block ref="1c0f7e78a2011839a2cb972a47f46536" category="inline-link-macro-rx"></block> nella fabbrica del carico di lavoro.</block>
+  <block id="38d8d5207d4ef99316428985c300feb1" category="list-text">Per visualizzare i database è necessario registrare le istanze nella fabbrica dei carichi di lavoro. Scopri come <block ref="e24144bf29586c3fb748c1e1cf493cb5" category="inline-link-macro-rx"></block> .</block>
+  <block id="19ceb4c9dbec8f50da133f5989360510" category="list-text">Fare clic sul menu a tre punti dell'istanza e quindi selezionare *Visualizza database*.</block>
+  <block id="d1a11c072934a6070961082a4f0ccfac" category="paragraph">I database vengono visualizzati per la singola istanza nella scheda Database.</block>
+  <block id="ad6ac298077f67c060156edbddf13a36" category="list-text">Selezionare la scheda *Database*.</block>
+  <block id="d0c6ba62b6c3694f7b736785522100f6" category="paragraph">I database vengono visualizzati per tutte le istanze registrate.</block>
+  <block id="3488d38349240c72f75d081c2a79fa3b" category="section-title">04 agosto 2025</block>
 </blocks>
