@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: protect-sql-server.html 
+keywords: protect, server, Microsoft SQL Server, SQL Server, protect instance, protect database 
+summary: Proteggere le istanze e i database di Microsoft SQL Server. 
+---
+= Proteggere i carichi di lavoro di Microsoft SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Proteggi i dati delle tue applicazioni Microsoft SQL Server utilizzando il BlueXP backup and recovery dalla console Workload Factory.  I backup vengono generati automaticamente e archiviati in un archivio oggetti nel tuo account cloud pubblico o privato, in base ai criteri che crei.
+
+
+
+== A proposito di questa attività
+
+Il BlueXP backup and recovery sfruttano la tecnologia di replicazione dei dati NetApp SnapMirror per garantire che tutti i backup siano completamente sincronizzati creando copie snapshot e trasferendole nelle posizioni di backup.
+
+Per i dettagli sulla protezione con BlueXP backup and recovery, fare riferimento alink:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-mssql-protect-overview.html["Panoramica sulla protezione dei carichi di lavoro Microsoft SQL con BlueXP backup and recovery"^] .
+
+
+
+== Prima di iniziare
+
+Di seguito sono riportati i requisiti per iniziare a proteggere i carichi di lavoro di Microsoft SQL Server con il BlueXP backup and recovery:
+
+* Un connettore BlueXP
++
+Fare riferimento alink:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Scopri come configurare un connettore BlueXP"^] Elink:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["requisiti standard BlueXP"^] .
+
++
+Per il connettore è richiesto il sistema operativo Ubuntu 22.04 LTS.
+
+* Una licenza per il BlueXP backup and recovery
++
+link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.html["Impostare la licenza per il BlueXP backup and recovery"^]
+
+* Impostazione della risoluzione host sul connettore
++
+Per scoprire i database, è necessario impostare la risoluzione host sul connettore.  Sul dispositivo ospitato, aggiungere la mappatura dell'indirizzo IP al nome host nel `/etc/hosts` file.
+
+
+
+
+
+== Proteggere le istanze e i database di Microsoft SQL Server
+
+La protezione delle istanze e dei database di Microsoft SQL Server implica l'individuazione delle risorse, la convalida dei prerequisiti, nonché la configurazione e l'installazione del plug-in per Microsoft SQL Server.  Il plug-in è un componente lato host di NetApp Software che consente di proteggere i carichi di lavoro di Microsoft SQL Server.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nella sezione Database, selezionare *Vai all'inventario dei database*.
+. In Database, selezionare la scheda *inventario*.
+. Filtra il *Tipo di motore* su *Microsoft SQL Server*.
+. Selezionare *Proteggi* dal menu per l'istanza da proteggere.
+. Selezionare il *Connettore* in cui si desidera registrare e proteggere il carico di lavoro.
+. Per preparare la protezione dei dati, Workload Factory registra automaticamente le risorse di SQL Server in BlueXP backup and recovery, configura e installa il plug-in per Microsoft SQL Server e individua le risorse che soddisfano i prerequisiti per la protezione dell'istanza di SQL Server.  Selezionare *Avvia* per iniziare il processo.
+. Dopo aver soddisfatto i prerequisiti, seleziona *Reindirizza* per essere reindirizzato al BlueXP backup and recovery.
+
+
+.Cosa succederà
+Da BlueXP backup and recovery, crea un criterio per proteggere la tua istanza e i tuoi database di Microsoft SQL Server.
+
+link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-policies-create.html["Scopri come creare un criterio per proteggere l'istanza e i database di Microsoft SQL Server"^] .
+
+Per informazioni correlate, fare riferimento alink:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-use-mssql-protect-overview.html["Documentazione BlueXP backup and recovery"^] per la gestione dei carichi di lavoro di Microsoft SQL Server.

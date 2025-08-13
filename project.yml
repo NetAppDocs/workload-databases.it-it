@@ -51,6 +51,8 @@ sidebar:
         url: "/create-sandbox-clone.html"
     - title: Automatizza con Codebox
       url: "/automate-codebox.html"
+    - title: Proteggere i carichi di lavoro di Microsoft SQL Server
+      url: "/protect-sql-server.html"
   - title: Amministrare e monitorare
     entries:
     - title: Monitorare i lavori del database

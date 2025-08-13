@@ -139,3 +139,9 @@ Non viene preso in considerazione il calcolo delle dimensioni del volume per lo 
 == Autenticazione dell'host del database in Esplora i risparmi
 
 In alcuni casi con autorizzazioni limitate, la pagina Esplora risparmi non carica i dati dopo l'autenticazione riuscita.
+
+
+
+== Integrazione con il BlueXP backup and recovery
+
+Dopo aver aggiunto gli host al backup e al ripristino BlueXP per la protezione, a volte l'individuazione del database non riesce.
