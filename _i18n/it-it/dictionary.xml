@@ -1143,7 +1143,6 @@
   <block id="ad6ac298077f67c060156edbddf13a36" category="list-text">Selezionare la scheda *Database*.</block>
   <block id="d0c6ba62b6c3694f7b736785522100f6" category="paragraph">I database vengono visualizzati per tutte le istanze registrate.</block>
   <block id="3488d38349240c72f75d081c2a79fa3b" category="section-title">04 agosto 2025</block>
-  <block id="22218c6d37412d25750364bd0d4047b5" category="doc">Il BlueXP backup and recovery ora supportano il carico di lavoro di Microsoft SQL Server</block>
   <block id="412038dfc7c530b95fd4f54ca173992c" category="paragraph">Il BlueXP backup and recovery consentono di eseguire il backup, il ripristino, la verifica e la clonazione di database e gruppi di disponibilità di Microsoft SQL Server.  Dalla console di Workload Factory è possibile accedere e utilizzare il BlueXP backup and recovery per proteggere i carichi di lavoro di Microsoft SQL Server.</block>
   <block id="0eabf86e93873fc39b5a49903ec1c780" category="inline-link-macro">Scopri come proteggere i carichi di lavoro di Microsoft SQL Server tramite la console Workload Factory</block>
   <block id="7b26957c70db2d24aefeef252ab7b883" category="inline-link-macro">Panoramica sulla protezione dei carichi di lavoro Microsoft SQL con BlueXP backup and recovery</block>
@@ -1152,7 +1151,6 @@
   <block id="51292e2d8212f9b8bc9828cc387d8722" category="paragraph">Dopo aver aggiunto gli host al backup e al ripristino BlueXP per la protezione, a volte l'individuazione del database non riesce.</block>
   <block id="6928b7abf5d9fe2390db1739e7eb6d4b" category="summary">Proteggere le istanze e i database di Microsoft SQL Server.</block>
   <block id="3d5a9cd83b30ec6ec9f0802593907f05" category="doc">Proteggere i carichi di lavoro di Microsoft SQL Server</block>
-  <block id="a11c14bfa7fba0cd35f6227250aa1033" category="paragraph">Proteggi i dati delle tue applicazioni Microsoft SQL Server utilizzando il BlueXP backup and recovery dalla console Workload Factory.  I backup vengono generati automaticamente e archiviati in un archivio oggetti nel tuo account cloud pubblico o privato, in base ai criteri che crei.</block>
   <block id="b488e89ecf7de1a4b1b2b7c08eaf5ec7" category="paragraph">Il BlueXP backup and recovery sfruttano la tecnologia di replicazione dei dati NetApp SnapMirror per garantire che tutti i backup siano completamente sincronizzati creando copie snapshot e trasferendole nelle posizioni di backup.</block>
   <block id="84e16205176c2d47e586e6b70d30c355" category="paragraph">Per i dettagli sulla protezione con BlueXP backup and recovery, fare riferimento a<block ref="b3db6ed8425306b30d05a9028a6a4afe" category="inline-link-macro-rx"></block> .</block>
   <block id="e82861995008f0e567492658d395dd98" category="paragraph">Di seguito sono riportati i requisiti per iniziare a proteggere i carichi di lavoro di Microsoft SQL Server con il BlueXP backup and recovery:</block>
@@ -1166,8 +1164,6 @@
   <block id="3c075e9819b05a2e34af9858d549a406" category="paragraph"><block ref="3c075e9819b05a2e34af9858d549a406" category="inline-link-macro-rx"></block></block>
   <block id="0c5a60b84e9bed78e59d37200b950d45" category="list-text">Impostazione della risoluzione host sul connettore</block>
   <block id="2a664f2dff1a4229f6bce49f7fdfe6f2" category="paragraph">Per scoprire i database, è necessario impostare la risoluzione host sul connettore.  Sul dispositivo ospitato, aggiungere la mappatura dell'indirizzo IP al nome host nel<block ref="ad942c725cd0cae65ca4c63717ec464c" prefix=" " category="inline-code"></block> file.</block>
-  <block id="8d32d9492a4c78269564d2850dc5cec6" category="section-title">Proteggere le istanze e i database di Microsoft SQL Server</block>
-  <block id="bee9961feeb03d02dc91c056e88e4752" category="paragraph">La protezione delle istanze e dei database di Microsoft SQL Server implica l'individuazione delle risorse, la convalida dei prerequisiti, nonché la configurazione e l'installazione del plug-in per Microsoft SQL Server.  Il plug-in è un componente lato host di NetApp Software che consente di proteggere i carichi di lavoro di Microsoft SQL Server.</block>
   <block id="c8e8c4da5256c1c745e327697c0ab942" category="list-text">Filtra il *Tipo di motore* su *Microsoft SQL Server*.</block>
   <block id="60cf19833f9c8f41398952fc003ec02d" category="list-text">Selezionare *Proteggi* dal menu per l'istanza da proteggere.</block>
   <block id="f44b851c9ab8fcb80a6dd8db43a90f89" category="list-text">Selezionare il *Connettore* in cui si desidera registrare e proteggere il carico di lavoro.</block>
@@ -1180,4 +1176,9 @@
   <block id="2b26ff19745211be5d0a237c9563b2e9" category="paragraph">Per informazioni correlate, fare riferimento a<block ref="1fc5869f304c5b888d6ddfbf36e6f479" category="inline-link-macro-rx"></block> per la gestione dei carichi di lavoro di Microsoft SQL Server.</block>
   <block id="d341f0c47f4b7ad5cc1b4c9bb210cfda" category="section-title">12 agosto 2025</block>
   <block id="82776afd94423c79dbb6478467a55ee1" category="paragraph"><block ref="01ada1ee9ae7e42f0ced5cd933931e08" category="inline-link-macro-rx"></block> .</block>
+  <block id="1d7888e9a7739b1a3282310704484ae5" category="doc">Il BlueXP backup and recovery ora supportano i carichi di lavoro di Microsoft SQL Server</block>
+  <block id="89f47c3c1994a3db38e0daf9dd673194" category="paragraph">Proteggi i dati delle tue applicazioni Microsoft SQL Server utilizzando il BlueXP backup and recovery dalla console Workload Factory. Grazie a questa integrazione, è possibile raggiungere i seguenti obiettivi di protezione: eseguire il backup dei carichi di lavoro con snapshot locali sullo storage primario locale Amazon FSx for NetApp ONTAP (FSx for ONTAP) e replicare i carichi di lavoro sullo storage secondario FSx for ONTAP .</block>
+  <block id="e6de5e622a1f84159a72b6b36d0457bd" category="paragraph">Workload Factory consente di automatizzare il processo di individuazione delle risorse di istanze e database, convalida dei prerequisiti e configurazione e installazione del plug-in per Microsoft SQL Server, tutti elementi che fanno parte del processo di preparazione per la protezione dei carichi di lavoro di Microsoft SQL Server con il BlueXP backup and recovery. Il plug-in è un componente lato host di NetApp Software che consente di proteggere i carichi di lavoro di Microsoft SQL Server.</block>
+  <block id="151fbaa196a40c93d8a7ab6cdfe564fe" category="section-title">Preparati alla protezione con il BlueXP backup and recovery</block>
+  <block id="0560cb07d58d813bf36ae0c3bcdcec57" category="paragraph">Completa il processo di preparazione per proteggere le tue risorse di Microsoft SQL Server con il BlueXP backup and recovery.</block>
 </blocks>
