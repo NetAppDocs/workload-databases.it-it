@@ -1,49 +1,30 @@
 ---
 sidebar: sidebar 
 permalink: register-instance.html 
-keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle instance, manage host, view host, database host, database instance, manage, unregister 
-summary: Gestisci le istanze di Microsoft SQL Server in una farm di workload BlueXP  per i database. 
+keywords: manage, register, Microsoft SQL Server instance, Oracle database, manage database, manage instance 
+summary: 'Registra le risorse in modo da poter monitorare lo stato delle risorse, l"utilizzo delle risorse, la protezione e le prestazioni di archiviazione nella fabbrica dei carichi di lavoro per i database.' 
 ---
-= Registra le istanze nella fabbrica dei carichi di lavoro per i database
+= Registra le risorse nella fabbrica dei carichi di lavoro per i database
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Registrare le istanze in modo da poter monitorare lo stato delle istanze e del database, l'utilizzo delle risorse, la protezione e le prestazioni di archiviazione nella fabbrica dei carichi di lavoro per i database.
+Registra istanze per Microsoft SQL Server e database per Oracle in modo da poter monitorare lo stato delle istanze e dei database, l'utilizzo delle risorse, la protezione e le prestazioni di archiviazione nella fabbrica dei carichi di lavoro per i database.
 
-I database possono registrare solo istanze con FSx per l'archiviazione del file system ONTAP.
+La registrazione è possibile solo per i motori di database in esecuzione su FSx per l'archiviazione del file system ONTAP .
 
 
 
 == Informazioni sul compito
 
-La registrazione di un'istanza prevede due passaggi: l'autenticazione dell'istanza e la sua preparazione, assicurandosi che tutti i moduli AWS, NetApp e PowerShell siano installati sull'istanza.
+La registrazione di un'istanza (SQL Server) o di un database (Oracle) prevede due passaggi: autenticazione e preparazione.  La preparazione prevede di assicurarsi che tutti i moduli AWS, NetApp e PowerShell siano installati sull'istanza.
 
-È possibile autenticare i collegamenti utilizzando le credenziali di SQL Server o le credenziali di Windows.
-
-
-NOTE: Workload Factory supporta solo la registrazione e la gestione delle istanze di Microsoft SQL Server. A seconda delle credenziali dell'account AWS selezionate in Workload Factory, gli host PostgreSQL e Oracle potrebbero essere visualizzati nell'inventario. Attualmente, Workload Factory supporta istanze PostgreSQL non registrate in esecuzione solo su sistemi operativi Amazon Linux e istanze Oracle in esecuzione solo su Red Hat Enterprise Linux.
-
-Registrazione di un'istanza in una rete privata:: Per registrare un'istanza in una rete privata senza connettività esterna, i seguenti endpoint devono essere disponibili nella VPC con associazione alle subnet in cui sono presenti i server SQL. Assicurarsi che gli endpoint dell'interfaccia consentano la porta 443 nel gruppo di protezione collegato.
-+
---
-* `S3 Gateway/endpoint`
-* `ssm`
-* `ssmmessages`
-* `fsx`
-+
-Se si utilizza un server proxy per tutte le connessioni in uscita da istanze EC2, è necessario consentire l'accesso ai seguenti domini in modo che le operazioni di gestione funzionino:
-
-* ``.microsoft.com``
-* ``.powershellgallery.com``
-* ``.aws.amazon.com``
-* ``.amazonaws.com``
+È possibile eseguire l'autenticazione utilizzando le credenziali di SQL Server o quelle di Windows.
 
 
---
-
+NOTE: Workload Factory supporta solo la registrazione e la gestione delle istanze di Microsoft SQL Server e del database Oracle.  A seconda delle credenziali dell'account AWS selezionate in Workload Factory, gli host PostgreSQL potrebbero apparire nell'inventario.  Attualmente, Workload Factory supporta istanze PostgreSQL non registrate in esecuzione solo su sistemi operativi Amazon Linux.
 
 
 
@@ -51,13 +32,30 @@ Se si utilizza un server proxy per tutte le connessioni in uscita da istanze EC2
 
 Prima di registrare un'istanza, tenere presente quanto segue:
 
-* L'host dell'istanza deve apparire nella scheda Inventario. Affinché gli host vengano visualizzati nell'inventario, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["è necessario aggiungere le credenziali dell'account AWS e le autorizzazioni in modalità _sola lettura_ o _lettura/scrittura_"^] .
-* Quando si utilizzano le credenziali utente di dominio Windows per l'autenticazione per le operazioni di gestione di SQL Server, Workload Factory abilita la delega CredSSP sui nodi SQL. Se la delega CredSSP è bloccata per tutti i computer del dominio con i criteri di gruppo, l'autenticazione con le credenziali utente di Windows non funziona.
+L'host per l'istanza o il database deve apparire nella scheda Inventario.  Per far sì che gli host appaiano nell'inventario,link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["è necessario aggiungere le credenziali dell'account AWS e le autorizzazioni in modalità _sola lettura_ o _lettura/scrittura_"^] .
+
+
+
+=== Registrazione di un'istanza in una rete privata
+
+Per registrare un'istanza (SQL Server) o un database (Oracle) in una rete privata senza connettività esterna, i seguenti endpoint devono essere disponibili nella VPC con associazione alle subnet in cui sono presenti i server SQL.  Assicurarsi che gli endpoint dell'interfaccia consentano la porta 443 nel gruppo di sicurezza associato.
+
+* `S3 Gateway/endpoint`
+* `ssm`
+* `ssmmessages`
+* `fsx`
++
+Se si utilizza un server proxy per tutte le connessioni in uscita da istanze EC2, è necessario consentire l'accesso ai seguenti domini in modo che le operazioni di gestione funzionino:
+
+* ``.microsoft.com``(SQL Server)
+* ``.powershellgallery.com``(SQL Server)
+* ``.aws.amazon.com``
+* ``.amazonaws.com``
 
 
 
 
-== Registra un'istanza
+== Registra un'istanza di SQL Server
 
 La registrazione di un'istanza include l'autenticazione e la preparazione dell'istanza.
 
@@ -65,7 +63,8 @@ La registrazione di un'istanza include l'autenticazione e la preparazione dell'i
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Vai all'inventario dei database*.
 . In Database, selezionare la scheda *inventario*.
-. Nella scheda Inventario, seleziona la scheda *Istanze*.
+. Selezionare *Microsoft SQL Server* come tipo di motore.
+. Selezionare la scheda *Istanze*.
 . Selezionare per registrare una singola istanza o più istanze.
 +
 .. Registrazione di una singola istanza: vai all'istanza da gestire e seleziona *Registra istanza*.
@@ -90,7 +89,7 @@ Sono disponibili due opzioni per la registrazione di più istanze. In entrambi i
 +
 .. Se mancante, selezionare la fabbrica del carico di lavoro per *Installare i moduli mancanti di AWS e NetApp PowerShell*.
 .. Se mancante, selezionare la fabbrica del carico di lavoro per *Installare PowerShell 7 mancante*. L'installazione del modulo PowerShell 7 mancante richiede il riavvio del sistema.
-.. Esaminare l'elenco dei prerequisiti per le seguenti funzionalità. Per registrare l'istanza, è necessario soddisfare almeno un prerequisito.
+.. Esaminare l'elenco dei prerequisiti per le seguenti funzionalità.  Assicurarsi di soddisfare tutti i prerequisiti per la capacità di registrare l'istanza.
 +
 *** *Esaminare problemi e raccomandazioni ben strutturati*
 *** *Risolvere problemi ben progettati*
@@ -101,11 +100,74 @@ Il completamento dei prerequisiti include l'aggiornamento delle autorizzazioni d
 
 
 
-.. Per continuare, è necessario soddisfare almeno un prerequisito mancante.
-.. Quando uno o più prerequisiti sono stati completati e i controlli sono *Pronti*, è possibile scegliere di *Registrare* l'istanza.
+.. Una volta completati i prerequisiti e i controlli sono *Pronti*, è possibile selezionare di *Registrare* l'istanza.
 
 
 
 
 .Risultato
-Viene avviata la richiesta di registrazione dell'istanza. Selezionare la scheda *Monitoraggio job* per monitorare l'avanzamento.
+Viene avviata la registrazione dell'istanza.  Selezionare la scheda *Monitoraggio lavori* per monitorare i progressi.
+
+
+
+== Registrare un database Oracle
+
+La registrazione di un database include l'autenticazione e la preparazione dell'istanza.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nella sezione Database, selezionare *Vai all'inventario dei database*.
+. In Database, selezionare la scheda *inventario*.
+. Nella scheda Inventario, seleziona *Oracle* come motore di database.
+. Selezionare la scheda *Database*.
+. Selezionare per registrare un singolo database o più database.
++
+.. Registrazione di un singolo database: accedere al database da gestire e selezionare *Registra database*.
+.. Registrazione di più database: selezionare il pulsante *Registra più database*.
++
+Per registrare più database sono disponibili due opzioni.  In entrambi i casi, i database devono condividere lo stesso stato di autenticazione (non autenticato o autenticato).
+
++
+*** Database non autenticati: seleziona più database non autenticati da registrare.  Questi database devono condividere le stesse credenziali di autenticazione e le stesse credenziali FSx per ONTAP .  Selezionare *Applica* e poi *Avanti*.
+*** Database autenticati: seleziona più database autenticati da registrare, quindi seleziona *Avanti*.
+
+
+
+
+. Nel passaggio 2 della pagina Registra database, seleziona la modalità di autenticazione del database, inserisci i seguenti dettagli e seleziona *Avanti*.  Se i database sono già autenticati, selezionare *Avanti*.
++
+** *Autenticazione utente Oracle*: immettere il nome utente e la password di Oracle e il nome utente e la password del file system FSx for ONTAP .
+** *Autenticazione utente Oracle ASM*: facoltativa.  Se il database Oracle utilizza Automatic Storage Management (ASM), immettere il nome utente e la password di Oracle ASM (grid).
+
+
+. Nel passaggio 3, preparare il database assicurandosi che soddisfi i prerequisiti richiesti.  Se tutti i moduli richiesti sono installati e i prerequisiti sono soddisfatti, selezionare *Avanti* per registrare il database.  Se devi intervenire, segui questi passaggi.
++
+.. Esaminare l'elenco dei prerequisiti per la seguente funzionalità.  Per registrare il database, è necessario che siano soddisfatti tutti i prerequisiti per una singola funzionalità.
++
+*** *Esaminare problemi e raccomandazioni ben strutturati*
+
+
+.. Completare i seguenti prerequisiti:
++
+*** *Autorizzazioni policy AWS IAM*: copia e aggiorna le autorizzazioni AWS nella console AWS.
+*** *Autorizzazioni del profilo dell'istanza EC2 IAM*: copia e aggiorna le autorizzazioni del profilo dell'istanza EC2 IAM sull'istanza Amazon EC2 nella console AWS.
+*** *Moduli di distribuzione*: se necessario, seleziona l'installazione dei moduli dipendenti, tra cui l'interfaccia della riga di comando AWS (AWS CLI), jq (processore JSON della riga di comando) e Python 3.12, se non è già installata la versione 3.6 o successiva.  Workload Factory installa automaticamente questi moduli come parte del processo di registrazione.
+*** *Autorizzazioni utente Oracle*: se necessario, aggiornare le autorizzazioni per l'utente Oracle.
+
+
+.. Una volta completati i prerequisiti e i controlli sono *Pronti*, è possibile selezionare di *Registrare* il database.
+
+
+
+
+.Risultato
+Viene avviata la registrazione del database.  Selezionare la scheda *Monitoraggio lavori* per monitorare i progressi.
+
+.Cosa succederà
+Dopo la registrazione delle risorse, è possibile eseguire le seguenti attività.
+
+* Visualizza i database dall'inventario
+* link:create-database.html["Creare un database"]
+* link:create-sandbox-clone.html["Creare un clone del database (sandbox)"]
+* link:optimize-configurations.html["Implementare configurazioni di database ben progettate"]
+

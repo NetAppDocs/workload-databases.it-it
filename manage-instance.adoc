@@ -2,23 +2,23 @@
 sidebar: sidebar 
 permalink: manage-instance.html 
 keywords: instance, instance management, FSx for ONTAP, instance, manage host, view host, database host, database instance, manage 
-summary: Scopri di più sulla gestione delle istanze nella Workload Factory per i database. 
+summary: Scopri di più sulla gestione di istanze e database in Workload Factory per i database. 
 ---
-= Gestione delle istanze nella fabbrica dei carichi di lavoro per i database
+= Gestione delle risorse nella fabbrica dei carichi di lavoro per i database
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-La gestione delle istanze registrate nella Workload Factory include la distribuzione di risorse per le istanze, come la creazione di database e cloni di database, nonché il monitoraggio dello stato delle istanze e dei database, dell'utilizzo delle risorse, della protezione e delle prestazioni di archiviazione. Inoltre, è possibile analizzare lo stato di corretta architettura delle configurazioni del database e implementare le best practice di configurazione per migliorare le prestazioni e ridurre i costi operativi. La gestione delle istanze è disponibile solo per istanze con storage del file system FSx for ONTAP.
+La gestione delle risorse in Workload Factory consente di utilizzare funzionalità avanzate, tra cui la creazione di database e cloni, l'utilizzo delle risorse e il monitoraggio.  Inoltre, è possibile analizzare lo stato di corretta architettura delle configurazioni del database e implementare le best practice di configurazione per migliorare le prestazioni e ridurre i costi operativi.  La gestione delle risorse è riservata solo agli ambienti Microsoft SQL Server e Oracle in esecuzione su FSx per l'archiviazione del file system ONTAP .
 
-Devi link:register-instance.html["registrare un'istanza"] per svolgere una qualsiasi delle seguenti attività di gestione.
+Devilink:register-instance.html["registra le risorse"] per svolgere una qualsiasi delle seguenti attività di gestione.
 
 I compiti di gestione includono:
 
+* Visualizzazione dei database dall'inventario
 * link:create-database.html["Creazione di un database"]
 * link:create-sandbox-clone.html["Creazione di un clone del database (sandbox)"]
-* link:view-databases.html["Visualizzazione dei database"]
 * link:optimize-configurations.html["Implementazione di configurazioni di database ben progettate"]
 

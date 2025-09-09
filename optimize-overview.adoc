@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: optimize-overview.html 
 keywords: database configuration issues, issues, analyze, scan, optimize, improve, database configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations, storage, compute, application, resiliency, scan, optimization, SQL Server, host, instance 
-summary: Workload Factory per Database analizza regolarmente le configurazioni di Microsoft SQL Server per determinare se ci sono problemi. 
+summary: Workload Factory per i database analizza regolarmente le configurazioni di Microsoft SQL Server e Oracle per determinare se ci sono problemi. 
 ---
 = Analisi della configurazione per ambienti di database nella fabbrica dei carichi di lavoro
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Workload Factory per Database analizza regolarmente le configurazioni d
 
 
 [role="lead"]
-Workload Factory per Database analizza regolarmente le configurazioni dei database per determinare eventuali problemi nelle distribuzioni di Microsoft SQL Server su Amazon FSx per lo storage NetApp ONTAP. Quando vengono rilevati problemi, Workload Factory ne indica la natura e spiega cosa è necessario modificare per garantire che le configurazioni dei database raggiungano le massime prestazioni, la massima efficienza dei costi e la conformità alle best practice.
+Workload Factory for Databases analizza regolarmente le configurazioni dei database per determinare se ci sono problemi con le distribuzioni di Microsoft SQL Server e Oracle su Amazon FSx for NetApp ONTAP .  Quando vengono rilevati problemi, Workload Factory ti mostra quali sono e ti spiega cosa è necessario modificare per garantire che le configurazioni del tuo database raggiungano le massime prestazioni, la massima efficienza dei costi e la conformità alle best practice.
 
 Le funzionalità principali includono:
 
@@ -29,10 +29,18 @@ Le funzionalità principali includono:
 
 Nella console workload Factory a livello di file system, viene elencato lo stato con un'architettura appropriata per tutti i file system FSX per ONTAP. Gli stati ben architettati sono classificati come "problemi", "non analizzati" o "ben architettati". Selezionando lo stato con un'architettura ottimale si passa alla scheda di stato con un'architettura ottimale all'interno del file system, dove è possibile trovare il punteggio con un'architettura adeguata, le categorie di configurazione e tutte le configurazioni del file system.
 
-Punteggio ben strutturato:: Il punteggio include tutte le configurazioni attualmente analizzate e viene visualizzato come percentuale. Un punteggio del 25% indica che il 25% delle configurazioni del file system è caratterizzato da un'architettura ottimale.
-Categorie di configurazione:: Le configurazioni del file system sono organizzate in categorie allineate con i seguenti cinque pilastri del framework ben strutturato AWS.
-+
---
+
+
+== Punteggio ben strutturato
+
+Il punteggio include tutte le configurazioni attualmente analizzate e viene visualizzato come percentuale. Un punteggio del 25% indica che il 25% delle configurazioni del file system è caratterizzato da un'architettura ottimale.
+
+
+
+== Categorie di configurazione
+
+Le configurazioni del file system sono organizzate in categorie allineate con i seguenti cinque pilastri del framework ben strutturato AWS.
+
 * _Reliability_: Garantisce che i carichi di lavoro svolgano le funzioni previste in modo corretto e coerente, anche in presenza di interruzioni. Un esempio di configurazione è FSX per i backup ONTAP.
 * _Sicurezza_: Sottolinea la protezione di dati, sistemi e risorse attraverso valutazioni dei rischi e strategie di mitigazione.
 * _Eccellenza operativa_: Si concentra sulla fornitura dell'architettura e del valore di business ottimali.
@@ -40,17 +48,19 @@ Categorie di configurazione:: Le configurazioni del file system sono organizzate
 * _Performance Efficiency_: Si concentra sull'utilizzo efficiente delle risorse per soddisfare i requisiti di sistema e mantenere prestazioni ottimali con il variare delle esigenze.
 
 
---
-Ambito di analisi:: L'ambito dell'ottimizzazione è diverso a seconda del componente da valutare. Ad esempio, l'ottimizzazione dello storage avviene a livello di istanza SQL, mentre l'ottimizzazione del calcolo avviene a livello di host.
 
+
+== Ambito di analisi
+
+L'ambito dell'ottimizzazione è diverso a seconda del componente da valutare. Ad esempio, l'ottimizzazione dello storage avviene a livello di istanza SQL, mentre l'ottimizzazione del calcolo avviene a livello di host.
 
 
 
 == Requisiti di analisi
 
-Per un'analisi completa dell'ambiente del database, le istanze devono essere registrate e online.
+Per un'analisi completa dell'ambiente del database, le risorse devono essere registrate e online.
 
-link:register-instance.html["Scopri come registrare un'istanza."]
+link:register-instance.html["Scopri come registrare le risorse."]
 
 .Cosa succederà
 link:optimize-configurations.html["Implementare configurazioni di database ben progettate"]

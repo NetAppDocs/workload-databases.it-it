@@ -42,7 +42,6 @@ Per scoprire i database, è necessario impostare la risoluzione host sul connett
 
 
 * link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.html["Impostare la licenza per il BlueXP backup and recovery"^]
-* Nella fabbrica dei carichi di lavoro per i database, assicurati di registrare le istanze utilizzando le credenziali di Windows.  Per fornire le credenziali di Windows, andare alla scheda Istanze dall'inventario.  Identifica l'istanza, seleziona *Gestisci istanze*, quindi seleziona *Dashboard istanza*.  Dal dashboard dell'istanza, seleziona il menu a tre punti, quindi seleziona *Aggiorna password Microsoft SQL Server*.  Aggiorna la password utilizzando l'autenticazione di Windows.
 
 
 
@@ -57,7 +56,11 @@ Completa il processo di preparazione per proteggere le tue risorse di Microsoft 
 . In Database, selezionare la scheda *inventario*.
 . Filtra il *Tipo di motore* su *Microsoft SQL Server*.
 . Selezionare *Proteggi* dal menu per l'istanza da proteggere.
-. Selezionare il *Connettore* in cui si desidera registrare e proteggere il carico di lavoro.
+. Se richiesto, fornire le credenziali di Windows con accesso amministrativo.
++
+Per utilizzare il BlueXP backup and recovery per la protezione, le istanze di SQL Server devono essere registrate nella fabbrica dei carichi di lavoro con le credenziali di Windows.
+
+. Se sono attivi e disponibili più connettori, selezionare il *Connettore* in cui si desidera registrare e proteggere il carico di lavoro.
 . Per preparare la protezione dei dati, Workload Factory registra automaticamente le risorse di SQL Server in BlueXP backup and recovery, configura e installa il plug-in per Microsoft SQL Server e individua le risorse che soddisfano i prerequisiti per la protezione dell'istanza di SQL Server.  Selezionare *Avvia* per iniziare il processo.
 . Dopo aver soddisfatto i prerequisiti, seleziona *Reindirizza* per accedere BlueXP backup and recovery.
 

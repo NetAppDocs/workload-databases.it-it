@@ -11,38 +11,59 @@ summary: 'Workload Factory per database analizza le configurazioni di Microsoft 
 
 
 [role="lead"]
-Utilizzando le informazioni e i suggerimenti dell'analisi della configurazione, sfrutta Workload Factory per implementare le best practice per le configurazioni del tuo database. È possibile esaminare facilmente lo stato di buona architettura, scoprire eventuali problemi con le configurazioni del database e intervenire per migliorare quelle non ottimizzate in termini di affidabilità, sicurezza, efficienza, prestazioni e costi.
+Utilizzando informazioni e consigli sull'analisi della configurazione, sfrutta Workload Factory per implementare le best practice per le configurazioni del tuo database con Microsoft SQL Server e Oracle.  È possibile esaminare facilmente lo stato di buona progettazione, scoprire eventuali problemi con le configurazioni del database e intervenire per migliorare eventuali configurazioni non ottimizzate in termini di affidabilità, sicurezza, efficienza, prestazioni e costi.
+
+È anche possibile ignorare l'analisi di configurazioni specifiche che non si applicano al proprio ambiente per evitare avvisi non necessari e risultati di ottimizzazione imprecisi.
 
 link:optimize-overview.html["Scopri di più sull'analisi della configurazione e sullo stato ben progettato nella fabbrica dei carichi di lavoro."]
 
-.A proposito di questa attività
+
+
+== A proposito di questa attività
+
 Workload Factory analizza quotidianamente le configurazioni del database. L'analisi giornaliera fornisce informazioni sullo stato di progettazione, nonché approfondimenti e raccomandazioni con opzioni per risolvere automaticamente i problemi di configurazione in modo che le configurazioni soddisfino le best practice.
 
 È possibile esaminare i suggerimenti per i problemi di configurazione e risolverli dall'inventario dei database nella console della Workload Factory.
 
-Cosa viene analizzato:: Workload Factory analizza lo stato di corretta architettura delle seguenti configurazioni per le istanze di Microsoft SQL Server:
-+
---
+.Cosa viene analizzato
+Workload Factory analizza lo stato di buona progettazione delle seguenti configurazioni:
+
+Per le istanze di Microsoft SQL Server:
+
 * Dimensionamento dello storage: Include Tier di storage, capacità aggiuntiva del file system, dimensioni dei dischi di log e dimensioni dei dischi TempDB
 * Layout dello storage: Comprende posizionamento dei file di dati degli utenti, posizionamento dei file di log e posizionamento di TempDB
 * Configurazione di archiviazione: include gestione della capacità, provisioning sottile, criteri di tiering, snapshot, stato Microsoft Multipath I/O (MPIO) e impostazione del timeout MPIO
-* Calcolo: Include il dimensionamento corretto, le patch del sistema operativo e le impostazioni della scheda di rete come Receive Side Scaling (RSS) e TCP offload
+* Elaborazione: include il dimensionamento corretto, le patch del sistema operativo e le impostazioni della scheda di rete come Receive Side Scaling (RSS), TCP offloading e allineamento MTU
 * Applicazioni: Include le licenze di Microsoft SQL Server, la patch di Microsoft SQL Server e le impostazioni MAXDOP
 * Resilienza: include snapshot locali, backup FSx per ONTAP , replica tra regioni (CRR) e Microsoft SQL High Availability.
 * Cloni: include opzioni per aggiornare ed eliminare i cloni (sandbox) creati all'interno o all'esterno della fabbrica dei carichi di lavoro e che hanno più di 60 giorni
 
 
---
+Per i database Oracle:
+
+* Configurazione di storage: include gestione della capacità, provisioning sottile, policy di tiering, snapshot ed efficienze di storage
 
 
-.Prima di iniziare
+
+
+== Prima di iniziare
+
 * Devi avere link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e autorizzazioni di lettura/scrittura"^] per analizzare le configurazioni del database.
-* Per valutare l'archiviazione di un'istanza di Microsoft SQL Server, l'istanza deve essere registrata nella Workload Factory e il tipo di archiviazione deve essere FSx per ONTAP. link:register-instance.html["Scopri come registrare un'istanza."]
+* Per valutare l'archiviazione di un'istanza di Microsoft SQL Server o di un database Oracle, la risorsa deve essere registrata nella fabbrica del carico di lavoro e il tipo di archiviazione deve essere FSx per ONTAP.link:register-instance.html["Scopri come registrare le risorse."]
 * Assicurarsi di rivedere attentamente ogni suggerimento prima di selezionare per correggere un'impostazione o una configurazione. Per le impostazioni RSS e MAXDOP, si consiglia di testare le impostazioni consigliate per determinare i miglioramenti delle prestazioni prima di apportare modifiche all'ambiente di produzione.
 
 
 
 NOTE: Il processo di correzione potrebbe causare tempi di inattività delle istanze o interruzioni del servizio. Assicuratevi di leggere attentamente la raccomandazione prima di decidere di correggere una configurazione.
+
+
+
+== Risolvi un problema di configurazione
+
+Risolve i problemi di configurazione per gli ambienti SQL Server o Oracle in esecuzione su FSx per l'archiviazione ONTAP .
+
+
+NOTE: Il processo di ripristino potrebbe causare tempi di inattività delle istanze o interruzioni del servizio.  Assicurati di leggere attentamente la raccomandazione prima di decidere di risolvere un problema di configurazione.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
@@ -76,3 +97,68 @@ NOTE: Il processo di correzione potrebbe causare tempi di inattività delle ista
 
 .Risultato
 Workload Factory inizia a risolvere i problemi. Selezionare la scheda *monitoraggio processo* per visualizzare lo stato dell'operazione.
+
+
+
+== Rinviare o respingere l'analisi delle configurazioni di database
+
+Rinviare o respingere l'analisi di configurazioni specifiche del database che non si applicano all'ambiente di database per evitare avvisi non necessari e risultati di ottimizzazione imprecisi. È possibile riattivare in qualsiasi momento un'analisi della configurazione posticipata o ignorata.
+
+I requisiti delle applicazioni per le configurazioni di database variano. Workload Factory offre due opzioni per ignorare l'analisi di specifiche configurazioni di database, in modo da poter monitorare solo i problemi rilevanti e ottenere una visione accurata dello stato delle configurazioni pertinenti. Quando un'analisi di configurazione specifica viene rinviata o chiusa, la configurazione non viene inclusa nel punteggio di ottimizzazione totale.
+
+È possibile posticipare, ignorare e riattivare l'analisi della configurazione a livello di configurazione e a livello di istanza di SQL Server o a livello di database Oracle.
+
+* *Rimandare per 30 giorni*: Posticipando l'analisi si fermerà l'analisi per 30 giorni. Dopo 30 giorni, l'analisi verrà riavviata automaticamente.
+* *Smissing*: L'eliminazione dell'analisi rinvia l'analisi a tempo indeterminato. Se necessario, è possibile riavviare l'analisi.
+
+
+Le seguenti istruzioni descrivono come posticipare, ignorare o riattivare un'analisi a livello di configurazione.  Per completare le seguenti attività per istanze specifiche di SQL Server o database Oracle, iniziare dalla scheda *Dashboard*.
+
+[role="tabbed-block"]
+====
+.Posticipa
+--
+Rinviare per 30 giorni l'interruzione di un'analisi di configurazione. Dopo 30 giorni, l'analisi verrà riavviata automaticamente.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nella sezione Database, selezionare *Vai all'inventario dei database*.
+. Nella scheda *inventario*, scorrere verso il basso fino alla configurazione da rinviare, selezionare il menu a tre punti, quindi selezionare *rinvia per 30 giorni*.
+. Selezionare *continua*.
+
+
+.Risultato
+L'analisi della configurazione si interrompe per 30 giorni.
+
+--
+.Ignora
+--
+Ignorare per interrompere un'analisi di configurazione a tempo indeterminato. È possibile riavviare l'analisi quando necessario.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nella sezione Database, selezionare *Vai all'inventario dei database*.
+. Nella scheda *inventario*, scorrere fino alla configurazione da chiudere, selezionare il menu a tre punti, quindi selezionare *Ignora*.
+. Selezionare *continua*.
+
+
+.Risultato
+L'analisi della configurazione si interrompe.
+
+--
+.Riattiva
+--
+Riattivare in qualsiasi momento un'analisi di configurazione posticipata o ignorata.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nella sezione Database, selezionare *Vai all'inventario dei database*.
+. Nella scheda *inventario*, scorrere verso il basso fino alla configurazione da riattivare, selezionare il menu a tre punti, quindi selezionare *Riattiva*.
+. Selezionare *continua*.
+
+
+.Risultato
+L'analisi della configurazione viene riattivata e viene eseguita quotidianamente.
+
+--
+====
