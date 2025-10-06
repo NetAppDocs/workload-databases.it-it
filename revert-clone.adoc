@@ -2,25 +2,25 @@
 sidebar: sidebar 
 permalink: revert-clone.html 
 keywords: re-baseline, revert clone, database, Microsoft SQL 
-summary: Ripristina un clone delle sandbox in una fabbrica di workload BlueXP  per i database. 
+summary: 'Ripristina un clone di database (sandbox) alla sua versione originale al momento della creazione in NetApp Workload Factory for Databases.' 
 ---
-= Ripristina un clone delle sandbox in una fabbrica di workload BlueXP  per i database
+= Ripristina un clone del database in NetApp Workload Factory per database
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Ripristina la versione originale di un clone del database al momento della creazione in una fabbrica di workload BlueXP  per i database.
+Ripristina un clone di database (sandbox) alla sua versione originale al momento della creazione in NetApp Workload Factory for Databases.
 
 .A proposito di questa attività
-Quando si clona un database, il clone al momento della creazione è un clone _baseline_. I dati nel database clonato corrispondono a quelli del database di origine al momento della creazione. Quando i dati di un clone di database sandbox cambiano nel tempo, è possibile ripristinare i dati di base alla prima creazione del clone. Questa operazione è chiamata re-baselining di un clone. Ridefinire il valore di base di un clone anziché crearne uno nuovo consente di risparmiare spazio, tuttavia qualsiasi modifica apportata al clone sandbox verrà eliminata.
+Quando si clona un database, il clone al momento della creazione è un clone _di base_.  I dati nel database clonato sono gli stessi del database di origine al momento della creazione.  Poiché i dati in un clone di database cambiano nel tempo, potrebbe essere opportuno ripristinare i dati allo stato di base al momento della creazione del clone.  Questa operazione è chiamata ri-baselining di un clone.  Rieseguire la baseline di un clone anziché crearne uno nuovo consente di risparmiare spazio; tuttavia, tutte le modifiche apportate al clone del database verranno eliminate.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Vai all'inventario dei database*.
-. In Database, selezionare la scheda *Sandbox*.
-. Nella scheda Sandbox, fare clic sul menu a tre punti del clone sandbox che si desidera ripristinare.
+. Dal menu Database, selezionare *Sandbox*.
+. In Sandbox, seleziona il menu azioni del clone del database che vuoi ripristinare.
 . Selezionare *Rebaseline*.
-. Nella finestra di dialogo Re-baseline, fare clic su *Re-baseline*.
+. Nella finestra di dialogo Re-baseline, selezionare *Re-baseline*.
 

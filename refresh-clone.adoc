@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: refresh-clone.html 
 keywords: refresh clone, sync, update, database, Microsoft SQL 
-summary: Fare un refresh di un clone sandbox nella factory dei carichi di lavoro BlueXP  per i database. 
+summary: Aggiorna un clone del database in NetApp Workload Factory for Databases in modo che sia equivalente al database di origine nel momento corrente o in un momento precedente. 
 ---
-= Fare un refresh di un clone sandbox nella factory dei carichi di lavoro BlueXP  per i database
+= Aggiorna un clone del database in NetApp Workload Factory per database
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Aggiornare un clone del database in una fabbrica di carichi di lavoro BlueXP  per i database in modo che sia equivalente al database di origine al momento attuale o a un point-in-time precedente.
+Aggiorna un clone del database (sandbox) in NetApp Workload Factory for Databases in modo che sia equivalente al database di origine nel momento corrente o in un momento precedente.
 
 .A proposito di questa attività
 L'aggiornamento di un clone aggiorna il clone nel database di origine al momento corrente o in uno snapshot del database di origine acquisito in un point-in-time precedente. Tutte le modifiche apportate al clone sandbox verranno eliminate.
@@ -24,8 +24,8 @@ Per aggiornare un clone del database da uno snapshot, il database di origine dev
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Vai all'inventario dei database*.
-. In Database, selezionare la scheda *Sandbox*.
-. Nella scheda Sandbox, fare clic sul menu a tre punti del clone sandbox che si desidera aggiornare.
+. Dal menu Database, selezionare *Sandbox*.
+. In Sandbox, seleziona il menu azioni del clone sandbox che vuoi aggiornare.
 . Selezionare *Aggiorna*.
 . Nella finestra di dialogo Aggiorna, selezionare una delle seguenti opzioni:
 +

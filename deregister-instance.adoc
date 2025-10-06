@@ -2,23 +2,23 @@
 sidebar: sidebar 
 permalink: deregister-instance.html 
 keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle database, deregister instance, unregister instance, remove instance 
-summary: Annullare la registrazione di una risorsa se non si desidera più distribuire o monitorare le risorse dalla console della fabbrica dei carichi di lavoro. 
+summary: Annullare la registrazione di una risorsa se non si desidera più distribuire o monitorare le risorse dalla console Workload Factory. 
 ---
-= Annullare la registrazione di una risorsa nella fabbrica dei carichi di lavoro
+= Annullare la registrazione di una risorsa in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Annullare la registrazione di una risorsa, ad esempio un'istanza di Microsoft SQL Server o un database Oracle, se non si desidera più distribuire o monitorare le risorse dalla console della Workload Factory.  L'annullamento della registrazione delle risorse rimuove anche la quantità di capacità di archiviazione FSx for ONTAP utilizzata dall'istanza.
+Annullare la registrazione di una risorsa, ad esempio un'istanza di Microsoft SQL Server o un database Oracle, se non si desidera più distribuire o monitorare le risorse dalla console NetApp Workload Factory. L'annullamento della registrazione delle risorse rimuove anche la quantità di capacità di archiviazione FSx for ONTAP utilizzata dall'istanza.
 
 Puoi registrare nuovamente la risorsa.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Vai all'inventario dei database*.
-. In Database, selezionare la scheda *inventario*.
-. Nell'inventario, seleziona il tipo di motore: Microsoft SQL Server, Oracle o PostgreSQL.
-. Individua la risorsa di cui vuoi annullare la registrazione, seleziona il menu a tre punti, quindi seleziona *Annulla registrazione*.
+. Dal menu Database, selezionare *Inventario*.
+. Nell'inventario, seleziona il tipo di motore: *Microsoft SQL Server*, *Oracle* o *PostgreSQL*.
+. Individua la risorsa di cui vuoi annullare la registrazione, seleziona il menu Azione, quindi seleziona *Annulla registrazione*.
 

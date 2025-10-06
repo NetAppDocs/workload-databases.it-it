@@ -4,14 +4,14 @@ permalink: known-limitations.html
 keywords: limitations, databases 
 summary: Le limitazioni note identificano piattaforme, dispositivi o funzioni non supportate da questa versione del prodotto o che non interagiscono correttamente con esso. Esaminare attentamente queste limitazioni. 
 ---
-= Limitazioni note per la farm di workload BlueXP  per i database
+= Limitazioni note per NetApp Workload Factory per database
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Le limitazioni note identificano piattaforme, dispositivi o funzioni non supportate da questa versione del prodotto o che non interagiscono correttamente con esso. Esaminare attentamente queste limitazioni.
+Le limitazioni note identificano piattaforme, dispositivi o funzioni che non sono supportati da NetApp Workload Factory for Databases o che non interagiscono correttamente con esso. Esamina attentamente queste limitazioni.
 
 
 
@@ -35,13 +35,13 @@ La distribuzione con un AMI personalizzato presuppone che nell'immagine siano pr
 * Quando si seleziona una fascicolazione diversa da quella impostata nell'immagine per la distribuzione autonoma
 
 
-Come parte della distribuzione, workload Factory non installa un AMI personalizzato con più istanze di Microsoft SQL Server. Solo l'istanza predefinita di Microsoft SQL Server è selezionata e configurata come parte della distribuzione.
+Come parte della distribuzione, Workload Factory non installa un'AMI personalizzata con più istanze di Microsoft SQL Server.  Solo l'istanza predefinita di Microsoft SQL Server viene selezionata e configurata come parte della distribuzione.
 
 
 
 == Eseguire il rollback e riprovare per le distribuzioni non riuscite
 
-Il rollback e il nuovo tentativo per le distribuzioni non riuscite non sono supportati in fabbrica del carico di lavoro. È possibile eseguire il rollback o riprovare uno stack non riuscito dalla console CloudFormation in AWS.
+Il rollback e il nuovo tentativo per le distribuzioni non riuscite non sono supportati in Workload Factory.  È possibile eseguire il rollback o riprovare uno stack non riuscito dalla console CloudFormation in AWS.
 
 
 
@@ -60,7 +60,7 @@ Sarà necessario ripulire manualmente questi elementi o attendere che il dominio
 
 == Supporto di configurazione per gruppi di disponibilità sempre attivo
 
-La gestione delle configurazioni dei gruppi di disponibilità sempre attive non è supportata in fabbrica dei workload.
+La gestione delle configurazioni dei gruppi di disponibilità Always On non è supportata in Workload Factory.
 
 
 
@@ -84,7 +84,7 @@ Il numero massimo di cloni sandbox che è possibile creare da un server di datab
 
 == Rilevamento e gestione di Microsoft SQL Server
 
-Il rilevamento di Microsoft SQL Server non è stato salvato. Ogni volta che si accede ai database nella fabbrica del carico di lavoro, il rilevamento di Microsoft SQL Server viene eseguito nuovamente per identificare le installazioni SQL nell'area.
+Il rilevamento di Microsoft SQL Server non viene salvato.  Ogni volta che si accede ai database in Workload Factory, viene eseguito nuovamente il rilevamento di Microsoft SQL Server per identificare le installazioni SQL nella regione.
 
 
 
@@ -118,7 +118,7 @@ L'ottimizzazione in blocco per più istanze di SQL Server non è supportata per 
 
 === Valutazione delle patch del sistema operativo per l'ottimizzazione
 
-La valutazione delle patch del sistema operativo effettuata a scopo di ottimizzazione potrebbe non funzionare in una rete privata. La valutazione si basa su AWS Patch Manager. Per informazioni su come applicare patch alle istanze di Windows EC2 in una rete privata, fare riferimento a link:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["AWS Cloud Operations Blog "come applicare patch alle istanze di Windows EC2 nelle subnet private usando AWS Systems Manager""^].
+La valutazione delle patch del sistema operativo effettuata a fini di ottimizzazione potrebbe non funzionare in una rete privata.  La valutazione si basa su AWS Patch Manager.  Per capire come applicare patch alle istanze Windows EC2 in una rete privata, fare riferimento al blog AWS Cloud Operationslink:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["Come applicare patch alle istanze Windows EC2 nelle subnet private utilizzando AWS Systems Manager"^] .
 
 
 
@@ -131,17 +131,35 @@ Non viene preso in considerazione il calcolo delle dimensioni del volume per lo 
 == Valutazione della replica tra aree
 
 * La valutazione di ottimizzazione non può determinare se viene utilizzata la replica tra aree (CRR) quando il file system FSX for ONTAP di destinazione si trova in un account AWS diverso.
-* Workload Factory valuta solo la configurazione CRR del file system di origine FSX per ONTAP.
+* Workload Factory valuta solo la configurazione CRR del file system FSx for ONTAP di origine.
 
 
 
 
-== Autenticazione dell'host del database in Esplora i risparmi
+== Autenticazione dell'host del database durante l'esplorazione dei risparmi
 
 In alcuni casi con autorizzazioni limitate, la pagina Esplora risparmi non carica i dati dopo l'autenticazione riuscita.
 
 
 
-== Integrazione con il BlueXP backup and recovery
+== Integrazione con NetApp Backup and Recovery
 
-Dopo aver aggiunto gli host al backup e al ripristino BlueXP per la protezione, a volte l'individuazione del database non riesce.
+Dopo aver aggiunto host a NetApp Backup and Recovery per la protezione, a volte l'individuazione del database non riesce.
+
+
+
+== Supporto regionale
+
+Le seguenti regioni AWS non sono supportate:
+
+* Regioni della Cina
+* Regioni di GovCloud (USA)
+* Cloud segreto
+* Segretissimo
+
+
+
+
+== Registrazione di Oracle su SUSE Linux Enterprise Server 12
+
+Quando si registra Oracle Database su SUSE Linux Enterprise Server 12, Workload Factory non installa le dipendenze Python.  È necessario configurare manualmente la versione Python richiesta.  Workload Factory richiede la versione minima 3.6; tuttavia, consigliamo la versione 3.11.

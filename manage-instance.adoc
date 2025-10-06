@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: manage-instance.html 
 keywords: instance, instance management, FSx for ONTAP, instance, manage host, view host, database host, database instance, manage 
-summary: Scopri di più sulla gestione di istanze e database in Workload Factory per i database. 
+summary: Scopri di più sulla gestione di istanze e database in NetApp Workload Factory per database. 
 ---
-= Gestione delle risorse nella fabbrica dei carichi di lavoro per i database
+= Gestione delle risorse in NetApp Workload Factory per database
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-La gestione delle risorse in Workload Factory consente di utilizzare funzionalità avanzate, tra cui la creazione di database e cloni, l'utilizzo delle risorse e il monitoraggio.  Inoltre, è possibile analizzare lo stato di corretta architettura delle configurazioni del database e implementare le best practice di configurazione per migliorare le prestazioni e ridurre i costi operativi.  La gestione delle risorse è riservata solo agli ambienti Microsoft SQL Server e Oracle in esecuzione su FSx per l'archiviazione del file system ONTAP .
+La gestione delle risorse in NetApp Workload Factory for Databases consente di utilizzare funzionalità avanzate, tra cui la creazione di database e cloni, l'utilizzo delle risorse e il monitoraggio. Inoltre, è possibile analizzare lo stato di corretta architettura delle configurazioni del database e implementare le best practice di configurazione per migliorare le prestazioni e ridurre i costi operativi. La gestione delle risorse è riservata solo agli ambienti Microsoft SQL Server e Oracle in esecuzione su FSx per l'archiviazione del file system ONTAP .
 
 Devilink:register-instance.html["registra le risorse"] per svolgere una qualsiasi delle seguenti attività di gestione.
 

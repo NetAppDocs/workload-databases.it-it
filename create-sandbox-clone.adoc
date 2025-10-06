@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-sandbox-clone.html 
 keywords: create, clone, sandbox 
-summary: Creare un clone sandbox nella factory dei carichi di lavoro BlueXP  per i database. 
+summary: Creare un clone sandbox in NetApp Workload Factory per database. 
 ---
-= Creare un clone sandbox nella factory dei carichi di lavoro BlueXP  per i database
+= Creare un clone sandbox in NetApp Workload Factory per database
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-La creazione di un clone sandbox di un database in una fabbrica di carichi di lavoro BlueXP  per i database consente di utilizzare il clone per le attività di sviluppo, test, integrazione, analisi, formazione, controllo qualità e altro ancora senza alterare il database di origine.
+La creazione di un clone sandbox di un database in NetApp Workload Factory for Databases consente di utilizzare il clone per sviluppo, test, integrazione, analisi, formazione, controllo qualità e altro ancora senza modificare il database di origine.
 
 .A proposito di questa attività
 Viene creato un clone sandbox a partire dallo snapshot più recente nel database di origine. Può essere clonato nello stesso Microsoft SQL Server del database di origine o in un altro Microsoft SQL Server, a condizione che condividano lo stesso file system FSX per ONTAP.
@@ -19,15 +19,13 @@ Viene creato un clone sandbox a partire dallo snapshot più recente nel database
 .Prima di iniziare
 Prima di creare un clone sandbox, assicurarsi di aver completato i seguenti prerequisiti.
 
-Credenziali e autorizzazioni:: Devi link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e autorizzazioni in modalità _sola lettura_ o _lettura/scrittura_"^]creare un clone sandbox in workfactory.
+* *Credenziali e permessi*: Devi averelink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e autorizzazioni in modalità _sola lettura_ o _lettura/scrittura_"^] per creare un clone sandbox in Workload Factory.
 +
---
-In alternativa, è possibile utilizzare Codebox per copiare un modello parzialmente completato o creare un modello completato in modo da poter creare il clone sandbox all'esterno della fabbrica del carico di lavoro utilizzando l'API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Ulteriori informazioni sull'automazione Codebox"^].
+In alternativa, puoi utilizzare Codebox per copiare un modello parzialmente completato o creare un modello completo in modo da poter creare il clone sandbox al di fuori di Workload Factory utilizzando l'API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Ulteriori informazioni sull'automazione Codebox"^] .
 
---
-Microsoft SQL Server:: Per ospitare il nuovo clone sandbox, è necessario disporre di Microsoft SQL Server gestito in fabbrica per i carichi di lavoro.
-AWS Systems Manager:: Assicurarsi che il `NT Authority\SYSTEM` privilegio utente sia abilitato nell'host Microsoft SQL tramite AWS Systems Manager.
-Database di origine:: È necessario un database di origine disponibile per il clone.
+* *Microsoft SQL Server*: è necessario disporre di un Microsoft SQL Server gestito in Workload Factory per i database per ospitare il nuovo clone sandbox.
+* *AWS Systems Manager*: assicurarsi che `NT Authority\SYSTEM` i privilegi utente sono abilitati nell'host Microsoft SQL tramite AWS Systems Manager.
+* *Database di origine*: è necessario che sia disponibile un database di origine per il clone.
 
 
 .Fasi
@@ -49,7 +47,7 @@ Database di origine:: È necessario un database di origine disponibile per il cl
 .. *Database di destinazione*: Immettere un nome per il clone sandbox.
 
 
-. *Mount*: Durante la clonazione di un database SQL con più file di dati e/o di registro, workload Factory clona tutti i file con la lettera di unità assegnata automaticamente o definita.
+. *Mount*: quando si clona un database SQL che contiene più file di dati e/o di registro, Workload Factory clona tutti i file sotto la lettera di unità assegnata automaticamente o definita.
 +
 Selezionare una delle seguenti opzioni:
 

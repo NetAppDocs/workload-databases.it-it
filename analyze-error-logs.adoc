@@ -2,19 +2,22 @@
 sidebar: sidebar 
 permalink: analyze-error-logs.html 
 keywords: analyze error logs, errors, error severity, Microsoft SQL Server error logs, smart analysis, Agentic AI 
-summary: 'Analizza i registri degli errori all"interno della fabbrica dei carichi di lavoro per i database.' 
+summary: Analizza i registri degli errori in Workload Factory per database. 
 ---
-= Analizza i registri degli errori nella fabbrica dei carichi di lavoro
+= Analizza i registri degli errori in Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Utilizza l'analizzatore intelligente dei log degli errori per interpretare automaticamente i log degli errori di Microsoft SQL Server, in modo da poter identificare e risolvere rapidamente i problemi.  L'analisi basata sull'intelligenza artificiale agentica richiede l'integrazione con Amazon Bedrock.
+Utilizza l'analizzatore intelligente del registro degli errori per interpretare automaticamente i registri degli errori di Microsoft SQL Server, in modo da poter identificare e risolvere rapidamente i problemi. L'analisi basata sull'intelligenza artificiale agentica richiede l'integrazione con Amazon Bedrock.
 
-.A proposito di questa attività
-L'analisi e la correzione del registro degli errori contribuiscono a preservare l'integrità e le prestazioni delle istanze di SQL Server.  Per interpretare in modo efficace i log degli errori di SQL Server sono necessarie analisi attente e competenza.  Il monitoraggio manuale, il rilevamento degli errori e l'analisi delle cause principali richiedono molto tempo e sono soggetti a errori.  Queste sfide possono ritardare la risoluzione dei problemi, aumentare i tempi di inattività e le inefficienze operative.  L'analizzatore di log degli errori intelligente affronta queste sfide con i seguenti vantaggi chiave:
+
+
+== A proposito di questa attività
+
+L'analisi e la correzione del registro degli errori contribuiscono a preservare l'integrità e le prestazioni delle istanze di SQL Server. Per interpretare in modo efficace i log degli errori di SQL Server sono necessarie analisi attente e competenza. Il monitoraggio manuale, il rilevamento degli errori e l'analisi delle cause principali richiedono molto tempo e sono soggetti a errori. Queste sfide possono ritardare la risoluzione dei problemi, aumentare i tempi di inattività e le inefficienze operative. L'analizzatore intelligente del registro degli errori affronta queste sfide con i seguenti vantaggi chiave:
 
 * Raggruppamento intelligente: consolida in modo intelligente gli errori in base a unicità, gravità e categoria e semplifica il processo di risoluzione dei problemi per soluzioni più rapide ed efficaci.
 * Indagine basata sull'intelligenza artificiale: sfrutta l'intelligenza artificiale per analizzare in modo proattivo gli errori, fornendo informazioni chiare e fruibili per accelerare l'identificazione dei problemi senza richiedere competenze approfondite.
@@ -22,24 +25,72 @@ L'analisi e la correzione del registro degli errori contribuiscono a preservare 
 * Risoluzione dei problemi basata sulle best practice: fornisce consigli di risoluzione personalizzati per i carichi di lavoro di SQL Server in esecuzione su FSx per ONTAP, consentendo agli utenti di tutti i livelli di competenza di risolvere i problemi con sicurezza.
 
 
-Ogni volta che utilizzi l'analizzatore intelligente del registro degli errori, mantieni il pieno controllo sul tuo ambiente, beneficiando al contempo di un'analisi AI avanzata.
+Ogni volta che utilizzi l'analizzatore del registro degli errori, mantieni il pieno controllo sul tuo ambiente, beneficiando al contempo di un'analisi AI avanzata.
 
-Per utilizzare Smart Error Log Analyzer, è necessario attivare Amazon Bedrock, selezionare il modello utilizzato dalla fabbrica del carico di lavoro, creare un endpoint privato per connettersi ad Amazon Bedrock, aggiungere autorizzazioni e creare una licenza aziendale.
+Per utilizzare l'analizzatore del log degli errori, è necessario attivare Amazon Bedrock, selezionare il modello utilizzato da Workload Factory, creare un endpoint privato per connettersi ad Amazon Bedrock, aggiungere autorizzazioni e creare una licenza aziendale.
 
 link:https://aws.amazon.com/bedrock/pricing/["Prezzi di Amazon Bedrock"^]
 
-.Prima di iniziare
-Per utilizzare lo Smart Error Log Analyzer, è necessario soddisfare i seguenti prerequisiti:
 
-* È necessario link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e autorizzazioni in modalità _lettura/scrittura_"^]creare un nuovo host di database in workload factory.
-* link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["Registra un'istanza di SQL Server"^]nella fabbrica del carico di lavoro. *
 
+=== Privacy e sicurezza dei dati
+
+La funzionalità garantisce la riservatezza e la sicurezza dei dati attraverso le seguenti misure:
+
+.Sovranità dei dati
+I dati di registro e le aggregazioni rimangono all'interno del tuo account AWS e vengono comunicati tramite endpoint VPC privato (Amazon Bedrock), garantendo così che non vi sia alcuna esposizione alla rete Internet pubblica.
+
+.Nessuna formazione AI
+I dati dei clienti non vengono utilizzati per addestrare o migliorare i modelli.  Amazon Bedrock elabora i log in tempo reale ma non esegue il training sui tuoi dati.  I risultati vengono memorizzati nel tuo ambiente solo a scopo di riferimento.  Per maggiori dettagli fare riferimento allink:https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html["Documentazione sulla protezione dei dati di Amazon Bedrock"^] .
+
+
+
+== Prima di iniziare
+
+Per utilizzare l'analizzatore del registro degli errori, è necessario soddisfare i seguenti prerequisiti:
+
+* Devi averelink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e autorizzazioni in modalità _lettura/scrittura_"^] per creare un nuovo host di database in Workload Factory.
+* link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["Registra un'istanza di SQL Server"^]nella fabbrica dei carichi di lavoro.
+* Devono essere soddisfatti anche i seguenti prerequisiti.  Ti verrà richiesto di completare questi prerequisiti come parte dei passaggi per analizzare gli errori del registro.
++
+** *Attivazione Amazon Bedrock*
++
+Amazon Bedrock è necessario affinché l'agente AI in esecuzione sul nodo SQL da Workload Factory possa connettersi senza problemi a Bedrock e recuperare informazioni basate sull'AI per i log degli errori identificati.
+
+** *Networking*
++
+L'endpoint Amazon Bedrock VPC garantisce la comunicazione privata del tuo nodo SQL con le API Amazon Bedrock ed elimina l'esposizione alla rete Internet pubblica.  Verificare che l'endpoint Amazon Bedrock VPC sia associato alla subnet del nodo SQL Server (ad esempio: vpce-050cb2f33a1380ffd).
+
+** *Autorizzazioni AWS IAM*
++
+Le seguenti autorizzazioni sono necessarie per il ruolo del profilo dell'istanza EC2 associato al nodo SQL e per le credenziali AWS associate a Workload Factory.
+
++
+*** Ruolo del profilo dell'istanza EC2 con autorizzazione "bedrock:InvokeModel"
++
+Questa autorizzazione consente all'istanza EC2 sul nodo SQL corrispondente di richiamare i modelli Bedrock per l'indagine proattiva degli errori e per indicazioni sulla correzione.  Questo profilo garantisce inoltre un accesso sicuro all'intelligenza artificiale per ottenere informazioni personalizzate.
+
+*** Credenziali AWS associate a Workload Factory: autorizzazioni "bedrock:GetFoundationModelAvailability" e "bedrock:ListInferenceProfiles"
++
+Queste autorizzazioni verificano la disponibilità e la configurazione del modello nella regione del nodo SQL e garantiscono prestazioni affidabili e specifiche per la regione.
+
+
+
+
+
+
+
+
+
+== Analizza i registri degli errori
+
+Utilizzare la console Workload Factory per analizzare i log degli errori di SQL Server.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Vai all'inventario dei database*.
-. In Database, selezionare la scheda *inventario*.
-. Selezionare *SQL Server* come motore di database.
+. Dal menu Database, selezionare *Inventario*.
+. Nell'inventario, seleziona *Microsoft SQL Server* come tipo di motore di database.
 . Dalla scheda Istanze, individua l'istanza specifica di SQL Server che desideri analizzare, quindi seleziona *Analizza errori* dal menu.
 . Dalla scheda *Indagine errore*, completare i seguenti prerequisiti come descritto nella console:
 +
@@ -49,7 +100,7 @@ Per utilizzare lo Smart Error Log Analyzer, è necessario soddisfare i seguenti 
 ** Credenziali associate a Workload Database Management (wlmdb)
 
 
-. Una volta soddisfatti i prerequisiti, seleziona *Indaga ora* per utilizzare l'analizzatore intelligente dei log degli errori e ottenere informazioni dettagliate sui log degli errori di SQL Server.
+. Una volta soddisfatti i prerequisiti, seleziona *Indaga ora* per utilizzare l'analizzatore del log degli errori e ottenere informazioni dettagliate sui log degli errori di SQL Server.
 +
 Dopo la scansione, gli errori vengono visualizzati nella console, offrendo una panoramica completa dei problemi rilevati dall'analizzatore del registro degli errori intelligente.
 

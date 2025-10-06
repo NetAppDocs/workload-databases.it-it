@@ -2,43 +2,47 @@
 sidebar: sidebar 
 permalink: monitor-databases.html 
 keywords: monitor databases, monitor jobs, track database jobs 
-summary: 'Tieni traccia dei lavori del database e monitora i database all"interno della fabbrica dei carichi di lavoro per i database.' 
+summary: 'Tieni traccia dei processi del database e monitora i database all"interno di NetApp Workload Factory per database.' 
 ---
-= Monitorare i lavori del database nella fabbrica dei carichi di lavoro
+= Monitorare i lavori del database in Workload Factory per i database
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Tieni traccia dei lavori del database e monitora i database all'interno della fabbrica dei carichi di lavoro per i database.
+Tieni traccia dei processi del database e monitora i database all'interno di NetApp Workload Factory for Databases per una maggiore visibilità e controllo sulle operazioni del database.
 
-.A proposito di questa attività
+
+
+== A proposito di questa attività
+
 I database consentono di monitorare i processi in modo da poter tenere traccia dell'avanzamento dei processi e diagnosticare e risolvere eventuali problemi. È possibile filtrare i lavori per tipo e stato, trovare i lavori utilizzando la funzione di ricerca e scaricare la tabella dei lavori.
 
 Il monitoraggio dei lavori supporta fino a tre livelli di monitoraggio a seconda del lavoro. Ad esempio, per la creazione di nuovi cloni di database e sandbox, il monitoraggio dei job tiene traccia dei job principali e secondari.
 
-Livelli di monitoraggio dei lavori::
-+
---
+.Livelli di monitoraggio dei lavori
 * Livello 1 (processo principale): Tiene traccia del processo di distribuzione dell'host.
 * Livello 2 (processo secondario): Tiene traccia dei processi secondari correlati al processo principale di distribuzione dell'host.
 * Livello 3 (attività): Elenca la sequenza delle azioni eseguite su ciascuna risorsa.
 
 
---
-Stato del lavoro:: La funzione di monitoraggio dei processi tiene traccia dei processi _in corso_, _completati_, _completati con problemi_ e _non riusciti_ giornalieri, settimanali, bisettimanali e mensili.
-Conservazione degli eventi del processo:: Gli eventi di monitoraggio dei processi vengono conservati nell'interfaccia utente per 30 giorni.
+.Stato del lavoro
+La funzione di monitoraggio dei processi tiene traccia dei processi _in corso_, _completati_, _completati con problemi_ e _non riusciti_ giornalieri, settimanali, bisettimanali e mensili.
 
+.Conservazione degli eventi del processo
+Gli eventi di monitoraggio dei processi vengono conservati nell'interfaccia utente per 30 giorni.
 
 
 
 == Monitorare i lavori
 
+Monitorare i lavori per tenere traccia dell'avanzamento delle operazioni del database e diagnosticare e risolvere eventuali problemi in caso di guasti.
+
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Vai all'inventario dei database*.
-. In Database, selezionare la scheda *monitoraggio processi*.
-. Nella scheda monitoraggio lavoro, utilizzare i filtri o cercare di limitare i risultati dei lavori. È anche possibile scaricare un rapporto lavori.
-. Fare clic sul menu a tre punti del processo e fare clic su *Vai a CloudFormation* per visualizzare il registro del processo nella console di AWS CloudFormation.
+. Dal menu Database, selezionare *Monitoraggio lavori*.
+. Nel monitoraggio dei lavori, utilizza i filtri o la ricerca per restringere i risultati dei lavori. È anche possibile scaricare un report sui lavori.
+. Facoltativamente, seleziona il menu delle azioni del processo e fai clic su *Vai a CloudFormation* per visualizzare il registro del processo nella console AWS CloudFormation.
 

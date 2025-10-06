@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-database.html 
 keywords: create, database, creation, Microsoft SQL 
-summary: Creare un database Microsoft SQL con workload Factory BlueXP  per i database. 
+summary: Crea un database Microsoft SQL con NetApp Workload Factory per database. 
 ---
-= Creare un database Microsoft SQL in una fabbrica di carichi di lavoro BlueXP  per i database
+= Creare un database Microsoft SQL in NetApp Workload Factory per database
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-La creazione di un nuovo database Microsoft SQL consente di gestire la risorsa all'interno della fabbrica dei carichi di lavoro BlueXP  per i database.
+La creazione di un nuovo database Microsoft SQL consente di gestire la risorsa all'interno di NetApp Workload Factory per database.
 
 .A proposito di questa attività
 Al momento della creazione del database, vengono creati due nuovi volumi nel file system FSX per ONTAP, che consiste di LUN indipendenti per ospitare i dati e i file di log per il database. I file di database del nuovo database sono dotati di thin provisioning e utilizzano solo pochi MB delle dimensioni totali allocate per il nuovo database.
@@ -26,15 +26,13 @@ NOTE: I server Microsoft SQL che utilizzano il protocollo SMB non supportano la 
 .Prima di iniziare
 Prima di creare un nuovo database, assicurarsi di aver completato i seguenti prerequisiti.
 
-Credenziali e autorizzazioni:: È necessario link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e autorizzazioni in modalità _sola lettura_ o _lettura/scrittura_"^]creare un nuovo database in workload factory.
+* *Credenziali e permessi*: Devi averelink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e autorizzazioni in modalità _sola lettura_ o _lettura/scrittura_"^] per creare un nuovo database in Workload Factory.
 +
---
 In alternativa, è possibile utilizzare Codebox per copiare un modello in modo da poter distribuire un database al di fuori della fabbrica del carico di lavoro utilizzando l'API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Ulteriori informazioni sull'automazione Codebox"^].
 
---
-Host Windows:: Se si utilizza la modalità _Quick create_, è necessario disporre di un numero di lettere di unità sufficiente in Microsoft SQL Server per creare nuove unità per il nuovo database.
-Microsoft SQL Server:: Affinché i database possano ospitare il nuovo database, è necessario disporre di un Microsoft SQL Server gestito in fabbrica per i carichi di lavoro.
-AWS Systems Manager:: Assicurarsi che il `NT Authority\SYSTEM user` privilegio sia abilitato nell'host Microsoft SQL tramite AWS System Manager.
+* *Host Windows*: se si utilizza la modalità _Creazione rapida_, è necessario disporre di un numero sufficiente di lettere di unità disponibili su Microsoft SQL Server per creare nuove unità per il nuovo database.
+* *Microsoft SQL Server*: è necessario disporre di un Microsoft SQL Server gestito nella Workload Factory affinché i database ospitino il nuovo database.
+* *AWS Systems Manager*: assicurarsi che `NT Authority\SYSTEM` i privilegi utente sono abilitati nell'host Microsoft SQL tramite AWS Systems Manager.
 
 
 
@@ -50,9 +48,10 @@ AWS Systems Manager:: Assicurarsi che il `NT Authority\SYSTEM user` privilegio s
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Vai all'inventario dei database*.
-. In Database, selezionare la scheda *inventario*.
-. Nella scheda inventario, selezionare un server database con un'istanza SQL Server gestita in cui creare il database.
-. Fare clic sul menu a tre punti dell'istanza gestita e quindi selezionare *Crea database utente*.
+. Dal menu Database, selezionare *Inventario*.
+. Nell'inventario, seleziona *Microsoft SQL Server* come tipo di motore di database.
+. Selezionare un server di database con un'istanza di SQL Server gestita in cui creare il database.
+. Fare clic sul menu azioni dell'istanza gestita e quindi selezionare *Crea database utente*.
 . Nella pagina Crea database utenti, in informazioni database, specificare quanto segue:
 +
 .. *Nome database*: Immettere il nome per il database.
@@ -83,9 +82,10 @@ In alternativa, se si desidera modificare subito una di queste impostazioni pred
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Vai all'inventario dei database*.
-. In Database, selezionare la scheda *inventario*.
-. Nella scheda inventario, selezionare un server database con un'istanza SQL Server gestita in cui creare il database.
-. Fare clic sul menu a tre puntidell'istanza gestita e selezionare *Crea database utente*.
+. Dal menu Database, selezionare *Inventario*.
+. Nell'inventario, seleziona *Microsoft SQL Server* come tipo di motore di database.
+. Selezionare un server di database con un'istanza di SQL Server gestita in cui creare il database.
+. Fare clic sul menu azioni dell'istanza gestita e quindi selezionare *Crea database utente*.
 . Selezionare *Crea database utenti*.
 . Nella pagina Crea database utenti, in informazioni database, specificare quanto segue:
 +

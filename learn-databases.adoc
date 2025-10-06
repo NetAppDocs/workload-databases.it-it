@@ -2,30 +2,30 @@
 sidebar: sidebar 
 permalink: learn-databases.html 
 keywords: Databases 
-summary: 'Workload Factory for Databases è un servizio di distribuzione e manutenzione di database end-to-end con best practice integrate per l"ottimizzazione, la clonazione automatica sottile e funzionalità di monitoraggio e risoluzione.' 
+summary: 'NetApp Workload Factory for Databases è un servizio di distribuzione e manutenzione di database end-to-end con best practice integrate per l"ottimizzazione, la clonazione automatica sottile e funzionalità di monitoraggio e risoluzione.' 
 ---
-= Scopri la fabbrica di workload per i database
+= Scopri di più su NetApp Workload Factory per database
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Workload Factory for Databases è un servizio di distribuzione e manutenzione di database end-to-end con best practice integrate per l'ottimizzazione, la clonazione automatica sottile e funzionalità di monitoraggio e risoluzione.
+NetApp Workload Factory for Databases è un servizio di distribuzione e manutenzione di database end-to-end con best practice integrate per l'ottimizzazione, la clonazione automatica sottile e funzionalità di monitoraggio e risoluzione.
 
 
 
-== Che cos'è la Workload Factory per i database?
+== Che cos'è NetApp Workload Factory per database?
 
-Workload Factory per database rileva, valuta, pianifica, predispone e sposta i dati di Microsoft SQL Server nelle distribuzioni Amazon FSx for NetApp ONTAP (FSx for ONTAP), ottimizzate per soddisfare le aspettative in termini di prestazioni e costi, nel rispetto delle best practice del settore. Durante l'intero ciclo di vita, la farm dei carichi di lavoro offre ottimizzazione e gestione continue per i database in FSX per ONTAP.
+NetApp Workload Factory for Databases rileva, valuta, pianifica, esegue il provisioning e sposta i dati di Microsoft SQL Server nelle distribuzioni Amazon FSx for NetApp ONTAP (FSx for ONTAP), ottimizzate per soddisfare le aspettative in termini di prestazioni e costi, nel rispetto delle best practice del settore.  Durante l'intero ciclo di vita, NetApp Workload Factory for Databases garantisce ottimizzazione e gestione continue per i database su FSx per ONTAP.
 
-Per ulteriori informazioni sulla fabbrica dei carichi di lavoro, fare riferimento alla link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html["panoramica della fabbrica del carico di lavoro"^].
+Per ulteriori informazioni su Workload Factory, fare riferimento alink:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html["Panoramica di Workload Factory"^] .
 
 
 
-== Workload factory migliora per i database a gestione autonoma
+== Vantaggi di Workload Factory per i database autogestiti
 
-Workload Factory offre le seguenti Best practice vantaggiose e l'automazione per database a gestione autonoma.
+Workload Factory offre le seguenti utili best practice e automazioni per i database autogestiti.
 
 
 
@@ -34,31 +34,31 @@ Workload Factory offre le seguenti Best practice vantaggiose e l'automazione per
 * Conoscenza integrata di AWS Cloud, Microsoft Windows e SQL Server e NetApp ONTAP per le implementazioni SQL Server su EC2 istanze.
 * Costo totale di proprietà implementazione ottimizzata.
 * Automazione dell'implementazione end-to-end basata sulle Best practice di AWS, Microsoft e ONTAP.
-* La modalità di implementazione "creazione rapida" consente di evitare potenziali insidie con la configurazione manuale.
+* La modalità di distribuzione _Creazione rapida_ ti aiuta a evitare potenziali insidie dovute alla configurazione manuale.
 
 
 
 
-=== Automazione con workload Factory Codebox
+=== Automazione con Workload Factory Codebox
 
-Workload Factory introduce l'automazione integrata con _Codebox_. Codebox offre i seguenti vantaggi dell'automazione:
+Workload Factory introduce l'automazione integrata con _Codebox_.  Codebox offre i seguenti vantaggi di automazione:
 
 * *Generazione di frammenti di codice*: I frammenti di codice IAC (Infrastructure-as-Code) vengono generati durante la creazione delle risorse, consentendo una perfetta integrazione con i flussi di lavoro di orchestrazione esistenti.
-* *Co-pilot Infrastructure-as-code*: Il Codebox è un co-pilot Infrastructure-as-code (IAC) che aiuta gli sviluppatori e DevOps a generare codice per eseguire qualsiasi operazione supportata da workload Factory.
+* *Copilota dell'infrastruttura come codice*: Codebox è un copilota dell'infrastruttura come codice (IaC) che aiuta gli sviluppatori e i DevOps a generare codice per eseguire qualsiasi operazione supportata da Workload Factory.
 * *Code Viewer e catalogo di automazione*: Il Codebox fornisce un visualizzatore di codice per una rapida analisi dell'automazione e un catalogo di automazione per un rapido riutilizzo futuro.
 
 
 
 
-=== Workload Factory per le funzionalità del database
+=== Funzionalità di Workload Factory per database
 
-Workload Factory per i database offre le seguenti funzionalità:
+Workload Factory per database offre le seguenti funzionalità:
 
 * *Implementazioni semplici e veloci*: Semplificate e ottimizzate la vostra esperienza di provisioning selezionando le risposte alle domande sulle specifiche ed eliminando il tempo generalmente richiesto per studiare come eseguire il provisioning e configurare Microsoft SQL Server su AWS.
-* *Orchestrazione automatizzata*: Disponibile tramite l'interfaccia utente di fabbrica del carico di lavoro con _Quick_ e _Advanced_, consente di creare modalità di implementazione, chatbot di workload Factory e API con AWS CloudFormation.
+* *Orchestrazione automatizzata*: disponibile tramite la console Workload Factory con modalità di distribuzione _Rapida_ e _Avanzata_, Chatbot e AWS CloudFormation tramite Codebox.
 * *Funzioni integrate*: Utilizza le Best practice di NetApp, Microsoft e Amazon e le selezioni delle risorse AWS integrate nella configurazione dell'implementazione.
 * *Stima dei costi*: Valutate i potenziali risparmi sui costi con il calcolatore di risparmio, che stima e fornisce dettagli sui costi dettagliati di storage, calcolo, licenze SQL, snapshot e clonazione per le implementazioni esistenti di Microsoft SQL Server con Elastic Block Store ed FSX per Windows file Server rispetto ad FSX per ONTAP.
-* *Modelli di automazione riutilizzabili*: Creare, riutilizzare e personalizzare i modelli di CloudFormation dalla fabbrica di workload Codebox per le future distribuzioni di Microsoft SQL Server in più ambienti.
+* *Modelli di automazione riutilizzabili*: crea, riutilizza e personalizza i modelli CloudFormation dal Workload Factory Codebox per future distribuzioni di Microsoft SQL Server in più ambienti.
 * *Rilevamento e provisioning delle risorse AWS*: Rileva automaticamente Microsoft SQL Server in FSX per ONTAP, FSX per Windows file Server e Elastic Block Store distribuito dal tuo account AWS. L'inventario dei database è un punto di lancio per esplorare le opportunità di risparmio sui costi per i server in altri sistemi storage AWS o uno strumento di gestione per FSX per le istanze e i server basati su ONTAP.
 * *Creazione Sandbox*: Creare un ambiente di database isolato on-demand che possa essere utilizzato per test, integrazione, diagnostica e formazione, senza influire sui dati di produzione.
 * *Creazione di database*: Creare un database utente per i server Microsoft SQL esistenti con le modalità _Quick_ o _Advanced_ create per configurare le regole di confronto del database, i nomi dei file e le dimensioni. Configurazione dello storage inclusa.
@@ -75,97 +75,110 @@ Workload Factory per i database offre le seguenti funzionalità:
 * *Efficienza e gestione dei dati*: FSX per ONTAP offre diverse funzionalità che migliorano l'efficienza e la gestione dei dati, ad esempio thin clone efficienti in termini di spazio, thin provisioning, compressione e deduplica, nonché tiering dei dati con accesso meno frequente nel pool di capacità.
 
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["Scopri FSX per ONTAP per workload factory"^].
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["Scopri di più su FSx per ONTAP per Workload Factory"^] .
 
 
 
-=== Modalità operative in fabbrica dei carichi di lavoro
+=== Modalità operative in Workload Factory
 
-Tre diverse modalità operative - _base_, _sola lettura_ e _lettura/scrittura_ - offrono opzioni flessibili per l'implementazione all'interno e all'esterno della workload factory. Ottieni un valore immediato con zero-trust in modalità _Basic_ con frammenti di codice da utilizzare al di fuori di workload factory. Ottieni valore incrementale con trust incrementale nelle modalità _sola lettura_ e _lettura/scrittura_.
+Tre diverse modalità operative (base, sola lettura e lettura/scrittura) offrono opzioni flessibili per l'implementazione all'interno e all'esterno di Workload Factory. Ottieni un valore immediato con zero-trust in modalità _basic_ con frammenti di codice da utilizzare al di fuori di Workload Factory. Ottieni un valore incrementale con fiducia incrementale nelle modalità _sola lettura_ e _lettura/scrittura_.
 
-Ulteriori informazioni su link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["modalità operative in fabbrica dei carichi di lavoro"^].
-
-
-
-== Strumenti per l'utilizzo di workload Factory
-
-È possibile utilizzare la farm di workload BlueXP  con i seguenti tool:
-
-* *Workload Factory Console*: La console workload Factory offre una visione visiva e olistica delle applicazioni e dei progetti.
-* *Console BlueXP *: La console BlueXP  offre un'interfaccia ibrida in modo da poter utilizzare la fabbrica dei workload BlueXP  insieme ad altri servizi BlueXP .
-* *Chiedimi*: Utilizza l'assistente Ask me ai per porre domande e saperne di più sulla fabbrica di workload senza abbandonare l'interfaccia utente web della fabbrica di workload. Accedere a Chiedimi dal menu della guida di fabbrica del carico di lavoro.
-* *CLI CloudShell*: Workload Factory include una CLI CloudShell per gestire e utilizzare ambienti AWS e NetApp tra diversi account da un'unica CLI basata su browser. Accedi a CloudShell dalla barra superiore della console workload Factory.
-* *API REST*: Utilizza le API REST DI workload factory per implementare e gestire i file system FSX per ONTAP e altre risorse AWS.
-* *CloudFormation*: Utilizzare il codice AWS CloudFormation per eseguire le azioni definite nella console workload factory in modo da modellare, eseguire il provisioning e gestire risorse AWS e di terze parti dallo stack CloudFormation nell'account AWS.
-* *Terraform BlueXP  workload Factory Provider*: USA Terraform per costruire e gestire i flussi di lavoro infrastrutturali generati nella console di workload Factory.
+Scopri di più su link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["modalità operative in Workload Factory"^] .
 
 
 
+== Strumenti per utilizzare NetApp Workload Factory
 
-== Dettagli di implementazione
+È possibile utilizzare NetApp Workload Factory con i seguenti strumenti:
+
+* *Console Workload Factory*: la console Workload Factory fornisce una visione visiva e olistica delle applicazioni e dei progetti.
+* * NetApp Console*: la NetApp Console offre un'esperienza di interfaccia ibrida che consente di utilizzare Workload Factory insieme ad altri servizi dati NetApp .
+* *Chiedimi*: utilizza l'assistente AI Chiedimi per porre domande e scoprire di più su Workload Factory senza uscire dalla console di Workload Factory. Accedi a Chiedimi dal menu della guida di Workload Factory.
+* *CloudShell CLI*: Workload Factory include una CloudShell CLI per gestire e utilizzare gli ambienti AWS e NetApp su più account da un'unica CLI basata su browser. Accedi a CloudShell dalla barra superiore della console di Workload Factory.
+* *API REST*: utilizza le API REST di Workload Factory per distribuire e gestire i tuoi file system FSx for ONTAP e altre risorse AWS.
+* *CloudFormation*: utilizza il codice AWS CloudFormation per eseguire le azioni definite nella console Workload Factory per modellare, fornire e gestire risorse AWS e di terze parti dallo stack CloudFormation nel tuo account AWS.
+* *Provider Terraform NetApp Workload Factory*: utilizza Terraform per creare e gestire i flussi di lavoro dell'infrastruttura generati nella console Workload Factory.
 
 
 
-=== Configurazioni supportate
 
-La fabbrica di workload per Microsoft SQL Server supporta sia l'high Availability (istanze di failover cluster sempre attive) che le implementazioni a singola istanza secondo le Best practice di AWS, NetApp ONTAP e SQL Server.
+== Configurazioni supportate
 
-[cols="2a,2a,2a,2a"]
+Workload Factory supporta i seguenti motori di database, versioni, sistemi operativi e modelli di distribuzione in base alle best practice di AWS, NetApp ONTAP, Microsoft SQL Server, Oracle e PostgreSQL.
+
+[cols="1,1,1,1"]
 |===
-| Versione di SQL Server | Windows Server 2016 | Windows Server 2019 | Windows Server 2022 
+| Motore | Versione | Sistema operativo | Modello di distribuzione 
 
 
- a| 
-SQL Server 2016
- a| 
-Sì
- a| 
-Sì
- a| 
-No
+| Microsoft SQL Server | SQL Server 2016 | Windows Server 2016 | FCI, istanza singola 
 
 
-
- a| 
-SQL Server 2019
- a| 
-Sì
- a| 
-Sì
- a| 
-Sì
+| Microsoft SQL Server | SQL Server 2019 | Windows Server 2016 | FCI, istanza singola 
 
 
+| Microsoft SQL Server | SQL Server 2022 | Windows Server 2016 | FCI, istanza singola 
 
- a| 
-SQL Server 2022
- a| 
-No
- a| 
-Sì
- a| 
-Sì
 
+| Microsoft SQL Server | SQL Server 2016 | Windows Server 2019 | FCI, istanza singola 
+
+
+| Microsoft SQL Server | SQL Server 2019 | Windows Server 2019 | FCI, istanza singola 
+
+
+| Microsoft SQL Server | SQL Server 2022 | Windows Server 2019 | FCI, istanza singola 
+
+
+| Microsoft SQL Server | SQL Server 2016 | Windows Server 2022 | FCI, istanza singola 
+
+
+| Microsoft SQL Server | SQL Server 2019 | Windows Server 2022 | FCI, istanza singola 
+
+
+| Microsoft SQL Server | SQL Server 2022 | Windows Server 2022 | FCI, istanza singola 
+
+
+| Microsoft SQL Server | SQL Server 2017 | Qualunque | FCI, istanza singola 
+
+
+| Microsoft SQL Server | SQL Server 2016, 2017, 2019, 2022 | Qualunque | FCI, istanza singola 
+
+
+| Microsoft SQL Server | SQL Server 2016, 2019, 2022 | Qualunque | Gruppi di disponibilità sempre attivi 
+
+
+| Oracolo | 19c | RHEL, SuSe Linux | Autonomo (singolo/multi-tenant) 
+
+
+| Oracolo | 21c | RHEL, SuSe Linux | Autonomo (singolo/multi-tenant) 
+
+
+| Oracolo | 19c | RHEL, SuSe Linux | Autonomo (singolo/multi-tenant) 
+
+
+| Oracolo | 21c | RHEL, SuSe Linux | Autonomo (singolo/multi-tenant) 
+
+
+| Oracolo | 19c | RHEL, SuSe Linux | Standalone con ASM (tenant singolo/multiplo) 
+
+
+| Oracolo | 21c | RHEL, SuSe Linux | Standalone con ASM (tenant singolo/multiplo) 
+
+
+| Oracolo | 19c | RHEL, SuSe Linux | Protezione dei dati 
+
+
+| Oracolo | 21c | RHEL, SuSe Linux | Protezione dei dati 
+
+
+| PostgreSQL | PostgreSQL 15 | Amazon Linux 2023 AMI | HA, istanza autonoma 
+
+
+| PostgreSQL | PostgreSQL 16 | Amazon Linux 2023 AMI | HA, istanza autonoma 
 |===
 
 
-=== Architetture di implementazione
-
-Le architetture di implementazione di zona di disponibilità singola e zone di disponibilità multiple sono supportate per i database.
-
-.Singola zona di disponibilità
-Il diagramma seguente mostra l'architettura standalone con una singola zona di disponibilità in un'unica area.
-
-image:diagram-SAZ-database-architecture.png["Un diagramma dell'architettura standalone con un'implementazione a singola zona di disponibilità di Amazon FSX per NetApp ONTAP in una singola area"]
-
-.Zone di disponibilità multiple
-Il diagramma seguente mostra un'architettura ad alta disponibilità (ha) a due nodi con cluster di istanza del cluster di failover (FCI) in una singola area.
-
-image:diagram-MAZ-database-architecture.png["Diagramma dell'architettura ad alta disponibilità a due nodi con cluster di istanza di failover in una singola area"]
-
-
-
-=== Servizi AWS integrati
+== Servizi AWS integrati
 
 I database includono i seguenti servizi AWS integrati:
 
@@ -178,7 +191,7 @@ I database includono i seguenti servizi AWS integrati:
 
 
 
-=== Regioni supportate
+== Regioni
 
 I database sono supportati in tutte le aree commerciali in cui è supportato FSX per ONTAP. https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Visualizza le regioni Amazon supportate."^]
 
@@ -196,4 +209,4 @@ Le seguenti regioni AWS non sono supportate:
 
 Amazon FSX per NetApp ONTAP è una soluzione AWS first-party. Per domande o problemi di supporto tecnico associati al file system, all'infrastruttura o alla soluzione FSX per ONTAP che utilizza questo servizio, utilizza il Support Center nella console di gestione AWS per aprire un caso di supporto con AWS. Selezionare il servizio "FSX per ONTAP" e la categoria appropriata. Fornire le informazioni rimanenti necessarie per creare il caso di supporto AWS.
 
-Per domande generali sulle applicazioni e i servizi di fabbrica dei carichi di lavoro o di fabbrica dei carichi di lavoro, fare riferimento a link:get-help.html["Assistenza per la farm di workload BlueXP  per i database"].
+Per domande generali su Workload Factory o sulle applicazioni e i servizi di Workload Factory, fare riferimento alink:get-help.html["Ottieni assistenza per NetApp Workload Factory per database"] .

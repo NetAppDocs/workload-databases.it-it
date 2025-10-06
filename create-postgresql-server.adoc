@@ -2,41 +2,41 @@
 sidebar: sidebar 
 permalink: create-postgresql-server.html 
 keywords: create, server, PostgreSQL, deploy, host, deploy a database host, database host 
-summary: 'Creare un nuovo server SQL PostgreSQL all"interno della factory del carico di lavoro BlueXP  per i database.' 
+summary: Creare un nuovo server SQL PostgreSQL in NetApp Workload Factory per database. 
 ---
-= Creare un server PostgreSQL in fabbrica carichi di lavoro BlueXP 
+= Creare un server PostgreSQL in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-La creazione di un nuovo server PostgreSQL, o host di database, nella fabbrica di carichi di lavoro BlueXP  per i database richiede la distribuzione di file system FSX per ONTAP e le risorse per Active Directory.
+Per creare un nuovo server PostgreSQL o un host di database in NetApp Workload Factory for Databases è necessario un'implementazione del file system FSx for ONTAP e risorse per Active Directory.
 
-.A proposito di questa attività
-Prima di creare un server PostgreSQL dalla fabbrica del carico di lavoro BlueXP , è necessario conoscere i tipi di distribuzione dello storage disponibili per la configurazione dell'host del database, le modalità operative della fabbrica del carico di lavoro e i requisiti per completare questa operazione.
 
-FSX per implementazioni di file system ONTAP:: La creazione di un nuovo server PostgreSQL richiede un file system FSX per ONTAP come backend dello storage. Puoi usare un file system FSX for ONTAP esistente o creare un nuovo file system. Se selezioni un file system FSX per ONTAP esistente come back-end dello storage del database server, creiamo una nuova macchina virtuale di storage per i workload PostgreSQL.
-+
---
-I file system FSX per ONTAP hanno due modelli di distribuzione di PostgreSQL Server: _Alta disponibilità (ha)_ o _istanza singola_. Vengono create risorse diverse per il file system FSX per ONTAP in base al modello di distribuzione di FSX per ONTAP selezionato.
+
+== A proposito di questa attività
+
+Prima di creare un server PostgreSQL da Workload Factory, informati sui tipi di distribuzione dello storage disponibili per la configurazione dell'host del database, sulle modalità operative di Workload Factory e sui requisiti per completare questa operazione.
+
+.FSX per implementazioni di file system ONTAP
+La creazione di un nuovo server PostgreSQL richiede un file system FSX per ONTAP come backend dello storage. Puoi usare un file system FSX for ONTAP esistente o creare un nuovo file system. Se selezioni un file system FSX per ONTAP esistente come back-end dello storage del database server, creiamo una nuova macchina virtuale di storage per i workload PostgreSQL.
+
++ I file system FSx per ONTAP hanno due modelli di distribuzione del server PostgreSQL: _Alta disponibilità (HA)_ o _singola istanza_.  A seconda del modello di distribuzione FSx for ONTAP selezionato, vengono create risorse diverse per il file system FSx for ONTAP .
 
 * *Distribuzione ad alta disponibilità (ha)*: Viene implementato un file system FSX per NetApp ONTAP con più zone di disponibilità quando viene selezionato un nuovo file system FSX per ONTAP per la distribuzione ha. Volumi e LUN separati vengono creati per i file di dati, log e tempdb per un'implementazione HA. Vengono creati un volume e un LUN aggiuntivi per Quorum o disco di controllo per il cluster Windows. L'installazione HA configura la replica Streaming tra i server PostgreSQL primario e secondario.
 * *Distribuzione a istanza singola*: Quando viene creato un nuovo server PostgreSQL, viene creato un file system FSX per ONTAP. Inoltre, vengono creati volumi e LUN separati per i file di dati, log e tempdb.
 
 
---
 
 
-.Prima di iniziare
-Prima di creare un nuovo host di database, accertarsi di disporre dei seguenti prerequisiti.
+== Prima di iniziare
 
-Credenziali e autorizzazioni:: È necessario link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e autorizzazioni in modalità _lettura/scrittura_"^]creare un nuovo host di database in workload factory.
-
+È necessario link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e autorizzazioni in modalità _lettura/scrittura_"^]creare un nuovo host di database in workload factory.
 
 
 
-== Creare un server di database
+== Creare un server PostgreSQL
 
 È possibile utilizzare le modalità di distribuzione _creazione rapida_ o _creazione avanzata_ per completare questa attività in fabbrica dei carichi di lavoro con autorizzazioni _automatizza_. Puoi anche utilizzare i seguenti tool disponibili in Codebox: API REST, interfaccia a riga di comando di AWS, AWS CloudFormation e Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Scopri come utilizzare Codebox per l'automazione"^].
 
@@ -52,7 +52,7 @@ NOTE: In _Quick create_, HA è il modello di distribuzione predefinito, Windows 
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Deploy database host*, quindi selezionare *PostgreSQL Server* dal menu a discesa.
+. Nel riquadro Database, seleziona *Distribuisci host* e poi seleziona *PostgreSQL Server* dal menu.
 . Selezionare *creazione rapida*.
 . In *zona di atterraggio*, specificare quanto segue:
 +
@@ -141,7 +141,7 @@ In alternativa, se si desidera modificare subito una di queste impostazioni pred
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Deploy database host*, quindi selezionare *PostgreSQL Server* dal menu a discesa.
+. Nel riquadro Database, seleziona *Distribuisci host* e poi seleziona *PostgreSQL Server* dal menu.
 . Selezionare *creazione avanzata*.
 . In *modello di distribuzione*, selezionare *istanza standalone* o *alta disponibilità (ha)*.
 . In *zona di atterraggio*, specificare quanto segue:
@@ -174,20 +174,17 @@ Gli attributi DNS del VPC `EnableDnsSupport` e `EnableDnsHostnames` sono stati m
 
 .. *Zone di disponibilità*: Selezionare zone di disponibilità e subnet.
 +
-Per implementazioni a singola istanza::
+*Per distribuzioni di istanze singole*
+
 +
---
 Nel campo *Configurazione cluster - nodo 1*, selezionare una zona di disponibilità dal menu a discesa *zona di disponibilità* e una sottorete dal menu a discesa *sottorete*.
 
---
-Per le implementazioni HA::
 +
---
+*Per distribuzioni HA*
+
++
 ... Nel campo *Configurazione cluster - nodo 1*, selezionare l'area di disponibilità primaria per la configurazione MAZ FSX per ONTAP dal menu a discesa *zona di disponibilità* e una subnet dall'area di disponibilità primaria dal menu a discesa *sottorete*.
 ... Nel campo *Configurazione cluster - nodo 2*, selezionare l'area di disponibilità secondaria per la configurazione MAZ FSX per ONTAP dal menu a discesa *zona di disponibilità* e una subnet dall'area di disponibilità secondaria dal menu a discesa *sottorete*.
-
-
---
 
 
 .. *Gruppo di protezione*: Selezionare un gruppo di protezione esistente o creare un nuovo gruppo di protezione.
