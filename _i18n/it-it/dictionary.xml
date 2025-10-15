@@ -1224,16 +1224,12 @@
   <block id="bb1b704677e0a9ac00a2bda88f85fe27" category="paragraph">Workload Factory automatizza la scoperta delle risorse, la convalida dei prerequisiti e la configurazione e l'installazione del plug-in per Microsoft SQL Server per preparare i carichi di lavoro alla protezione con NetApp Backup and Recovery. Il plug-in è un componente lato host di NetApp Software che consente di proteggere i carichi di lavoro di Microsoft SQL Server.</block>
   <block id="e9575ae90b7ec054c43a9797544d0103" category="paragraph">NetApp Backup and Recovery sfrutta la tecnologia di replicazione dei dati NetApp SnapMirror per garantire che tutti i backup siano completamente sincronizzati creando copie snapshot e trasferendole nelle posizioni di backup.</block>
   <block id="51c9172cf36fbb00094cffedddeabb88" category="inline-link-macro">Panoramica sulla protezione dei carichi di lavoro Microsoft SQL con Backup e Ripristino</block>
-  <block id="a292d9789e1a8310e21f5a8a602daa0f" category="paragraph">Per i dettagli sulla protezione con Backup e Ripristino, fare riferimento a<block ref="85948b58ef5177befb6ab29aca8b19b5" category="inline-link-macro-rx"></block> .</block>
   <block id="ce8e733ff697d3370377249dbc3ffd6d" category="paragraph">Per proteggere i carichi di lavoro di Microsoft SQL Server con Backup e Ripristino, è necessario soddisfare i seguenti requisiti.</block>
   <block id="e3f8bb97f8af8ab70be96564f7d02f6f" category="inline-link-macro">i requisiti di backup e ripristino di SQL Server</block>
-  <block id="e08bd5423f9a375d5cb1f9f4c8b79db6" category="list-text">Assicurati che il tuo ambiente soddisfi<block ref="e98bf21ac036414aba6dc78dc64aa41b" category="inline-link-macro-rx"></block> .</block>
   <block id="c9fac6b51e56e1759975cd42fd695b0b" category="inline-link-macro">Requisiti completi della console NetApp</block>
-  <block id="7f9a133b28a3d76a5c8f832f834cc204" category="list-text"><block ref="8acd0ec71994a25eb6e3e3ae982731d3" category="inline-link-macro-rx"></block>inclusa la configurazione, l'assegnazione dei ruoli IAM e l'installazione di un agente Console.</block>
   <block id="6c10f0d7d75df4253299ebf279f9f52e" category="inline-xref">preparati alla protezione con NetApp Backup and Recovery</block>
   <block id="b807a81f390179f97e9c142515fa129d" category="paragraph">Se si dispone dell'accesso come amministratore dell'organizzazione all'account NetApp ,<block ref="d431b2247c053b79ca08cc138d1dc11a" prefix=" " category="inline-code"></block> il ruolo viene assegnato automaticamente quando<block ref="18ec113fe3fddf3d32c25f017ae9116b" category="inline-xref-macro-rx"></block> .</block>
   <block id="50913c9499a96938febd19de9c1bf895" category="inline-link-macro">Impostare la licenza per NetApp Backup and Recovery</block>
-  <block id="52a63c60e4cc1cb7e13a179287a93716" category="list-text"><block ref="52a63c60e4cc1cb7e13a179287a93716" category="inline-link-macro-rx"></block></block>
   <block id="45c35d83e41e395f7c62d7b77450c660" category="section-title">Preparati alla protezione con NetApp Backup and Recovery</block>
   <block id="de18c48772737ff03e5d5c7e6db0044c" category="paragraph">Completa il processo di preparazione per proteggere le tue risorse di Microsoft SQL Server con NetApp Backup and Recovery.</block>
   <block id="00151bd722bf3fd83e9173ec473238da" category="list-text">Nell'inventario, seleziona *Microsoft SQL Server* come tipo di motore.</block>
@@ -1243,9 +1239,7 @@
   <block id="1f6bfa37836a1e9968d5ea7593e0629b" category="list-text">Per preparare la protezione dei dati, Workload Factory registra automaticamente le risorse di SQL Server in Backup e ripristino, configura e installa il plug-in per Microsoft SQL Server e individua le risorse che soddisfano i prerequisiti per la protezione dell'istanza di SQL Server. Selezionare *Avvia* per iniziare il processo.</block>
   <block id="8b48bc7f871383eb926099b2126e0377" category="list-text">Dopo aver soddisfatto i prerequisiti, selezionare *Reindirizza* per accedere a Backup e Ripristino.</block>
   <block id="0a34414f3db7a7d22b890f0de8eb8225" category="paragraph">Da Backup e ripristino, crea un criterio per proteggere l'istanza e i database di Microsoft SQL Server.</block>
-  <block id="429cd6f061edda5c69ca25c65e8ea236" category="paragraph"><block ref="1712bcf9c278b15383d89f55649b8558" category="inline-link-macro-rx"></block> .</block>
   <block id="a34428791f8c5ce4b1184d505db69402" category="inline-link-macro">Documentazione di backup e ripristino</block>
-  <block id="466ae7236a1ef5fce9dae7319a9d7e2f" category="paragraph">Per informazioni correlate, fare riferimento a<block ref="708964af478ed2d68a5d28b41ebeb257" category="inline-link-macro-rx"></block> per la gestione dei carichi di lavoro di Microsoft SQL Server.</block>
   <block id="d05a91a23b39b2ef83c7f917a0c9c7e5" category="summary">Inizia a usare NetApp Workload Factory for Databases per utilizzare frammenti di codice infrastrutturale, scoprire host, gestire risorse e altro ancora.</block>
   <block id="91494b330cfa4716e9d4103109705d0c" category="doc">Avvio rapido per NetApp Workload Factory per database</block>
   <block id="0680daa6368db6612af2c2ea36617ecc" category="paragraph">Con NetApp Workload Factory for Databases puoi iniziare subito in modalità _base_.  Se desideri utilizzare Workload Factory per individuare host, gestire risorse e altro ancora, puoi iniziare seguendo pochi passaggi.</block>
@@ -1299,4 +1293,10 @@
   <block id="3c031b939f6ec312ee601d021e7a6644" category="sidebar">Console NetApp</block>
   <block id="cc58d3a9b2264c4fd8cb1d3f61b90bdc" category="sidebar">Servizi dati NetApp</block>
   <block id="da799d994391b08e1d7460381c98559f" category="sidebar">Scopri di più su Workload Factory per database</block>
+  <block id="b932f0cf95f538a8c687f905809c4de8" category="paragraph">Per i dettagli sulla protezione con Backup e Ripristino, fare riferimento a <block ref="aefe430dd4ebf4bd80cdc056d521c135" category="inline-link-macro-rx"></block>.</block>
+  <block id="1a60f402f44b25587846bc52b43a5256" category="list-text">Assicurati che il tuo ambiente soddisfi <block ref="e28e35d1fa3b60445b98139b282e0fe6" category="inline-link-macro-rx"></block>.</block>
+  <block id="b840c4396ce722a09c18899a4424775c" category="list-text"><block ref="3a4019be669eb0d9a01f9ed45fbe9c1e" category="inline-link-macro-rx"></block> inclusa la configurazione, l'assegnazione dei ruoli IAM e l'installazione di un agente Console.</block>
+  <block id="1cad8c414706b5bcb0b45db25ebf8cb8" category="list-text"><block ref="1cad8c414706b5bcb0b45db25ebf8cb8" category="inline-link-macro-rx"></block></block>
+  <block id="8cddfd1e7d348910ccb9f33f1875227b" category="paragraph"><block ref="f04d9a72ed4e336f6d3f26aa1ae4191f" category="inline-link-macro-rx"></block>.</block>
+  <block id="99a41b50ffc589da72247d73d9ef02ed" category="paragraph">Per informazioni correlate, fare riferimento a <block ref="dc3edb02c7b9b729d8ce33699dc1f607" category="inline-link-macro-rx"></block> per la gestione dei carichi di lavoro di Microsoft SQL Server.</block>
 </blocks>

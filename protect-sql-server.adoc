@@ -21,7 +21,7 @@ Workload Factory automatizza la scoperta delle risorse, la convalida dei prerequ
 
 NetApp Backup and Recovery sfrutta la tecnologia di replicazione dei dati NetApp SnapMirror per garantire che tutti i backup siano completamente sincronizzati creando copie snapshot e trasferendole nelle posizioni di backup.
 
-Per i dettagli sulla protezione con Backup e Ripristino, fare riferimento alink:https://docs.netapp.com/us-en/console-backup-recovery/br-use-mssql-protect-overview.html["Panoramica sulla protezione dei carichi di lavoro Microsoft SQL con Backup e Ripristino"^] .
+Per i dettagli sulla protezione con Backup e Ripristino, fare riferimento a link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-mssql-protect-overview.html["Panoramica sulla protezione dei carichi di lavoro Microsoft SQL con Backup e Ripristino"^].
 
 
 
@@ -29,8 +29,8 @@ Per i dettagli sulla protezione con Backup e Ripristino, fare riferimento alink:
 
 Per proteggere i carichi di lavoro di Microsoft SQL Server con Backup e Ripristino, è necessario soddisfare i seguenti requisiti.
 
-* Assicurati che il tuo ambiente soddisfilink:https://docs.netapp.com/us-en/console-backup-recovery/concept-start-prereq.html#microsoft-sql-server-workload-requirements["i requisiti di backup e ripristino di SQL Server"^] .
-* link:https://docs.netapp.com/us-en/console-backup-recovery/concept-start-prereq.html#in-netapp-console["Requisiti completi della console NetApp"^]inclusa la configurazione, l'assegnazione dei ruoli IAM e l'installazione di un agente Console.
+* Assicurati che il tuo ambiente soddisfi link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-start-prereq.html#microsoft-sql-server-workload-requirements["i requisiti di backup e ripristino di SQL Server"^].
+* link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-start-prereq.html#in-netapp-console["Requisiti completi della console NetApp"^] inclusa la configurazione, l'assegnazione dei ruoli IAM e l'installazione di un agente Console.
 
 
 Se si dispone dell'accesso come amministratore dell'organizzazione all'account NetApp , `backup and recovery super admin` il ruolo viene assegnato automaticamente quando<<Preparati alla protezione con NetApp Backup and Recovery,preparati alla protezione con NetApp Backup and Recovery>> .
@@ -40,7 +40,7 @@ Se si dispone dell'accesso come amministratore dell'organizzazione all'account N
 Per scoprire i database, è necessario impostare la risoluzione host sul connettore.  Sul dispositivo ospitato, aggiungere la mappatura dell'indirizzo IP al nome host nel `/etc/hosts` file.
 
 +
-** link:https://docs.netapp.com/us-en/console-backup-recovery/br-start-licensing.html["Impostare la licenza per NetApp Backup and Recovery"^]
+** link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html["Impostare la licenza per NetApp Backup and Recovery"^]
 
 
 
@@ -69,6 +69,6 @@ Per utilizzare NetApp Backup and Recovery per la protezione, le istanze di SQL S
 .Cosa succederà
 Da Backup e ripristino, crea un criterio per proteggere l'istanza e i database di Microsoft SQL Server.
 
-link:https://docs.netapp.com/us-en/console-backup-recovery/br-use-policies-create.html["Scopri come creare un criterio per proteggere l'istanza e i database di Microsoft SQL Server"^] .
+link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-policies-create.html["Scopri come creare un criterio per proteggere l'istanza e i database di Microsoft SQL Server"^].
 
-Per informazioni correlate, fare riferimento alink:https://docs.netapp.com/us-en/console-backup-recovery/br-use-mssql-protect-overview.html["Documentazione di backup e ripristino"^] per la gestione dei carichi di lavoro di Microsoft SQL Server.
+Per informazioni correlate, fare riferimento a link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-mssql-protect-overview.html["Documentazione di backup e ripristino"^] per la gestione dei carichi di lavoro di Microsoft SQL Server.
