@@ -25,27 +25,13 @@ Le funzionalità principali includono:
 
 
 
-== Stato ben progettato
+== Componenti dell'analisi della configurazione
 
-Nella console Workload Factory a livello di file system, lo stato di buona architettura è elencato per tutti i file system FSx for ONTAP . Gli stati ben progettati sono classificati come "problemi", "non analizzati" o "ben progettati". Selezionando lo stato ben progettato si viene reindirizzati alla scheda dello stato ben progettato all'interno del file system, dove è possibile trovare il punteggio ben progettato, le categorie di configurazione e tutte le configurazioni per il file system.
+L'analisi della configurazione include i seguenti componenti:
 
-
-
-== Punteggio ben strutturato
-
-Il punteggio include tutte le configurazioni attualmente analizzate e viene visualizzato come percentuale. Un punteggio del 25% indica che il 25% delle configurazioni del file system è caratterizzato da un'architettura ottimale.
-
-
-
-== Categorie di configurazione
-
-Le configurazioni del file system sono organizzate in categorie allineate con i seguenti cinque pilastri del framework ben strutturato AWS.
-
-* _Reliability_: Garantisce che i carichi di lavoro svolgano le funzioni previste in modo corretto e coerente, anche in presenza di interruzioni. Un esempio di configurazione è FSX per i backup ONTAP.
-* _Sicurezza_: Sottolinea la protezione di dati, sistemi e risorse attraverso valutazioni dei rischi e strategie di mitigazione.
-* _Eccellenza operativa_: Si concentra sulla fornitura dell'architettura e del valore di business ottimali.
-* _Ottimizzazione dei costi_: Mira a fornire valore aziendale riducendo al minimo i costi.
-* _Performance Efficiency_: Si concentra sull'utilizzo efficiente delle risorse per soddisfare i requisiti di sistema e mantenere prestazioni ottimali con il variare delle esigenze.
+Stato ben progettato:: Lo stato ben progettato si riferisce allo stato generale delle configurazioni del database; le configurazioni sono classificate come "ottimizzate", "non ottimizzate" o "con provisioning eccessivo". Lo stato ben progettato di una configurazione viene referenziato dall'interno di un'istanza di Microsoft SQL Server o di un database Oracle nella console di Workload Factory.
+Punteggio ben strutturato:: Il punteggio include tutte le configurazioni attualmente analizzate e viene visualizzato come percentuale. Un punteggio del 25% significa che il 25% delle distribuzioni del database sono ben progettate. Il punteggio ben progettato è referenziato dalla schermata *Ben progettato* e da un'istanza di Microsoft SQL Server o da un database Oracle nella console Workload Factory.
+Categorie di configurazione:: Le configurazioni sono organizzate nelle seguenti categorie: archiviazione, elaborazione, applicazione, resilienza e clonazione. Ogni categoria include valutazioni di configurazione specifiche che vengono analizzate regolarmente. Le categorie di configurazione sono referenziate dalla schermata *Ben architettata* e da un'istanza di Microsoft SQL Server o da un database Oracle nella console Workload Factory.
 
 
 

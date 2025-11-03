@@ -104,6 +104,6 @@ Utilizzare la console Workload Factory per analizzare i log degli errori di SQL 
 +
 Dopo la scansione, gli errori vengono visualizzati nella console, offrendo una panoramica completa dei problemi rilevati dall'analizzatore del registro degli errori intelligente.
 
-. Utilizza i filtri per restringere gli errori visualizzati in base a criteri quali gravità, intervallo di tempo e codice di errore.
+. Utilizza i filtri per restringere gli errori visualizzati in base a criteri quali gravità, intervallo di tempo e codice di errore, oppure in base a tag orientati all'infrastruttura quali elaborazione, archiviazione, rete e sicurezza.
 . Esamina le informazioni dettagliate sull'errore, tra cui il messaggio di errore originale, la spiegazione basata sull'intelligenza artificiale e i passaggi correttivi suggeriti per risolvere gli errori.
 
