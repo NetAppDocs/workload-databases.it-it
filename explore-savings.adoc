@@ -62,7 +62,7 @@ Sono disponibili due opzioni di calcolo per effettuare il confronto dei costi tr
 
 Esplora i risparmi tramite la personalizzazione: Fornisci le impostazioni di configurazione di Microsoft SQL Server su Amazon EC2 con EBS o FSX per Windows file Server, inclusi la regione, il modello di distribuzione, l'edizione di SQL Server, la frequenza di modifica dei dati mensile, la frequenza delle snapshot e altro ancora.
 
-Scopri i risparmi per gli host rilevati: Workload Factory si collega ai tuoi server Microsoft SQL esistenti e inserisce i dettagli nella calcolatrice per un confronto automatico.  Per utilizzare questa opzione della calcolatrice, è necessario concedere autorizzazioni di _sola lettura_ o _lettura/scrittura_. È possibile modificare il caso d'uso, ma tutti gli altri dettagli vengono determinati automaticamente nel calcolo.
+Scopri i risparmi per gli host rilevati: Workload Factory si collega ai tuoi server Microsoft SQL esistenti e inserisce i dettagli nella calcolatrice per un confronto automatico. Per utilizzare questa opzione della calcolatrice, è necessario concedere le autorizzazioni di _visualizzazione, pianificazione e analisi_. È possibile modificare il caso d'uso, ma tutti gli altri dettagli vengono determinati automaticamente nel calcolo.
 
 Inoltre, è possibile link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Aggiungi le credenziali AWS"^]migliorare l'accuratezza dell'analisi della calcolatrice. Selezionare *Calcola risparmio in base alle risorse esistenti*. Verrai reindirizzato alla pagina Aggiungi credenziali. Dopo aver aggiunto le credenziali, selezionare le risorse esistenti da confrontare con FSX per ONTAP e selezionare *Esplora risparmio*.
 
@@ -158,7 +158,7 @@ Workload Factory immette le caratteristiche rilevate dell'host Elastic Block Sto
 .Prima di iniziare
 Prima di iniziare, completare i seguenti prerequisiti:
 
-* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Concedi autorizzazioni _di sola lettura_ o _di lettura/scrittura_"^] Nel tuo account AWS per rilevare i sistemi Elastic Block Store (EBS) ed FSX per Windows nella scheda *Esplora risparmio* e per mostrare il calcolo del risparmio nel calcolatore di risparmio.
+* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Concedi autorizzazioni di _visualizzazione, pianificazione e analisi_"^] nel tuo account AWS per rilevare Elastic Block Store (EBS) e FSx per i sistemi Windows nella scheda *Esplora risparmi* e per visualizzare il calcolo dei risparmi nel calcolatore dei risparmi.
 * Per ottenere consigli sul tipo di istanza e migliorare l'accuratezza dei costi, procedere come segue:
 +
 .. Concedi le autorizzazioni ad Amazon CloudWatch e AWS Compute Optimizer.
@@ -326,6 +326,9 @@ Se si desidera passare a FSX for ONTAP per ottenere risparmi sui costi, fare cli
 NOTE: Workload Factory non supporta il salvataggio o la creazione di più file system FSx per ONTAP .
 
 .Metodi di distribuzione
-In modalità _lettura/scrittura_, è possibile distribuire il nuovo server Microsoft SQL su AWS EC2 utilizzando FSx per ONTAP direttamente da Workload Factory.  È anche possibile copiare il contenuto dalla finestra Codebox e distribuire la configurazione consigliata utilizzando uno dei metodi Codebox.
+Con le _autorizzazioni di creazione dell'host del database_, puoi distribuire il nuovo server Microsoft SQL su AWS EC2 utilizzando FSx per ONTAP direttamente da Workload Factory. È anche possibile copiare il contenuto dalla finestra Codebox e distribuire la configurazione consigliata utilizzando uno dei metodi Codebox.
 
-+ Nella modalità _base_, puoi copiare il contenuto dalla finestra Codebox e distribuire la configurazione consigliata utilizzando uno dei metodi Codebox.
+Senza autorizzazioni, è possibile copiare il contenuto dalla finestra Codebox e distribuire la configurazione consigliata utilizzando uno dei metodi Codebox.
+
+.Informazioni correlate
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Riferimento alle autorizzazioni di Workload Factory"^]

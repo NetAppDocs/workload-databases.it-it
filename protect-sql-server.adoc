@@ -72,3 +72,20 @@ Da Backup e ripristino, crea un criterio per proteggere l'istanza e i database d
 link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-policies-create.html["Scopri come creare un criterio per proteggere l'istanza e i database di Microsoft SQL Server"^].
 
 Per informazioni correlate, fare riferimento a link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-mssql-protect-overview.html["Documentazione di backup e ripristino"^] per la gestione dei carichi di lavoro di Microsoft SQL Server.
+
+
+
+== Protezione dalle modifiche per le risorse di Microsoft SQL Server
+
+È possibile modificare la protezione per le istanze e i database di Microsoft SQL Server già protetti in NetApp Backup and Recovery. La modifica della protezione consente di modificare i criteri di protezione o la pianificazione per le istanze di SQL Server protette.
+
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Nella sezione Database, selezionare *Vai all'inventario dei database*.
+. Dal menu Database, selezionare *Inventario*.
+. Nell'inventario, seleziona *Microsoft SQL Server* come tipo di motore.
+. Selezionare la scheda *Database*.
+. Individua il database per cui modificare la protezione, quindi seleziona *Modifica protezione* dal menu.
++
+Verrai reindirizzato a Backup e ripristino nella NetApp Console , dove potrai modificare la policy o la pianificazione della protezione.
+
+

@@ -49,7 +49,7 @@ Per i database Oracle:
 
 == Prima di iniziare
 
-* Devi avere link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e autorizzazioni di lettura/scrittura"^] per analizzare le configurazioni del database.
+* Devilink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["concedere autorizzazioni per _operazioni e bonifica_"^] nel tuo account AWS.
 * Per valutare l'archiviazione di un'istanza di Microsoft SQL Server o di un database Oracle, la risorsa deve essere registrata in Workload Factory e il tipo di archiviazione deve essere FSx per ONTAP.link:register-instance.html["Scopri come registrare le risorse."]
 * Assicurarsi di rivedere attentamente ogni suggerimento prima di selezionare per correggere un'impostazione o una configurazione. Per le impostazioni RSS e MAXDOP, si consiglia di testare le impostazioni consigliate per determinare i miglioramenti delle prestazioni prima di apportare modifiche all'ambiente di produzione.
 

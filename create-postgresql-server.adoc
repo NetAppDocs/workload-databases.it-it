@@ -32,7 +32,7 @@ La creazione di un nuovo server PostgreSQL richiede un file system FSX per ONTAP
 
 == Prima di iniziare
 
-È necessario link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e autorizzazioni in modalità _lettura/scrittura_"^]creare un nuovo host di database in workload factory.
+Devi avere link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["concedere i permessi di creazione dell'host del database"^] nel tuo account AWS per creare un nuovo host del database in Workload Factory.
 
 
 

@@ -49,7 +49,7 @@ I dati dei clienti non vengono utilizzati per addestrare o migliorare i modelli.
 
 Per utilizzare l'analizzatore del registro degli errori, è necessario soddisfare i seguenti prerequisiti:
 
-* Devi averelink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e autorizzazioni in modalità _lettura/scrittura_"^] per creare un nuovo host di database in Workload Factory.
+* Devi link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["concedere permessi di visualizzazione, pianificazione e analisi"^] nel tuo account AWS per creare un nuovo host di database in Workload Factory.
 * link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["Registra un'istanza di SQL Server"^]nella fabbrica dei carichi di lavoro.
 * Devono essere soddisfatti anche i seguenti prerequisiti.  Ti verrà richiesto di completare questi prerequisiti come parte dei passaggi per analizzare gli errori del registro.
 +

@@ -32,7 +32,7 @@ NOTE: Workload Factory supporta solo la registrazione e la gestione delle istanz
 
 Prima di registrare un'istanza, tenere presente quanto segue:
 
-L'host per l'istanza o il database deve apparire nell'inventario. Per far sì che gli host appaiano nell'inventario,link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["è necessario aggiungere le credenziali dell'account AWS e le autorizzazioni in modalità _sola lettura_ o _lettura/scrittura_"^] .
+L'host per l'istanza o il database deve apparire nell'inventario. Per far sì che gli host appaiano nell'inventario, è necessario link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["concedere permessi di visualizzazione, pianificazione e analisi"^] nel tuo account AWS.
 
 
 

@@ -18,7 +18,7 @@ Al momento della creazione del database, vengono creati due nuovi volumi nel fil
 
 Se si desidera separare lo storage per il database, è possibile farlo utilizzando un _punto di montaggio virtuale_. Il punto di montaggio virtuale consente di consolidare i database in poche unità comuni sull'host.
 
-La creazione di un database nella fabbrica dei carichi di lavoro richiede l'automazione delle autorizzazioni per la modalità. In alternativa, in modalità base, è possibile copiare o scaricare un modello di codice parzialmente completato per completare l'operazione al di fuori della fabbrica del carico di lavoro. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Scopri le modalità operative in fabbrica dei carichi di lavoro"^] per decidere quale modalità utilizzare.
+Per creare un database in Workload Factory sono necessarie le autorizzazioni di visualizzazione, pianificazione e analisi. In alternativa, è possibile copiare o scaricare un modello di codice parzialmente completato per completare l'operazione al di fuori della fabbrica del carico di lavoro. link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Scopri di più sulle autorizzazioni di Workload Factory"^] per decidere quale modalità desideri utilizzare.
 
 
 NOTE: I server Microsoft SQL che utilizzano il protocollo SMB non supportano la creazione di database.
@@ -26,7 +26,7 @@ NOTE: I server Microsoft SQL che utilizzano il protocollo SMB non supportano la 
 .Prima di iniziare
 Prima di creare un nuovo database, assicurarsi di aver completato i seguenti prerequisiti.
 
-* *Credenziali e permessi*: Devi averelink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e autorizzazioni in modalità _sola lettura_ o _lettura/scrittura_"^] per creare un nuovo database in Workload Factory.
+* *Credenziali e permessi*: Devi avere link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e autorizzazioni di visualizzazione, pianificazione e analisi"^] per creare un nuovo database in Workload Factory.
 +
 In alternativa, è possibile utilizzare Codebox per copiare un modello in modo da poter distribuire un database al di fuori della fabbrica del carico di lavoro utilizzando l'API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Ulteriori informazioni sull'automazione Codebox"^].
 
@@ -39,7 +39,7 @@ In alternativa, è possibile utilizzare Codebox per copiare un modello in modo d
 
 == Creare un database
 
-È possibile utilizzare le modalità di distribuzione _Creazione rapida_ o _Creazione avanzata_ per completare questa attività nella fabbrica dei carichi di lavoro con autorizzazioni in modalità _sola lettura_ o _lettura/scrittura_.
+È possibile utilizzare le modalità di distribuzione _Creazione rapida_ o _Creazione avanzata_ per completare questa attività in Workload Factory.
 
 [role="tabbed-block"]
 ====

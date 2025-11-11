@@ -60,7 +60,7 @@ Se si decide di ripristinare le risorse DNS (Domain Name System), i record di ri
 Prima di creare un nuovo host di database, accertarsi di disporre dei seguenti prerequisiti.
 
 .Credenziali e autorizzazioni
-Devi averelink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e autorizzazioni in modalità _lettura/scrittura_"^] per creare un nuovo host di database in Workload Factory.
+Devi link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["concedere i permessi di creazione dell'host del database"^] nel tuo account AWS per creare un nuovo host di database in Workload Factory.
 
 .Active Directory
 Quando ci si connette ad Active Directory, è necessario disporre dell'accesso amministrativo con autorizzazioni per effettuare le seguenti operazioni:
