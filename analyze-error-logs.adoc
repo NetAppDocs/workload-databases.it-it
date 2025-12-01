@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: analyze-error-logs.html 
-keywords: analyze error logs, errors, error severity, Microsoft SQL Server error logs, smart analysis, Agentic AI 
+keywords: analyze error logs, errors, error severity, Microsoft SQL Server error logs, Oracle database error logs, smart analysis, Agentic AI 
 summary: Analizza i registri degli errori in Workload Factory per database. 
 ---
 = Analizza i registri degli errori in Workload Factory
@@ -11,13 +11,13 @@ summary: Analizza i registri degli errori in Workload Factory per database.
 
 
 [role="lead"]
-Utilizza l'analizzatore intelligente del registro degli errori per interpretare automaticamente i registri degli errori di Microsoft SQL Server, in modo da poter identificare e risolvere rapidamente i problemi. L'analisi basata sull'intelligenza artificiale agentica richiede l'integrazione con Amazon Bedrock.
+Utilizza l'analizzatore intelligente del registro degli errori per interpretare automaticamente i registri degli errori dei database Microsoft SQL Server e Oracle, in modo da poter identificare e risolvere rapidamente i problemi. L'analisi basata sull'intelligenza artificiale agentica richiede l'integrazione con Amazon Bedrock.
 
 
 
 == A proposito di questa attività
 
-L'analisi e la correzione del registro degli errori contribuiscono a preservare l'integrità e le prestazioni delle istanze di SQL Server. Per interpretare in modo efficace i log degli errori di SQL Server sono necessarie analisi attente e competenza. Il monitoraggio manuale, il rilevamento degli errori e l'analisi delle cause principali richiedono molto tempo e sono soggetti a errori. Queste sfide possono ritardare la risoluzione dei problemi, aumentare i tempi di inattività e le inefficienze operative. L'analizzatore intelligente del registro degli errori affronta queste sfide con i seguenti vantaggi chiave:
+L'analisi e la correzione del registro degli errori contribuiscono a preservare l'integrità e le prestazioni delle istanze di SQL Server e dei database Oracle.  Per interpretare in modo efficace i registri degli errori sono necessarie analisi attente e competenza. Il monitoraggio manuale, il rilevamento degli errori e l'analisi delle cause principali richiedono molto tempo e sono soggetti a errori. Queste sfide possono ritardare la risoluzione dei problemi, aumentare i tempi di inattività e le inefficienze operative.  L'analizzatore intelligente del registro degli errori affronta queste sfide con i seguenti vantaggi chiave:
 
 * Raggruppamento intelligente: consolida in modo intelligente gli errori in base a unicità, gravità e categoria e semplifica il processo di risoluzione dei problemi per soluzioni più rapide ed efficaci.
 * Indagine basata sull'intelligenza artificiale: sfrutta l'intelligenza artificiale per analizzare in modo proattivo gli errori, fornendo informazioni chiare e fruibili per accelerare l'identificazione dei problemi senza richiedere competenze approfondite.
@@ -50,31 +50,35 @@ I dati dei clienti non vengono utilizzati per addestrare o migliorare i modelli.
 Per utilizzare l'analizzatore del registro degli errori, è necessario soddisfare i seguenti prerequisiti:
 
 * Devi link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["concedere permessi di visualizzazione, pianificazione e analisi"^] nel tuo account AWS per creare un nuovo host di database in Workload Factory.
-* link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["Registra un'istanza di SQL Server"^]nella fabbrica dei carichi di lavoro.
+* link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["Registra le risorse"^]nella fabbrica dei carichi di lavoro.
 * Devono essere soddisfatti anche i seguenti prerequisiti.  Ti verrà richiesto di completare questi prerequisiti come parte dei passaggi per analizzare gli errori del registro.
 +
 ** *Attivazione Amazon Bedrock*
 +
-Amazon Bedrock è necessario affinché l'agente AI in esecuzione sul nodo SQL da Workload Factory possa connettersi senza problemi a Bedrock e recuperare informazioni basate sull'AI per i log degli errori identificati.
+Amazon Bedrock è necessario affinché l'agente AI in esecuzione sull'host SQL Server o Oracle da Workload Factory possa connettersi senza problemi a Bedrock e recuperare informazioni basate sull'AI per i log degli errori identificati.
 
 ** *Networking*
 +
-L'endpoint Amazon Bedrock VPC garantisce la comunicazione privata del tuo nodo SQL con le API Amazon Bedrock ed elimina l'esposizione alla rete Internet pubblica.  Verificare che l'endpoint Amazon Bedrock VPC sia associato alla subnet del nodo SQL Server (ad esempio: vpce-050cb2f33a1380ffd).
+L'endpoint Amazon Bedrock VPC garantisce la comunicazione privata del tuo host SQL Server o Oracle con le API Amazon Bedrock ed elimina l'esposizione alla rete Internet pubblica.  Verificare che l'endpoint Amazon Bedrock VPC sia associato alla subnet dell'host SQL Server o Oracle (ad esempio: vpce-050cb2f33a1380ffd).
 
 ** *Autorizzazioni AWS IAM*
 +
-Le seguenti autorizzazioni sono necessarie per il ruolo del profilo dell'istanza EC2 associato al nodo SQL e per le credenziali AWS associate a Workload Factory.
+Le seguenti autorizzazioni sono necessarie per il ruolo del profilo dell'istanza EC2 associato all'host SQL Server o Oracle e per le credenziali AWS associate a Workload Factory.
 
 +
 *** Ruolo del profilo dell'istanza EC2 con autorizzazione "bedrock:InvokeModel"
 +
-Questa autorizzazione consente all'istanza EC2 sul nodo SQL corrispondente di richiamare i modelli Bedrock per l'indagine proattiva degli errori e per indicazioni sulla correzione.  Questo profilo garantisce inoltre un accesso sicuro all'intelligenza artificiale per ottenere informazioni personalizzate.
+Questa autorizzazione consente all'istanza EC2 sull'host SQL Server o Oracle corrispondente di richiamare i modelli Bedrock per l'indagine proattiva degli errori e per indicazioni sulla correzione.  Questo profilo garantisce inoltre un accesso sicuro all'intelligenza artificiale per ottenere informazioni personalizzate.
 
 *** Credenziali AWS associate a Workload Factory: autorizzazioni "bedrock:GetFoundationModelAvailability" e "bedrock:ListInferenceProfiles"
 +
-Queste autorizzazioni verificano la disponibilità e la configurazione del modello nella regione del nodo SQL e garantiscono prestazioni affidabili e specifiche per la regione.
+Queste autorizzazioni verificano la disponibilità e la configurazione del modello nella regione dell'host SQL Server o Oracle e garantiscono prestazioni affidabili e specifiche per la regione.
 
 
+
+** *Autorizzazione utente Oracle*
++
+La seguente autorizzazione concede l'accesso in lettura agli avvisi diagnostici estesi, consentendo l'estrazione di dettagli di errori/tracce dai registri per il rilevamento e la correzione di modelli basati sull'intelligenza artificiale: `V$DIAG_ALERT_EXT` .  Questa autorizzazione è richiesta solo per i database Oracle.
 
 
 
@@ -90,8 +94,8 @@ Utilizzare la console Workload Factory per analizzare i log degli errori di SQL 
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Nella sezione Database, selezionare *Vai all'inventario dei database*.
 . Dal menu Database, selezionare *Inventario*.
-. Nell'inventario, seleziona *Microsoft SQL Server* come tipo di motore di database.
-. Dalla scheda Istanze, individua l'istanza specifica di SQL Server che desideri analizzare, quindi seleziona *Analizza errori* dal menu.
+. Nell'inventario, seleziona *Microsoft SQL Server* o *Oracle* come tipo di motore di database.
+. Dalla scheda Istanze, individua l'istanza specifica di SQL Server o il database Oracle che desideri analizzare, quindi seleziona *Analizza errori* dal menu.
 . Dalla scheda *Indagine errore*, completare i seguenti prerequisiti come descritto nella console:
 +
 ** Roccia amazzonica

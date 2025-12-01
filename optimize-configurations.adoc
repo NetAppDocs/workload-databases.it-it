@@ -41,6 +41,7 @@ Per le istanze di Microsoft SQL Server:
 
 Per i database Oracle:
 
+* Dimensionamento dello storage: include l'allocazione dello spazio di swap e il margine di manovra del file system
 * Configurazione di archiviazione: include gestione della capacità, provisioning sottile, criteri di tiering, snapshot, efficienze di archiviazione e configurazioni del sistema operativo per distribuzioni tramite NFS o iSCSI con o senza gestione automatica dell'archiviazione (ASM), inclusi stato e impostazioni di Microsoft Multipath I/O (MPIO)
 * Layout di archiviazione: include il posizionamento del redo log, il posizionamento dello spazio tabella temporaneo, il posizionamento dei file di dati, il posizionamento del log di archivio, il posizionamento dei file di controllo e il posizionamento dei binari, il conteggio LUN dei gruppi di dischi ASM
 

@@ -219,11 +219,11 @@ Seguire i passaggi nella scheda relativa al tipo di storage in uso.
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Database, seleziona *Esplora risparmio*, quindi *Microsoft SQL Server su FSX per Windows* dal menu a discesa.
+. Nel riquadro Database, seleziona *Esplora risparmi*, quindi *Microsoft SQL Server su FSx per Windows* dal menu.
 +
 Se Workload Factory rileva host EBS, verrai reindirizzato alla scheda Esplora risparmi.  Se Workload Factory non rileva gli host EBS, verrai reindirizzato alla calcolatrice per<<Esplora i risparmi tramite la personalizzazione,esplora i risparmi tramite la personalizzazione>> .
 
-. Nella scheda Esplora risparmi, fare clic su *Esplora risparmi* del server database che utilizza lo storage EBS.
+. Da *Esplora risparmi*, seleziona uno o più host di database in esecuzione su EBS, quindi seleziona *Esplora risparmi*.
 . Se necessario, autenticare l'host del database con le credenziali di SQL Server, le credenziali di Windows o aggiungendo le autorizzazioni mancanti di SQL Server.
 +
 Se la pagina Esplora risparmi non carica i dati dopo l'autenticazione riuscita, seleziona la scheda *Inventario* per ricaricare i dati, quindi seleziona nuovamente la scheda *Esplora risparmi*.
@@ -234,6 +234,10 @@ Se la pagina Esplora risparmi non carica i dati dopo l'autenticazione riuscita, 
 .. *Frequenza di aggiornamento clonazione*: seleziona dal menu la frequenza con cui clonare l'aggiornamento.
 .. *Numero di copie clonate*: Immettere il numero di copie clonate nella configurazione EBS.
 .. *Tasso di modifica mensile*: Immettere la percentuale di variazione dei dati clone e snapshot in media al mese.
+.. *Aggiungi host*: facoltativamente, seleziona fino a cinque host EBS rilevati da includere nel calcolo del risparmio.
++
+Workload Factory consolida più host SQL Server in un'unica configurazione consigliata FSx for ONTAP per ottimizzare il risparmio sui costi, a meno che gli host EBS selezionati non superino i limiti di throughput, capacità o IOPS per un singolo file system FSx for ONTAP .
+
 
 
 
