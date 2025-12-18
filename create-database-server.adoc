@@ -285,6 +285,9 @@ NOTE: Se il gruppo di regole di confronto selezionato non è compatibile per l'i
 
 .. *Nome database*: Immettere il nome del cluster di database.
 .. *Credenziali database*: Immettere un nome utente e una password per un nuovo account di servizio o utilizzare le credenziali di account di servizio esistenti in Active Directory.
++
+Facoltativo: selezionare *Utilizza account di servizio gestito* per l'account di servizio di SQL Server. Utilizzare questa opzione se l'ambiente utilizza MSA (Managed Service Account) o Group Managed Service Account (gMSA) in cui la gestione delle password è affidata ad Active Directory.
+
 
 
 . In *connettività*, fornire quanto segue:
@@ -304,6 +307,9 @@ Per le Active Directory gestite da AWS, gli indirizzi IP DNS vengono visualizzat
 
 ... Nel campo *Nome utente*, immettere il nome utente per il dominio Active Directory.
 ... Nel campo *Password*, immettere una password per il dominio Active Directory.
+... *Controller di dominio preferito*: facoltativamente, immettere il controller di dominio preferito da utilizzare per l'aggiunta di Active Directory.
+... *Percorso dell'unità organizzativa preferita*: facoltativamente, immettere l'unità organizzativa (OU) preferita in Active Directory a cui unirsi.
+... *Gruppo Active Directory di destinazione*: facoltativamente, immettere il gruppo Active Directory di destinazione a cui aggiungere i computer.
 
 
 

@@ -1338,4 +1338,17 @@
   <block id="edb81fcd705508c0f4e0b66b31bfc44f" category="paragraph">Workload Factory consolida più host SQL Server in un'unica configurazione consigliata FSx for ONTAP per ottimizzare il risparmio sui costi, a meno che gli host EBS selezionati non superino i limiti di throughput, capacità o IOPS per un singolo file system FSx for ONTAP .</block>
   <block id="7bc5d760eb2707645670155d907850e9" category="list-text">Dimensionamento dello storage: include l'allocazione dello spazio di swap e il margine di manovra del file system</block>
   <block id="815e75619b370a1b845eccec6979ed74" category="section-title">27 novembre 2025</block>
+  <block id="e75004bce0e2abb43e6673b8bd4bbd2f" category="doc">Miglioramenti dell'integrazione di Active Directory</block>
+  <block id="4be7fbd19e77cc55e8637326f3cc569d" category="paragraph">Workload Factory per database include tre nuovi campi Active Directory (AD) quando si distribuisce Microsoft SQL Server utilizzando l'opzione *Creazione avanzata*. Questi miglioramenti consentono di specificare le preferenze di adesione ad Active Directory e di utilizzare un account di servizio gestito.</block>
+  <block id="2d652258eef11b26b58d2ac1040af4fb" category="paragraph">I nuovi campi AD sono:</block>
+  <block id="f069ee08ebc87aaad1c479cd4f54611c" category="list-text">Controller di dominio preferito</block>
+  <block id="5a90d56c7caec61381ba4316f0a43849" category="list-text">Percorso dell'unità organizzativa preferita</block>
+  <block id="b535bc12ab7716de58cac2633cbe0ec8" category="list-text">Gruppo di destinazione Active Directory</block>
+  <block id="f43a09fcb5f30e27a88e58e1804f13d0" category="inline-link-macro">Distribuisci Microsoft SQL Server</block>
+  <block id="8139c8013582edc0d0eba7cc713f8ffd" category="paragraph"><block ref="8139c8013582edc0d0eba7cc713f8ffd" category="inline-link-macro-rx"></block></block>
+  <block id="568883356bf64941250150c47d023c85" category="paragraph">Facoltativo: selezionare *Utilizza account di servizio gestito* per l'account di servizio di SQL Server. Utilizzare questa opzione se l'ambiente utilizza MSA (Managed Service Account) o Group Managed Service Account (gMSA) in cui la gestione delle password è affidata ad Active Directory.</block>
+  <block id="b3c4527b66cf49711e0f4c425a9fdbe1" category="list-text">*Controller di dominio preferito*: facoltativamente, immettere il controller di dominio preferito da utilizzare per l'aggiunta di Active Directory.</block>
+  <block id="ae41853f33cf42c1d6ea60e021ce20b3" category="list-text">*Percorso dell'unità organizzativa preferita*: facoltativamente, immettere l'unità organizzativa (OU) preferita in Active Directory a cui unirsi.</block>
+  <block id="5da5a84735de60ec35b817899791d509" category="list-text">*Gruppo Active Directory di destinazione*: facoltativamente, immettere il gruppo Active Directory di destinazione a cui aggiungere i computer.</block>
+  <block id="bfcc9fa5a3178fd803540af87a6b6ab7" category="section-title">18 dicembre 2025</block>
 </blocks>
