@@ -1351,4 +1351,7 @@
   <block id="ae41853f33cf42c1d6ea60e021ce20b3" category="list-text">*Percorso dell'unità organizzativa preferita*: facoltativamente, immettere l'unità organizzativa (OU) preferita in Active Directory a cui unirsi.</block>
   <block id="5da5a84735de60ec35b817899791d509" category="list-text">*Gruppo Active Directory di destinazione*: facoltativamente, immettere il gruppo Active Directory di destinazione a cui aggiungere i computer.</block>
   <block id="bfcc9fa5a3178fd803540af87a6b6ab7" category="section-title">18 dicembre 2025</block>
+  <block id="5e3b7f958129022f75fe2931c55615b2" category="doc">Chiedimi l'integrazione della home page dell'assistente AI</block>
+  <block id="65bcc541760e8f25e0281edbfdfbf7f3" category="paragraph">La home page della console Workload Factory incorpora l'assistente Chiedimi AI, che ti consente di porre domande sul tuo spazio di archiviazione, ottenere informazioni personalizzate direttamente dal tuo ambiente e fare riferimento a conversazioni precedenti. Puoi interagire con Ask me per comprendere i tuoi carichi di lavoro, risolvere problemi e scoprire di più su Workload Factory, il tutto senza uscire dalla console.</block>
+  <block id="334f5b13a66630c66877aaf36ce24673" category="section-title">04 gennaio 2026</block>
 </blocks>
