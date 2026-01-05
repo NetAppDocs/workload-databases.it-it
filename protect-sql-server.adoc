@@ -53,7 +53,7 @@ Completa il processo di preparazione per proteggere le tue risorse di Microsoft 
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai all'inventario dei database*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
 . Dal menu Database, selezionare *Inventario*.
 . Nell'inventario, seleziona *Microsoft SQL Server* come tipo di motore.
 . Individua l'istanza che desideri proteggere, quindi seleziona *Proteggi* dal menu.
@@ -80,7 +80,7 @@ Per informazioni correlate, fare riferimento a link:https://docs.netapp.com/us-e
 È possibile modificare la protezione per le istanze e i database di Microsoft SQL Server già protetti in NetApp Backup and Recovery. La modifica della protezione consente di modificare i criteri di protezione o la pianificazione per le istanze di SQL Server protette.
 
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai all'inventario dei database*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
 . Dal menu Database, selezionare *Inventario*.
 . Nell'inventario, seleziona *Microsoft SQL Server* come tipo di motore.
 . Selezionare la scheda *Database*.

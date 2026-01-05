@@ -69,7 +69,7 @@ NOTE: Il processo di ripristino potrebbe causare tempi di inattività delle ista
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai all'inventario dei database*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
 . Nell'*Inventario*, seleziona il tipo di motore: Microsoft SQL Server o Oracle.
 . Seleziona le risorse da correggere per configurazioni specifiche.
 +
@@ -130,7 +130,7 @@ Rinviare per 30 giorni l'interruzione di un'analisi di configurazione. Dopo 30 g
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai all'inventario dei database*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
 . Dal menu Database, selezionare *Inventario*.
 . Nell'inventario, selezionare il tipo di motore di database: *Microsoft SQL Server* o *Oracle*.
 . Passare all'istanza di SQL Server o al database Oracle con la configurazione da posticipare, selezionare il menu Azione, quindi selezionare *Ben architettato*.
@@ -148,7 +148,7 @@ Ignorare per interrompere un'analisi di configurazione a tempo indeterminato. È
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai all'inventario dei database*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
 . Dal menu Database, selezionare *Inventario*.
 . Nell'inventario, selezionare il tipo di motore di database: *Microsoft SQL Server* o *Oracle*.
 . Passare all'istanza di SQL Server o al database Oracle con la configurazione da posticipare, selezionare il menu Azione, quindi selezionare *Ben architettato*.
@@ -166,7 +166,7 @@ Riattivare in qualsiasi momento un'analisi di configurazione posticipata o ignor
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai all'inventario dei database*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
 . Dal menu Database, selezionare *Inventario*.
 . Nell'inventario, selezionare il tipo di motore di database: *Microsoft SQL Server* o *Oracle*.
 . Passare all'istanza di SQL Server o al database Oracle con la configurazione da posticipare, selezionare il menu Azione, quindi selezionare *Ben architettato*.

@@ -18,7 +18,7 @@ Quando si clona un database, il clone al momento della creazione è un clone _di
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai all'inventario dei database*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
 . Dal menu Database, selezionare *Sandbox*.
 . In Sandbox, seleziona il menu azioni del clone del database che vuoi ripristinare.
 . Selezionare *Rebaseline*.

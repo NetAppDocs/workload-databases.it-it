@@ -41,7 +41,7 @@ Monitorare i lavori per tenere traccia dell'avanzamento delle operazioni del dat
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai all'inventario dei database*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
 . Dal menu Database, selezionare *Monitoraggio lavori*.
 . Nel monitoraggio dei lavori, utilizza i filtri o la ricerca per restringere i risultati dei lavori. È anche possibile scaricare un report sui lavori.
 . Facoltativamente, seleziona il menu delle azioni del processo e fai clic su *Vai a CloudFormation* per visualizzare il registro del processo nella console AWS CloudFormation.

@@ -30,7 +30,7 @@ In alternativa, puoi utilizzare Codebox per copiare un modello parzialmente comp
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai all'inventario dei database*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
 . In Database, selezionare la scheda *Sandbox*.
 . Nella scheda Sandbox, selezionare *Crea nuova sandbox*.
 . Nella pagina Crea nuova sandbox, in origine database, fornire quanto segue:

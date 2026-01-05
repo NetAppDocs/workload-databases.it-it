@@ -17,7 +17,7 @@ Puoi registrare nuovamente la risorsa.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai all'inventario dei database*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
 . Dal menu Database, selezionare *Inventario*.
 . Nell'inventario, seleziona il tipo di motore: *Microsoft SQL Server*, *Oracle* o *PostgreSQL*.
 . Individua la risorsa di cui vuoi annullare la registrazione, seleziona il menu Azione, quindi seleziona *Annulla registrazione*.

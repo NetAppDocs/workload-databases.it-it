@@ -18,7 +18,7 @@ Considerare la capacità di storage necessaria per il nuovo database. Se necessa
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai all'inventario dei database*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
 . Dal menu Database, selezionare *Sandbox*.
 . In Sandbox, seleziona il menu azioni del clone del database che vuoi dividere.
 . Selezionare *Dividi*.

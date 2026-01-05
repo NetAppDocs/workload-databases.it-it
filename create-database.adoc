@@ -47,7 +47,7 @@ In alternativa, è possibile utilizzare Codebox per copiare un modello in modo d
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai all'inventario dei database*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
 . Dal menu Database, selezionare *Inventario*.
 . Nell'inventario, seleziona *Microsoft SQL Server* come tipo di motore di database.
 . Selezionare un server di database con un'istanza di SQL Server gestita in cui creare il database.
@@ -81,7 +81,7 @@ In alternativa, se si desidera modificare subito una di queste impostazioni pred
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai all'inventario dei database*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
 . Dal menu Database, selezionare *Inventario*.
 . Nell'inventario, seleziona *Microsoft SQL Server* come tipo di motore di database.
 . Selezionare un server di database con un'istanza di SQL Server gestita in cui creare il database.

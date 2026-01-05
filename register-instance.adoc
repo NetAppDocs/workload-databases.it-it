@@ -61,7 +61,7 @@ La registrazione di un'istanza include l'autenticazione e la preparazione dell'i
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai all'inventario dei database*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
 . Dal menu Database, selezionare *Inventario*.
 . Nell'inventario, seleziona *Microsoft SQL Server* come tipo di motore.
 . Selezionare la scheda *Istanze*.
@@ -116,7 +116,7 @@ La registrazione di un database include l'autenticazione e la preparazione dell'
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nella sezione Database, selezionare *Vai all'inventario dei database*.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
 . Dal menu Database, selezionare *Inventario*.
 . Nell'inventario, seleziona *Oracle* come motore di database.
 . Selezionare la scheda *Database*.
