@@ -45,12 +45,20 @@ La calcolatrice valuta il modello di distribuzione e se è richiesta l'edizione 
 .Risorse allocate
 Il calcolatore valuta le condizioni delle seguenti risorse assegnate in base alla licenza:
 
-+ * vCPU dell'istanza di destinazione: l'istanza ha 48 o meno CPU virtuali.  * Allocazione di memoria: l'istanza ha 128 GB o meno di memoria.
+* vCPU dell'istanza di destinazione: l'istanza ha 48 o meno virtual CPU.
+* Allocazione di memoria: l'istanza ha 128GB o meno di memoria.
+
 
 .Utilizzo delle funzioni aziendali
 La calcolatrice verifica se è in uso una delle seguenti funzioni di Enterprise:
 
-+ * Funzionalità aziendali a livello di database * Operazioni di indice online * Resource Governor * Replica peer-to-peer o Oracle * Estensioni R/Python * TempDB ottimizzato per la memoria
+* Funzionalità Enterprise a livello di database
+* Operazioni di indice online
+* Resource Governor
+* Replica peer-to-peer o Oracle
+* Estensioni R/Python
+* TempDB ottimizzato per la memoria
+
 
 Se l'istanza di SQL Server valutata non utilizza alcuna delle funzionalità Enterprise precedenti e soddisfa i limiti delle risorse, la calcolatrice consiglia di eseguire il downgrade della licenza alla Standard Edition. Questo suggerimento consente di ottimizzare i costi di licenza di SQL Server senza compromettere le prestazioni o la funzionalità.
 
@@ -78,6 +86,7 @@ Seguire i passaggi nella scheda relativa al tipo di storage in uso.
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
 . Dai database, selezionare *Esplora i risparmi*, quindi *Microsoft SQL Server su EBS*.
 . Nel calcolatore dei risparmi, fornire i seguenti dettagli:
 +
@@ -112,6 +121,7 @@ Seguire i passaggi nella scheda relativa al tipo di storage in uso.
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
 . Dai database, selezionare *Esplora risparmi*, quindi *Microsoft SQL Server su FSX per Windows*.
 . Nel calcolatore dei risparmi, fornire i seguenti dettagli:
 +
@@ -219,7 +229,9 @@ Seguire i passaggi nella scheda relativa al tipo di storage in uso.
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Database, seleziona *Esplora risparmi*, quindi *Microsoft SQL Server su FSx per Windows* dal menu.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
+. Dal menu Databases, seleziona *Explore savings*.
+. In Esplora risparmi, seleziona la scheda *SQL Server su Elastic Block Store (EBS)*.
 +
 Se Workload Factory rileva host EBS, verrai reindirizzato alla scheda Esplora risparmi.  Se Workload Factory non rileva gli host EBS, verrai reindirizzato alla calcolatrice per<<Esplora i risparmi tramite la personalizzazione,esplora i risparmi tramite la personalizzazione>> .
 
@@ -247,7 +259,9 @@ Workload Factory consolida più host SQL Server in un'unica configurazione consi
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Database, seleziona *Esplora risparmi*, quindi *Microsoft SQL Server su FSx per Windows* dal menu.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
+. Dal menu Databases, seleziona *Explore savings*.
+. In Explore savings, seleziona la scheda *SQL Server su FSx per Windows*.
 +
 Se Workload Factory rileva host FSx per Windows, verrai reindirizzato alla scheda Esplora risparmi.  Se Workload Factory non rileva FSx per gli host Windows, verrai reindirizzato alla calcolatrice per<<Esplora i risparmi tramite la personalizzazione,esplora i risparmi tramite la personalizzazione>> .
 
@@ -274,10 +288,12 @@ Se vengono rilevate copie shadow di FSX per Windows, il valore predefinito è *g
 --
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Nel riquadro Database, seleziona *Esplora risparmi*, quindi *Microsoft SQL Server locale* dal menu.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
+. Dal menu Databases, seleziona *Explore savings*.
+. In Esplora risparmi, seleziona la scheda *SQL Server on-premises*.
 . Dalla scheda on-premise di SQL Server, scaricare lo script per valutare gli ambienti SQL Server on-premise.
 +
-.. Scarica lo script di valutazione.  Lo script è uno strumento di raccolta dati basato su PowerShell.  Raccoglie e carica i dati sulla configurazione e sulle prestazioni di SQL Server in Workload Factory.  Il consulente per la migrazione valuta i dati e pianifica la distribuzione di FSx per ONTAP per l'ambiente SQL Server.
+.. Scarica lo script di valutazione. Lo script è uno strumento di raccolta di dati basato su PowerShell. Raccoglie e poi carica i dati di configurazione e prestazioni di SQL Server su Workload Factory. Il migration advisor valuta i dati e pianifica la distribuzione di FSx for ONTAP per il tuo ambiente SQL Server.
 +
 image:screenshot-download-script-on-premises.png["Una schermata della scheda on-premise di SQL Server mostra l'opzione di scaricare lo script di valutazione."]
 
@@ -288,9 +304,8 @@ image:screenshot-upload-script-on-premises.png["Una schermata della scheda on-pr
 
 
 
-. Dalla scheda on-premise di SQL Server, selezionare *Esplora risparmio* per eseguire un'analisi dei costi dell'host on-premise di SQL Server rispetto a FSX per ONTAP.
+. Dalla scheda SQL Server on-premises, seleziona fino a cinque host di database e poi seleziona *Esplora risparmi* per eseguire un'analisi dei costi degli host SQL Server on-premises rispetto a FSx per ONTAP.
 . Nel calcolatore di risparmio, selezionare la regione per l'host on-premise.
-. Per risultati più precisi, aggiorna le informazioni di calcolo, i dettagli sullo storage e sulle performance.
 . Facoltativamente, fornisci i seguenti dettagli sui cloni (copie shadow) e sulle Snapshot nell'ambiente di database on-premise per una stima più accurata dei risparmi sui costi.
 +
 .. *Frequenza snapshot*: seleziona una frequenza snapshot dal menu.
@@ -301,6 +316,10 @@ Se vengono rilevate copie shadow di FSX per Windows, il valore predefinito è *g
 .. *Numero di copie clonate*: Immettere il numero di copie clonate nella configurazione on-premise.
 .. *Tasso di modifica mensile*: Immettere la percentuale di variazione dei dati clone e snapshot in media al mese.
 
+
+. Per risultati più precisi, aggiorna le informazioni di calcolo, i dettagli sullo storage e sulle performance.
++
+Workload Factory consolida più host on-premises di SQL Server in un'unica configurazione consigliata di FSx for ONTAP per ottimizzare il risparmio sui costi, a meno che gli host on-premises selezionati non superino i limiti di throughput, capacità o IOPS per un singolo file system FSx for ONTAP.
 
 
 

@@ -13,24 +13,19 @@ summary: 'Registra le risorse in modo da poter monitorare lo stato delle risorse
 [role="lead"]
 Registra istanze per Microsoft SQL Server e database per Oracle in modo da poter monitorare lo stato delle istanze e dei database, l'utilizzo delle risorse, la protezione e le prestazioni di archiviazione in NetApp Workload Factory per database.
 
-La registrazione è possibile solo per i motori di database in esecuzione su FSx per l'archiviazione del file system ONTAP .
+È possibile registrare le risorse solo se vengono eseguite su FSx for ONTAP file system storage.
 
 
 
 == Informazioni sul compito
 
-La registrazione di un'istanza (SQL Server) o di un database (Oracle) prevede due passaggi: autenticazione e preparazione.  La preparazione prevede di assicurarsi che tutti i moduli AWS, NetApp e PowerShell siano installati sull'istanza.
+La registrazione di un'istanza (SQL Server) o di un database (Oracle) prevede tre fasi: autenticazione dell'istanza o del database, autenticazione FSx for ONTAP e preparazione. La preparazione consiste nell'assicurarsi che tutti i moduli AWS, NetApp e PowerShell siano installati sull'istanza o sul database e che siano soddisfatti i requisiti minimi per le funzionalità di Workload Factory for Databases come link:analyze-error-logs.html["analisi del registro degli errori"] o link:optimize-configurations.html["well-architected review"].
 
-È possibile eseguire l'autenticazione utilizzando le credenziali di SQL Server o quelle di Windows.
-
-
-NOTE: Workload Factory supporta solo la registrazione e la gestione delle istanze di Microsoft SQL Server e del database Oracle.  A seconda delle credenziali dell'account AWS selezionate in Workload Factory, gli host PostgreSQL potrebbero apparire nell'inventario.  Attualmente, Workload Factory supporta istanze PostgreSQL non registrate eseguite solo su sistemi operativi Amazon Linux.
+Workload Factory supporta solo la registrazione e la gestione delle istanze di Microsoft SQL Server e del database Oracle.  A seconda delle credenziali dell'account AWS selezionate in Workload Factory, gli host PostgreSQL potrebbero apparire nell'inventario.  Attualmente, Workload Factory supporta istanze PostgreSQL non registrate eseguite solo su sistemi operativi Amazon Linux.
 
 
 
 == Prima di iniziare
-
-Prima di registrare un'istanza, tenere presente quanto segue:
 
 L'host per l'istanza o il database deve apparire nell'inventario. Per far sì che gli host appaiano nell'inventario, è necessario link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["concedere permessi di visualizzazione, pianificazione e analisi"^] nel tuo account AWS.
 
@@ -55,9 +50,11 @@ Se si utilizza un server proxy per tutte le connessioni in uscita da istanze EC2
 
 
 
-== Registra un'istanza di SQL Server
+== Registra un'istanza di Microsoft SQL Server
 
-La registrazione di un'istanza include l'autenticazione e la preparazione dell'istanza.
+La registrazione di un'istanza prevede tre fasi: autenticazione dell'istanza, autenticazione FSx for ONTAP e preparazione per il completamento dei prerequisiti mancanti. È possibile registrare una o più istanze.
+
+Workload Factory supporta la registrazione per Failover Cluster Instance (FCI) e Standalone deployment per SQL Server.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
@@ -66,102 +63,92 @@ La registrazione di un'istanza include l'autenticazione e la preparazione dell'i
 . Nell'inventario, seleziona *Microsoft SQL Server* come tipo di motore.
 . Selezionare la scheda *Istanze*.
 . Selezionare per registrare una singola istanza o più istanze.
+. Per autenticare le istanze (passaggio 1), eseguire le seguenti operazioni e quindi selezionare *Avanti*:
 +
-.. Registrazione di una singola istanza: vai all'istanza da gestire e seleziona *Registra istanza*.
-.. Registrazione di più istanze: selezionare il pulsante *Registra più istanze*.
+** Selezionare *Usa le stesse credenziali per tutte le istanze* o *Gestisci le credenziali manualmente*.
+** Autenticare SQL Server e Windows fornendo nome utente e password.
 +
-Sono disponibili due opzioni per la registrazione di più istanze. In entrambi i casi, le istanze devono condividere lo stesso stato di autenticazione (non autenticato o autenticato).
+Se le istanze sono autenticate, seleziona *Avanti*.
+
+
+
+. Per autenticare FSx per ONTAP (passaggio 2), procedere come segue:
++
+** Selezionare *Usa le stesse credenziali per tutte le risorse* o *Gestisci le credenziali manualmente*.
+** Immettere il nome utente e la password del file system FSx for ONTAP, quindi selezionare *Avanti*.
++
+Se il file system FSx for ONTAP è autenticato, selezionare *Avanti*.
+
+
+
+. Per Prepare (passaggio 3), assicurarsi che l'istanza o le istanze soddisfino i requisiti minimi.
++
+Per soddisfare i requisiti minimi, l'istanza deve avere i moduli AWS e NetApp PowerShell e i moduli PowerShell 7 installati, e devi completare i prerequisiti per almeno una delle funzionalità elencate sotto Controllo prerequisiti. .. Esamina i prerequisiti nella *visualizzazione Controllo prerequisiti*.
 
 +
-*** Istanze non autenticate: selezionare più istanze non autenticate da registrare. Queste istanze devono condividere le stesse credenziali di autenticazione e le stesse credenziali FSx for ONTAP. Selezionare *Applica* e quindi *Avanti*.
-*** Istanze autenticate: seleziona più istanze autenticate da registrare, quindi seleziona *Avanti*.
++ È necessario completare tutti i prerequisiti per una singola funzionalità come *Review well-architected issues and recommendations* per registrare l'istanza.
 
-
-
-
-. Al passaggio 2 della pagina "Registra istanze", seleziona la modalità di autenticazione dell'istanza, inserisci i seguenti dettagli e seleziona "Avanti". Se le istanze sono già autenticate, seleziona "Avanti".
 +
-** *Autenticazione di SQL Server*: immettere il nome utente e la password di SQL Server, nonché il nome utente e la password del file system FSx for ONTAP.
-** *Autenticazione Windows*: immettere il nome utente e la password di Windows, nonché il nome utente e la password del file system FSx for ONTAP.
-
-
-. Nel passaggio 3, preparare l'istanza assicurandosi che soddisfi i prerequisiti richiesti. Se tutti i moduli richiesti sono installati e i prerequisiti sono soddisfatti, selezionare *Avanti* per registrare l'istanza. Se è necessario intervenire, seguire questi passaggi.
+.. Seleziona *Dettagli di configurazione* per ciascuna funzionalità per conoscere i prerequisiti della funzionalità e seguire le istruzioni sullo schermo per completare eventuali prerequisiti mancanti per una funzionalità.
 +
-.. Se mancante, selezionare la fabbrica del carico di lavoro per *Installare i moduli mancanti di AWS e NetApp PowerShell*.
-.. Se mancante, selezionare la fabbrica del carico di lavoro per *Installare PowerShell 7 mancante*. L'installazione del modulo PowerShell 7 mancante richiede il riavvio del sistema.
-.. Esaminare l'elenco dei prerequisiti per le seguenti funzionalità.  Assicurarsi di soddisfare tutti i prerequisiti per la capacità di registrare l'istanza.
-+
-*** *Esaminare problemi e raccomandazioni ben strutturati*
-*** *Risolvere problemi ben progettati*
-*** *Crea database*
-*** *Creare copie del database (sandbox)*
-+
-Il completamento dei prerequisiti include l'aggiornamento delle autorizzazioni della policy AWS IAM, delle autorizzazioni del profilo dell'istanza EC2 IAM, delle autorizzazioni di SQL Server e dei moduli PowerShell.
+Per avere Workload Factory link:optimize-configurations.html["rivedere e correggere i problemi di architettura"] per le tue istanze, completa tutti i prerequisiti elencati nelle funzionalità *Esamina i problemi e le raccomandazioni ben progettati* e *Correggi i problemi ben progettati*.
 
 
 
-.. Una volta completati i prerequisiti e i controlli sono *Pronti*, è possibile selezionare di *Registrare* l'istanza.
-
-
+. Quando i prerequisiti sono completi, *Registra* l'istanza/le istanze.
 
 
 .Risultato
-Viene avviata la registrazione dell'istanza.  Selezionare la scheda *Monitoraggio lavori* per monitorare i progressi.
+La registrazione dell'istanza viene avviata. Selezionare la scheda *Monitoraggio lavori* per monitorare l'avanzamento.
 
 
 
 == Registrare un database Oracle
 
-La registrazione di un database include l'autenticazione e la preparazione dell'istanza.
+La registrazione di un'istanza prevede tre passaggi: autenticazione del database, autenticazione FSx for ONTAP e preparazione per completare i prerequisiti mancanti. È possibile registrare uno o più database.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
 . Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
 . Dal menu Database, selezionare *Inventario*.
-. Nell'inventario, seleziona *Oracle* come motore di database.
+. Nell'inventario, seleziona *Oracle* come tipo di engine.
 . Selezionare la scheda *Database*.
 . Selezionare per registrare un singolo database o più database.
+. Per autenticare i database (passaggio 1), eseguire le seguenti operazioni:
 +
-.. Registrazione di un singolo database: accedere al database da gestire e selezionare *Registra database*.
-.. Registrazione di più database: selezionare il pulsante *Registra più database*.
+** Selezionare *Usa le stesse credenziali per tutte le istanze* o *Gestisci le credenziali manualmente*.
+** Se i database sono autenticati, seleziona *Avanti*.
 +
-Per registrare più database sono disponibili due opzioni.  In entrambi i casi, i database devono condividere lo stesso stato di autenticazione (non autenticato o autenticato).
+Se i database sono autenticati, seleziona *Avanti*.
 
+
+
+. Per autenticare FSx per ONTAP (passaggio 2), procedere come segue e quindi selezionare *Avanti*:
 +
-*** Database non autenticati: seleziona più database non autenticati da registrare.  Questi database devono condividere le stesse credenziali di autenticazione e le stesse credenziali FSx per ONTAP .  Selezionare *Applica* e poi *Avanti*.
-*** Database autenticati: seleziona più database autenticati da registrare, quindi seleziona *Avanti*.
-
-
-
-
-. Nel passaggio 2 della pagina Registra database, seleziona la modalità di autenticazione del database, inserisci i seguenti dettagli e seleziona *Avanti*.  Se i database sono già autenticati, selezionare *Avanti*.
+** Selezionare *Usa le stesse credenziali per tutte le risorse* o *Gestisci le credenziali manualmente*.
+** Immettere il nome utente e la password del file system FSx for ONTAP.
 +
-** *Autenticazione utente Oracle*: immettere il nome utente e la password di Oracle e il nome utente e la password del file system FSx for ONTAP .
-** *Autenticazione utente Oracle ASM*: facoltativa.  Se il database Oracle utilizza Automatic Storage Management (ASM), immettere il nome utente e la password di Oracle ASM (grid).
+Se il file system FSx for ONTAP è autenticato, selezionare *Avanti*.
 
 
-. Nel passaggio 3, preparare il database assicurandosi che soddisfi i prerequisiti richiesti.  Se tutti i moduli richiesti sono installati e i prerequisiti sono soddisfatti, selezionare *Avanti* per registrare il database.  Se devi intervenire, segui questi passaggi.
+
+. Per la preparazione (passaggio 3), assicurarsi che il database soddisfi i prerequisiti richiesti. Se tutti i moduli richiesti sono installati e i prerequisiti sono soddisfatti, selezionare *Next* per registrare il database. In caso contrario, seguire questi passaggi.
 +
-.. Esaminare l'elenco dei prerequisiti per la seguente funzionalità.  Per registrare il database, è necessario che siano soddisfatti tutti i prerequisiti per una singola funzionalità.
+.. Rivedi i prerequisiti nella *Prerequisite check view*.
 +
-*** *Esaminare problemi e raccomandazioni ben strutturati*
+È necessario completare tutti i prerequisiti per una singola funzionalità come *Review well-architected issues and recommendations* per registrare il database.
 
-
-.. Completare i seguenti prerequisiti:
+.. Seleziona *Dettagli di configurazione* per ciascuna funzionalità per conoscere i prerequisiti della funzionalità e seguire le istruzioni sullo schermo per completare eventuali prerequisiti mancanti per una funzionalità.
 +
-*** *Autorizzazioni policy AWS IAM*: copia e aggiorna le autorizzazioni AWS nella console AWS.
-*** *Autorizzazioni del profilo dell'istanza EC2 IAM*: copia e aggiorna le autorizzazioni del profilo dell'istanza EC2 IAM sull'istanza Amazon EC2 nella console AWS.
-*** *Moduli di distribuzione*: se necessario, seleziona l'installazione dei moduli dipendenti, tra cui l'interfaccia della riga di comando AWS (AWS CLI), jq (processore JSON della riga di comando) e Python 3.12, se non è già installata la versione 3.6 o successiva.  Workload Factory installa automaticamente questi moduli come parte del processo di registrazione.
-*** *Autorizzazioni utente Oracle*: se necessario, aggiornare le autorizzazioni per l'utente Oracle.
+Per avere Workload Factory link:optimize-configurations.html["rivedere e correggere i problemi di architettura"] per i tuoi database, completa tutti i prerequisiti elencati nelle funzionalità *Esamina i problemi e le raccomandazioni ben progettati* e *Correggi i problemi ben progettati*.
 
 
-.. Una volta completati i prerequisiti e i controlli sono *Pronti*, è possibile selezionare di *Registrare* il database.
 
-
+. Una volta completati i prerequisiti, *Registra* il database.
 
 
 .Risultato
-Viene avviata la registrazione del database.  Selezionare la scheda *Monitoraggio lavori* per monitorare i progressi.
+La registrazione del database viene avviata. Selezionare la scheda *Job monitoring* per monitorare l'avanzamento.
 
 .Cosa succederà
 Dopo la registrazione delle risorse, è possibile eseguire le seguenti attività.

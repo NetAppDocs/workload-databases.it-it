@@ -16,7 +16,7 @@ indexpage:
     links:
     - title: Scopri i risparmi
       url: "/explore-savings.html"
-    - title: Registra un'istanza
+    - title: Registra le risorse
       url: "/register-instance.html"
     - title: Visualizza lo stato di buona progettazione delle tue istanze
       url: "/optimize-configurations.html"
