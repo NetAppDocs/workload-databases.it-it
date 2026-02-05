@@ -65,8 +65,8 @@ Workload Factory supporta la registrazione per Failover Cluster Instance (FCI) e
 . Selezionare per registrare una singola istanza o più istanze.
 . Per autenticare le istanze (passaggio 1), eseguire le seguenti operazioni e quindi selezionare *Avanti*:
 +
-** Selezionare *Usa le stesse credenziali per tutte le istanze* o *Gestisci le credenziali manualmente*.
-** Autenticare SQL Server e Windows fornendo nome utente e password.
+.. Selezionare *Usa le stesse credenziali per tutte le istanze* o *Gestisci le credenziali manualmente*.
+.. Autenticare SQL Server e Windows fornendo nome utente e password.
 +
 Se le istanze sono autenticate, seleziona *Avanti*.
 
@@ -74,8 +74,8 @@ Se le istanze sono autenticate, seleziona *Avanti*.
 
 . Per autenticare FSx per ONTAP (passaggio 2), procedere come segue:
 +
-** Selezionare *Usa le stesse credenziali per tutte le risorse* o *Gestisci le credenziali manualmente*.
-** Immettere il nome utente e la password del file system FSx for ONTAP, quindi selezionare *Avanti*.
+.. Selezionare *Usa le stesse credenziali per tutte le risorse* o *Gestisci le credenziali manualmente*.
+.. Immettere il nome utente e la password del file system FSx for ONTAP, quindi selezionare *Avanti*.
 +
 Se il file system FSx for ONTAP è autenticato, selezionare *Avanti*.
 
@@ -83,15 +83,16 @@ Se il file system FSx for ONTAP è autenticato, selezionare *Avanti*.
 
 . Per Prepare (passaggio 3), assicurarsi che l'istanza o le istanze soddisfino i requisiti minimi.
 +
-Per soddisfare i requisiti minimi, l'istanza deve avere i moduli AWS e NetApp PowerShell e i moduli PowerShell 7 installati, e devi completare i prerequisiti per almeno una delle funzionalità elencate sotto Controllo prerequisiti. .. Esamina i prerequisiti nella *visualizzazione Controllo prerequisiti*.
+Per soddisfare i requisiti minimi, l'istanza deve avere i moduli AWS e NetApp PowerShell e i moduli PowerShell 7 installati, e devi completare i prerequisiti per almeno una delle funzionalità elencate sotto Controllo prerequisiti.
 
 +
-+ È necessario completare tutti i prerequisiti per una singola funzionalità come *Review well-architected issues and recommendations* per registrare l'istanza.
-
+.. Rivedi i prerequisiti nella *Prerequisite check view*.
 +
+È necessario completare tutti i prerequisiti per una singola funzionalità come *Review well-architected issues and recommendations* per registrare l'istanza.
+
 .. Seleziona *Dettagli di configurazione* per ciascuna funzionalità per conoscere i prerequisiti della funzionalità e seguire le istruzioni sullo schermo per completare eventuali prerequisiti mancanti per una funzionalità.
 +
-Per avere Workload Factory link:optimize-configurations.html["rivedere e correggere i problemi di architettura"] per le tue istanze, completa tutti i prerequisiti elencati nelle funzionalità *Esamina i problemi e le raccomandazioni ben progettati* e *Correggi i problemi ben progettati*.
+Per avere Workload Factory link:optimize-configurations.html["rivedere e correggere i problemi di architettura"] per le tue istanze, completa tutti i prerequisiti elencati nelle funzionalità *Esamina i problemi e le raccomandazioni ben progettati* e *Risolvi i problemi ben progettati*.
 
 
 
