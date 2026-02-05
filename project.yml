@@ -40,7 +40,7 @@ sidebar:
     - title: Gestisci le risorse
       entries:
       - title: Gestione delle risorse
-        url: manage-instance.html
+        url: "/manage-instance.html"
       - title: Registra le risorse
         url: "/register-instance.html"
       - title: Creare un database
