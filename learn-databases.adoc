@@ -136,6 +136,9 @@ Workload Factory supporta i seguenti motori di database, versioni, sistemi opera
 | Microsoft SQL Server | SQL Server 2016, 2017, 2019, 2022 | Qualunque | FCI, autonomo 
 
 
+| Microsoft SQL Server | SQL Server 2016, 2017, 2019, 2022 | Qualunque | Gruppo di disponibilità Always On 
+
+
 | Oracolo | 19c | RHEL, SuSe Linux | Autonomo (singolo/multi-tenant) 
 
 
@@ -152,6 +155,9 @@ Workload Factory supporta i seguenti motori di database, versioni, sistemi opera
 
 
 | Oracolo | 21c | RHEL, SuSe Linux | Standalone con ASM (tenant singolo/multiplo) 
+
+
+| Oracolo | 19c, 21c | RHEL, SuSe Linux | Data Guard 
 
 
 | PostgreSQL | PostgreSQL 15 | Amazon Linux 2023 AMI | HA, istanza autonoma 

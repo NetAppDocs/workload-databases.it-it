@@ -19,9 +19,9 @@ Registra istanze per Microsoft SQL Server e database per Oracle in modo da poter
 
 == Informazioni sul compito
 
-La registrazione di un'istanza (SQL Server) o di un database (Oracle) prevede tre fasi: autenticazione dell'istanza o del database, autenticazione FSx for ONTAP e preparazione. La preparazione consiste nell'assicurarsi che tutti i moduli AWS, NetApp e PowerShell siano installati sull'istanza o sul database e che siano soddisfatti i requisiti minimi per le funzionalità di Workload Factory for Databases come link:analyze-error-logs.html["analisi del registro degli errori"] o link:optimize-configurations.html["well-architected review"].
+La registrazione di un'istanza (SQL Server) o di un database (database Oracle) prevede tre passaggi: autenticazione dell'istanza o del database, autenticazione FSx for ONTAP e preparazione. Per preparare, installare i moduli AWS, NetApp e PowerShell sull'istanza o sul database e soddisfare i requisiti minimi per le funzionalità di Workload Factory for Databases come link:analyze-error-logs.html["analisi del registro degli errori"] o link:optimize-configurations.html["valutazione well-architected"].
 
-Workload Factory supporta solo la registrazione e la gestione delle istanze di Microsoft SQL Server e del database Oracle.  A seconda delle credenziali dell'account AWS selezionate in Workload Factory, gli host PostgreSQL potrebbero apparire nell'inventario.  Attualmente, Workload Factory supporta istanze PostgreSQL non registrate eseguite solo su sistemi operativi Amazon Linux.
+Workload Factory supporta solo la registrazione e la gestione di istanze Microsoft SQL Server e database Oracle. A seconda delle credenziali dell'account AWS selezionate in Workload Factory, gli host PostgreSQL vengono visualizzati nell'Inventory. Attualmente, Workload Factory supporta istanze PostgreSQL non registrate in esecuzione solo su sistemi operativi Amazon Linux.
 
 
 
@@ -33,14 +33,14 @@ L'host per l'istanza o il database deve apparire nell'inventario. Per far sì ch
 
 === Registrazione di un'istanza in una rete privata
 
-Per registrare un'istanza (SQL Server) o un database (Oracle) in una rete privata senza connettività esterna, i seguenti endpoint devono essere disponibili nella VPC con associazione alle subnet in cui sono presenti i server SQL.  Assicurarsi che gli endpoint dell'interfaccia consentano la porta 443 nel gruppo di sicurezza associato.
+Per registrare un'istanza o un database in una rete privata senza connettività esterna, rendi disponibili gli endpoint richiesti nella VPC e associarli alle subnet pertinenti. Consenti la porta 443 nel Security Group per gli endpoint dell'interfaccia.
 
 * `S3 Gateway/endpoint`
 * `ssm`
 * `ssmmessages`
 * `fsx`
 +
-Se si utilizza un server proxy per tutte le connessioni in uscita da istanze EC2, è necessario consentire l'accesso ai seguenti domini in modo che le operazioni di gestione funzionino:
+Se si utilizza un proxy server per le connessioni EC2 outbound, consentire l'accesso a questi domini per le operazioni di gestione:
 
 * ``.microsoft.com``(SQL Server)
 * ``.powershellgallery.com``(SQL Server)
@@ -92,11 +92,11 @@ Per soddisfare i requisiti minimi, l'istanza deve avere i moduli AWS e NetApp Po
 
 .. Seleziona *Dettagli di configurazione* per ciascuna funzionalità per conoscere i prerequisiti della funzionalità e seguire le istruzioni sullo schermo per completare eventuali prerequisiti mancanti per una funzionalità.
 +
-Per avere Workload Factory link:optimize-configurations.html["rivedere e correggere i problemi di architettura"] per le tue istanze, completa tutti i prerequisiti elencati nelle funzionalità *Esamina i problemi e le raccomandazioni ben progettati* e *Risolvi i problemi ben progettati*.
+Per abilitare Workload Factory a link:optimize-configurations.html["rivedere e correggere i problemi di architettura"], completare tutti i prerequisiti in *Esaminare i problemi e le raccomandazioni ben progettati* e *Correggere i problemi ben progettati*.
 
 
 
-. Quando i prerequisiti sono completi, *Registra* l'istanza/le istanze.
+. Dopo aver completato tutti i prerequisiti, *Registra* l'istanza/le istanze.
 
 
 .Risultato
@@ -145,14 +145,14 @@ Per avere Workload Factory link:optimize-configurations.html["rivedere e corregg
 
 
 
-. Una volta completati i prerequisiti, *Registra* il database.
+. Dopo aver completato i prerequisiti, *Registra* il database.
 
 
 .Risultato
 La registrazione del database viene avviata. Selezionare la scheda *Job monitoring* per monitorare l'avanzamento.
 
 .Cosa succederà
-Dopo la registrazione delle risorse, è possibile eseguire le seguenti attività.
+Dopo la registrazione, puoi eseguire queste attività.
 
 * Visualizza i database dall'inventario
 * link:create-database.html["Creare un database"]
