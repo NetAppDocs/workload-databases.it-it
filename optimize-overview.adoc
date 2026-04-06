@@ -41,9 +41,21 @@ Workload Factory applica le best practice ad ambienti di storage, database e VMw
 
 
 
+== Opzioni per l'analisi dell'ambiente del database
+
+Workload Factory offre le seguenti opzioni per analizzare il tuo ambiente database:
+
+* *Valutazione una tantum*: Esegui una link:optimize-configurations.html["valutazione una tantum"] per scoprire lo stato di corretta architettura delle tue istanze di Microsoft SQL Server o database Oracle senza memorizzare credenziali o registrare risorse.
+* *Monitoraggio continuo*: Registra le risorse per abilitare il monitoraggio continuo. Workload Factory analizza regolarmente l'ambiente del database, fornisce raccomandazioni continue per ottimizzare le configurazioni e risolve automaticamente i problemi.
+
+
+
+
 == Requisiti di analisi
 
-Per un'analisi completa dell'ambiente del database, è necessario eseguire le seguenti operazioni:
+Per la valutazione una tantum, è sufficiente fornire le credenziali una sola volta per le istanze di Microsoft SQL Server o per il database Oracle che si desidera analizzare.
+
+Per il monitoraggio continuo, è necessario registrare le risorse, associare un collegamento e concedere le autorizzazioni nel proprio account AWS.
 
 * link:register-instance.html["Registra le tue risorse"] e assicuratevi che siano online.
 * Associa un collegamento. La connettività del collegamento consente a Workload Factory di analizzare tutte le configurazioni di distribuzione del database, come la struttura di archiviazione e la resilienza.
@@ -255,6 +267,30 @@ Configurare le impostazioni del sistema operativo per prestazioni ottimali del d
 * *Patch del sistema operativo*
 +
 Applica regolarmente le patch del sistema operativo per garantire sicurezza, stabilità e miglioramenti delle performance per il tuo ambiente database Oracle.
+
+
+
+
+
+==== Applicazione
+
+* *Aggiornamenti critici di Oracle*
++
+Applica gli aggiornamenti critici di Oracle più recenti per risolvere le vulnerabilità di sicurezza e mantenere l'integrità del tuo ambiente di database. Esamina e applica regolarmente le patch per proteggerti da potenziali minacce e garantire la conformità alle migliori pratiche di sicurezza.
+
+
+
+
+
+==== Resilienza
+
+* *Replicazione interregionale (CRR)*
++
+Abilita la replica tra regioni (CRR) per migliorare la disponibilità dei dati e le funzionalità di ripristino di emergenza per i tuoi database Oracle. La CRR contribuisce a proteggere dalle interruzioni regionali e garantisce la continuità operativa replicando i dati in posizioni geograficamente distribuite.
+
+* *Snapshot coerenti con l'applicazione*
++
+Utilizza snapshot coerenti con l'applicazione con NetApp SnapCenter per creare snapshot accurati e affidabili dei tuoi dati di volume in un momento specifico. Questo garantisce il corretto funzionamento delle tue applicazioni e la sicurezza dei tuoi dati. SnapCenter semplifica i backup e ti aiuta a ripristinare i dati in modo rapido e corretto, riducendo i tempi di inattività e proteggendo i tuoi carichi di lavoro più importanti.
 
 
 

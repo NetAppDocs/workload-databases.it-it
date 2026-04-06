@@ -348,6 +348,9 @@ Se Workload Factory rileva copie shadow di FSx for Windows, imposta il valore pr
 
 
 . Per risultati più precisi, aggiorna le informazioni di calcolo, i dettagli sullo storage e sulle performance.
++
+Workload Factory consolida più database Oracle on-premises in un'unica raccomandazione di configurazione FSx for ONTAP per ottimizzare il risparmio sui costi, a meno che i database on-premises selezionati non superino i limiti di throughput, capacità o IOPS per un singolo file system FSx for ONTAP.
+
 
 
 --
