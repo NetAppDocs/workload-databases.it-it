@@ -163,7 +163,7 @@ Per passare a FSX per ONTAP, seguire le istruzioni riportate in <<Implementa Mic
 
 === Esplora i risparmi per gli host rilevati
 
-Workload Factory immette le caratteristiche rilevate dell'host Elastic Block Store e FSx per Windows File Server, in modo da poter esplorare automaticamente i risparmi.
+Workload Factory inserisce le caratteristiche host rilevate in modo da poter esplorare automaticamente le possibilità di risparmio.
 
 .Prima di iniziare
 Prima di iniziare, completare i seguenti prerequisiti:
@@ -220,6 +220,10 @@ Prima di iniziare, completare i seguenti prerequisiti:
 
 
 
+
+
+
+==== Esplora i risparmi per gli host Microsoft SQL Server rilevati
 
 Seguire i passaggi nella scheda relativa al tipo di storage in uso.
 
@@ -318,6 +322,59 @@ Workload Factory consolida più host on-premises di SQL Server in un'unica confi
 
 
 
+.Rimozione dell'host on-premise
+Dopo aver valutato i risparmi per un host locale di Microsoft SQL Server, hai la possibilità di rimuovere il record dell'host locale da Workload Factory.  Selezionare il menu azioni dell'host locale di Microsoft SQL Server, quindi selezionare *Elimina*.
+
+--
+====
+Dopo aver fornito i dettagli per la configurazione dell'host del database, esaminare i calcoli e i consigli forniti nella pagina.
+
+Inoltre, scorrere verso il basso fino in fondo alla pagina per visualizzare il report selezionando una delle seguenti opzioni:
+
+* *Esporta PDF*
+* *Invia tramite e-mail*
+* *Visualizzare i calcoli*
+
+
+Per passare a FSX per ONTAP, seguire le istruzioni riportate in <<Implementa Microsoft SQL Server su AWS EC2 usando FSX per ONTAP,Distribuire Microsoft SQL Server su AQS EC2 utilizzando i file system FSX per ONTAP>>.
+
+
+
+==== Scopri le opportunità di risparmio per gli host Oracle rilevati
+
+Seguire i passaggi nella scheda relativa al tipo di storage in uso.
+
+[role="tabbed-block"]
+====
+.Amazon Elastic Block Store (EBS)
+--
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
+. Dal menu Databases, seleziona *Explore savings*.
+. In Esplora i risparmi, seleziona la scheda *Oracle on Elastic Block Store (EBS)*.
++
+Se Workload Factory rileva host EBS, ti reindirizza alla scheda Esplora risparmi. Se non rileva host EBS, ti reindirizza alla calcolatrice per <<Esplora i risparmi tramite la personalizzazione,esplora i risparmi tramite la personalizzazione>>.
+
+. Da *Esplora risparmi*, seleziona uno o più host di database in esecuzione su EBS, quindi seleziona *Esplora risparmi*.
+. Se necessario, autenticare l'host del database con le credenziali Oracle oppure aggiungendo le autorizzazioni Oracle mancanti.
++
+Se la pagina Esplora risparmi non carica i dati dopo l'autenticazione riuscita, seleziona la scheda *Inventario* per ricaricare i dati, quindi seleziona nuovamente la scheda *Esplora risparmi*.
+
+. Nel calcolatore dei risparmi, puoi fornire i seguenti dettagli su cloni e snapshot nel tuo EBS storage per una stima più accurata dei risparmi sui costi.
++
+.. *Frequenza snapshot*: seleziona una frequenza snapshot dal menu.
+.. *Frequenza di aggiornamento clonazione*: seleziona dal menu la frequenza con cui clonare l'aggiornamento.
+.. *Numero di copie clonate*: Immettere il numero di copie clonate nella configurazione EBS.
+.. *Tasso di modifica mensile*: Immettere la percentuale di variazione dei dati clone e snapshot in media al mese.
+.. *Aggiungi host*: facoltativamente, seleziona fino a cinque host EBS rilevati da includere nel calcolo del risparmio.
++
+Workload Factory consolida più host Oracle in un'unica raccomandazione di configurazione FSx for ONTAP per ottimizzare il risparmio sui costi, a meno che gli host EBS selezionati non superino i limiti di throughput, capacità o IOPS per un singolo file system FSx for ONTAP.
+
+
+
+
+
 --
 .Oracle Server on-premise
 --
@@ -353,6 +410,9 @@ Workload Factory consolida più database Oracle on-premises in un'unica raccoman
 
 
 
+.Rimozione dell'host on-premise
+Dopo aver analizzato i risparmi ottenibili con un host Oracle on-premises, hai la possibilità di rimuovere il record dell'host on-premises da Workload Factory. Seleziona il menu delle azioni dell'host Oracle on-premises e quindi seleziona *Elimina*.
+
 --
 ====
 Dopo aver fornito i dettagli per la configurazione dell'host del database, esaminare i calcoli e i consigli forniti nella pagina.
@@ -365,9 +425,6 @@ Inoltre, scorrere verso il basso fino in fondo alla pagina per visualizzare il r
 
 
 Per passare a FSX per ONTAP, seguire le istruzioni riportate in <<Implementa Microsoft SQL Server su AWS EC2 usando FSX per ONTAP,Distribuire Microsoft SQL Server su AQS EC2 utilizzando i file system FSX per ONTAP>>.
-
-.Rimozione dell'host on-premise
-Dopo aver valutato i risparmi per un host locale di Microsoft SQL Server, hai la possibilità di rimuovere il record dell'host locale da Workload Factory.  Selezionare il menu azioni dell'host locale di Microsoft SQL Server, quindi selezionare *Elimina*.
 
 
 

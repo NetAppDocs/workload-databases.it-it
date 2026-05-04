@@ -170,7 +170,7 @@ Configura MAXDOP per ottimizzare le performance delle query. I valori di 4, 8 o 
 
 
 
-==== Affidabilità
+==== Resilienza
 
 * *Pianifica snapshot locali*
 +
@@ -291,6 +291,14 @@ Abilita la replica tra regioni (CRR) per migliorare la disponibilità dei dati e
 * *Snapshot coerenti con l'applicazione*
 +
 Utilizza snapshot coerenti con l'applicazione con NetApp SnapCenter per creare snapshot accurati e affidabili dei tuoi dati di volume in un momento specifico. Questo garantisce il corretto funzionamento delle tue applicazioni e la sicurezza dei tuoi dati. SnapCenter semplifica i backup e ti aiuta a ripristinare i dati in modo rapido e corretto, riducendo i tempi di inattività e proteggendo i tuoi carichi di lavoro più importanti.
+
+* *Configurazione backup*
++
+Configura FSx for ONTAP o AWS Backup per soddisfare i requisiti di conservazione dei dati e di conformità. Evita backup ridondanti.
+
+* *Pulizia del clone*
++
+Rivedere e rimuovere regolarmente i cloni obsoleti per ridurre i costi di archiviazione. I cloni vecchi e inutilizzati causano costi elevati.
 
 
 

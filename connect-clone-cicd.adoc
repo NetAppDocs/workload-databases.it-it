@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: connect-clone-cicd.html 
-keywords: connect ci/cd pipeline, clone 
-summary: 'Collega un clone sandbox a una pipeline ci/CD con codice API REST per migliorare la distribuzione del software tramite l"automazione.' 
+keywords: connect ci and cd pipeline, clone 
+summary: 'Collega un clone sandbox a una pipeline CI e CD tramite codice API REST per migliorare la distribuzione del software attraverso l"automazione.' 
 ---
 = Collegare un clone sandbox agli strumenti ci/CD
 :allow-uri-read: 
