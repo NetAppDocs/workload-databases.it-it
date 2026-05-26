@@ -8,7 +8,7 @@
 
 È ora possibile distribuire una configurazione ad alta disponibilità (ha) per PostgreSQL Server.
 
-link:https://review.docs.netapp.com/us-en/workload-databases_explore-savings-updates/create-postgresql-server.html["Creare un server PostgreSQL"]
+link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.html["Creare un server PostgreSQL"]
 
 
 
