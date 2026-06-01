@@ -212,10 +212,10 @@ Per gli account GovCloud, inserisci il valore ARN del parametro AWS SSM per le c
 +
 ... *Crea nuovo file FSX per ONTAP*: Inserisci nome utente e password.
 +
-+ Per gli account GovCloud, immettere il valore ARN del parametro AWS SSM per le credenziali FSx for ONTAP nel seguente formato: `{fsx:{"username":"fsxadmin","password":"pass"}}`. Il tipo di parametro AWS SSM deve essere "Secure String" con il nome nel formato `/netapp/wlmdb/<anyname>`. Ulteriori informazioni sul recupero dei parametri SSM da link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["Documentazione AWS GovCloud"^].
+Per gli account GovCloud, immettere il valore ARN del parametro AWS SSM per le credenziali FSx for ONTAP nel seguente formato: `{fsx:{"username":"fsxadmin","password":"pass"}}`. Il tipo di parametro AWS SSM deve essere "Secure String" con il nome nel formato `/netapp/wlmdb/<anyname>`. Per ulteriori informazioni sul recupero dei parametri SSM da link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["Documentazione AWS GovCloud"^].
 
 +
-+ L'installazione di un nuovo file system FSx per ONTAP potrebbe richiedere 30 minuti o più.
+Un nuovo file system FSX per ONTAP può aggiungere 30 minuti o più di tempo di installazione.
 
 ... *Selezionare un file FSX esistente per ONTAP*: Selezionare FSX per nome ONTAP dal menu a discesa e immettere un nome utente e una password per il file system.
 +
