@@ -4,6 +4,7 @@
 
 
 
+[[well-architected-analysis-includes-high-availability-cluster-validation]]
 === Un'analisi ben progettata include la convalida del cluster ad alta disponibilità
 
 L'analisi ben progettata ora include la convalida per cluster ad alta disponibilità.  Questa convalida controlla tutte le configurazioni relative al cluster dal lato server, tra cui la disponibilità e la configurazione del disco su entrambi i nodi, la configurazione del cluster Windows e la predisposizione al failover.  Ciò garantisce che il cluster Windows sia configurato correttamente e possa eseguire correttamente il failover quando necessario.
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[multi-level-menu-available-for-instances]]
 === Menu multilivello disponibile per le istanze
 
 La console Workload Factory ora include un menu multilivello per le istanze.  Questa modifica fornisce una struttura di navigazione più organizzata e intuitiva per la gestione delle istanze.  Le opzioni di menu per la gestione delle istanze includono la visualizzazione della dashboard delle istanze, la visualizzazione dei database, la creazione di un database e la creazione di un clone sandbox.
@@ -20,6 +22,7 @@ image:manage-instance-table-menu.png["Uno screenshot del menu della tabella dell
 
 
 
+[[new-authentication-option-to-explore-savings]]
 === Nuova opzione di autenticazione per esplorare i risparmi
 
 Quando il `NT Authority\SYSTEM` l'utente non dispone di autorizzazioni sufficienti su Microsoft SQL Server, è possibile autenticarsi con le credenziali di SQL Server o aggiungere le autorizzazioni mancanti di SQL Server a `NT Authority\SYSTEM` .

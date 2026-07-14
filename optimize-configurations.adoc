@@ -19,6 +19,7 @@ link:optimize-overview.html["Scopri di più sull'analisi della configurazione e 
 
 
 
+[[about-this-task]]
 == A proposito di questa attività
 
 NetApp Workload Factory analizza quotidianamente le configurazioni del database. L'analisi giornaliera fornisce stato ben architettato, approfondimenti e raccomandazioni. È possibile correggere automaticamente i problemi di configurazione per soddisfare le best practice.
@@ -55,6 +56,7 @@ L'analisi well-architected per Oracle ti avvisa quando una configurazione dipend
 
 
 
+[[perform-a-one-time-assessment-of-your-configurations]]
 == Effettua una valutazione una tantum delle tue configurazioni
 
 Esegui una valutazione una tantum per scoprire lo stato di corretta architettura delle tue istanze di Microsoft SQL Server o dei tuoi database Oracle senza memorizzare credenziali o registrare risorse.
@@ -102,6 +104,7 @@ Esegui una valutazione una tantum per scoprire lo stato di corretta architettura
 ====
 
 
+[[before-you-begin-fixing-dismissing-and-re-activating-configurations]]
 == Prima di iniziare a correggere, ignorare e riattivare le configurazioni
 
 I seguenti requisiti sono necessari per il monitoraggio continuo dell'ambiente del database e la correzione automatica dei problemi di configurazione. Tali requisiti non sono richiesti per la valutazione una tantum.
@@ -113,6 +116,7 @@ I seguenti requisiti sono necessari per il monitoraggio continuo dell'ambiente d
 
 
 
+[[fix-a-configuration-issue]]
 == Risolvi un problema di configurazione
 
 Risolve i problemi di configurazione per gli ambienti SQL Server o Oracle in esecuzione su FSx per l'archiviazione ONTAP .
@@ -161,6 +165,7 @@ Workload Factory inizia a risolvere il/i problema/i.  Selezionare la scheda *Mon
 
 
 
+[[dismiss-the-analysis-of-database-configurations]]
 == Ignora l'analisi delle configurazioni del database
 
 Ignora l'analisi di configurazioni di database specifiche che non si applicano al tuo ambiente di database per evitare avvisi non necessari e risultati di ottimizzazione imprecisi. Puoi riattivare un'analisi di configurazione ignorata in qualsiasi momento.
@@ -182,6 +187,7 @@ Workload Factory interrompe l'analisi della configurazione.
 
 
 
+[[reactivate-a-dismissed-configuration-analysis]]
 == Riattivare un'analisi di configurazione ignorata
 
 Riattiva un'analisi di configurazione ignorata in qualsiasi momento. Puoi selezionare una o più configurazioni da riattivare.

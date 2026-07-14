@@ -4,6 +4,7 @@
 
 
 
+[[postgresql-high-availability-configuration]]
 === PostgreSQL configurazione ad alta disponibilità
 
 È ora possibile distribuire una configurazione ad alta disponibilità (ha) per PostgreSQL Server.
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.h
 
 
 
+[[terraform-support-for-postgresql-server-creation]]
 === Supporto terraform per la creazione di server PostgreSQL
 
 È ora possibile utilizzare Terraform dal Codebox per distribuire PostgreSQL.
@@ -22,6 +24,7 @@ link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.h
 
 
 
+[[resiliency-assessment-for-local-snapshot-schedule]]
 === Valutazione della resilienza per la pianificazione locale delle snapshot
 
 Per i carichi di lavoro del database è disponibile una nuova valutazione della resilienza. Valutiamo se i volumi delle istanze di Microsoft SQL Server dispongono di policy di Snapshot pianificate valide. Le snapshot sono copie dei tuoi dati in un determinato momento e contribuiscono a mantenere resilienti gli ambienti di database in caso di perdita di dati.
@@ -30,6 +33,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[maxdop-remediation-for-database-workloads]]
 === Ripristino MAXDOP per i carichi di lavoro del database
 
 BlueXP  workload factory per database supporta ora il ripristino della configurazione del server MAXDOP (Maximum grado di parallelismo). Quando la configurazione di MAXDOP non è ottimale, è possibile consentire a BlueXP  workload Factory di ottimizzare la configurazione.
@@ -38,6 +42,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[email-savings-analysis-report]]
 === Report di analisi sui risparmi delle email
 
 Quando esplori i risparmi offerti dal tuo Amazon Elastic Block Store e da FSX per Windows file Server rispetto a FSX per ONTAP, adesso puoi inviare il report di suggerimento via email a te, ai membri del team e ai clienti.

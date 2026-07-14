@@ -15,6 +15,7 @@ NetApp Workload Factory for Databases è un servizio di distribuzione e manutenz
 
 
 
+[[what-is-netapp-workload-factory-for-databases]]
 == Che cos'è NetApp Workload Factory per database?
 
 NetApp Workload Factory for Databases scopre, valuta, pianifica, fornisce e sposta i dati di Microsoft SQL Server, PostgreSQL e Oracle su implementazioni Amazon FSx for NetApp ONTAP (FSx for ONTAP) ottimizzate per soddisfare le tue aspettative di prestazioni e costi, rispettando le best practice del settore. NetApp Workload Factory for Databases ottimizza e gestisce continuamente i database su FSx for ONTAP.
@@ -23,12 +24,14 @@ Per ulteriori informazioni su Workload Factory, fare riferimento alink:https://d
 
 
 
+[[workload-factory-benefits-for-self-managed-databases]]
 == Vantaggi di Workload Factory per i database autogestiti
 
 Workload Factory offre le migliori pratiche e l'automazione per i database autogestiti.
 
 
 
+[[best-practices]]
 === Best practice
 
 * Conoscenza integrata di AWS Cloud, Microsoft Windows e SQL Server e NetApp ONTAP per le implementazioni SQL Server su EC2 istanze.
@@ -39,6 +42,7 @@ Workload Factory offre le migliori pratiche e l'automazione per i database autog
 
 
 
+[[automation-with-workload-factory-codebox]]
 === Automazione con Workload Factory Codebox
 
 Workload Factory introduce l'automazione integrata con _Codebox_.  Codebox offre i seguenti vantaggi di automazione:
@@ -50,6 +54,7 @@ Workload Factory introduce l'automazione integrata con _Codebox_.  Codebox offre
 
 
 
+[[workload-factory-for-databases-features]]
 === Funzionalità di Workload Factory per database
 
 Workload Factory per database offre le seguenti funzionalità:
@@ -68,6 +73,7 @@ Workload Factory per database offre le seguenti funzionalità:
 
 
 
+[[benefits-of-amazon-fsx-for-ontap-for-self-managed-databases]]
 == Vantaggi di Amazon FSX per ONTAP per database a gestione autonoma
 
 * *Durata, disponibilità e affidabilità*: FSX per ONTAP offre diverse funzionalità che migliorano la durata e la disponibilità dei database gestiti autonomamente ospitati su FSX per ONTAP, come l'alta disponibilità che supporta le distribuzioni di zone di disponibilità singole e multiple, le snapshot integrate con le applicazioni, il disaster recovery migliorato tramite la replica e il backup efficiente.
@@ -79,6 +85,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["Scop
 
 
 
+[[tools-to-use-netapp-workload-factory]]
 == Strumenti per utilizzare NetApp Workload Factory
 
 È possibile utilizzare NetApp Workload Factory con i seguenti strumenti:
@@ -94,6 +101,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["Scop
 
 
 
+[[supported-configurations]]
 == Configurazioni supportate
 
 È possibile utilizzare Workload Factory con i seguenti motori di database, versioni, sistemi operativi e modelli di implementazione, seguendo le best practice di AWS, NetApp ONTAP, Microsoft SQL Server, Oracle e PostgreSQL.
@@ -167,6 +175,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["Scop
 |===
 
 
+[[integrated-aws-services]]
 == Servizi AWS integrati
 
 I database includono i seguenti servizi AWS integrati:
@@ -180,6 +189,7 @@ I database includono i seguenti servizi AWS integrati:
 
 
 
+[[regions]]
 == Regioni
 
 I database sono supportati in tutte le aree commerciali in cui è supportato FSX per ONTAP. https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Visualizza le regioni Amazon supportate."^]
@@ -187,13 +197,13 @@ I database sono supportati in tutte le aree commerciali in cui è supportato FSX
 Le seguenti regioni AWS non sono supportate:
 
 * Regioni della Cina
-* Regioni di GovCloud (USA)
 * Cloud segreto
 * Cloud top secret
 
 
 
 
+[[getting-help]]
 == Assistenza
 
 Amazon FSX per NetApp ONTAP è una soluzione AWS first-party. Per domande o problemi di supporto tecnico associati al file system, all'infrastruttura o alla soluzione FSX per ONTAP che utilizza questo servizio, utilizza il Support Center nella console di gestione AWS per aprire un caso di supporto con AWS. Selezionare il servizio "FSX per ONTAP" e la categoria appropriata. Fornire le informazioni rimanenti necessarie per creare il caso di supporto AWS.

@@ -4,6 +4,7 @@
 
 
 
+[[dashboard-enhancements]]
 === Miglioramenti alla dashboard
 
 * Le viste per account e aree multiple sono disponibili mentre si naviga tra le schede nella console di fabbrica del carico di lavoro di BlueXP . Le nuove viste migliorano la gestione, il monitoraggio e l'ottimizzazione delle risorse.
@@ -12,18 +13,21 @@
 
 
 
+[[ad-hoc-scan-available-for-database-configurations]]
 === Scansione ad hoc disponibile per le configurazioni di database
 
 La farm di workload BlueXP  per i database analizza automaticamente le istanze gestite di Microsoft SQL Server con FSX per lo storage ONTAP per rilevare potenziali problemi di configurazione. Ora, oltre alla scansione giornaliera, è possibile eseguire la scansione in qualsiasi momento.
 
 
 
+[[removal-of-on-premises-assessment-records]]
 === Rimozione dei record di valutazione in loco
 
 Dopo aver esaminato i risparmi per un host on-premise di Microsoft SQL Server, è possibile rimuovere il record dell'host on-premise dalla fabbrica dei workload BlueXP .
 
 
 
+[[optimization-enhancements]]
 === Miglioramenti all'ottimizzazione
 
 
@@ -40,6 +44,7 @@ Alcune configurazioni potrebbero non essere applicabili agli ambienti di databas
 
 
 
+[[updated-permissions-terminology]]
 === Terminologia aggiornata per le autorizzazioni
 
 L'interfaccia utente e la documentazione della Workload Factory ora utilizzano "sola lettura" per fare riferimento alle autorizzazioni di lettura e "lettura/scrittura" per fare riferimento alle autorizzazioni di automazione.

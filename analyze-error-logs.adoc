@@ -15,6 +15,7 @@ Utilizza l'analizzatore intelligente del registro degli errori per interpretare 
 
 
 
+[[about-this-task]]
 == A proposito di questa attività
 
 L'analisi e la correzione del registro degli errori contribuiscono a preservare l'integrità e le prestazioni delle istanze di SQL Server e dei database Oracle.  Per interpretare in modo efficace i registri degli errori sono necessarie analisi attente e competenza. Il monitoraggio manuale, il rilevamento degli errori e l'analisi delle cause principali richiedono molto tempo e sono soggetti a errori. Queste sfide possono ritardare la risoluzione dei problemi, aumentare i tempi di inattività e le inefficienze operative.  L'analizzatore intelligente del registro degli errori affronta queste sfide con i seguenti vantaggi chiave:
@@ -33,6 +34,7 @@ link:https://aws.amazon.com/bedrock/pricing/["Prezzi di Amazon Bedrock"^]
 
 
 
+[[data-privacy-and-security]]
 === Privacy e sicurezza dei dati
 
 La funzionalità garantisce la riservatezza e la sicurezza dei dati attraverso le seguenti misure:
@@ -45,6 +47,7 @@ I dati dei clienti non vengono utilizzati per addestrare o migliorare i modelli.
 
 
 
+[[before-you-begin]]
 == Prima di iniziare
 
 Per utilizzare l'analizzatore del registro degli errori, è necessario soddisfare i seguenti prerequisiti:
@@ -86,6 +89,7 @@ La seguente autorizzazione concede l'accesso in lettura agli avvisi diagnostici 
 
 
 
+[[analyze-error-logs]]
 == Analizza i registri degli errori
 
 Utilizzare la console Workload Factory per analizzare i log degli errori di SQL Server.

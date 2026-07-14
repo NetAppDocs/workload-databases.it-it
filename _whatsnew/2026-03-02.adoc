@@ -4,6 +4,7 @@
 
 
 
+[[one-time-assessment-for-sql-server]]
 === Valutazione una tantum per SQL Server
 
 Workload Factory offre ora una valutazione una tantum per analizzare le configurazioni delle distribuzioni del database SQL Server ogni volta che ne hai bisogno: nuove distribuzioni, post-migrazione, risoluzione dei problemi e altro ancora. Riceverai consigli per ottimizzare le configurazioni delle distribuzioni e rispettare le best practice. Questa è la tua opportunità per utilizzare la funzionalità ben progettata senza dover completare l'intero processo di configurazione. Puoi valutare i tuoi database senza memorizzare le credenziali in Workload Factory, registrare le risorse del database o configurare connessioni esterne.
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[registration-support-for-always-on-availability-groups-on-microsoft-sql-server-and-data-guard-on-oracle]]
 === Supporto di registrazione per gruppi di disponibilità Always On su Microsoft SQL Server e Data Guard su database Oracle
 
 Ora è possibile individuare e registrare istanze di Microsoft SQL Server con il modello di distribuzione Always On availability group (AOAG) e database Oracle con il modello di distribuzione Data Guard nel carico di lavoro Databases di NetApp Workload Factory. Questo miglioramento consente una migliore gestione delle risorse di SQL Server e Oracle all'interno della console di Workload Factory.
@@ -24,6 +26,7 @@ link:https://docs.netapp.com/us-en/workload-databases/register-instance.html#reg
 
 
 
+[[well-architected-analysis-for-oracle]]
 === Analisi ben progettata per Oracle
 
 L'analisi ben strutturata include *patch del sistema operativo* per Oracle per verificare se hai le patch più recenti sul sistema operativo e dirti come installarle.
@@ -34,6 +37,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[oracle-on-premises-database-environments-cost-analysis-and-migration-planning]]
 === Analisi dei costi e pianificazione della migrazione degli ambienti di database on-premises Oracle
 
 Workload Factory for Databases ora analizza e ti aiuta a pianificare la migrazione del database Oracle on-premises ad Amazon FSx for NetApp ONTAP. Puoi utilizzare il calcolatore di risparmio per stimare il costo di esecuzione del tuo ambiente di database Oracle on-premises nel cloud e consultare le raccomandazioni per la migrazione del tuo ambiente di database on-premises al cloud.
@@ -42,6 +46,7 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Espl
 
 
 
+[[new-ask-me-bookmark-available-in-workload-factory]]
 === Nuovo segnalibro Ask Me disponibile in Workload Factory
 
 Abbiamo aggiunto un nuovo segnalibro Ask Me in ogni schermata della console di Workload Factory. Questo miglioramento rende più facile e veloce accedere ad Ask Me ogni volta che hai bisogno di aiuto. Ask Me è il nostro assistente AI, che ti consente di porre domande sui tuoi ambienti di carico di lavoro, ottenere informazioni personalizzate direttamente dal tuo ambiente e fare riferimento a conversazioni precedenti.

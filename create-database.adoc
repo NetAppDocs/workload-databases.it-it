@@ -37,6 +37,7 @@ In alternativa, è possibile utilizzare Codebox per copiare un modello in modo d
 
 
 
+[[create-a-database]]
 == Creare un database
 
 È possibile utilizzare le modalità di distribuzione _Creazione rapida_ o _Creazione avanzata_ per completare questa attività in Workload Factory.

@@ -4,12 +4,14 @@
 
 
 
+[[dashboard-improvements]]
 === Miglioramenti della dashboard
 
 La nuova dashboard è semplificata e meglio organizzata per fornire una panoramica più chiara delle risorse del database e delle funzionalità chiave di Workload Factory in un'unica schermata; una scheda evidenzia le risorse del database, una scheda fornisce informazioni sul punteggio e sull'analisi ben strutturati, una scheda visualizza l'analisi degli errori, due schede visualizzano i costi mensili e i potenziali risparmi e una scheda visualizza informazioni sulle sandbox.
 
 
 
+[[well-architected-analysis-for-oracle]]
 === Analisi ben progettata per Oracle
 
 L'analisi ben progettata include le seguenti valutazioni e correzioni per le configurazioni Oracle:
@@ -23,6 +25,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[permissions-changes-for-workload-factory-for-databases]]
 === Modifiche alle autorizzazioni per Workload Factory per database
 
 Workload Factory for Databases ha aggiornato i criteri di autorizzazione per fornire maggiore chiarezza su ciò che richiede per azioni specifiche e granularità per selezionare solo le autorizzazioni necessarie. Quando aggiungi le credenziali, avrai tre opzioni di autorizzazioni tra cui scegliere, anziché il precedente modello di autorizzazioni che era _sola lettura_ e _lettura/scrittura_. Il nuovo modello di autorizzazioni suddivide le policy di autorizzazione come segue:
@@ -38,12 +41,14 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.ht
 
 
 
+[[well-architected-dashboard-screen-added]]
 === Aggiunta schermata dashboard ben progettata
 
 Una nuova schermata del dashboard _Well-architected_ è stata aggiunta al menu Database. Da questa schermata è possibile ottenere una visualizzazione aggregata dello stato di configurazione dell'intero database.
 
 
 
+[[edit-protection-for-database-deployments-in-netapp-backup-and-recovery]]
 === Protezione delle modifiche per le distribuzioni di database in NetApp Backup and Recovery
 
 Dalla console Workload Factory, puoi scegliere di modificare la protezione per una risorsa protetta e poi verrai reindirizzato a Backup e ripristino nella NetApp Console , dove potrai modificare la policy o la pianificazione della protezione.
@@ -52,6 +57,7 @@ link:https://docs.netapp.com/us-en/workload-databases/protect-sql-server.html["P
 
 
 
+[[error-filtering-by-tags-available-for-the-error-analysis-feature]]
 === Filtraggio degli errori tramite tag disponibile per la funzionalità di analisi degli errori
 
 È possibile filtrare e visualizzare i log degli errori di Microsoft SQL Server in base a tag orientati all'infrastruttura quando si utilizza la funzionalità di analisi degli errori in Workload Factory. Questo miglioramento ti aiuta a individuare, risolvere e risolvere rapidamente i problemi.

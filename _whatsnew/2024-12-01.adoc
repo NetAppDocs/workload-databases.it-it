@@ -4,6 +4,7 @@
 
 
 
+[[continuous-optimization-adds-compute-remediation-and-assessment]]
 === L'ottimizzazione continua aggiunge correzioni e valutazioni di calcolo
 
 I database ora offrono informazioni e consigli per aiutarti a ottimizzare le risorse di calcolo per le istanze di Microsoft SQL Server. Misuriamo l'utilizzo della CPU e sfruttiamo il servizio AWS Compute Optimizer per consigliare tipi di istanze ottimali e dimensionate in modo adeguato e notificare le patch del sistema operativo disponibili. L'ottimizzazione delle risorse di calcolo può aiutarti a prendere decisioni informate sui tipi di istanze, risparmiando sui costi e utilizzando in modo efficiente le risorse.
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[postgresql-support]]
 === Supporto PostgreSQL
 
 È ora possibile distribuire e gestire le distribuzioni standalone di PostgreSQL Server nei database.

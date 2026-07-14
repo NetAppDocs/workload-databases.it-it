@@ -17,6 +17,7 @@ Registra istanze per Microsoft SQL Server e database per Oracle in modo da poter
 
 
 
+[[about-the-task]]
 == Informazioni sul compito
 
 La registrazione di un'istanza (SQL Server) o di un database (database Oracle) prevede tre passaggi: autenticazione dell'istanza o del database, autenticazione FSx for ONTAP e preparazione. Per preparare, installare i moduli AWS, NetApp e PowerShell sull'istanza o sul database e soddisfare i requisiti minimi per le funzionalità di Workload Factory for Databases come link:analyze-error-logs.html["analisi del registro degli errori"] o link:optimize-configurations.html["valutazione well-architected"].
@@ -27,12 +28,14 @@ Gli utenti AWS GovCloud (US) devono utilizzare AWS Secrets Manager per autentica
 
 
 
+[[before-you-begin]]
 == Prima di iniziare
 
 L'host per l'istanza o il database deve apparire nell'inventario. Per far sì che gli host appaiano nell'inventario, è necessario link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["concedere permessi di visualizzazione, pianificazione e analisi"^] nel tuo account AWS.
 
 
 
+[[registering-an-instance-in-a-private-network]]
 === Registrazione di un'istanza in una rete privata
 
 Per registrare un'istanza o un database in una rete privata senza connettività esterna, rendi disponibili gli endpoint richiesti nella VPC e associarli alle subnet pertinenti. Consenti la porta 443 nel Security Group per gli endpoint dell'interfaccia.
@@ -52,6 +55,7 @@ Se si utilizza un proxy server per le connessioni EC2 outbound, consentire l'acc
 
 
 
+[[register-a-microsoft-sql-server-instance]]
 == Registra un'istanza di Microsoft SQL Server
 
 La registrazione di un'istanza prevede tre fasi: autenticazione dell'istanza, autenticazione FSx for ONTAP e preparazione per il completamento dei prerequisiti mancanti. È possibile registrare una o più istanze.
@@ -109,6 +113,7 @@ La registrazione dell'istanza viene avviata. Selezionare la scheda *Monitoraggio
 
 
 
+[[register-an-oracle-database]]
 == Registrare un database Oracle
 
 La registrazione di un'istanza prevede tre passaggi: autenticazione del database, autenticazione FSx for ONTAP e preparazione per completare i prerequisiti mancanti. È possibile registrare uno o più database.

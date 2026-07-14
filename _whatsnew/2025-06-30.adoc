@@ -4,6 +4,7 @@
 
 
 
+[[bluexp-workload-factory-notification-service-support]]
 === Supporto del servizio di notifica di fabbrica del carico di lavoro BlueXP
 
 Il servizio di notifica di BlueXP Workload Factory consente a Workload Factory di inviare notifiche al servizio di avvisi BlueXP o a un argomento Amazon SNS. Le notifiche inviate agli avvisi BlueXP vengono visualizzate nel pannello degli avvisi BlueXP. Quando la Workload Factory pubblica notifiche su un argomento Amazon SNS, i sottoscrittori dell'argomento (ad esempio persone o altre applicazioni) ricevono le notifiche sugli endpoint configurati per l'argomento (ad esempio, tramite e-mail o SMS).
@@ -18,6 +19,7 @@ Workload Factory fornisce le seguenti notifiche per i database:
 
 
 
+[[onboarding-enhancement-for-registering-instances]]
 === Miglioramento dell'onboarding per la registrazione delle istanze
 
 Workload Factory per Database ha migliorato il processo di onboarding per la registrazione delle istanze in esecuzione su Amazon FSx per lo storage NetApp ONTAP. Ora è possibile selezionare le istanze in blocco per la registrazione. Una volta registrata un'istanza, è possibile creare e gestire le risorse del database all'interno della console della Workload Factory.
@@ -26,6 +28,7 @@ link:https://docs.netapp.com/us-en/workload-databases/manage-instance.html["Gest
 
 
 
+[[analysis-and-fix-for-microsoft-multipath-io-timeout-setting]]
 === Analisi e correzione per l'impostazione del timeout di Microsoft Multipath I/O
 
 Lo stato ben progettato per le istanze del database ora include l'analisi e la correzione per l'impostazione di timeout di Microsoft Multipath I/O (MPIO). L'impostazione del timeout MPIO a 60 secondi garantisce la connettività e la stabilità dello storage FSx for ONTAP durante i failover. Se l'impostazione MPIO non è impostata correttamente, Workload Factory fornirà una correzione per impostare il valore di timeout MPIO a 60 secondi.
@@ -34,6 +37,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[enhancements-to-graphics-in-instance-inventory]]
 === Miglioramenti alla grafica nell'inventario delle istanze
 
 Dalla schermata dell'inventario delle istanze, vari grafici sull'utilizzo delle risorse, come throughput e IOPS, ora visualizzano i dati degli ultimi 7 giorni, in modo da poter monitorare le prestazioni dei nodi SQL dalla console della Workload Factory in modo più efficiente. I parametri delle prestazioni raccolti dai nodi SQL verranno salvati in Amazon CloudWatch e potranno essere utilizzati per Logs Insights o per l'integrazione con altri servizi di analisi nel tuo ambiente.
@@ -42,6 +46,7 @@ Nelle schede Istanze e Database all'interno dell'inventario, abbiamo migliorato 
 
 
 
+[[support-for-windows-authentication-in-workload-factory]]
 === Supporto per l'autenticazione di Windows nella fabbrica dei carichi di lavoro
 
 Ora Workload Factory supporta l'autenticazione di SQL Server utilizzando utenti autenticati Windows per registrare istanze e trarre vantaggio dalle funzionalità di gestione.

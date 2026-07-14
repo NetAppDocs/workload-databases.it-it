@@ -4,12 +4,14 @@
 
 
 
+[[bluexp-workload-factory-now-netapp-workload-factory]]
 === La BlueXP workload factory ora è NetApp Workload Factory
 
 BlueXP è stato rinominato e riprogettato per riflettere meglio il ruolo che svolge nella gestione dell'infrastruttura dati. Di conseguenza, BlueXP workload factory è stato rinominato NetApp Workload Factory.
 
 
 
+[[enhancements-for-oracle-in-the-workload-factory-console]]
 === Miglioramenti per Oracle nella console Workload Factory
 
 
@@ -36,12 +38,14 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[databases-inventory-enhancements]]
 === Miglioramenti dell'inventario dei database
 
 Dalla schermata dell'istanza nell'inventario dei database, le opzioni per correggere, posticipare e ignorare un problema di configurazione sono disponibili per una o più istanze per Microsoft SQL Server o per uno o più database per Oracle.
 
 
 
+[[optimize-savings-based-on-usage-for-amazon-elastic-block-store-ebs]]
 === Ottimizza i risparmi in base all'utilizzo di Amazon Elastic Block Store (EBS)
 
 Workload Factory può analizzare l'utilizzo delle prestazioni EBS e quindi suggerire la configurazione FSx for ONTAP migliore e più conveniente, in modo da consentirti di risparmiare di più passando a FSx for ONTAP.

@@ -15,6 +15,7 @@ Tieni traccia dei processi del database e monitora i database all'interno di Net
 
 
 
+[[about-this-task]]
 == A proposito di questa attività
 
 I database consentono di monitorare i processi in modo da poter tenere traccia dell'avanzamento dei processi e diagnosticare e risolvere eventuali problemi. È possibile filtrare i lavori per tipo e stato, trovare i lavori utilizzando la funzione di ricerca e scaricare la tabella dei lavori.
@@ -35,6 +36,7 @@ Gli eventi di monitoraggio dei processi vengono conservati nell'interfaccia uten
 
 
 
+[[monitor-jobs]]
 == Monitorare i lavori
 
 Monitorare i lavori per tenere traccia dell'avanzamento delle operazioni del database e diagnosticare e risolvere eventuali problemi in caso di guasti.
