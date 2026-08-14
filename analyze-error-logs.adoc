@@ -33,6 +33,9 @@ Per utilizzare l'analizzatore del log degli errori, è necessario attivare Amazo
 link:https://aws.amazon.com/bedrock/pricing/["Prezzi di Amazon Bedrock"^]
 
 
+NOTE: Se l'amministratore del tuo account ha disattivato le funzionalità di intelligenza artificiale, visualizzerai un messaggio e non potrai utilizzare l'analisi basata sull'IA. Contatta il tuo amministratore o link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["Scopri come amministrare l'AI"^].
+
+
 
 [[data-privacy-and-security]]
 === Privacy e sicurezza dei dati

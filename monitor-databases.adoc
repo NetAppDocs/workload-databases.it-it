@@ -4,47 +4,98 @@ permalink: monitor-databases.html
 keywords: monitor databases, monitor jobs, track database jobs 
 summary: 'Tieni traccia dei processi del database e monitora i database all"interno di NetApp Workload Factory per database.' 
 ---
-= Monitorare i lavori del database in Workload Factory per i database
+= Monitora le operazioni in Workload Factory per i database
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Tieni traccia dei processi del database e monitora i database all'interno di NetApp Workload Factory for Databases per una maggiore visibilità e controllo sulle operazioni del database.
+Monitora e traccia l'esecuzione di FSx for ONTAP, delle credenziali e delle operazioni di collegamento e monitora l'avanzamento delle attività con Tracker in NetApp Workload Factory.
+
+.A proposito di questa attività
+Workload Factory offre Tracker, una funzionalità di monitoraggio che ti permette di monitorare e tenere traccia dell'avanzamento e dello stato di FSx for ONTAP, delle credenziali e delle operazioni di collegamento, di esaminare i dettagli delle attività e delle sottoattività operative e di diagnosticare eventuali problemi o errori.
+
+In Tracker sono disponibili diverse azioni. Puoi filtrare i job in base all'intervallo di tempo (ultime 24 ore, 7 giorni, 14 giorni o 30 giorni), al workload, allo stato e all'utente; trovare i job usando la funzione di ricerca; e scaricare la tabella dei job come file CSV. Puoi aggiornare Tracker in qualsiasi momento. Puoi anche riprovare rapidamente un'operazione non riuscita oppure modificare i parametri di un'operazione non riuscita e riprovare l'operazione.
+
+Tracker supporta due livelli di monitoraggio a seconda dell'operazione. Ogni attività, come la distribuzione del file system, mostra la descrizione dell'attività, lo stato, l'ora di inizio, la durata dell'attività, l'utente, la regione, la risorsa proxy, l'ID dell'attività e tutte le sottoattività correlate. Puoi visualizzare le risposte API per capire cosa è successo durante l'operazione.
+
+Livelli di attività di tracker con esempi::
++
+--
+* Livello 1 (attività): Monitora la distribuzione del file system.
+* Livello 2 (sotto-attività): tiene traccia delle sotto-attività relative alla distribuzione del file system.
+
+
+--
+Stato operativo:: Lo stato dell'operazione in Tracker è il seguente: _in corso_, _successo_ e _fallito_.
++
+--
+Frequenza operativa:: La frequenza operativa dipende dal tipo di job e dalla pianificazione del job.
+
+
+--
+Conservazione degli eventi:: Gli eventi vengono conservati nell'interfaccia utente per 30 giorni.
 
 
 
-[[about-this-task]]
-== A proposito di questa attività
 
-I database consentono di monitorare i processi in modo da poter tenere traccia dell'avanzamento dei processi e diagnosticare e risolvere eventuali problemi. È possibile filtrare i lavori per tipo e stato, trovare i lavori utilizzando la funzione di ricerca e scaricare la tabella dei lavori.
+[[track-and-monitor-operations]]
+== Traccia e monitora le operazioni
 
-Il monitoraggio dei lavori supporta fino a tre livelli di monitoraggio a seconda del lavoro. Ad esempio, per la creazione di nuovi cloni di database e sandbox, il monitoraggio dei job tiene traccia dei job principali e secondari.
-
-.Livelli di monitoraggio dei lavori
-* Livello 1 (processo principale): Tiene traccia del processo di distribuzione dell'host.
-* Livello 2 (processo secondario): Tiene traccia dei processi secondari correlati al processo principale di distribuzione dell'host.
-* Livello 3 (attività): Elenca la sequenza delle azioni eseguite su ciascuna risorsa.
-
-
-.Stato del lavoro
-La funzione di monitoraggio dei processi tiene traccia dei processi _in corso_, _completati_, _completati con problemi_ e _non riusciti_ giornalieri, settimanali, bisettimanali e mensili.
-
-.Conservazione degli eventi del processo
-Gli eventi di monitoraggio dei processi vengono conservati nell'interfaccia utente per 30 giorni.
-
-
-
-[[monitor-jobs]]
-== Monitorare i lavori
-
-Monitorare i lavori per tenere traccia dell'avanzamento delle operazioni del database e diagnosticare e risolvere eventuali problemi in caso di guasti.
+Traccia e monitora le operazioni nella NetApp Console con Tracker.
 
 .Fasi
 . Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
-. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
-. Dal menu Database, selezionare *Monitoraggio lavori*.
-. Nel monitoraggio dei lavori, utilizza i filtri o la ricerca per restringere i risultati dei lavori. È anche possibile scaricare un report sui lavori.
-. Facoltativamente, seleziona il menu delle azioni del processo e fai clic su *Vai a CloudFormation* per visualizzare il registro del processo nella console AWS CloudFormation.
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e poi seleziona *Amministrazione*.
+. Dal menu Amministrazione, seleziona *Tracker*.
+. In Tracker, utilizza i filtri o la funzione di ricerca per restringere i risultati dei job. Puoi anche scaricare un report dei job.
 
+
+
+
+[[view-api-request]]
+== Visualizza richiesta API
+
+Visualizza la richiesta API nel riquadro Codice per un'attività in Tracker.
+
+.Fasi
+. In Tracker, seleziona un'attività.
+. Seleziona il menu Azioni e poi seleziona *Visualizza richiesta API*.
+
+
+
+
+[[retry-a-failed-operation]]
+== Riprova un'operazione non riuscita
+
+Riprova un'operazione non riuscita in Tracker. Puoi anche copiare il messaggio di errore di un'operazione non riuscita.
+
+
+NOTE: Sono consentiti solo x tentativi per un'operazione non riuscita.
+
+.Fasi
+. In Tracker, seleziona un'operazione non riuscita.
+. Seleziona il menu Azioni e poi seleziona *Riprova*.
+
+
+.Risultato
+L'operazione è stata riavviata.
+
+
+
+[[edit-and-retry-a-failed-operation]]
+== Modifica e riprova un'operazione non riuscita
+
+Modifica i parametri dell'operazione non riuscita e riprova l'operazione fuori da Tracker.
+
+.Fasi
+. In Tracker, seleziona un'operazione non riuscita.
+. Seleziona il menu Azioni e poi seleziona *Modifica e riprova*.
++
+Verrai reindirizzato alla pagina dell'operazione dove puoi modificare i parametri e riprovare l'operazione.
+
+
+
+.Risultato
+L'operazione è stata riavviata. Vai al Tracker per visualizzare lo stato dell'operazione.

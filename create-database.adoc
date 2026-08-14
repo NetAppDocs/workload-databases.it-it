@@ -24,9 +24,9 @@ Per creare un database in Workload Factory sono necessarie le autorizzazioni di 
 NOTE: I server Microsoft SQL che utilizzano il protocollo SMB non supportano la creazione di database.
 
 .Prima di iniziare
-Prima di creare un nuovo database, assicurarsi di aver completato i seguenti prerequisiti.
+Completa i seguenti prerequisiti prima di creare un nuovo database.
 
-* *Credenziali e permessi*: Devi avere link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e autorizzazioni di visualizzazione, pianificazione e analisi"^] per creare un nuovo database in Workload Factory.
+* *Credenziali e autorizzazioni*: Devi avere link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Credenziali dell'account AWS e autorizzazioni per _operations and remediation_"^] per creare un nuovo database in Workload Factory.
 +
 In alternativa, è possibile utilizzare Codebox per copiare un modello in modo da poter distribuire un database al di fuori della fabbrica del carico di lavoro utilizzando l'API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["Ulteriori informazioni sull'automazione Codebox"^].
 
