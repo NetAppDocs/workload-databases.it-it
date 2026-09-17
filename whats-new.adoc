@@ -15,6 +15,28 @@ Scopri le novità di NetApp Workload Factory per database.
 
 
 
+[[27-september-2026]]
+== 27 settembre 2026
+
+
+
+[[database-configurations-included-in-well-architected-dashboard]]
+=== Configurazioni del database incluse nella dashboard ben strutturata
+
+La dashboard ben progettata ora include suggerimenti per le configurazioni del database, consentendoti di valutare e ottimizzare la tua configurazione in base alle best practice. Le prime configurazioni includono:
+
+* Tiering dei dati freddi
+* Efficienze dello storage
+* policy di Snapshot
+* margine di capacità SSD
+
+
+Trova la dashboard well-architected selezionando il menu principale nella console di NetApp Workload Factory e seleziona *Well-architected*.
+
+image:well-architected-menu-option.png["Opzione di menu ben strutturata nella console di NetApp Workload Factory"]
+
+
+
 [[30-august-2026]]
 == 30 agosto 2026
 
@@ -199,7 +221,7 @@ Dopo aver registrato le istanze AOAG e i database Data Guard, puoi sfruttare le 
 
 Workload Factory for Databases supporta anche l'analisi ben progettata per le istanze di Microsoft SQL Server con il modello di distribuzione AOAG. Puoi analizzare le configurazioni delle tue istanze di SQL Server in un gruppo di disponibilità e ricevere raccomandazioni per ottimizzare le configurazioni di distribuzione e rispettare le best practice. Registra le istanze AOAG per abilitare questa funzionalità.
 
-link:https://docs.netapp.com/us-en/workload-databases/register-instance.html#register-a-sql-server-instance["Registra le risorse in Workload Factory for Databases"]
+link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["Registra le risorse in Workload Factory for Databases"]
 
 
 

@@ -1,0 +1,159 @@
+---
+sidebar: sidebar 
+permalink: manage-clones.html 
+keywords: manage clones, manage sandboxes, manage sandbox clones, check clone integrity, check data integrity, connect to CICD, delete clone 
+summary: Gestisci i cloni delle tue sandbox in NetApp Workload Factory for Databases per mantenere affidabili e convenienti i tuoi ambienti di sviluppo e test. 
+---
+= Gestisci i cloni del database in NetApp Workload Factory for Databases
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Gestisci i tuoi cloni sandbox in NetApp Workload Factory for Databases per mantenere affidabili e convenienti i tuoi ambienti di sviluppo e test. Verifica che i dati di un clone siano integri, collega un clone alla tua pipeline CI/CD per automatizzare la distribuzione del software oppure aggiorna, ripristina o dividi un clone per allinearlo alle tue attuali esigenze di sviluppo. Quando non hai più bisogno di un clone, eliminalo per liberare spazio di archiviazione.
+
+
+
+[[check-sandbox-data-integrity]]
+== Verifica l'integrità dei dati della sandbox
+
+Eseguire un controllo di integrità per determinare se i dati del clone sandbox sono intatti o danneggiati in NetApp Workload Factory for Databases.
+
+.A proposito di questa attività
+Quando si crea un clone sandbox da un database di origine mentre è occupato, i dati del clone potrebbero non essere sincronizzati con lo snapshot più recente del database di origine. Questa operazione verifica l'integrità di tutti gli oggetti nel clone sandbox per determinare se i dati del clone sandbox sono aggiornati.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi seleziona *Archiviazione*.
+. Dal menu Database, selezionare *Sandbox*.
+. In Sandbox, seleziona il menu azioni del clone sandbox per verificarne l'integrità.
+. Selezionare *Esegui controllo integrità*.
+. Nella finestra di dialogo controllo integrità, fare clic su *controllo integrità*.
+. Controllare lo stato del controllo di integrità nelle sandbox o in monitoraggio processo.
+
+
+Se il controllo di integrità non riesce, si consiglia di non utilizzare il clone sandbox e di creare un nuovo clone sandbox.
+
+
+
+[[connect-a-sandbox-clone-to-cicd]]
+== Collega un clone sandbox a CI/CD
+
+Collega un clone sandbox a una pipeline di integrazione continua e distribuzione continua (CI/CD) con codice API REST per migliorare la distribuzione del software tramite l'automazione in NetApp Workload Factory for Databases.
+
+.A proposito di questa attività
+Per fornire automaticamente una nuova versione del software al clone del database, è necessario connettersi a una pipeline ci/CD. Utilizzare il codice API REST fornito da questa operazione per effettuare la connessione.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
+. Dal menu Database, selezionare *Sandbox*.
+. In Sandbox, seleziona il menu azioni del clone sandbox per connetterti agli strumenti CI/CD.
+. Selezionare *Connetti a strumenti ci/CD*.
+. Nella finestra di dialogo ci/CD, copiare o scaricare il codice API REST necessario per connettersi agli strumenti ci/CD.
+. Fare clic su *Chiudi*.
+
+
+
+
+[[delete-a-database-clone]]
+== Elimina un clone del database
+
+Elimina un clone sandbox in NetApp Workload Factory for Databases quando non ti serve più e vuoi liberare capacità di archiviazione.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
+. Dal menu Database, selezionare *Sandbox*.
+. In Sandbox, seleziona il menu azioni del clone sandbox che desideri eliminare.
+. Selezionare *Delete* (Elimina).
+. Nella finestra di dialogo Elimina, seleziona *Elimina* per confermare l'eliminazione.
+
+
+
+
+[[refresh-a-database-clone]]
+== Aggiorna un clone del database
+
+Aggiorna un clone del database (sandbox) in NetApp Workload Factory for Databases in modo che sia equivalente al database di origine nel momento corrente o in un momento precedente.
+
+.A proposito di questa attività
+L'aggiornamento di un clone aggiorna il clone nel database di origine al momento corrente o in uno snapshot del database di origine acquisito in un point-in-time precedente. Tutte le modifiche apportate al clone sandbox verranno eliminate.
+
+.Prima di iniziare
+Un aggiornamento è possibile solo quando il database di origine è attivo.
+
+Per aggiornare un clone del database da uno snapshot, il database di origine deve avere almeno uno snapshot per l'operazione.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
+. Dal menu Database, selezionare *Sandbox*.
+. In Sandbox, seleziona il menu azioni del clone sandbox che vuoi aggiornare.
+. Selezionare *Aggiorna*.
+. Nella finestra di dialogo Aggiorna, selezionare una delle seguenti opzioni:
++
+.. *Aggiorna all'ora corrente*
+.. *Aggiorna al punto nel tempo*
++
+Per questa opzione, selezionare l'istantanea del database dal menu a discesa per aggiornarla a.
+
+
+
+. Fare clic su *Aggiorna*.
+
+
+
+
+[[revert-a-database-clone]]
+== Ripristina un clone del database
+
+Ripristina un clone di database (sandbox) alla sua versione originale al momento della creazione in NetApp Workload Factory for Databases.
+
+Quando si clona un database, il clone al momento della creazione è un clone _di base_.  I dati nel database clonato sono gli stessi del database di origine al momento della creazione.  Poiché i dati in un clone di database cambiano nel tempo, potrebbe essere opportuno ripristinare i dati allo stato di base al momento della creazione del clone.  Questa operazione è chiamata ri-baselining di un clone.  Rieseguire la baseline di un clone anziché crearne uno nuovo consente di risparmiare spazio; tuttavia, tutte le modifiche apportate al clone del database verranno eliminate.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
+. Dal menu Database, selezionare *Sandbox*.
+. In Sandbox, seleziona il menu azioni del clone del database che vuoi ripristinare.
+. Selezionare *Rebaseline*.
+. Nella finestra di dialogo Re-baseline, selezionare *Re-baseline*.
+
+
+
+
+[[split-a-database-clone]]
+== Dividi un clone del database
+
+In NetApp Workload Factory for Databases, la suddivisione di un clone di database dal suo database di origine crea un nuovo database che consumerà una certa quantità di capacità di archiviazione.  Il clone verrà eliminato al termine della suddivisione e il nuovo database apparirà nell'inventario.
+
+.Prima di iniziare
+Considerare la capacità di storage necessaria per il nuovo database. Se necessario, link:https://docs.netapp.com/us-en/workload-fsx-ontap/increase-file-system-capacity.html["aumentare la capacità del file system"^] per il file system FSX for ONTAP prima di iniziare.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
+. Dal menu Database, selezionare *Sandbox*.
+. In Sandbox, seleziona il menu azioni del clone del database che vuoi dividere.
+. Selezionare *Dividi*.
+. Nella finestra di dialogo Dividi, seleziona *Dividi*.
+
+
+
+
+[[view-a-clones-connection-information]]
+== Visualizza le informazioni di connessione di un clone
+
+Visualizza e copia le informazioni di connessione di un clone di database in NetApp Workload Factory for Databases.
+
+.Fasi
+. Accedere utilizzando uno dei link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["esperienze di console"^].
+. Seleziona il menu image:workloads-menu-icon.png["L'icona del menu hamburger viene utilizzata per navigare tra carichi di lavoro quali storage, eda, ai, database, vmware e amministrazione."] e quindi selezionare *Database*.
+. Dal menu Database, selezionare *Sandbox*.
+. In Sandbox, seleziona il menu azioni del clone sandbox per visualizzare le informazioni sulla sua connessione.
+. Selezionare *Mostra informazioni di connessione*.
+. Nella finestra di dialogo Mostra informazioni di connessione, copiare le informazioni di connessione, se necessario.
+. Selezionare *Chiudi*.
+
