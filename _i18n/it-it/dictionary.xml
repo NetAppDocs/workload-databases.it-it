@@ -1679,10 +1679,10 @@
   <block id="c615884836ba8ff129bccac26af65a58" category="section-title">Ripristina un clone del database</block>
   <block id="74c32f8fc6fe86c04537074f1e3cb88e" category="section-title">Dividi un clone del database</block>
   <block id="2f06756420805ba71f60842577c60dc8" category="section-title">Visualizza le informazioni di connessione di un clone</block>
-  <block id="301497b54979bb49bba5249c4f44b4ad" category="section-title">27 settembre 2026</block>
   <block id="e30e82b6ba088958ce23ba4d6a33b01f" category="sidebar">Usa Workload Factory per i carichi di lavoro database</block>
   <block id="573be33921395db38cda47a4830a127e" category="sidebar">Crea risorse di database</block>
   <block id="33995eab65a0112a35f0233d5de5a0a6" category="sidebar">Proteggi, monitora e ottimizza le risorse del database</block>
   <block id="753d621a767f80f69e64e577e1856e54" category="doc">Supporto per più file system per una singola istanza</block>
   <block id="6adeb7328ee4497e74b45036bf16ff9d" category="paragraph">Workload Factory for Databases supporta più file system per una singola istanza di Microsoft SQL Server. Puoi registrare più file system in un'istanza di SQL Server e risolvere contemporaneamente un problema di configurazione per più file system in un'istanza di SQL Server.</block>
+  <block id="74bc5d714652a3ae18c64ee93e4ba085" category="section-title">30 settembre 2026</block>
 </blocks>
