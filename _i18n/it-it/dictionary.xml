@@ -1797,4 +1797,18 @@
   <block id="c205c53a606156f982f2d7d7c8d9b4a3" category="paragraph-title">I miei dati di log sono al sicuro quando utilizzo l'analizzatore dei log degli errori?</block>
   <block id="2aec8f10b1cd6aa48fdd1951d13b132d" category="paragraph">I dati di log e le aggregazioni rimangono nel tuo account AWS e transitano attraverso un endpoint VPC privato, senza alcuna esposizione a Internet pubblico. I dati dei clienti non servono per addestrare o migliorare i modelli. Bedrock elabora i log in tempo reale e i risultati sono archiviati nel tuo ambiente.</block>
   <block id="1fe917b01f9a3f87fa2d7d3b7643fac1" category="sidebar">Domande frequenti</block>
+  <block id="b3ae445fa637203f0dc17550b5c4a56c" category="doc">Configurazioni del database incluse nella dashboard ben strutturata</block>
+  <block id="17d52f36b5492e8aeada41d949434243" category="paragraph">La dashboard ben progettata ora include suggerimenti per le configurazioni del database, consentendoti di valutare e ottimizzare la tua configurazione in base alle migliori pratiche. Le prime configurazioni incluse nella dashboard sono:</block>
+  <block id="0ab265b548fdc40b21483e61ffde3aba" category="list-text">Tiering dei dati freddi</block>
+  <block id="4c0abf2d4c54820b8d33061abaf30759" category="list-text">policy di Snapshot</block>
+  <block id="6f5cf50fa90f8d99bf50f65e676c6cba" category="list-text">margine di capacità SSD</block>
+  <block id="935aff9bc7bcf43dd1fe5825226b72c1" category="list-text">Abbina il tipo di sistema operativo del dispositivo a blocchi all'host</block>
+  <block id="868e9efce60d04bdf51fc2494a73a9ce" category="list-text">Dispositivi a blocchi inattivi (LUNs)</block>
+  <block id="797a6fe95ffc7bef7107556bac722567" category="list-text">Posizionamento dei file di dati (.mdf)</block>
+  <block id="27c70398ced593abb96a3c33b5e1072b" category="list-text">Posizionamento dei file di registro (.ldf)</block>
+  <block id="346c87aaab415cd5adb218f88181ede8" category="list-text">Stato I/O multipath</block>
+  <block id="92a6dbd219f1455bd74f5d666b1b27c5" category="list-text">Timeout Multipath I/O</block>
+  <block id="33bf723377efe51bc70f70bbb5efa8a4" category="paragraph">Seleziona il menu principale nella console di Workload Factory, quindi seleziona *Well-architected* per trovare la dashboard well-architected.</block>
+  <block id="2d647234501319107057acb4d3f8dfaf" category="inline-image-macro">Opzione di menu ben strutturata nella console di NetApp Workload Factory</block>
+  <block id="353cc99df6b21e74c805e74bdab4b8aa" category="paragraph"><block ref="353cc99df6b21e74c805e74bdab4b8aa" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
