@@ -2,25 +2,25 @@
 sidebar: sidebar 
 permalink: protect-sql-server.html 
 keywords: protect, server, Microsoft SQL Server, SQL Server, protect instance, protect database 
-summary: Proteggere le istanze e i database di Microsoft SQL Server. 
+summary: Prepara le istanze di Microsoft SQL Server per la protezione con NetApp Backup and Recovery di Workload Factory e modifica la protezione per istanze e database. 
 ---
-= Proteggi i carichi di lavoro di Microsoft SQL Server con NetApp Workload Factory for Databases
+= Proteggi i carichi di lavoro di Microsoft SQL Server con Workload Factory for Databases
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Proteggi i dati delle tue applicazioni Microsoft SQL Server utilizzando NetApp Backup and Recovery dalla console Workload Factory. Grazie a questa integrazione, è possibile raggiungere i seguenti obiettivi di protezione: eseguire il backup dei carichi di lavoro con snapshot locali sullo storage primario locale Amazon FSx for NetApp ONTAP (FSx for ONTAP) e replicare i carichi di lavoro sullo storage secondario FSx for ONTAP .
+Proteggi i dati delle applicazioni Microsoft SQL Server con NetApp Backup and Recovery dalla console di Workload Factory. Con questa integrazione, puoi eseguire il backup dei carichi di lavoro con snapshot locali nello storage primario Amazon FSx for NetApp ONTAP (FSx for ONTAP) e replicare i carichi di lavoro nello storage secondario FSx for ONTAP.
 
 
 
 [[about-this-task]]
 == A proposito di questa attività
 
-Workload Factory automatizza la scoperta delle risorse, la convalida dei prerequisiti e la configurazione e l'installazione del plug-in per Microsoft SQL Server per preparare i carichi di lavoro alla protezione con NetApp Backup and Recovery. Il plug-in è un componente lato host di NetApp Software che consente di proteggere i carichi di lavoro di Microsoft SQL Server.
+Workload Factory automatizza l'individuazione delle risorse, la convalida dei prerequisiti e la configurazione e l'installazione del Plug-in for Microsoft SQL Server per prepararti a proteggere i tuoi carichi di lavoro con NetApp Backup and Recovery. Il plug-in è un componente software lato host di NetApp che ti consente di proteggere i tuoi carichi di lavoro Microsoft SQL Server.
 
-NetApp Backup and Recovery sfrutta la tecnologia di replicazione dei dati NetApp SnapMirror per garantire che tutti i backup siano completamente sincronizzati creando copie snapshot e trasferendole nelle posizioni di backup.
+NetApp Backup and Recovery utilizza la tecnologia di NetApp SnapMirror per la replica dei dati per garantire che tutti i backup siano completamente sincronizzati, creando copie snapshot e trasferendole nelle posizioni di backup.
 
 Per i dettagli sulla protezione con Backup e Ripristino, fare riferimento a link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-mssql-protect-overview.html["Panoramica sulla protezione dei carichi di lavoro Microsoft SQL con Backup e Ripristino"^].
 
@@ -29,17 +29,17 @@ Per i dettagli sulla protezione con Backup e Ripristino, fare riferimento a link
 [[before-you-begin]]
 == Prima di iniziare
 
-Per proteggere i carichi di lavoro di Microsoft SQL Server con Backup e Ripristino, è necessario soddisfare i seguenti requisiti.
+Assicurati di soddisfare questi requisiti prima di proteggere i carichi di lavoro di Microsoft SQL Server con Backup and Recovery.
 
 * Assicurati che il tuo ambiente soddisfi link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-start-prereq.html#microsoft-sql-server-workload-requirements["i requisiti di backup e ripristino di SQL Server"^].
-* link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-start-prereq.html#in-netapp-console["Requisiti completi della console NetApp"^] inclusa la configurazione, l'assegnazione dei ruoli IAM e l'installazione di un agente Console.
+* link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-start-prereq.html#in-netapp-console["Requisiti completi della console NetApp"^], tra cui la configurazione, l'assegnazione dei ruoli IAM e l'installazione di un agente Console.
 
 
 Se si dispone dell'accesso come amministratore dell'organizzazione all'account NetApp , `backup and recovery super admin` il ruolo viene assegnato automaticamente quando<<Preparati alla protezione con NetApp Backup and Recovery,preparati alla protezione con NetApp Backup and Recovery>> .
 
-* Imposta la risoluzione host sul connettore
+* Imposta la risoluzione host sul Console agent
 +
-Per scoprire i database, è necessario impostare la risoluzione host sul connettore.  Sul dispositivo ospitato, aggiungere la mappatura dell'indirizzo IP al nome host nel `/etc/hosts` file.
+Per individuare i database, devi impostare la risoluzione host sull'agente della console. Sul dispositivo ospitato, aggiungi la mappatura dell'indirizzo IP al nome host nel file  `/etc/hosts`.
 
 +
 ** link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html["Impostare la licenza per NetApp Backup and Recovery"^]
@@ -65,8 +65,8 @@ Completa il processo di preparazione per proteggere le tue risorse di Microsoft 
 Per utilizzare NetApp Backup and Recovery per la protezione, le istanze di SQL Server devono essere registrate in Workload Factory con le credenziali di Windows.
 
 . Se sono attivi e disponibili più agenti della console, selezionare l'*agente della console* in cui si desidera registrare e proteggere il carico di lavoro.
-. Per preparare la protezione dei dati, Workload Factory registra automaticamente le risorse di SQL Server in Backup e ripristino, configura e installa il plug-in per Microsoft SQL Server e individua le risorse che soddisfano i prerequisiti per la protezione dell'istanza di SQL Server. Selezionare *Avvia* per iniziare il processo.
-. Dopo aver soddisfatto i prerequisiti, selezionare *Reindirizza* per accedere a Backup e Ripristino.
+. Seleziona *Avvia* per prepararti alla protezione dei dati. Workload Factory registra automaticamente le risorse di SQL Server in Backup and Recovery, configura e installa il plug-in per Microsoft SQL Server e rileva le risorse necessarie per soddisfare i prerequisiti per proteggere l'istanza di SQL Server.
+. Una volta soddisfatti i prerequisiti, seleziona *Redirect* per accedere a Backup and Recovery.
 
 
 .Cosa succederà
